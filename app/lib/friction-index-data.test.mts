@@ -5,7 +5,6 @@ import frictionData from '../../public/data/annual-scores.json' with { type: 'js
 const expectedTopicIds = ['ai-governance', 'cybersecurity']
 const expectedInstitutionIds = [
   'nist',
-  'cisa',
   'dod',
   'openai',
   'anthropic',
@@ -24,7 +23,7 @@ describe('Friction Index data integrity', () => {
     )
     assert.equal(
       frictionData.note,
-      'Illustrative capacity scores for six institutions across two fields.',
+      'Illustrative capacity scores for five institutions across two fields.',
     )
   })
 
@@ -48,7 +47,7 @@ describe('Friction Index data integrity', () => {
 
     assert.doesNotMatch(
       serialized,
-      /nato-diana|NATO DIANA|military-ai|Military AI|biosecurity|Biosecurity/,
+      /cisa|CISA|nato-diana|NATO DIANA|military-ai|Military AI|biosecurity|Biosecurity/,
     )
   })
 

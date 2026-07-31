@@ -161,7 +161,6 @@ TOPICS.forEach((topic, ti) => {
 const FRICTION_TOPIC_IDS = new Set(['ai-governance', 'cybersecurity'])
 const FRICTION_INSTITUTION_IDS = new Set([
   'nist',
-  'cisa',
   'dod',
   'openai',
   'anthropic',
@@ -196,7 +195,7 @@ writeFileSync(`${DATA_DIR}/institutions.json`, JSON.stringify(
 const annual = {
   title: 'Friction Index',
   description: 'Weight knowledge, authority, dependency, and coordination to see where AI governance and cybersecurity are most misaligned.',
-  note: 'Illustrative capacity scores for six institutions across two fields.',
+  note: 'Illustrative capacity scores for five institutions across two fields.',
   years: YEARS,
   layers: [
     { id: 'knowledge', label: 'Knowledge' },

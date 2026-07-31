@@ -1,7 +1,7 @@
 {
   "title": "Friction Index",
   "description": "Weight knowledge, authority, dependency, and coordination to see where AI governance and cybersecurity are most misaligned.",
-  "note": "Illustrative capacity scores for six institutions across two fields.",
+  "note": "Illustrative capacity scores for five institutions across two fields.",
   "years": [
     2019,
     2020,
@@ -99,12 +99,6 @@
       "series": 1
     },
     {
-      "id": "cisa",
-      "label": "CISA",
-      "type": "Government agency",
-      "series": 3
-    },
-    {
       "id": "dod",
       "label": "U.S. Department of Defense",
       "type": "Government agency",
@@ -165,43 +159,6 @@
             38,
             37,
             38
-          ]
-        }
-      },
-      "cisa": {
-        "knowledge": {
-          "technical": 56,
-          "legal": 39,
-          "policy": 50,
-          "security": 73
-        },
-        "authority": {
-          "regulatory": 49,
-          "procurement": 31,
-          "funding": 36,
-          "deployment": 42,
-          "standards": 42
-        },
-        "series": {
-          "knowledge": [
-            36,
-            40,
-            42,
-            49,
-            51,
-            55,
-            53,
-            55
-          ],
-          "authority": [
-            27,
-            28,
-            33,
-            34,
-            35,
-            37,
-            40,
-            40
           ]
         }
       },
@@ -389,43 +346,6 @@
             33,
             35,
             36
-          ]
-        }
-      },
-      "cisa": {
-        "knowledge": {
-          "technical": 72,
-          "legal": 48,
-          "policy": 61,
-          "security": 90
-        },
-        "authority": {
-          "regulatory": 54,
-          "procurement": 38,
-          "funding": 42,
-          "deployment": 53,
-          "standards": 49
-        },
-        "series": {
-          "knowledge": [
-            43,
-            51,
-            54,
-            58,
-            65,
-            67,
-            66,
-            68
-          ],
-          "authority": [
-            31,
-            33,
-            35,
-            43,
-            44,
-            47,
-            47,
-            47
           ]
         }
       },
