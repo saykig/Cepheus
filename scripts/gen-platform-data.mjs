@@ -158,6 +158,31 @@ TOPICS.forEach((topic, ti) => {
   })
 })
 
+const FRICTION_TOPIC_IDS = new Set(['ai-governance', 'cybersecurity'])
+const FRICTION_INSTITUTION_IDS = new Set([
+  'nist',
+  'cisa',
+  'dod',
+  'openai',
+  'anthropic',
+  'universities',
+])
+const frictionTopics = TOPICS.filter((topic) => FRICTION_TOPIC_IDS.has(topic.id))
+const frictionInstitutions = INSTITUTIONS.filter((institution) =>
+  FRICTION_INSTITUTION_IDS.has(institution.id),
+)
+const frictionScores = Object.fromEntries(
+  frictionTopics.map((topic) => [
+    topic.id,
+    Object.fromEntries(
+      frictionInstitutions.map((institution) => [
+        institution.id,
+        scores[topic.id][institution.id],
+      ]),
+    ),
+  ]),
+)
+
 // ---------------------------------------------------------------- files
 writeFileSync(`${DATA_DIR}/topics.json`, JSON.stringify(
   TOPICS.map(({ id, label, series, importance, description, gapType, gap, coords }) =>
@@ -169,9 +194,9 @@ writeFileSync(`${DATA_DIR}/institutions.json`, JSON.stringify(
 
 // annual-scores.json  (Institutional Capacity Explorer)
 const annual = {
-  title: 'Institutional Friction Explorer',
-  description: 'Weight knowledge, authority, dependency, and coordination to see where cybersecurity, military AI, and biosecurity are most misaligned.',
-  note: 'Illustrative capacity scores for seven institutions across five fields.',
+  title: 'Friction Index',
+  description: 'Weight knowledge, authority, dependency, and coordination to see where AI governance and cybersecurity are most misaligned.',
+  note: 'Illustrative capacity scores for six institutions across two fields.',
   years: YEARS,
   layers: [
     { id: 'knowledge', label: 'Knowledge' },
@@ -179,9 +204,9 @@ const annual = {
   ],
   dimensions: { knowledge: K_DIMS, authority: A_DIMS },
   defaultWeights: DEFAULT_WEIGHTS,
-  topics: TOPICS.map(({ id, label, description }) => ({ id, label, description })),
-  institutions: INSTITUTIONS.map(({ id, label, type, series }) => ({ id, label, type, series })),
-  scores,
+  topics: frictionTopics.map(({ id, label, description }) => ({ id, label, description })),
+  institutions: frictionInstitutions.map(({ id, label, type, series }) => ({ id, label, type, series })),
+  scores: frictionScores,
 }
 writeFileSync(`${DATA_DIR}/annual-scores.json`, JSON.stringify(annual, null, 2) + '\n')
 

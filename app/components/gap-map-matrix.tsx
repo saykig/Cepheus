@@ -234,31 +234,6 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
       </div>
       <p className="tool-subtitle">{copy.gapDescription}</p>
 
-      <div className="gap-toolbar">
-        <div
-          className="gap-selected-node"
-          role="status"
-          aria-live="polite"
-          aria-label={`Selected node: ${selected.label}`}
-        >
-          <svg className="gap-size-key" viewBox="0 0 14 14" aria-hidden="true">
-            <defs>
-              <WatercolorNodeDefs id="gap-selected-watercolor" />
-            </defs>
-            <g style={{ '--sc': colorFor(selected) } as CSSProperties}>
-              <WatercolorNode
-                cx={7}
-                cy={7}
-                radius={4}
-                filterId="gap-selected-watercolor"
-                selected
-              />
-            </g>
-          </svg>
-          <span>{selected.label}</span>
-        </div>
-      </div>
-
       <div className="gap-layout">
         <div className="gap-plot">
           <svg

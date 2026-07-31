@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "node --test --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON app/lib/gap-matrix-*.test.mts",
+    "test": "node --test --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON app/lib/gap-matrix-*.test.mts app/lib/friction-index-*.test.mts",
     "typecheck": "tsc --noEmit",
     "dev": "next dev",
     "build": "next build",

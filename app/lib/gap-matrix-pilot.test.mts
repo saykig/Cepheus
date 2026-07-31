@@ -94,7 +94,7 @@ describe('Gap Matrix illustrative pilot data', () => {
     assert.match(component, /\/data\/gap-data\.json/)
   })
 
-  it('uses the shared project marker and selected node readout copy', async () => {
+  it('uses the shared project marker without a separate node readout', async () => {
     const [gapComponent, frictionComponent] = await Promise.all([
       readFile(
         new URL('../components/gap-map-matrix.tsx', import.meta.url),
@@ -112,7 +112,8 @@ describe('Gap Matrix illustrative pilot data', () => {
       assert.match(component, /✳/)
     }
 
-    assert.match(gapComponent, /Selected node: \$\{selected\.label\}/)
+    assert.doesNotMatch(gapComponent, /gap-selected-node|Selected node:/)
+    assert.doesNotMatch(gapComponent, /gap-toolbar/)
     assert.doesNotMatch(gapComponent, />\s*Illustrative importance\s*</)
     assert.doesNotMatch(gapComponent, />\s*Illustrative pilot\s*</)
   })
