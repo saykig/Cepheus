@@ -3907,6 +3907,7 @@ html[data-theme="dark"] .tool.constellation .constellation-instructions p {
 
 .bubble.is-selected text,
 .bubble:hover text,
+.bubble:focus-visible text,
 .bubble.is-labeled text {
   opacity: 1;
 }

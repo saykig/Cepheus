@@ -167,8 +167,8 @@ export default async function CepheusEssay({
             <GapMapMatrix locale={locale} />
             <p className="tool-caption">
               Points below the diagonal have higher knowledge concentration than
-              public authority. Unscored fields remain marked “Assessment pending”
-              until evidence coding is complete.
+              public authority. These pilot points are illustrative values for the
+              visual only, not finalized or evidence-backed assessments.
             </p>
             <EssayDisclosure title="Where do these institutions meet?">
               <p>

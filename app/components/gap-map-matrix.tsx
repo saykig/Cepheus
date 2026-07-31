@@ -10,25 +10,53 @@ import { useInView } from './use-in-view'
 import { WatercolorNode, WatercolorNodeDefs } from './watercolor-node'
 import type { Locale } from 'app/lib/i18n'
 import { visualCopy } from 'app/lib/visual-copy'
-import {
-  deriveAssessment,
-  type ComponentAssessment,
-  type ComponentAssessmentData,
-  type GovernanceField,
-  type GovernanceSignificanceTier,
-} from 'app/lib/gap-matrix-scoring'
 
 type HelpId = 'knowledge' | 'authority' | 'gap' | 'significance'
 
+type PilotTopic = {
+  id: string
+  label: string
+  series: number
+  importance: number
+  gapType: string
+  gap: string
+  knowledge: number
+  authority: number
+  dependency: number
+  oversight: number
+}
+
+type PilotAxis = {
+  key: keyof PilotTopic
+  label: string
+  low: string
+  high: string
+}
+
+type PilotPreset = {
+  id: string
+  label: string
+  x: PilotAxis
+  y: PilotAxis
+}
+
+type PilotData = {
+  title: string
+  description: string
+  note: string
+  presets: PilotPreset[]
+  topics: PilotTopic[]
+}
+
 const HELP_TEXT: Record<HelpId, string> = {
   knowledge:
-    'How strongly technical capability, information, and evaluation access are concentrated outside public institutions. A higher score means greater non-public concentration.',
+    'How strongly technical capability, information, and evaluation access are concentrated outside public institutions. These pilot positions are illustrative, not finalized scores.',
   authority:
-    'The extent to which public institutions possess binding, operational powers over that field. A higher score means broader and more enforceable public authority.',
+    'The extent to which public institutions possess binding, operational powers over that field. These pilot positions are illustrative, not finalized scores.',
   gap:
-    'Calculated by subtracting public authority from knowledge concentration. A larger positive result indicates a wider institutional gap.',
+    'A short description of the illustrative institutional mismatch represented by the selected pilot node.',
   significance:
-    'An assessment of the field’s scale of exposure, severity and reversibility, strategic dependence, and pace of spillover. It is shown as a tier rather than a precise public score.',
+    'Relative circle size reproduces the original illustrative importance values. It is not an evidence-backed governance significance score.',
 }
 
 const HELP_DOM_IDS: Record<HelpId, string> = {
@@ -40,12 +68,8 @@ const HELP_DOM_IDS: Record<HelpId, string> = {
 
 const sx = (value: number) => value
 const sy = (value: number) => 100 - value
-const fieldColor = 'var(--series-1)'
-
-const tierLabel = (tier: GovernanceSignificanceTier | null) => {
-  if (tier === null) return 'Pending'
-  return tier.replace(/^./, (letter) => letter.toUpperCase())
-}
+const rFor = (value: number) => (2 + (Math.sqrt(value) / 10) * 3.6) * 1.16
+const colorFor = (topic: PilotTopic) => `var(--series-${topic.series})`
 
 function HelpTooltip({
   active,
@@ -71,8 +95,8 @@ function HelpTooltip({
 export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
   const copy = visualCopy[locale]
   const { ref, inView } = useInView<HTMLElement>()
-  const [field, setField] = useState<GovernanceField | null>(null)
-  const [assessments, setAssessments] = useState<ComponentAssessment[] | null>(null)
+  const [data, setData] = useState<PilotData | null>(null)
+  const [selectedId, setSelectedId] = useState<string | null>(null)
   const [loadFailed, setLoadFailed] = useState(false)
   const [activeTooltip, setActiveTooltip] = useState<HelpId | null>(null)
   const touchStartedOpen = useRef(false)
@@ -80,23 +104,16 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
   useEffect(() => {
     const controller = new AbortController()
 
-    const loadJson = async <T,>(path: string) => {
-      const response = await fetch(path, { signal: controller.signal })
-      if (!response.ok) {
-        throw new Error(`Gap Matrix data returned ${response.status} for ${path}`)
-      }
-      return response.json() as Promise<T>
-    }
-
-    Promise.all([
-      loadJson<GovernanceField>('/data/gap-matrix/fields.json'),
-      loadJson<ComponentAssessmentData>(
-        '/data/gap-matrix/component-assessments.json',
-      ),
-    ])
-      .then(([fieldData, assessmentData]) => {
-        setField(fieldData)
-        setAssessments(assessmentData.assessments)
+    fetch('/data/gap-data.json', { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Gap Matrix data returned ${response.status}`)
+        }
+        return response.json() as Promise<PilotData>
+      })
+      .then((pilotData) => {
+        setData(pilotData)
+        setSelectedId(pilotData.topics[0]?.id ?? null)
       })
       .catch((error: unknown) => {
         if (error instanceof DOMException && error.name === 'AbortError') return
@@ -126,9 +143,13 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
     }
   }, [activeTooltip])
 
-  const derived = useMemo(
-    () => (field && assessments ? deriveAssessment(field, assessments) : null),
-    [assessments, field],
+  const preset = useMemo(
+    () => data?.presets.find((candidate) => candidate.id === 'capacity'),
+    [data],
+  )
+  const selected = useMemo(
+    () => data?.topics.find((topic) => topic.id === selectedId),
+    [data, selectedId],
   )
 
   if (loadFailed) {
@@ -139,15 +160,9 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
     )
   }
 
-  if (!field || !assessments || !derived) {
+  if (!data || !preset || !selected) {
     return <div className="tool-loading" aria-live="polite" aria-busy="true" />
   }
-
-  const isPositioned =
-    derived.knowledgeConcentration !== null &&
-    derived.publicAuthority !== null &&
-    derived.governanceSignificanceRadius !== null
-  const isPending = !isPositioned
 
   const showHelp = (helpId: HelpId) => setActiveTooltip(helpId)
   const hideHelp = (helpId: HelpId) =>
@@ -173,17 +188,20 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
     },
   })
 
-  const axisMeters = [
+  const orderedTopics = [...data.topics].sort(
+    (a, b) => Number(a.id === selectedId) - Number(b.id === selectedId),
+  )
+
+  const meters = [
     {
-      helpId: 'knowledge' as const,
-      label: field.metrics.knowledgeConcentration.label,
-      value: derived.knowledgeConcentration,
+      label: preset.x.label,
+      value: selected.knowledge,
     },
     {
-      helpId: 'authority' as const,
-      label: field.metrics.publicAuthority.label,
-      value: derived.publicAuthority,
+      label: preset.y.label,
+      value: selected.authority,
     },
+    { label: 'Importance', value: selected.importance },
   ]
 
   return (
@@ -198,24 +216,12 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
           <details className="tool-about">
             <summary>{copy.about}</summary>
             <div className="tool-about-body">
-              Each point is a dated assessment of a defined governance field.
-              Knowledge concentration measures how strongly technical capability,
-              information, and evaluation access are concentrated outside public
-              institutions. Public authority measures binding rules, compulsory
-              access to information, independent evaluation powers, and enforcement
-              capacity. Both scores are calculated from a published component
-              rubric. The diagonal marks equal index scores; points below it have
-              greater non-public knowledge concentration than public authority.
-              Circle size shows governance significance as a tier. Full sources,
-              coding decisions, and methodological limitations are documented on{' '}
-              <a
-                href="https://github.com/saykig/cepheus"
-                rel="noreferrer"
-                target="_blank"
-              >
-                GitHub
-              </a>
-              .
+              These four points reproduce the original illustrative pilot
+              visualization. Knowledge concentration and public authority place
+              each field on the matrix, while circle size shows relative
+              importance. The diagonal marks equal index values; points below it
+              have greater knowledge concentration than public authority. These
+              values are not finalized or evidence-backed assessments.
             </div>
           </details>
         </div>
@@ -247,7 +253,7 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
               />
             </g>
           </svg>
-          Governance significance
+          Illustrative importance
         </button>
         <HelpTooltip
           active={activeTooltip === 'significance'}
@@ -317,34 +323,48 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
               Public authority
             </text>
 
-            {isPositioned && (
-              <g
-                className="bubble is-selected is-labeled"
-                style={
-                  {
-                    '--sc': fieldColor,
-                    transform: `translate(${sx(derived.knowledgeConcentration as number)}px, ${sy(derived.publicAuthority as number)}px)`,
-                  } as CSSProperties
-                }
-                role="img"
-                aria-label={`${field.label}: Knowledge concentration ${derived.knowledgeConcentration}, Public authority ${derived.publicAuthority}, Governance significance ${derived.governanceSignificanceTier}`}
-              >
-                <WatercolorNode
-                  cx={0}
-                  cy={0}
-                  radius={derived.governanceSignificanceRadius as number}
-                  filterId="gap-node-watercolor"
-                  selected
-                  hitRadius={(derived.governanceSignificanceRadius as number) + 2.7}
-                />
-                <text
-                  x={0}
-                  y={-(derived.governanceSignificanceRadius as number) - 1.4}
+            {orderedTopics.map((topic) => {
+              const isSelected = selectedId === topic.id
+              const radius = rFor(topic.importance)
+              const x = sx(topic.knowledge)
+              const y = sy(topic.authority)
+
+              return (
+                <g
+                  key={topic.id}
+                  className={`bubble${isSelected ? ' is-selected is-labeled' : ''}`}
+                  style={
+                    {
+                      '--sc': colorFor(topic),
+                      transform: `translate(${x}px, ${y}px)`,
+                    } as CSSProperties
+                  }
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isSelected}
+                  aria-label={`${topic.label}: illustrative Knowledge concentration ${topic.knowledge}, Public authority ${topic.authority}, Importance ${topic.importance}`}
+                  onClick={() => setSelectedId(topic.id)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault()
+                      setSelectedId(topic.id)
+                    }
+                  }}
                 >
-                  {field.label}
-                </text>
-              </g>
-            )}
+                  <WatercolorNode
+                    cx={0}
+                    cy={0}
+                    radius={radius}
+                    filterId="gap-node-watercolor"
+                    selected={isSelected}
+                    hitRadius={radius + 2.7}
+                  />
+                  <text x={0} y={-radius - 1.4}>
+                    {topic.label}
+                  </text>
+                </g>
+              )
+            })}
           </svg>
 
           <HelpTooltip
@@ -360,79 +380,55 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
         </div>
 
         <aside
-          className={`gap-panel${isPending ? ' is-pending' : ''}`}
-          style={{ '--sc': fieldColor } as CSSProperties}
+          className="gap-panel"
+          style={{ '--sc': colorFor(selected) } as CSSProperties}
           aria-live="polite"
         >
           <span className="gap-panel-kind">
             <span className="dot" />
-            {isPending ? 'Assessment pending' : 'Dated assessment'}
+            Illustrative pilot
           </span>
-          <h5>{field.label}</h5>
+          <h5>{selected.label}</h5>
           <p className="gap-panel-quadrant">
-            As of {field.assessment.evidenceCutoff}
+            <button
+              type="button"
+              className="gap-help-button"
+              {...helpProps('gap')}
+            >
+              {selected.gapType}
+            </button>
           </p>
+          <HelpTooltip
+            active={activeTooltip === 'gap'}
+            className="is-gap"
+            helpId="gap"
+          />
 
           <div className="gap-meters">
-            {axisMeters.map((meter) => (
-              <div className="gap-meter-row" key={meter.helpId}>
+            {meters.map((meter) => (
+              <div className="gap-meter-row" key={meter.label}>
                 <div className="gap-meter-head">
                   <span>{meter.label}</span>
-                  <span className="val">
-                    {meter.value === null
-                      ? 'Pending'
-                      : `${Math.round(meter.value)} / 100`}
-                  </span>
+                  <span className="val">{Math.round(meter.value)} / 100</span>
                 </div>
-                {meter.value !== null && (
-                  <div
-                    className="meter"
-                    role="meter"
-                    aria-label={meter.label}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                    aria-valuenow={Math.round(meter.value)}
-                  >
-                    <span style={{ width: `${meter.value}%` }} />
-                  </div>
-                )}
+                <div
+                  className="meter"
+                  role="meter"
+                  aria-label={`${meter.label}, illustrative pilot value`}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={Math.round(meter.value)}
+                >
+                  <span style={{ width: `${meter.value}%` }} />
+                </div>
               </div>
             ))}
-
-            <div className="gap-meter-row">
-              <div className="gap-meter-head">
-                <button
-                  type="button"
-                  className="gap-help-button"
-                  {...helpProps('gap')}
-                >
-                  Gap result
-                </button>
-                <span className="val">
-                  {derived.gap === null
-                    ? 'Pending'
-                    : `${derived.gap > 0 ? '+' : ''}${derived.gap}`}
-                </span>
-              </div>
-              <HelpTooltip
-                active={activeTooltip === 'gap'}
-                className="is-gap"
-                helpId="gap"
-              />
-            </div>
-
-            <div className="gap-meter-row">
-              <div className="gap-meter-head">
-                <span>Governance significance</span>
-                <span className="val">
-                  {tierLabel(derived.governanceSignificanceTier)}
-                </span>
-              </div>
-            </div>
           </div>
 
-          <p className="gap-insight">{field.definition}</p>
-          <p className="gap-scope-note">{field.assessment.scopeNote}</p>
+          <p className="gap-insight">{selected.gap}</p>
+          <p className="gap-scope-note">
+            Pilot values for this visual only. Not finalized or evidence-backed.
+          </p>
         </aside>
       </div>
     </section>
