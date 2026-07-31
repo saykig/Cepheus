@@ -208,6 +208,15 @@ export function FrontierScoreExplorer({ locale = 'en' }: { locale?: Locale }) {
       className={`tool frontier reveal${inView ? ' is-in' : ''}`}
       aria-label={copy.frictionTitle}
     >
+      <div
+        className="constellation-meta instrument-meta"
+        aria-label={copy.projectName}
+      >
+        <span>{copy.projectName}</span>
+        <span className="constellation-meta-mark" aria-hidden="true">
+          ✳
+        </span>
+      </div>
       <div className="tool-head">
         <div className="tool-heading">
           <h4 className="tool-title">{copy.frictionTitle}</h4>

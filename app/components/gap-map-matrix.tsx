@@ -11,7 +11,7 @@ import { WatercolorNode, WatercolorNodeDefs } from './watercolor-node'
 import type { Locale } from 'app/lib/i18n'
 import { visualCopy } from 'app/lib/visual-copy'
 
-type HelpId = 'knowledge' | 'authority' | 'gap' | 'significance'
+type HelpId = 'knowledge' | 'authority' | 'gap'
 
 type PilotTopic = {
   id: string
@@ -55,15 +55,12 @@ const HELP_TEXT: Record<HelpId, string> = {
     'The extent to which public institutions possess binding, operational powers over that field. These pilot positions are illustrative, not finalized scores.',
   gap:
     'A short description of the illustrative institutional mismatch represented by the selected pilot node.',
-  significance:
-    'Relative circle size reproduces the original illustrative importance values. It is not an evidence-backed governance significance score.',
 }
 
 const HELP_DOM_IDS: Record<HelpId, string> = {
   knowledge: 'gap-help-knowledge',
   authority: 'gap-help-authority',
   gap: 'gap-help-result',
-  significance: 'gap-help-significance',
 }
 
 const sx = (value: number) => value
@@ -210,6 +207,15 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
       className={`tool gap reveal${inView ? ' is-in' : ''}`}
       aria-label={copy.gapTitle}
     >
+      <div
+        className="constellation-meta instrument-meta"
+        aria-label={copy.projectName}
+      >
+        <span>{copy.projectName}</span>
+        <span className="constellation-meta-mark" aria-hidden="true">
+          ✳
+        </span>
+      </div>
       <div className="tool-head">
         <div className="tool-heading">
           <h4 className="tool-title">{copy.gapTitle}</h4>
@@ -229,37 +235,28 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
       <p className="tool-subtitle">{copy.gapDescription}</p>
 
       <div className="gap-toolbar">
-        <button
-          type="button"
-          className="gap-legend-note gap-help-button"
-          {...helpProps('significance')}
+        <div
+          className="gap-selected-node"
+          role="status"
+          aria-live="polite"
+          aria-label={`Selected node: ${selected.label}`}
         >
-          <svg className="gap-size-key" viewBox="0 0 28 14" aria-hidden="true">
+          <svg className="gap-size-key" viewBox="0 0 14 14" aria-hidden="true">
             <defs>
-              <WatercolorNodeDefs id="gap-legend-watercolor" />
+              <WatercolorNodeDefs id="gap-selected-watercolor" />
             </defs>
-            <g style={{ '--sc': 'var(--olive)' } as CSSProperties}>
+            <g style={{ '--sc': colorFor(selected) } as CSSProperties}>
               <WatercolorNode
                 cx={7}
                 cy={7}
-                radius={2.3}
-                filterId="gap-legend-watercolor"
-              />
-              <WatercolorNode
-                cx={20}
-                cy={7}
-                radius={4.9}
-                filterId="gap-legend-watercolor"
+                radius={4}
+                filterId="gap-selected-watercolor"
+                selected
               />
             </g>
           </svg>
-          Illustrative importance
-        </button>
-        <HelpTooltip
-          active={activeTooltip === 'significance'}
-          className="is-significance"
-          helpId="significance"
-        />
+          <span>{selected.label}</span>
+        </div>
       </div>
 
       <div className="gap-layout">
@@ -384,10 +381,6 @@ export function GapMapMatrix({ locale = 'en' }: { locale?: Locale }) {
           style={{ '--sc': colorFor(selected) } as CSSProperties}
           aria-live="polite"
         >
-          <span className="gap-panel-kind">
-            <span className="dot" />
-            Illustrative pilot
-          </span>
           <h5>{selected.label}</h5>
           <p className="gap-panel-quadrant">
             <button
