@@ -120,7 +120,7 @@ function FootnoteContent({ segments }: { segments: FootnoteSegment[] }) {
 }
 
 export function FootnoteRef({ number }: { number: number }) {
-  const { openId, setOpenId, closeAll } = useFootnotes()
+  const { openId, setOpenId } = useFootnotes()
   const note = footnotes.find((item) => item.id === number)
 
   if (!note) return <sup>{number}</sup>
@@ -155,19 +155,7 @@ export function FootnoteRef({ number }: { number: number }) {
         role="note"
         aria-label={`Footnote ${number}`}
       >
-        <FootnoteContent segments={note.preview ?? note.body} />
-        {note.readMore ? (
-          <>
-            {' '}
-            <a
-              className="footnote-read-more"
-              href={`#footnote-${number}`}
-              onClick={closeAll}
-            >
-              Read More in Notes
-            </a>
-          </>
-        ) : null}
+        <FootnoteContent segments={note.body} />
       </span>
     </span>
   )

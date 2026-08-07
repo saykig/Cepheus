@@ -1230,7 +1230,7 @@ html[data-theme="dark"] .theme-toggle::after {
   border-radius: 3px;
   background: color-mix(in oklab, var(--olive) 11%, var(--paper-bright));
   color: var(--olive);
-  cursor: help;
+  cursor: pointer;
   font-family: var(--font-text), Georgia, serif;
   font-size: 0.66rem;
   font-weight: 700;
@@ -1330,7 +1330,7 @@ html[data-theme="dark"] .theme-toggle::after {
   }
 }
 
-@media (max-width: 1339px), (hover: none) {
+@media (max-width: 1279px), (hover: none) {
   .footnote-popover {
     position: fixed;
     top: auto;
@@ -1349,7 +1349,7 @@ html[data-theme="dark"] .theme-toggle::after {
   }
 }
 
-@media (max-width: 1339px) and (hover: hover) {
+@media (max-width: 1279px) and (hover: hover) {
   .footnote-control:hover .footnote-popover,
   .footnote-control:focus-within .footnote-popover {
     transform: translate(-50%, 0);
