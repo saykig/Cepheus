@@ -31,7 +31,7 @@ export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
           <h2 className="essay-opening-heading" id="first-collision">{labels.firstCollision}</h2>
           {draft.opening.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           <ol className="essay-questions">{draft.questions.map((question) => <li key={question}><strong>{question}</strong></li>)}</ol>
-          <section className="essay-visual-block" id="gap-matrix">
+          <section className="essay-visual-block" id="gap-matrix" data-essay-visual="gap">
             <GapMapMatrix locale={locale} />
             <p className="tool-caption">{draft.gapCaption}</p>
           </section>
@@ -41,7 +41,7 @@ export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
             <div key={paragraph}>
               <p>{paragraph}</p>
               {index === 4 ? (
-                <section className="essay-visual-block" id="institutional-friction-explorer">
+                <section className="essay-visual-block" id="institutional-friction-explorer" data-essay-visual="friction">
                   <FrontierScoreExplorer locale={locale} />
                   <p className="tool-caption">{draft.frictionCaption}</p>
                 </section>
@@ -53,7 +53,7 @@ export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
             <div key={paragraph}>
               <p>{paragraph}</p>
               {index === 4 ? (
-                <section className="essay-visual-block" id="cepheus-map">
+                <section className="essay-visual-block" id="cepheus-map" data-essay-visual="link">
                   <InstitutionalLinkMap locale={locale} />
                 </section>
               ) : null}

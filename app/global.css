@@ -1158,12 +1158,153 @@ html[data-theme="dark"] .theme-toggle::after {
 
 /* --- Inline visual disclosures --- */
 .essay-visual-block {
+  position: relative;
   margin: 1.65rem 0 35px;
   scroll-margin-top: 104px;
 }
 
 .essay-visual-block > .tool {
   margin-top: 0;
+}
+
+/* The index sets these data attributes from its section activation logic. The
+   connector deliberately travels before the instrument's small target mark
+   settles, making the reading sequence visible without altering the tools. */
+.essay-visual-block[data-essay-visual]::before,
+.essay-visual-block[data-essay-visual]::after {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  content: "";
+}
+
+.essay-visual-block[data-essay-visual]::before {
+  top: 1.72rem;
+  left: -1.25rem;
+  width: 2.1rem;
+  height: 1px;
+  transform: scaleX(0.12);
+  transform-origin: left center;
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--olive) 26%, transparent),
+    color-mix(in oklab, var(--olive) 76%, transparent)
+  );
+  opacity: 0;
+}
+
+.essay-visual-block[data-essay-visual]::after {
+  top: calc(1.72rem - 0.22rem);
+  left: 0.63rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--paper-bright);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--olive) 44%, transparent);
+  opacity: 0;
+  transform: scale(0.68);
+  transition: opacity 260ms var(--ease-quart), transform 360ms var(--ease-expo),
+    background-color 260ms var(--ease-quart), box-shadow 260ms var(--ease-quart);
+}
+
+.essay-page[data-essay-visual-target="gap"] .essay-visual-block[data-essay-visual="gap"]::before,
+.essay-page[data-essay-visual-target="friction"] .essay-visual-block[data-essay-visual="friction"]::before,
+.essay-page[data-essay-visual-target="link"] .essay-visual-block[data-essay-visual="link"]::before {
+  opacity: 0.88;
+}
+
+.essay-page[data-essay-visual-phase="travel"][data-essay-visual-target="gap"] .essay-visual-block[data-essay-visual="gap"]::before,
+.essay-page[data-essay-visual-phase="travel"][data-essay-visual-target="friction"] .essay-visual-block[data-essay-visual="friction"]::before,
+.essay-page[data-essay-visual-phase="travel"][data-essay-visual-target="link"] .essay-visual-block[data-essay-visual="link"]::before {
+  animation: essay-visual-connector 520ms cubic-bezier(0.16, 0.72, 0.25, 1) both;
+}
+
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="gap"] .essay-visual-block[data-essay-visual="gap"]::before,
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="friction"] .essay-visual-block[data-essay-visual="friction"]::before,
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="link"] .essay-visual-block[data-essay-visual="link"]::before,
+.essay-page[data-essay-visual-phase="settled"][data-essay-visual-active="gap"] .essay-visual-block[data-essay-visual="gap"]::before,
+.essay-page[data-essay-visual-phase="settled"][data-essay-visual-active="friction"] .essay-visual-block[data-essay-visual="friction"]::before,
+.essay-page[data-essay-visual-phase="settled"][data-essay-visual-active="link"] .essay-visual-block[data-essay-visual="link"]::before {
+  opacity: 0.68;
+  transform: scaleX(1);
+}
+
+.essay-page[data-essay-visual-active="gap"] .essay-visual-block[data-essay-visual="gap"]::after,
+.essay-page[data-essay-visual-active="friction"] .essay-visual-block[data-essay-visual="friction"]::after,
+.essay-page[data-essay-visual-active="link"] .essay-visual-block[data-essay-visual="link"]::after {
+  background: var(--olive);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--olive) 74%, transparent),
+    0 0 0 0.26rem color-mix(in oklab, var(--watercolor-sage-wash) 76%, transparent);
+  opacity: 0.9;
+  transform: scale(1);
+}
+
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="gap"] .essay-visual-block[data-essay-visual="gap"]::after,
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="friction"] .essay-visual-block[data-essay-visual="friction"]::after,
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="link"] .essay-visual-block[data-essay-visual="link"]::after {
+  animation: essay-visual-target-settle 360ms cubic-bezier(0.16, 0.72, 0.25, 1) 70ms both;
+}
+
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="gap"] .essay-visual-block[data-essay-visual="gap"] .watercolor-node-bloom,
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="link"] .essay-visual-block[data-essay-visual="link"] .watercolor-node-bloom {
+  animation: essay-visual-node-settle 480ms cubic-bezier(0.16, 0.72, 0.25, 1) 70ms both;
+}
+
+.essay-page[data-essay-visual-phase="settling"][data-essay-visual-target="friction"] .essay-visual-block[data-essay-visual="friction"] .chart-end-dot {
+  animation: essay-visual-chart-settle 440ms cubic-bezier(0.16, 0.72, 0.25, 1) 70ms both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes essay-visual-connector {
+  0% {
+    opacity: 0.12;
+    transform: scaleX(0.08);
+  }
+  62% {
+    opacity: 0.94;
+    transform: scaleX(0.78);
+  }
+  100% {
+    opacity: 0.88;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes essay-visual-target-settle {
+  0% {
+    opacity: 0.28;
+    transform: scale(0.56);
+  }
+  68% {
+    opacity: 1;
+    transform: scale(1.22);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+@keyframes essay-visual-node-settle {
+  0% {
+    opacity: 0.16;
+    transform: scale(0.68);
+  }
+  68% {
+    opacity: 0.74;
+    transform: scale(1.13);
+  }
+  100% {
+    opacity: 0.46;
+    transform: scale(1);
+  }
+}
+
+@keyframes essay-visual-chart-settle {
+  0% { opacity: 0.2; transform: scale(0.5); }
+  70% { opacity: 1; transform: scale(1.28); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .essay-disclosure {

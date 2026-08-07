@@ -171,7 +171,11 @@ export default async function CepheusEssay({
             decisions, and where responsibility sits.
           </p>
 
-          <section className="essay-visual-block" id="gap-matrix">
+          <section
+            className="essay-visual-block"
+            id="gap-matrix"
+            data-essay-visual="gap"
+          >
             <GapMapMatrix locale={locale} />
             <p className="tool-caption">
               Points below the diagonal have higher knowledge concentration than
@@ -287,6 +291,7 @@ export default async function CepheusEssay({
           <section
             className="essay-visual-block"
             id="institutional-friction-explorer"
+            data-essay-visual="friction"
           >
             <FrontierScoreExplorer locale={locale} />
             <p className="tool-caption">
@@ -539,7 +544,11 @@ export default async function CepheusEssay({
             map below is a preliminary picture of that system:
           </p>
 
-          <section className="essay-visual-block" id="cepheus-map">
+          <section
+            className="essay-visual-block"
+            id="cepheus-map"
+            data-essay-visual="link"
+          >
             <InstitutionalLinkMap locale={locale} />
             <EssayDisclosure title="Who depends on whom?">
               <p>

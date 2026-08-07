@@ -12,6 +12,23 @@ type Section = {
   children?: Section[]
 }
 
+type EssayVisualState = 'gap' | 'friction' | 'link'
+type EssayVisualPhase = 'travel' | 'settling' | 'settled'
+
+// This is the single, explicit sequence shared by the essay index and its
+// three visual instruments. A heading begins the transition; its child visual
+// keeps the same state once the reader reaches the instrument itself.
+const SECTION_TO_VISUAL: Record<string, EssayVisualState> = {
+  'first-collision': 'gap',
+  'gap-matrix': 'gap',
+  'what-is-expected-of-us': 'friction',
+  'institutional-friction-explorer': 'friction',
+  'what-do-we-owe-to-each-other': 'link',
+  'cepheus-map': 'link',
+}
+
+const VISUAL_APPROACH_LEAD = 144
+
 export function EssayIndex({
   sections,
   updated,
@@ -27,6 +44,19 @@ export function EssayIndex({
   const [progress, setProgress] = useState(0)
   const [noteOpacity, setNoteOpacity] = useState(1)
   const indexRef = useRef<HTMLElement>(null)
+  const visualProgressRef = useRef<{
+    active: EssayVisualState
+    target: EssayVisualState
+    phase: EssayVisualPhase
+    initialized: boolean
+    settleTimer: number | null
+  }>({
+    active: 'gap',
+    target: 'gap',
+    phase: 'settled',
+    initialized: false,
+    settleTimer: null,
+  })
   const flatSections = useMemo(
     () => sections.flatMap((section) => [section, ...(section.children ?? [])]),
     [sections],
@@ -37,6 +67,58 @@ export function EssayIndex({
   )
 
   useEffect(() => {
+    const article = document.querySelector<HTMLElement>('.essay-page')
+    const visualProgress = visualProgressRef.current
+
+    const writeVisualProgress = () => {
+      if (!article) return
+      article.dataset.essayVisualActive = visualProgress.active
+      article.dataset.essayVisualTarget = visualProgress.target
+      article.dataset.essayVisualPhase = visualProgress.phase
+    }
+
+    const finishVisualSettle = () => {
+      visualProgress.phase = 'settled'
+      visualProgress.settleTimer = null
+      writeVisualProgress()
+    }
+
+    const scheduleVisualSettle = () => {
+      if (visualProgress.settleTimer !== null) {
+        window.clearTimeout(visualProgress.settleTimer)
+      }
+      visualProgress.settleTimer = window.setTimeout(finishVisualSettle, 340)
+    }
+
+    const syncVisualProgress = (activeSectionId: string, approachingSectionId: string) => {
+      const activeVisual = SECTION_TO_VISUAL[activeSectionId] ?? visualProgress.active
+      const targetVisual = SECTION_TO_VISUAL[approachingSectionId] ?? activeVisual
+
+      if (!visualProgress.initialized) {
+        visualProgress.active = activeVisual
+        visualProgress.target = activeVisual
+        visualProgress.phase = 'settled'
+        visualProgress.initialized = true
+        writeVisualProgress()
+        return
+      }
+
+      if (targetVisual !== visualProgress.target) {
+        visualProgress.target = targetVisual
+        visualProgress.phase = targetVisual === activeVisual ? 'settling' : 'travel'
+        writeVisualProgress()
+        if (visualProgress.phase === 'settling') scheduleVisualSettle()
+      }
+
+      if (activeVisual === visualProgress.active) return
+
+      visualProgress.active = activeVisual
+      visualProgress.target = activeVisual
+      visualProgress.phase = 'settling'
+      writeVisualProgress()
+      scheduleVisualSettle()
+    }
+
     const update = () => {
       setNoteOpacity(Math.max(0.78, 1 - window.scrollY / 1800))
 
@@ -49,6 +131,16 @@ export function EssayIndex({
           : active
       }, flatSections[0]?.id)
       setActiveId(current)
+
+      const approaching = flatSections.reduce((active, section) => {
+        const element = document.getElementById(section.id)
+        if (!element) return active
+        return element.getBoundingClientRect().top <=
+          getEssayTargetOffset(section.id) + VISUAL_APPROACH_LEAD
+          ? section.id
+          : active
+      }, flatSections[0]?.id)
+      if (current && approaching) syncVisualProgress(current, approaching)
 
       const visibleChild = childSections.find((section) => {
         const element = document.getElementById(section.id)
@@ -76,6 +168,14 @@ export function EssayIndex({
     return () => {
       window.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
+      if (visualProgress.settleTimer !== null) {
+        window.clearTimeout(visualProgress.settleTimer)
+      }
+      if (article) {
+        delete article.dataset.essayVisualActive
+        delete article.dataset.essayVisualTarget
+        delete article.dataset.essayVisualPhase
+      }
     }
   }, [childSections, flatSections])
 
