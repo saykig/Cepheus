@@ -24,20 +24,24 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const labels = isLocale(locale) ? essayLabels[locale] : essayLabels.en
-  const title = `${labels.titleLineOne} ${labels.titleLineTwo}`
-  const description = labels.subtitle
+  const essayTitle = `${labels.titleLineOne} ${labels.titleLineTwo}`
+  const isEnglish = locale === 'en'
+  const title = isEnglish ? 'What We Owe to Each Other - Cepheus' : essayTitle
+  const description = isEnglish
+    ? 'AI is often built in one world and governed in another.'
+    : labels.subtitle
   const pathname =
     locale === 'en'
       ? '/essays/what-we-owe-to-each-other'
       : `/${locale}/essays/what-we-owe-to-each-other`
   const image = `/og?${new URLSearchParams({
     kind: 'essay',
-    title,
+    title: essayTitle,
     description,
   }).toString()}`
 
   return {
-    title,
+    title: isEnglish ? { absolute: title } : title,
     description,
     alternates: { canonical: pathname },
     openGraph: {
