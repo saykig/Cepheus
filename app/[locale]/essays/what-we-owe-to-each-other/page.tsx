@@ -264,25 +264,6 @@ export default async function CepheusEssay({
             consequences.
           </p>
           <p>
-            Authority is divided in a different way. Governments distribute
-            responsibility across legislatures, courts, defence departments,
-            regulators, and international bodies. Each sees the technology
-            through its own mandate. One institution may write the rules,
-            another may purchase the system, and another may only become
-            involved after something has gone wrong. Responsibility still
-            exists, but it is spread across institutions that may not share the
-            same information or even agree on what the main problem is.
-          </p>
-          <p>
-            The divide is also linguistic. Engineers tend to ask whether a
-            system works and how reliably it performs. Policymakers are more
-            likely to ask who is authorized to use it and who will be held
-            responsible if it fails. Companies must also consider deployment,
-            competition, and their obligations to customers or investors. They
-            may all be discussing the same model while approaching it as a
-            different kind of problem.
-          </p>
-          <p>
             Their timelines rarely match either, as models can change within
             weeks, while legislation, judicial review, and international effort
             can take years. It is tempting to reduce this to the claim that
@@ -327,20 +308,149 @@ export default async function CepheusEssay({
           </section>
 
           <p>
-            This mismatch becomes more serious when private technical choices
-            begin to shape public life. A decision about model access or
-            safeguards may be made inside a company, yet its consequences can
-            reach national security, civil liberties, and critical
-            infrastructure.
+            I therefore do not think the central problem is a simple shortage of
+            expertise, as specialization itself is not the problem. In fact, it
+            is probably one of the main reasons humanity has become capable of
+            doing extraordinarily difficult things. We spend years learning the
+            language, methods, assumptions, and history of one field precisely
+            because no person can know everything. But our institutions tend to
+            preserve those divisions long after the problems themselves have
+            stopped respecting them. We grow up moving between separate subjects
+            in school, and eventually become very good at speaking to people who
+            were trained to think about problems in roughly the same way we were.
+            Universities certainly create interdisciplinary programs,
+            laboratories, and research groups, but their basic architecture is
+            still largely disciplinary.
           </p>
           <p>
-            I therefore do not think the central problem is a simple shortage
-            of expertise. The expertise exists already, but it is distributed
-            across institutions that organize knowledge and authority
-            separately. Specialization still matters too, because it gives us
-            depth and makes complex work possible. The problem begins when those
-            divisions also become the main way we understand issues that are
-            already moving across them.
+            This becomes much more consequential as AI begins to increase the
+            amount of intellectual work that specialized fields can produce. One
+            way Dario describes this problem is to ask what becomes the limiting
+            factor once intelligence itself becomes much more abundant. More
+            intelligence does not make every other constraint disappear, as
+            experiments still take time, institutions still have procedures, and
+            human beings still have to decide whether something should actually
+            be used. And there is another possible bottleneck that I think
+            deserves much more attention: <strong>verification</strong>.
+          </p>
+          <p>
+            Mathematics offers an unusually interesting example of what this can
+            look like. In 1946, Paul Erdős posed a problem about something that
+            sounds almost trivial: if you place a large number of points on a
+            plane, how many pairs can be exactly one unit apart? Mathematicians
+            worked on versions of this problem for nearly eighty years. Then, in
+            May 2026, an internal OpenAI model produced a construction that
+            disproved a longstanding conjecture about its answer. External
+            mathematicians subsequently checked the argument and produced
+            human-written papers explaining and verifying the result.
+          </p>
+          <p>
+            One of those tools is Lean, a formal proof system. In very simple
+            terms, Lean allows mathematicians to express a mathematical statement
+            with extraordinary precision and then check whether a proposed proof
+            actually establishes it. It does not decide which theorem matters,
+            nor does it magically tell us whether we have formalized the question
+            we intended to ask. In fact, the Lean community explicitly warns that
+            this distinction matters: a formally valid proof is not useful if the
+            formal statement does not correspond to the mathematical claim we
+            thought we were proving.
+          </p>
+          <p>
+            This is becoming particularly interesting alongside AI. DeepMind's
+            Formal Conjectures project is turning large collections of open
+            mathematical problems—including hundreds drawn from Erdős's problem
+            lists—into statements written in Lean. The point is partly to create
+            problems against which automated theorem provers can work, but also
+            to make the questions themselves precise enough that solutions can
+            eventually be formally checked.
+          </p>
+          <p>
+            I find this incredibly compelling, but also slightly frustrating as
+            someone who works in global affairs, because our problems do not
+            behave like this. We cannot place a statement such as{' '}
+            <em>this institution has authority over this AI system</em> into Lean
+            and expect it to tell us whether that statement is true. Even the
+            word <em>authority</em> immediately creates more questions. Authority
+            granted by what? A regulation? A procurement contract? Is the
+            authority legally binding, politically asserted, or merely advisory?
+            Does it apply to this particular institution, jurisdiction, or use?
+            Two perfectly competent researchers can read the same material and
+            still disagree about the answer. The disagreement here is not an
+            error in the system, because sometimes, or most of the time, it is the
+            system.
+          </p>
+          <p>
+            That means I do not think policy needs, or could realistically have,
+            some universal language that verifies political truth. But the
+            benefit of formal systems points toward something smaller and much
+            more achievable.{' '}
+            <strong>
+              We may not be able to formalize whether a political judgment is
+              ultimately true, but we can become far better at formalizing what
+              we are claiming, where the claim came from, what evidence supports
+              it, what assumptions were required to reach it, and what we still
+              do not know.
+            </strong>
+          </p>
+          <p>
+            This sounds rather obvious until you look at how much policy research
+            is actually produced. A statute lives in one place. An institutional
+            mandate lives somewhere else. A policy analyst interprets it in a
+            report and another researcher compresses the report into a
+            spreadsheet. Someone else cites that spreadsheet in a comparison.
+            Eventually, a conclusion can travel remarkably far from the evidence
+            that originally produced it, making provenance difficult.
+          </p>
+          <p>
+            People working between policy and technology have already encountered
+            narrower versions of this problem. New Zealand's Better Rules
+            project, for example, found what it called a translation gap between
+            policy analysts and software developers. Each group had its own
+            structured language and professional standards, but each subsequent
+            group had to reinterpret what the previous one produced. There is now
+            an entire Rules as Code movement built around related ideas. Catala,
+            a programming language designed specifically for statutory law, goes
+            further by giving lawyers and programmers a shared medium through
+            which certain computational parts of legislation can be represented
+            and tested. None of these projects makes politics mathematically
+            provable, nor should they. But they demonstrate something important:
+            professional boundaries become less costly when the information
+            crossing them has structure.
+          </p>
+          <p>
+            What made this problem feel less abstract to me was realizing how
+            often I encountered the same fragmentation simply by trying to
+            understand AI governance. I would open one government report, which
+            led me to another framework, then a paper, then a legal document, and
+            eventually to projects such as Catala or the OECD’s work on Rules as
+            Code. Before long, I had ten tabs open, all describing parts of the
+            same problem in completely different languages. In an era of abundant
+            knowledge, the problem is often not that information does not exist,
+            but that it is stored differently, described differently, and made
+            legible to entirely different professional communities.
+          </p>
+          <p>
+            That is the problem I have been trying to work through with Writ,
+            which is still at its pilot stage. Writ is an open-source
+            domain-specific language and knowledge system for political and
+            global-affairs research. A source comes first. From that source, a
+            researcher records a specific claim and the evidence supporting it.
+            Those records can then be organized into bodies of knowledge and
+            queried comparatively without separating the conclusion from the
+            material that produced it. If sources conflict, the disagreement can
+            remain contested. If something is not known, it can remain unknown.
+            And if an analysis produces a conclusion, the path back through the
+            relevant records and ultimately to the source remains visible.
+          </p>
+          <p>
+            Someone working in policy should be able to read the evidence and
+            conclusions without needing to understand the code underneath them,
+            but an engineer should also be able to inspect the same material as
+            structured data, trace how it was represented, and build tools on top
+            of it. The point is not to force policymakers to become programmers,
+            or programmers to become policy analysts, as that is not the goal.
+            This would be better understood as a offering a tool to for both
+            worlds to have a shared object they can both inspect.
           </p>
           <h2 id="what-do-we-owe-to-each-other">
             {labels.owe}
