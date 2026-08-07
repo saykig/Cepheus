@@ -311,11 +311,10 @@ export default async function CepheusEssay({
                 the systems through which those decisions are carried out.
               </p>
               <p>
-                In military AI, defence institutions may rely on commercial
-                models and cloud systems that they do not fully own. Anthropic’s
-                clash with the White House demonstrated what happens when a
-                government becomes operationally interested in a system while the
-                supplier retains control over important conditions of use.
+                Anthropic’s clash with the White House demonstrated what happens
+                when a government becomes operationally interested in a system
+                while the supplier retains control over important conditions of
+                use.
               </p>
             </EssayDisclosure>
           </section>
