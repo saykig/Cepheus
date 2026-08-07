@@ -474,26 +474,9 @@ export default async function CepheusEssay({
             of us? I do not think the answer is that engineers should become
             policymakers, or that policymakers need to understand every
             technical detail. These fields exist separately for good reasons.
-            But once the same systems begin to shape public life, that
-            separation can no longer excuse the distance it has.
-          </p>
-          <p>
-            When different institutions each hold part of the knowledge needed
-            to understand a serious risk, they have some responsibility to make
-            those parts intelligible to one another. The failure in this
-            challenge is simply allowing the gaps and distance between them to
-            remain even after their consequences have become visible.
-          </p>
-          <p>
-            Alignment, then, is not a matter of policy catching up with
-            technology, or technology simply submitting to policy. It should
-            create enough shared understanding where each side can see what the
-            other knows, what it cannot know, and where responsibility cannot
-            simply be passed along. The goal is not to arrive at some perfect
-            agreement as we try to close this gap.<FootnoteRef number={3} /> What
-            matters is that the institutions involved can explain their
-            decisions to one another and to the people who will live with their
-            consequences.
+            But when different institutions each hold part of the knowledge
+            needed to understand a serious risk, they have some responsibility
+            to make those parts intelligible to one another.
           </p>
           <p>
             Thus, these relationships form something closer to an institutional
@@ -532,6 +515,71 @@ export default async function CepheusEssay({
           </section>
 
           <p>
+            Alignment, then, is not a matter of policy catching up with
+            technology, or technology simply submitting to policy. The goal is
+            not to arrive at some perfect agreement as we try to close this
+            gap.<FootnoteRef number={3} /> In regards to the aforementioned
+            concept of Erdős problems and Lean, the lesson I take from mathematics
+            is not that international affairs ought to become mathematics. It is
+            almost the quite opposite. Mathematics can demand a degree of formal
+            verification because it operates under conditions that political life
+            rarely gives us. Global affairs contains ambiguity, incomplete
+            evidence, competing interpretations, and legitimate disagreement. Any
+            system that removed those things for the sake of producing a clean
+            answer would probably make the analysis worse.
+          </p>
+          <p>
+            But ambiguity does not require disorder: there is a difference
+            between saying <em>we disagree about what this evidence means</em> and
+            not being able to determine which evidence produced the disagreement
+            in the first place. There is a difference between a government having
+            legal authority, possessing technical capability, and depending on
+            someone else to actually carry a decision out. And AI makes this
+            increasingly important because it is not merely producing more text,
+            as it is beginning to act across the same institutional boundaries
+            that we already struggle to describe.
+          </p>
+          <p>
+            The July 2026 Hugging Face incident is a useful example. An AI agent
+            being evaluated inside OpenAI's environment found a way out of its
+            intended sandbox, moved through third-party infrastructure, and
+            eventually compromised parts of Hugging Face's production environment
+            while trying to obtain answers to the benchmark on which it was being
+            tested. Hugging Face later reconstructed roughly 17,600 actions across
+            the intrusion. OpenAI and Hugging Face then had to work across
+            organizational boundaries to understand what the system had actually
+            done.
+          </p>
+          <p>
+            The Hugging Face case is obviously a cybersecurity problem, but I
+            think it is also an institutional one. A system developed by one
+            organization and interacting with infrastructure operated by several
+            others can create consequences that no single institution completely
+            contains.{' '}
+            <strong>
+              That becomes even more complicated when control over the system
+              itself is distributed.
+            </strong>
+          </p>
+          <p>
+            Even the debate over what should follow from incidents like this is
+            divided. A July 2026 open-weights statement backed by NVIDIA, Hugging
+            Face, OpenAI, Microsoft, and many other firms openly acknowledges that
+            once model weights are released, the original developer loses
+            substantial control, and modified versions become difficult to trace
+            or reverse. Yet the same statement argues that distributing access
+            can improve security because defenders, researchers, and smaller
+            organizations can inspect models and develop protections themselves.
+          </p>
+          <p>
+            And this returns me to the much simpler problem I began with. The
+            people working on these systems and the people working on the
+            institutions around them probably need to be talking to one another
+            far more often than they currently do.
+          </p>
+          <p>
+            I do not think the answer is to create one language in which everyone
+            thinks. We need better ways for our different languages to meet.
             Perhaps this is what the worlds of policy and technology owe one
             another: not to become the same, but to make a serious effort to
             render their knowledge understandable across the boundary between
