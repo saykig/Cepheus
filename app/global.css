@@ -396,7 +396,7 @@ html[data-theme="dark"] .theme-toggle::after {
   color: var(--ink);
   cursor: default;
   font-family: var(--font-display), "Iowan Old Style", "Palatino Linotype", serif;
-  font-size: 1.4rem;
+  font-size: 1.14rem;
   line-height: 1;
   letter-spacing: 0;
 }
