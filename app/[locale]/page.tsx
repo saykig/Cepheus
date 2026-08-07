@@ -5,8 +5,7 @@ import { notFound } from 'next/navigation'
 
 const title = 'Cepheus'
 const description = 'Bridging the gap between policy and technology.'
-const image =
-  '/og?kind=home&title=Cepheus&description=Bridging%20the%20gap%20between%20policy%20and%20technology.'
+const image = '/brand/cepheus-brand-home.png'
 
 export const metadata: Metadata = {
   title,
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     description,
     url: '/',
     type: 'website',
-    images: [{ url: image, width: 1200, height: 630, alt: 'Cepheus' }],
+    images: [{ url: image, width: 1731, height: 909, alt: 'Cepheus' }],
   },
   twitter: {
     card: 'summary_large_image',
