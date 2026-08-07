@@ -34,11 +34,7 @@ export async function generateMetadata({
     locale === 'en'
       ? '/essays/what-we-owe-to-each-other'
       : `/${locale}/essays/what-we-owe-to-each-other`
-  const image = `/og?${new URLSearchParams({
-    kind: 'essay',
-    title: essayTitle,
-    description,
-  }).toString()}`
+  const image = '/brand/cepheus-brand-essay.png'
 
   return {
     title: isEnglish ? { absolute: title } : title,
@@ -52,8 +48,8 @@ export async function generateMetadata({
       images: [
         {
           url: image,
-          width: 1200,
-          height: 630,
+          width: 1731,
+          height: 909,
           alt: `${title} — Cepheus essay`,
         },
       ],
