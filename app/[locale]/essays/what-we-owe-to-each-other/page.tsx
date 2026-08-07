@@ -212,30 +212,27 @@ export default async function CepheusEssay({
             a great deal from writing this alongside people with deep expertise
             and passions in biology, physics, mathematics, economics, computer
             science, law, and other fields. Dario Amodei makes a similar
-            admission near the beginning of <em>Machines of Loving Grace</em>:
-            writing across so many domains made him realize how much better the
-            exercise would be with experts from those fields involved.
-            <FootnoteRef number={1} /> I think there is something important in
+            admission near the beginning of{' '}
+            <a
+              className="citation-link"
+              href="https://darioamodei.com/essay/machines-of-loving-grace"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <em>Machines of Loving Grace</em>
+            </a>
+            : writing across so many domains made him realize how much better
+            the exercise would be with experts from those fields involved. I
+            think there is something important in
             that admission. No individual, and probably no single institution,
             is supposed to understand all of this on its own.
           </p>
           <p>
             I have found it helpful to think of these as three views of the same
-            system. The{' '}
-            <a className="citation-link" href="#gap-matrix">
-              Gap Matrix
-            </a>{' '}
-            shows where technical knowledge and public authority separate. The{' '}
-            <a
-              className="citation-link"
-              href="#institutional-friction-explorer"
-            >
-              Friction Index
-            </a>{' '}
-            shows how that mismatch differs across fields. The{' '}
-            <a className="citation-link" href="#cepheus-map">
-              Institutional Link Map
-            </a>{' '}
+            system. The Gap Matrix<FootnoteRef number={1} /> shows where
+            technical knowledge and public authority separate. The Friction
+            Index<FootnoteRef number={2} /> shows how that mismatch differs
+            across fields. The Institutional Link Map<FootnoteRef number={3} />
             traces the dependencies and interfaces through which these
             institutions might be connected.
           </p>
@@ -249,7 +246,7 @@ export default async function CepheusEssay({
 
           <h2 id="what-is-expected-of-us">
             {labels.expected}
-            <FootnoteRef number={2} />
+            <FootnoteRef number={4} />
           </h2>
           <p>
             AI is often described as something that is simply happening to us,
@@ -323,7 +320,7 @@ export default async function CepheusEssay({
             I therefore do not think the central problem is a simple shortage of
             expertise, as specialization itself is not the problem. In fact, it
             is probably one of the main reasons humanity has become capable of
-            doing extraordinarily difficult things.<FootnoteRef number={3} /> We
+            doing extraordinarily difficult things.<FootnoteRef number={5} /> We
             spend years learning the language, methods, assumptions, and history
             of one field precisely because no person can know everything. But
             our institutions tend to preserve those divisions long after the
@@ -342,7 +339,7 @@ export default async function CepheusEssay({
             intelligence does not make every other constraint disappear, as
             experiments still take time, institutions still have procedures, and
             human beings still have to decide whether something should actually
-            be used.<FootnoteRef number={4} /> And there is another possible
+            be used.<FootnoteRef number={6} /> And there is another possible
             bottleneck that I think deserves much more attention:{' '}
             <strong>verification</strong>.
           </p>
@@ -356,10 +353,10 @@ export default async function CepheusEssay({
             disproved a longstanding conjecture about its answer. External
             mathematicians subsequently checked the argument and produced
             human-written papers explaining and verifying the result.
-            <FootnoteRef number={5} />
+            <FootnoteRef number={7} />
           </p>
           <p>
-            One of those tools is Lean, a formal proof system. In very simple
+            One of those tools is Lean, a formal proof system.<FootnoteRef number={8} /> In very simple
             terms, Lean allows mathematicians to express a mathematical statement
             with extraordinary precision and then check whether a proposed proof
             actually establishes it. It does not decide which theorem matters,
@@ -367,16 +364,16 @@ export default async function CepheusEssay({
             we intended to ask. In fact, the Lean community explicitly warns that
             this distinction matters: a formally valid proof is not useful if the
             formal statement does not correspond to the mathematical claim we
-            thought we were proving.<FootnoteRef number={6} />
+            thought we were proving.
           </p>
           <p>
             This is becoming particularly interesting alongside AI. DeepMind's
-            Formal Conjectures project is turning large collections of open
+            Formal Conjectures<FootnoteRef number={9} /> project is turning large collections of open
             mathematical problems—including hundreds drawn from Erdős's problem
             lists—into statements written in Lean. The point is partly to create
             problems against which automated theorem provers can work, but also
             to make the questions themselves precise enough that solutions can
-            eventually be formally checked.<FootnoteRef number={7} />
+            eventually be formally checked.
           </p>
           <p>
             I find this incredibly compelling, but also slightly frustrating as
@@ -410,9 +407,9 @@ export default async function CepheusEssay({
             This sounds rather obvious until you look at how much policy research
             is actually produced. A statute lives in one place, a policy analyst
             interprets it in a report and another researcher compresses the
-            report into a spreadsheet. Eventually, a conclusion can travel
-            remarkably far from the evidence that originally produced it, making
-            provenance difficult.
+            report into a spreadsheet. Eventually, a conclusion can become
+            separated from the evidence it is based on, making provenance
+            difficult to trace.
           </p>
           <p>
             People working between policy and technology have already encountered
@@ -421,7 +418,7 @@ export default async function CepheusEssay({
             policy analysts and software developers. Each group had its own
             structured language and professional standards, but each subsequent
             group had to reinterpret what the previous one produced.
-            <FootnoteRef number={8} /> There is now an entire Rules as Code
+            <FootnoteRef number={10} /> There is now an entire Rules as Code
             movement built around related ideas. Catala, a programming language
             designed specifically for statutory law, goes further by giving
             lawyers and programmers a shared medium through which certain
@@ -442,7 +439,7 @@ export default async function CepheusEssay({
             knowledge, the problem is often not that information does not exist,
             but that it is stored differently, described differently, and made
             legible to entirely different professional communities.
-            <FootnoteRef number={9} />
+            <FootnoteRef number={11} />
           </p>
           <p>
             That is when I began thinking about{' '}
@@ -465,7 +462,7 @@ export default async function CepheusEssay({
             What I would like Writ to borrow from systems such as Lean is not
             mathematical certainty, but <strong>provenance and interoperability</strong>.
             {' '}Provenance means that a judgment should remain connected to the
-            evidence and assumptions that produced it. Interoperability means
+            evidence and assumptions it is based on. Interoperability means
             that the same underlying piece of knowledge should be usable across
             different tools and professional communities without having to be
             continually translated and reconstructed. Someone working in policy
@@ -485,9 +482,9 @@ export default async function CepheusEssay({
             >
               current Writ pilot
             </a>
-            {' '}begins to test this idea. It preserves sources, claims and
+            {' '}begins to test this idea. It preserves sources, claims, and
             uncertainty in a structured form so that conclusions can still be
-            traced back to what produced them. I am cautiously optimistic that,
+            traced back to the evidence behind them. I am cautiously optimistic that,
             if such systems like this become useful enough, policy knowledge
             could become easier to compare, update, inspect, and carry across
             institutional boundaries without pretending that political judgment
@@ -497,7 +494,7 @@ export default async function CepheusEssay({
             That would not close the gap between policy and technology on its
             own. Nor is the goal to turn policymakers into programmers or
             engineers into policy analysts. The more realistic ambition is to
-            make the knowledge produced in each world more legible to the other.
+            make the knowledge in each world more legible to the other.
             {' '}<strong>The gap becomes harder to bridge when every transfer of
             knowledge also requires a new translation.</strong> Writ is currently
             in an experimental stage in asking whether some of that distance can
@@ -509,7 +506,7 @@ export default async function CepheusEssay({
           <p>
             Then, as people working in policy and technology, we have to ask
             ourselves: what is expected of us? More importantly, what do we owe
-            one another<FootnoteRef number={10} />, and what should that require
+            one another<FootnoteRef number={12} />, and what should that require
             of us? I do not think the answer is that engineers should become
             policymakers, or that policymakers need to understand every
             technical detail. These fields exist separately for good reasons.
@@ -557,7 +554,7 @@ export default async function CepheusEssay({
             Alignment, then, is not a matter of policy catching up with
             technology, or technology simply submitting to policy. The goal is
             not to arrive at some perfect agreement as we try to close this
-            gap.<FootnoteRef number={11} /> In regards to the aforementioned
+            gap.<FootnoteRef number={13} /> In regards to the aforementioned
             concept of Erdős problems and Lean, the lesson I take from mathematics
             is not that international affairs ought to become mathematics. It is
             almost the quite opposite. Mathematics can demand a degree of formal
@@ -579,15 +576,32 @@ export default async function CepheusEssay({
             that we already struggle to describe.
           </p>
           <p>
-            The July 2026 Hugging Face incident is a useful example. An AI agent
-            being evaluated inside OpenAI's environment found a way out of its
+            The{' '}
+            <a
+              aria-label="OpenAI and Hugging Face partner to address security incident during model evaluation"
+              className="citation-link"
+              href="https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              July 2026 Hugging Face incident
+            </a>{' '}
+            is a useful example. An AI agent being evaluated inside OpenAI's
+            environment found a way out of its
             intended sandbox, moved through third-party infrastructure, and
             eventually compromised parts of Hugging Face's production environment
             while trying to obtain answers to the benchmark on which it was being
-            tested. Hugging Face later reconstructed roughly 17,600 actions across
-            the intrusion. OpenAI and Hugging Face then had to work across
-            organizational boundaries to understand what the system had actually
-            done.<FootnoteRef number={12} />
+            tested. Hugging Face later reconstructed{' '}
+            <a
+              className="citation-link"
+              href="https://huggingface.co/blog/agent-intrusion-technical-timeline"
+              rel="noreferrer"
+              target="_blank"
+            >
+              roughly 17,600 actions across the intrusion
+            </a>
+            . OpenAI and Hugging Face then had to work across organizational
+            boundaries to understand what the system had actually done.
           </p>
           <p>
             The Hugging Face case is obviously a cybersecurity problem, but I
@@ -602,17 +616,16 @@ export default async function CepheusEssay({
           </p>
           <p>
             Even the debate over what should follow from incidents like this is
-            divided. A July 2026 open-weights statement backed by NVIDIA, Hugging
+            divided. A July 2026 open-weights statement<FootnoteRef number={14} /> backed by NVIDIA, Hugging
             Face, Microsoft, Meta, and many other firms openly acknowledges that
             once model weights are released, the original developer loses
             substantial control, and modified versions become difficult to trace
             or reverse. Yet the same statement argues that distributing access
             can improve security because defenders, researchers, and smaller
             organizations can inspect models and develop protections themselves.
-            <FootnoteRef number={13} />
           </p>
           <p>
-            I have not yet figured out how to answer the three questions I
+            I have not yet figured out how to answer the three questions<FootnoteRef number={15} /> I
             proposed at the beginning of this essay. But I do know that the
             answer is not to create one language in which everyone thinks. A
             better way forward is to find ways for our different languages to

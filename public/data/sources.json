@@ -192,41 +192,62 @@
     {
       "id": 1,
       "readMore": true,
-      "preview": [
-        {
-          "type": "text",
-          "text": "Dario Amodei makes this point near the beginning of "
-        },
-        {
-          "type": "source",
-          "sourceId": 18,
-          "text": "Machines of Loving Grace",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " (2024)."
-        }
-      ],
       "body": [
         {
           "type": "text",
-          "text": "Dario Amodei makes this point near the beginning of "
+          "text": "The Gap Matrix is intended to show where technical knowledge and public authority become separated across different fields. "
         },
         {
-          "type": "source",
-          "sourceId": 18,
-          "text": "Machines of Loving Grace",
-          "italic": true
+          "type": "link",
+          "text": "View the Gap Matrix here.",
+          "href": "#gap-matrix"
         },
         {
           "type": "text",
-          "text": " (2024). Writing across biology, economics, international relations, and other areas led him to suggest that the exercise would be better done with domain experts from those fields. I use the example here because the same limitation applies to the kind of cross-disciplinary argument I am making."
+          "text": " This link will move you to the visual elsewhere in the essay."
         }
       ]
     },
     {
       "id": 2,
+      "readMore": true,
+      "body": [
+        {
+          "type": "text",
+          "text": "The Friction Index is intended to compare how the distance between technical knowledge and public authority differs across fields. "
+        },
+        {
+          "type": "link",
+          "text": "View the Friction Index here.",
+          "href": "#institutional-friction-explorer"
+        },
+        {
+          "type": "text",
+          "text": " This link will move you to the visual elsewhere in the essay."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "readMore": true,
+      "body": [
+        {
+          "type": "text",
+          "text": "The Institutional Link Map is intended to show the dependencies, relationships, and interfaces connecting the institutions discussed in this essay. "
+        },
+        {
+          "type": "link",
+          "text": "View the Institutional Link Map here.",
+          "href": "#cepheus-map"
+        },
+        {
+          "type": "text",
+          "text": " This link will move you to the visual elsewhere in the essay."
+        }
+      ]
+    },
+    {
+      "id": 4,
       "readMore": true,
       "preview": [
         {
@@ -279,7 +300,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "readMore": true,
       "body": [
         {
@@ -298,7 +319,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "readMore": true,
       "preview": [
         {
@@ -344,7 +365,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 7,
       "readMore": true,
       "preview": [
         {
@@ -390,7 +411,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 8,
       "readMore": true,
       "preview": [
         {
@@ -426,7 +447,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 9,
       "readMore": true,
       "preview": [
         {
@@ -462,7 +483,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 10,
       "readMore": true,
       "preview": [
         {
@@ -498,7 +519,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": 11,
       "readMore": true,
       "preview": [
         {
@@ -553,7 +574,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": 12,
       "readMore": true,
       "preview": [
         {
@@ -589,7 +610,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": 13,
       "readMore": true,
       "preview": [
         {
@@ -615,86 +636,36 @@
       ]
     },
     {
-      "id": 12,
+      "id": 14,
       "readMore": true,
-      "preview": [
-        {
-          "type": "text",
-          "text": "OpenAI, "
-        },
-        {
-          "type": "source",
-          "sourceId": 28,
-          "text": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": "; Hugging Face, "
-        },
-        {
-          "type": "source",
-          "sourceId": 29,
-          "text": "Anatomy of a Frontier Lab Agent Intrusion",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ],
       "body": [
         {
-          "type": "text",
-          "text": "OpenAI, "
-        },
-        {
           "type": "source",
-          "sourceId": 28,
-          "text": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+          "sourceId": 30,
+          "text": "Open Weights and American AI Leadership",
           "italic": true
         },
         {
           "type": "text",
-          "text": "; Hugging Face, "
-        },
-        {
-          "type": "source",
-          "sourceId": 29,
-          "text": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": ". Hugging Face’s reconstruction covers roughly 17,600 attacker actions across an intrusion that moved from OpenAI’s evaluation environment, through third-party infrastructure, and into Hugging Face’s systems. I use the case here because understanding what happened required evidence and coordination across organizational boundaries."
+          "text": " (July 2026). I use it here as one side of the open-weights governance debate, rather than as evidence that open weights are inherently safer."
         }
       ]
     },
     {
-      "id": 13,
+      "id": 15,
       "readMore": true,
-      "preview": [
-        {
-          "type": "source",
-          "sourceId": 30,
-          "text": "Open Weights and American AI Leadership",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " (July 2026) acknowledges that once model weights are released, the original developer loses substantial control."
-        }
-      ],
       "body": [
         {
-          "type": "source",
-          "sourceId": 30,
-          "text": "Open Weights and American AI Leadership",
-          "italic": true
+          "type": "text",
+          "text": "These are the three questions posed at the beginning of the essay:"
         },
         {
-          "type": "text",
-          "text": " (July 2026) acknowledges that once model weights are released, the original developer loses substantial control and modified versions become difficult to trace or reverse. The same statement argues that wider access can strengthen defensive capability and transparency. I use it here as one side of the open-weights governance debate, rather than as evidence that open weights are inherently safer."
+          "type": "list",
+          "items": [
+            "Who has legal or political authority?",
+            "Who controls the technology or infrastructure?",
+            "Why is there no reliable institution connecting these groups?"
+          ]
         }
       ]
     }

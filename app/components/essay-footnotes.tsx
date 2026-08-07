@@ -11,12 +11,22 @@ import {
 import sourcesData from '../../public/data/sources.json'
 import { scrollToEssayTarget } from './essay-scroll'
 
-type FootnoteSegment = {
-  type: 'text' | 'source'
-  text: string
-  sourceId?: number
-  italic?: boolean
-}
+type FootnoteSegment =
+  | {
+      type: 'text' | 'source'
+      text: string
+      sourceId?: number
+      italic?: boolean
+    }
+  | {
+      type: 'link'
+      text: string
+      href: string
+    }
+  | {
+      type: 'list'
+      items: string[]
+    }
 
 type Footnote = {
   id: number
@@ -96,6 +106,28 @@ function FootnoteContent({ segments }: { segments: FootnoteSegment[] }) {
   return segments.map((segment, index) => {
     if (segment.type === 'text') {
       return <span key={`text-${index}`}>{segment.text}</span>
+    }
+
+    if (segment.type === 'link') {
+      return (
+        <a className="citation-link" href={segment.href} key={`link-${index}`}>
+          {segment.text}
+        </a>
+      )
+    }
+
+    if (segment.type === 'list') {
+      return (
+        <span className="footnote-list" key={`list-${index}`}>
+          <br />
+          {segment.items.map((item, itemIndex) => (
+            <span key={`list-item-${itemIndex}`}>
+              {itemIndex + 1}. {item}
+              {itemIndex < segment.items.length - 1 && <br />}
+            </span>
+          ))}
+        </span>
+      )
     }
 
     const source = sourcesData.sources.find(
