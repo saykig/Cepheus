@@ -578,12 +578,14 @@ export default async function CepheusEssay({
             far more often than they currently do.
           </p>
           <p>
-            I do not think the answer is to create one language in which everyone
-            thinks. We need better ways for our different languages to meet.
-            Perhaps this is what the worlds of policy and technology owe one
-            another: not to become the same, but to make a serious effort to
-            render their knowledge understandable across the boundary between
-            them.
+            I have not yet figured out how to answer the three questions I
+            proposed at the beginning of this essay. But I do know that the
+            answer is not to create one language in which everyone thinks. A
+            better way forward is to find ways for our different languages to
+            meet, and to make the distance between them easier to cross. Perhaps
+            this is what the worlds of policy and technology owe one another: not
+            to become the same, but to make a serious effort to render their
+            knowledge understandable across the boundary between them.
           </p>
 
             <EssayEndnotes />
