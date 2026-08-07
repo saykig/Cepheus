@@ -394,12 +394,11 @@ export default async function CepheusEssay({
           </p>
           <p>
             This sounds rather obvious until you look at how much policy research
-            is actually produced. A statute lives in one place. An institutional
-            mandate lives somewhere else. A policy analyst interprets it in a
-            report and another researcher compresses the report into a
-            spreadsheet. Someone else cites that spreadsheet in a comparison.
-            Eventually, a conclusion can travel remarkably far from the evidence
-            that originally produced it, making provenance difficult.
+            is actually produced. A statute lives in one place, a policy analyst
+            interprets it in a report and another researcher compresses the
+            report into a spreadsheet. Eventually, a conclusion can travel
+            remarkably far from the evidence that originally produced it, making
+            provenance difficult.
           </p>
           <p>
             People working between policy and technology have already encountered
