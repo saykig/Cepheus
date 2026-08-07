@@ -160,6 +160,17 @@ export default async function CepheusEssay({
             </li>
           </ol>
 
+          <p>
+            The third question is key.{' '}
+            <strong>
+              What is expected of us, then, is neither perfect coordination nor
+              a single institution capable of seeing everything.
+            </strong>{' '}
+            A more realistic starting point is to make the relationships
+            visible: who understands the technology, who can make the
+            decisions, and where responsibility sits.
+          </p>
+
           <section className="essay-visual-block" id="gap-matrix">
             <GapMapMatrix locale={locale} />
             <p className="tool-caption">
@@ -196,16 +207,6 @@ export default async function CepheusEssay({
             </EssayDisclosure>
           </section>
 
-          <p>
-            The third question is key.{' '}
-            <strong>
-              What is expected of us, then, is neither perfect coordination nor
-              a single institution capable of seeing everything.
-            </strong>{' '}
-            A more realistic starting point is to make the relationships
-            visible: who understands the technology, who can make the
-            decisions, and where responsibility sits.
-          </p>
           <p>
             I should also say, quite candidly, that I would almost certainly gain
             a great deal from writing this alongside people with deep expertise
