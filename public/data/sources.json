@@ -186,6 +186,12 @@
       "title": "Broad Institute, CRISPR Timeline.",
       "url": "https://www.broadinstitute.org/what-broad/areas-focus/project-spotlight/crispr-timeline",
       "note": "Traces CRISPR's path from early observations of unusual bacterial DNA sequences to practical gene-editing tools."
+    },
+    {
+      "id": 32,
+      "title": "Kristine Eck, In Data We Trust? A Comparison of UCDP GED and ACLED Conflict Events Datasets.",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0010836711434463",
+      "note": "Compares the coding and coverage differences between UCDP GED and ACLED conflict-event datasets."
     }
   ],
   "footnotes": [
@@ -350,7 +356,7 @@
         },
         {
           "type": "text",
-          "text": ", Amodei asks what becomes limiting once intelligence itself becomes much more abundant, pointing to factors such as the speed of the outside world, missing data, and human constraints. In "
+          "text": ", Dario points to factors such as the speed of the outside world, missing data, and human constraints in a world of abundant intelligence. In "
         },
         {
           "type": "source",
@@ -385,14 +391,9 @@
       ],
       "body": [
         {
-          "type": "text",
-          "text": "OpenAI, "
-        },
-        {
           "type": "source",
           "sourceId": 20,
-          "text": "An OpenAI model has disproved a central conjecture in discrete geometry",
-          "italic": true
+          "text": "An OpenAI model has disproved a central conjecture in discrete geometry"
         },
         {
           "type": "text",
@@ -442,7 +443,7 @@
         },
         {
           "type": "text",
-          "text": " makes an important distinction between verifying a proof and verifying that the formal statement actually corresponds to the theorem someone claims to have proved. I borrow that distinction here because formal verification still depends on representing the original claim correctly."
+          "text": " makes an important distinction between verifying a proof and verifying that the formal statement actually corresponds to the theorem someone claims to have proved."
         }
       ]
     },
@@ -457,8 +458,7 @@
         {
           "type": "source",
           "sourceId": 23,
-          "text": "Formal Conjectures",
-          "italic": true
+          "text": "Formal Conjectures"
         },
         {
           "type": "text",
@@ -473,53 +473,55 @@
         {
           "type": "source",
           "sourceId": 23,
-          "text": "Formal Conjectures",
-          "italic": true
+          "text": "Formal Conjectures"
         },
         {
           "type": "text",
-          "text": " collects open mathematical conjectures as Lean 4 statements, including a large collection drawn from Erdős problem lists. The project is intended in part as a benchmark for automated theorem proving. I use it here as an example of making the question itself precise enough that a later answer can be checked."
+          "text": " project is intended in part as a benchmark for automated theorem proving."
         }
       ]
     },
     {
       "id": 10,
       "readMore": true,
-      "preview": [
-        {
-          "type": "text",
-          "text": "The New Zealand Government’s "
-        },
-        {
-          "type": "source",
-          "sourceId": 24,
-          "text": "Better Rules for Government Discovery Report",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " examined the translation gap across policy, legislative drafting, rules analysis, and software implementation."
-        }
-      ],
       "body": [
         {
           "type": "text",
-          "text": "The New Zealand Government’s "
+          "text": "Conflict-event data offers a useful parallel because the difficulty is often not that data does not exist, but that different datasets make the world legible through different coding choices. UCDP, for example, defines state-based armed conflict through a contested incompatibility over government or territory and a threshold of at least 25 battle-related deaths in a calendar year, while ACLED collects real-time political violence and disorder events using a broader event-data structure. ACLED itself warns that care is needed when combining its data with datasets that use different units of analysis, and that findings may differ across datasets because of different scopes and methodologies. "
         },
         {
           "type": "source",
-          "sourceId": 24,
-          "text": "Better Rules for Government Discovery Report",
-          "italic": true
+          "sourceId": 32,
+          "text": "Kristine Eck’s comparison of UCDP GED and ACLED"
         },
         {
           "type": "text",
-          "text": " examined the translation gap across policy, legislative drafting, rules analysis, and software implementation. I use it here because it treats this translation problem as an institutional problem, not simply a technical one."
+          "text": " is useful because it shows how even adjacent, respected datasets can require substantial interpretive work before they can be responsibly compared."
         }
       ]
     },
     {
       "id": 11,
+      "readMore": true,
+      "body": [
+        {
+          "type": "text",
+          "text": "The OECD’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 25,
+          "text": "Cracking the Code: Rulemaking for Humans and Machines",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " is useful here because it shows that the need for machine-consumable public rules has already been recognized. But it should not be mistaken for the thing it describes: it is a working paper, not an implemented corpus or dataset. Its abstract presents “Rules as Code” as a proposal and describes the paper as a guide to the concept’s potential and possible public-service applications. In that sense, it also illustrates the limitation I am describing in international relations: multilateral policy institutions often identify the need for a shared structure, but do not themselves provide the structured knowledge layer it calls for."
+        }
+      ]
+    },
+    {
+      "id": 12,
       "readMore": true,
       "preview": [
         {
@@ -574,7 +576,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": 13,
       "readMore": true,
       "preview": [
         {
@@ -610,7 +612,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": 14,
       "readMore": true,
       "preview": [
         {
@@ -636,9 +638,13 @@
       ]
     },
     {
-      "id": 14,
+      "id": 15,
       "readMore": true,
       "body": [
+        {
+          "type": "text",
+          "text": "I treat "
+        },
         {
           "type": "source",
           "sourceId": 30,
@@ -647,12 +653,12 @@
         },
         {
           "type": "text",
-          "text": " (July 2026). I use it here as one side of the open-weights governance debate, rather than as evidence that open weights are inherently safer."
+          "text": " (July 2026) as one side of the open-weights governance debate, rather than as evidence that open weights are inherently safer."
         }
       ]
     },
     {
-      "id": 15,
+      "id": 16,
       "readMore": true,
       "body": [
         {

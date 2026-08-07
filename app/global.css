@@ -389,6 +389,7 @@ html[data-theme="dark"] .theme-toggle::after {
 .essay-trigger {
   appearance: none;
   position: relative;
+  isolation: isolate;
   margin: 0;
   padding: 0;
   border: 0;
@@ -404,11 +405,50 @@ html[data-theme="dark"] .theme-toggle::after {
 .essay-nav.is-current .essay-trigger::after {
   content: "";
   position: absolute;
-  top: calc(100% + 0.32rem);
-  right: 0;
-  left: 0;
-  height: 1px;
-  background: color-mix(in oklab, var(--olive) 54%, transparent);
+  z-index: -1;
+  top: 54%;
+  left: 50%;
+  width: 2.78rem;
+  height: 1.26rem;
+  border-radius: 54% 46% 59% 41% / 48% 55% 45% 52%;
+  background:
+    radial-gradient(circle at 76% 76%, var(--watercolor-sage-core) 0 6%, transparent 8%),
+    radial-gradient(circle at 20% 80%, var(--watercolor-sage-core) 0 5%, transparent 7%),
+    radial-gradient(
+      ellipse at 47% 42%,
+      var(--watercolor-sage-core),
+      var(--watercolor-sage-drop-wash) 51%,
+      transparent 74%
+    );
+  filter: blur(0.55px);
+  mix-blend-mode: var(--watercolor-blend);
+  opacity: 0.96;
+  pointer-events: none;
+  transform: translateX(-50%) rotate(-5deg);
+  animation: nav-watercolor-bloom 720ms var(--ease-expo) both;
+}
+
+@keyframes nav-watercolor-bloom {
+  0% {
+    opacity: 0;
+    filter: blur(2.4px);
+    transform: translateX(-50%) translateY(-0.16rem) rotate(-12deg) scale(0.16, 0.28);
+  }
+  38% {
+    opacity: 0.76;
+    filter: blur(1.15px);
+    transform: translateX(-50%) translateY(-0.04rem) rotate(-8deg) scale(0.72, 0.58);
+  }
+  74% {
+    opacity: 0.98;
+    filter: blur(0.68px);
+    transform: translateX(-50%) translateY(0.02rem) rotate(-3deg) scale(1.08, 0.84);
+  }
+  100% {
+    opacity: 0.96;
+    filter: blur(0.55px);
+    transform: translateX(-50%) rotate(-5deg) scale(1);
+  }
 }
 
 .essay-menu {
@@ -857,6 +897,10 @@ html[data-theme="dark"] .theme-toggle::after {
   .watercolor-link {
     animation-duration: 1ms;
   }
+
+  .essay-nav.is-current .essay-trigger::after {
+    animation: none;
+  }
 }
 
 /* ============================================================ Essay chrome */
@@ -1143,9 +1187,8 @@ html[data-theme="dark"] .theme-toggle::after {
     min-height: 76px;
   }
 
-  .technical-capacity-essay .essay-scroll-index::before {
-    top: 38px;
-    bottom: 38px;
+  .technical-capacity-essay .essay-scroll-index {
+    --essay-index-line-inset: 38px;
   }
 
   .technical-capacity-essay .essay-index-item.is-child {
@@ -1480,6 +1523,7 @@ html[data-theme="dark"] .theme-toggle::after {
 }
 
 .essay-scroll-index {
+  --essay-index-line-inset: 32px;
   position: relative;
   display: grid;
   gap: 0.2rem;
@@ -1493,8 +1537,8 @@ html[data-theme="dark"] .theme-toggle::after {
 .essay-scroll-index::before {
   content: "";
   position: absolute;
-  top: 32px;
-  bottom: 32px;
+  top: var(--essay-index-line-inset);
+  bottom: var(--essay-index-line-inset);
   left: 0.29rem;
   width: 1px;
   transform: translateX(-50%);

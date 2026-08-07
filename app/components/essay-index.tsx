@@ -1,7 +1,7 @@
 'use client'
 
 import type { CSSProperties } from 'react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { getEssayTargetOffset } from './essay-scroll'
 import type { Locale } from 'app/lib/i18n'
 import { siteCopy } from 'app/lib/site-copy'
@@ -26,6 +26,7 @@ export function EssayIndex({
   const [visibleChildId, setVisibleChildId] = useState<string | null>(null)
   const [progress, setProgress] = useState(0)
   const [noteOpacity, setNoteOpacity] = useState(1)
+  const indexRef = useRef<HTMLElement>(null)
   const flatSections = useMemo(
     () => sections.flatMap((section) => [section, ...(section.children ?? [])]),
     [sections],
@@ -37,16 +38,15 @@ export function EssayIndex({
 
   useEffect(() => {
     const update = () => {
-      const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight
-      const next = scrollable > 0 ? window.scrollY / scrollable : 0
-      setProgress(Math.min(1, Math.max(0, next)))
       setNoteOpacity(Math.max(0.78, 1 - window.scrollY / 1800))
 
       const current = flatSections.reduce((active, section) => {
         const element = document.getElementById(section.id)
         if (!element) return active
-        return element.getBoundingClientRect().top <= 320 ? section.id : active
+        return element.getBoundingClientRect().top <=
+          getEssayTargetOffset(section.id)
+          ? section.id
+          : active
       }, flatSections[0]?.id)
       setActiveId(current)
 
@@ -78,6 +78,37 @@ export function EssayIndex({
       window.removeEventListener('resize', update)
     }
   }, [childSections, flatSections])
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const index = indexRef.current
+      const activeItem = index?.querySelector<HTMLElement>(
+        `[data-index-section="${activeId}"]`,
+      )
+      const dot = activeItem?.querySelector<HTMLElement>('.essay-index-dot')
+      if (!index || !dot) return
+
+      const lineInset =
+        Number.parseFloat(
+          getComputedStyle(index).getPropertyValue('--essay-index-line-inset'),
+        ) || 32
+      const indexRect = index.getBoundingClientRect()
+      const dotRect = dot.getBoundingClientRect()
+      const lineLength = Math.max(indexRect.height - lineInset * 2, 1)
+      const next =
+        (dotRect.top + dotRect.height / 2 - indexRect.top - lineInset) /
+        lineLength
+
+      setProgress(Math.min(1, Math.max(0, next)))
+    }
+
+    const frame = window.requestAnimationFrame(updateProgress)
+    window.addEventListener('resize', updateProgress)
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener('resize', updateProgress)
+    }
+  }, [activeId, visibleChildId])
 
   useEffect(() => {
     const id = decodeURIComponent(window.location.hash.slice(1))
@@ -143,6 +174,7 @@ export function EssayIndex({
           .join(' ')}
         href={`#${section.id}`}
         key={section.id}
+        data-index-section={section.id}
         aria-current={isActive ? 'true' : undefined}
         tabIndex={tabIndex}
       >
@@ -167,7 +199,11 @@ export function EssayIndex({
         {copy.sideNote}
       </p>
 
-      <nav className="essay-scroll-index" aria-label={copy.sections}>
+      <nav
+        className="essay-scroll-index"
+        aria-label={copy.sections}
+        ref={indexRef}
+      >
         {sections.map((section) => {
           const childIds = section.children?.map((child) => child.id) ?? []
           const branchOpen = childIds.includes(visibleChildId ?? '')

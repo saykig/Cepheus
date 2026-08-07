@@ -376,9 +376,12 @@ export default async function CepheusEssay({
             eventually be formally checked.
           </p>
           <p>
-            I find this incredibly compelling, but also slightly frustrating as
-            someone who works in global affairs, because our problems do not
-            behave like this. We cannot place a statement such as{' '}
+            I find this incredibly compelling,{' '}
+            <strong>
+              but also slightly frustrating as someone who works in global affairs,
+              because our problems do not behave like this.
+            </strong>{' '}
+            We cannot place a statement such as{' '}
             <em>this institution has authority over this AI system</em> into Lean
             and expect it to tell us whether that statement is true. Even the
             word <em>authority</em> immediately creates more questions. Authority
@@ -413,14 +416,30 @@ export default async function CepheusEssay({
           </p>
           <p>
             People working between policy and technology have already encountered
-            narrower versions of this problem. New Zealand's Better Rules
-            project, for example, found what it called a translation gap between
-            policy analysts and software developers. Each group had its own
-            structured language and professional standards, but each subsequent
-            group had to reinterpret what the previous one produced.
-            <FootnoteRef number={10} /> There is now an entire Rules as Code
-            movement built around related ideas. Catala, a programming language
-            designed specifically for statutory law, goes further by giving
+            narrower versions of this problem.{' '}
+            <a
+              className="citation-link"
+              href="https://www.digital.govt.nz/dmsdocument/95-better-zrules-for-government-discovery-report/html"
+              rel="noreferrer"
+              target="_blank"
+            >
+              New Zealand&apos;s Better Rules project
+            </a>
+            , for example, found what it called a translation gap between policy
+            analysts and software developers. Each group had its own structured
+            language and professional standards, but each subsequent group had
+            to reinterpret what the previous one produced. There is now an
+            entire Rules as Code movement built around related ideas.{' '}
+            <a
+              className="citation-link"
+              href="https://catala-lang.org/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Catala
+            </a>
+            , a programming language designed specifically for statutory law,
+            goes further by giving
             lawyers and programmers a shared medium through which certain
             computational parts of legislation can be represented and tested.
             None of these projects makes politics mathematically provable, nor
@@ -431,15 +450,15 @@ export default async function CepheusEssay({
           <p>
             What made this problem feel less abstract to me was realizing how
             often I encountered the same fragmentation simply by trying to
-            understand AI governance. I would open one government report, which
-            led me to another framework, then a paper, then a legal document, and
+            understand AI governance.<FootnoteRef number={10} /> I would open one government report, which
+            led me to another framework, then a paper, then a legal document<FootnoteRef number={11} />, and
             eventually to projects such as Catala or the OECD’s work on Rules as
             Code. Before long, I had ten tabs open, all describing parts of the
             same problem in completely different languages. In an era of abundant
             knowledge, the problem is often not that information does not exist,
             but that it is stored differently, described differently, and made
             legible to entirely different professional communities.
-            <FootnoteRef number={11} />
+            <FootnoteRef number={12} />
           </p>
           <p>
             That is when I began thinking about{' '}
@@ -506,7 +525,7 @@ export default async function CepheusEssay({
           <p>
             Then, as people working in policy and technology, we have to ask
             ourselves: what is expected of us? More importantly, what do we owe
-            one another<FootnoteRef number={12} />, and what should that require
+            one another<FootnoteRef number={13} />, and what should that require
             of us? I do not think the answer is that engineers should become
             policymakers, or that policymakers need to understand every
             technical detail. These fields exist separately for good reasons.
@@ -554,7 +573,7 @@ export default async function CepheusEssay({
             Alignment, then, is not a matter of policy catching up with
             technology, or technology simply submitting to policy. The goal is
             not to arrive at some perfect agreement as we try to close this
-            gap.<FootnoteRef number={13} /> In regards to the aforementioned
+            gap.<FootnoteRef number={14} /> In regards to the aforementioned
             concept of Erdős problems and Lean, the lesson I take from mathematics
             is not that international affairs ought to become mathematics. It is
             almost the quite opposite. Mathematics can demand a degree of formal
@@ -616,7 +635,7 @@ export default async function CepheusEssay({
           </p>
           <p>
             Even the debate over what should follow from incidents like this is
-            divided. A July 2026 open-weights statement<FootnoteRef number={14} /> backed by NVIDIA, Hugging
+            divided. A July 2026 open-weights statement<FootnoteRef number={15} /> backed by NVIDIA, Hugging
             Face, Microsoft, Meta, and many other firms openly acknowledges that
             once model weights are released, the original developer loses
             substantial control, and modified versions become difficult to trace
@@ -625,7 +644,7 @@ export default async function CepheusEssay({
             organizations can inspect models and develop protections themselves.
           </p>
           <p>
-            I have not yet figured out how to answer the three questions<FootnoteRef number={15} /> I
+            I have not yet figured out how to answer the three questions<FootnoteRef number={16} /> I
             proposed at the beginning of this essay. But I do know that the
             answer is not to create one language in which everyone thinks. A
             better way forward is to find ways for our different languages to
