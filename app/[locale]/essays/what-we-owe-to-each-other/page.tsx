@@ -250,8 +250,7 @@ export default async function CepheusEssay({
             language captures the speed of change, but it can also make
             responsibility disappear. Before asking whether policy can keep up,
             we should ask a more basic question:{' '}
-            <em>what is expected of us?</em> Here, I would put the problem more
-            simply: rooms full of experts, but too few hallways between them.
+            <em>what is expected of us?</em>
           </p>
           <p>
             Much of frontier AI is developed inside a small number of private
@@ -315,25 +314,19 @@ export default async function CepheusEssay({
                 standards. These powers rarely belong to the same institution.
               </p>
               <p>
-                In cybersecurity, a government agency may issue guidance or
-                investigate an attack, while private companies still control the
-                affected networks and infrastructure. In military AI, elected
-                governments and defence institutions hold authority over
+                For example, in cybersecurity, a government agency may issue
+                guidance or investigate an attack, while private companies still
+                control the affected networks and infrastructure. In military AI,
+                elected governments and defence institutions hold authority over
                 military operations, but contractors and AI companies may control
-                the systems through which those decisions are carried out. In
-                biosecurity, authority may be divided among health agencies,
-                research regulators, laboratories, security institutions, and
-                international bodies.
+                the systems through which those decisions are carried out.
               </p>
               <p>
-                The Anthropic-Pentagon dispute belongs partly on this map. The
-                Pentagon argued that military decisions belonged to the state.
-                Anthropic accepted that principle but argued that it should not
-                be required to provide a system for uses it considered
-                technically unreliable or incompatible with basic safeguards.
-                The dispute was not simply about whether the military or the
-                company had authority. It was about which kind of authority
-                applied to which decision.
+                In military AI, defence institutions may rely on commercial
+                models and cloud systems that they do not fully own. Anthropic’s
+                clash with the White House demonstrated what happens when a
+                government becomes operationally interested in a system while the
+                supplier retains control over important conditions of use.
               </p>
             </EssayDisclosure>
           </section>
@@ -343,11 +336,7 @@ export default async function CepheusEssay({
             begin to shape public life. A decision about model access or
             safeguards may be made inside a company, yet its consequences can
             reach national security, civil liberties, and critical
-            infrastructure. Governments may then depend on systems they cannot
-            fully inspect, meanwhile the company understands the technology but
-            does not possess the authority to decide every public use. In
-            return, the government possesses that authority but may lack the
-            knowledge needed to exercise it well.
+            infrastructure.
           </p>
           <p>
             I therefore do not think the central problem is a simple shortage
@@ -390,15 +379,6 @@ export default async function CepheusEssay({
             consequences.
           </p>
           <p>
-            Cepheus is my attempt to make those relationships easier to see. It
-            would not tell institutions what to decide, nor would it remove
-            disagreement between them. It would show where knowledge sits,
-            where authority lies, and where one institution has become
-            dependent on another. I think that matters a lot, because good
-            judgment depends, at least in part, on having an honest picture of
-            the system in which decisions are being made.
-          </p>
-          <p>
             Thus, these relationships form something closer to an institutional
             system than a simple divide between government and industry. The
             map below is a preliminary picture of that system:
@@ -427,32 +407,13 @@ export default async function CepheusEssay({
                 coordinate on cybersecurity threats.
               </p>
               <p>
-                In military AI, defence institutions may rely on commercial
-                models and cloud systems that they do not fully own. The Anthropic
-                dispute demonstrated what happens when a government becomes
-                operationally interested in a system while the supplier retains
-                control over important conditions of use.
-              </p>
-              <p>
-                In biosecurity, AI companies may depend on external scientists
-                to evaluate biological capabilities, while public-health
-                institutions may depend on private laboratories, commercial data,
-                and proprietary AI tools.
-              </p>
-              <p>
-                The Institutional Link Map would make these
-                relationships visible because dependency can shape decisions as
-                strongly as law does.
+                The Institutional Link Map tries to make these relationships
+                visible because dependency can shape decisions as strongly as law
+                does.
               </p>
             </EssayDisclosure>
           </section>
 
-          <p>
-            It is important to note that, no map can decide what these
-            institutions should do. It can, however, make it harder for any
-            institution to claim that the relevant knowledge or responsibility
-            belonged entirely to someone else.
-          </p>
           <p>
             Perhaps this is what the worlds of policy and technology owe one
             another: not to become the same, but to make a serious effort to
