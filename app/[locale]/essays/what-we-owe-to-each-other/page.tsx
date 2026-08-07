@@ -227,13 +227,11 @@ export default async function CepheusEssay({
             institutions might be connected.
           </p>
           <p>
-            This is the core of the Cepheus Link. Its central claim is
-            that the governance problem of frontier AI lies in the distance
-            between who knows, who decides, and who bears the risk. The greater
-            that distance, the more likely AI policy is to become late,
-            adversarial, or technically unworkable. Cepheus is therefore
-            proposed as a policy-intelligence platform for mapping that distance
-            across public and private institutions.
+            In this essay, I try to illustrate that the central governance
+            problem of frontier AI lies in the distance between those who
+            understand it most deeply and those who decide how it should be
+            managed. The greater that distance, the more likely AI policy is to
+            become adversarial, or technically unworkable.
           </p>
 
           <h2 id="what-is-expected-of-us">
