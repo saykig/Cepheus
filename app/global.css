@@ -310,6 +310,15 @@ button {
   pointer-events: auto;
 }
 
+.header-navigation {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  flex-flow: row nowrap;
+  gap: 20px;
+  white-space: nowrap;
+}
+
 .essay-nav {
   display: flex;
   align-items: center;
@@ -372,8 +381,14 @@ html[data-theme="dark"] .theme-toggle::after {
   min-width: 12rem;
 }
 
+.header-navigation .essay-nav {
+  flex: none;
+  min-width: 0;
+}
+
 .essay-trigger {
   appearance: none;
+  position: relative;
   margin: 0;
   padding: 0;
   border: 0;
@@ -381,9 +396,19 @@ html[data-theme="dark"] .theme-toggle::after {
   color: var(--ink);
   cursor: default;
   font-family: var(--font-display), "Iowan Old Style", "Palatino Linotype", serif;
-  font-size: 1.12rem;
+  font-size: 1.4rem;
   line-height: 1;
   letter-spacing: 0;
+}
+
+.essay-nav.is-current .essay-trigger::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.32rem);
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: color-mix(in oklab, var(--olive) 54%, transparent);
 }
 
 .essay-menu {
@@ -411,10 +436,30 @@ html[data-theme="dark"] .theme-toggle::after {
 }
 
 .essay-nav:hover .essay-menu,
-.essay-nav:focus-within .essay-menu {
+.essay-nav:focus-within .essay-menu,
+.project-nav.is-open .project-menu {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+}
+
+.project-trigger {
+  cursor: pointer;
+}
+
+.project-menu {
+  min-width: 16rem;
+}
+
+.project-menu a {
+  display: grid;
+  gap: 0.14rem;
+}
+
+.project-menu-description {
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  line-height: 1.4;
 }
 
 .language-picker select {
@@ -1733,6 +1778,10 @@ html[data-theme="dark"] .theme-toggle::after {
 
   .header-actions {
     gap: 12px;
+  }
+
+  .header-navigation {
+    gap: 14px;
   }
 
   .essay-nav {

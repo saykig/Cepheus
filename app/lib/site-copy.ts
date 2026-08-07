@@ -4,6 +4,8 @@ type SiteCopy = {
   essays: string
   essayTitle: string
   essayMenuTitle: string
+  projects: string
+  writDescription: string
   home: string
   footer: string
   backToTop: string
@@ -25,6 +27,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     essays: 'essays',
     essayTitle: 'The Cepheus Link',
     essayMenuTitle: 'What We Owe to Each Other',
+    projects: 'projects',
+    writDescription: 'domain-specific language for global affairs',
     home: 'Home',
     footer: 'Footer',
     backToTop: 'Back to top',
@@ -46,6 +50,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     essays: 'эссе',
     essayTitle: 'Связь Cepheus',
     essayMenuTitle: 'Связь Cepheus',
+    projects: 'Проекты',
+    writDescription: 'Предметно-ориентированный язык для глобальных отношений',
     home: 'Главная',
     footer: 'Нижняя навигация',
     backToTop: 'Наверх',
@@ -67,6 +73,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     essays: '에세이',
     essayTitle: 'Cepheus 연결',
     essayMenuTitle: 'Cepheus 연결',
+    projects: '프로젝트',
+    writDescription: '국제 관계를 위한 도메인 특화 언어',
     home: '홈',
     footer: '하단 메뉴',
     backToTop: '맨 위로',
@@ -88,6 +96,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     essays: 'essais',
     essayTitle: 'Le lien Cepheus',
     essayMenuTitle: 'Le lien Cepheus',
+    projects: 'Projets',
+    writDescription: 'Un langage spécialisé pour les affaires mondiales',
     home: 'Accueil',
     footer: 'Pied de page',
     backToTop: 'Haut de page',
@@ -109,6 +119,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     essays: '文章',
     essayTitle: 'Cepheus 之链',
     essayMenuTitle: 'Cepheus 之链',
+    projects: '项目',
+    writDescription: '面向全球事务的领域专用语言',
     home: '首页',
     footer: '页脚',
     backToTop: '返回顶部',

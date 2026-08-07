@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   defaultLocale,
   localeCookie,
@@ -23,8 +23,34 @@ export function Navbar({
   const pathname = usePathname()
   const unprefixedPath = stripLocale(pathname)
   const showHome = unprefixedPath !== '/'
+  const isEssayRoute = unprefixedPath.startsWith('/essays')
   const [darkMode, setDarkMode] = useState(false)
+  const [projectsOpen, setProjectsOpen] = useState(false)
+  const projectsNavRef = useRef<HTMLElement>(null)
   const copy = siteCopy[locale]
+
+  useEffect(() => {
+    const closeProjectsOnOutsidePress = (event: PointerEvent) => {
+      const target = event.target
+      if (
+        target instanceof Node &&
+        !projectsNavRef.current?.contains(target)
+      ) {
+        setProjectsOpen(false)
+      }
+    }
+
+    const closeProjectsOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setProjectsOpen(false)
+    }
+
+    document.addEventListener('pointerdown', closeProjectsOnOutsidePress)
+    document.addEventListener('keydown', closeProjectsOnEscape)
+    return () => {
+      document.removeEventListener('pointerdown', closeProjectsOnOutsidePress)
+      document.removeEventListener('keydown', closeProjectsOnEscape)
+    }
+  }, [])
 
   const toggleTheme = () => {
     const nextDarkMode = !darkMode
@@ -43,6 +69,14 @@ export function Navbar({
     window.location.assign(`${nextPath}${window.location.search}${window.location.hash}`)
   }
 
+  const closeProjectsAfterFocusChange = () => {
+    queueMicrotask(() => {
+      if (!projectsNavRef.current?.contains(document.activeElement)) {
+        setProjectsOpen(false)
+      }
+    })
+  }
+
   return (
     <header className={showHome ? 'site-header has-home' : 'site-header'}>
       {showHome ? (
@@ -51,16 +85,57 @@ export function Navbar({
         </Link>
       ) : null}
       <div className="header-actions">
-        <nav className="essay-nav" aria-label={copy.essays}>
-          <button className="essay-trigger" type="button">
-            {copy.essays}
-          </button>
-          <div className="essay-menu">
-            <Link href={localizeHref('/essays/what-we-owe-to-each-other', locale)}>
-              {copy.essayMenuTitle}
-            </Link>
-          </div>
-        </nav>
+        <div className="header-navigation">
+          <nav
+            aria-label={copy.essays}
+            className={`essay-nav${isEssayRoute ? ' is-current' : ''}`}
+          >
+            <button
+              aria-current={isEssayRoute ? 'page' : undefined}
+              className="essay-trigger"
+              type="button"
+            >
+              {copy.essays}
+            </button>
+            <div className="essay-menu">
+              <Link href={localizeHref('/essays/what-we-owe-to-each-other', locale)}>
+                {copy.essayMenuTitle}
+              </Link>
+            </div>
+          </nav>
+          <nav
+            aria-label={copy.projects}
+            className={`essay-nav project-nav${projectsOpen ? ' is-open' : ''}`}
+            onBlur={closeProjectsAfterFocusChange}
+            onFocus={() => setProjectsOpen(true)}
+            onMouseEnter={() => setProjectsOpen(true)}
+            onMouseLeave={() => setProjectsOpen(false)}
+            ref={projectsNavRef}
+          >
+            <button
+              aria-controls="projects-menu"
+              aria-expanded={projectsOpen}
+              aria-haspopup="true"
+              className="essay-trigger project-trigger"
+              onClick={() => setProjectsOpen((open) => !open)}
+              type="button"
+            >
+              {copy.projects}
+            </button>
+            <div className="essay-menu project-menu" id="projects-menu">
+              <a
+                href="https://writewrit.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span>Writ</span>
+                <span className="project-menu-description">
+                  {copy.writDescription}
+                </span>
+              </a>
+            </div>
+          </nav>
+        </div>
         {localeOptions.length > 1 ? (
           <label className="language-picker">
             <span className="visually-hidden">{copy.language}</span>
