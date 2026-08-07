@@ -102,11 +102,125 @@
       "title": "Stanford Encyclopedia of Philosophy, Contractualism.",
       "url": "https://plato.stanford.edu/entries/contractualism/",
       "note": "An overview of contractualism and Scanlon's account of justifiability to others."
+    },
+    {
+      "id": 18,
+      "title": "Dario Amodei, Machines of Loving Grace (2024).",
+      "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+      "note": "Amodei's essay on the potential effects and constraints of powerful AI across multiple domains."
+    },
+    {
+      "id": 19,
+      "title": "Dario Amodei, Policy on the AI Exponential.",
+      "url": "https://darioamodei.com/post/policy-on-the-ai-exponential",
+      "note": "A policy argument for preserving optionality and improving visibility as AI capabilities change quickly."
+    },
+    {
+      "id": 20,
+      "title": "OpenAI, An OpenAI model has disproved a central conjecture in discrete geometry (May 2026).",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "note": "OpenAI's account of the model-produced construction and subsequent mathematical verification."
+    },
+    {
+      "id": 21,
+      "title": "Quanta Magazine, Why the Legendary Erdős Problems Are Falling to AI.",
+      "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
+      "note": "A report on AI systems solving longstanding Erdős problems."
+    },
+    {
+      "id": 22,
+      "title": "Lean Prover Community, Did you prove it?",
+      "url": "https://leanprover-community.github.io/did_you_prove_it.html",
+      "note": "Explains the distinction between verifying a proof and verifying that its formal statement matches the intended theorem."
+    },
+    {
+      "id": 23,
+      "title": "Google DeepMind, Formal Conjectures.",
+      "url": "https://google-deepmind.github.io/formal-conjectures/",
+      "note": "A collection of open mathematical conjectures formalized as Lean 4 statements."
+    },
+    {
+      "id": 24,
+      "title": "New Zealand Government, Better Rules for Government Discovery Report.",
+      "url": "https://www.digital.govt.nz/dmsdocument/95-better-zrules-for-government-discovery-report/html",
+      "note": "Examines translation gaps across policy, legislative drafting, rules analysis, and software implementation."
+    },
+    {
+      "id": 25,
+      "title": "OECD, Cracking the Code: Rulemaking for Humans and Machines.",
+      "url": "https://www.oecd.org/en/publications/cracking-the-code_3afe6ba5-en.html",
+      "note": "Examines governments producing some rules in machine-consumable form."
+    },
+    {
+      "id": 26,
+      "title": "Denis Merigoux, Nicolas Chataing, and Jonathan Protzenko, Catala: A Programming Language for the Law.",
+      "url": "https://www.microsoft.com/en-us/research/publication/catala-a-programming-language-for-the-law/",
+      "note": "Develops a shared medium for lawyers and programmers to represent computational parts of statutory law."
+    },
+    {
+      "id": 27,
+      "title": "OpenFisca.",
+      "url": "https://openfisca.org/en/",
+      "note": "An open-source Rules as Code project."
+    },
+    {
+      "id": 28,
+      "title": "OpenAI, OpenAI and Hugging Face partner to address security incident during model evaluation.",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "note": "OpenAI's account of the July 2026 model-evaluation security incident."
+    },
+    {
+      "id": 29,
+      "title": "Hugging Face, Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident.",
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "note": "Hugging Face's technical reconstruction of the intrusion."
+    },
+    {
+      "id": 30,
+      "title": "Open Weights and American AI Leadership (July 2026).",
+      "url": "https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf",
+      "note": "An industry statement on the governance, security, and transparency implications of open model weights."
     }
   ],
   "footnotes": [
     {
       "id": 1,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "Dario Amodei makes this point near the beginning of "
+        },
+        {
+          "type": "source",
+          "sourceId": 18,
+          "text": "Machines of Loving Grace",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " (2024)."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Dario Amodei makes this point near the beginning of "
+        },
+        {
+          "type": "source",
+          "sourceId": 18,
+          "text": "Machines of Loving Grace",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " (2024). Writing across biology, economics, international relations, and other areas led him to suggest that the exercise would be better done with domain experts from those fields. I use the example here because the same limitation applies to the kind of cross-disciplinary argument I am making."
+        }
+      ]
+    },
+    {
+      "id": 2,
       "readMore": true,
       "preview": [
         {
@@ -159,8 +273,279 @@
       ]
     },
     {
-      "id": 2,
-      "readMore": false,
+      "id": 3,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "In "
+        },
+        {
+          "type": "source",
+          "sourceId": 18,
+          "text": "Machines of Loving Grace",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": ", Amodei asks what becomes limiting once intelligence itself becomes much more abundant."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "In "
+        },
+        {
+          "type": "source",
+          "sourceId": 18,
+          "text": "Machines of Loving Grace",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": ", Amodei asks what becomes limiting once intelligence itself becomes much more abundant, pointing to factors such as the speed of the outside world, missing data, and human constraints. In "
+        },
+        {
+          "type": "source",
+          "sourceId": 19,
+          "text": "Policy on the AI Exponential",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": ", he makes a related policy argument for preserving optionality and improving visibility as AI capabilities change quickly. I use the two here to distinguish faster intelligence from the physical and institutional conditions needed to act on it."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "OpenAI, "
+        },
+        {
+          "type": "source",
+          "sourceId": 20,
+          "text": "An OpenAI model has disproved a central conjecture in discrete geometry",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " (May 2026)."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "OpenAI, "
+        },
+        {
+          "type": "source",
+          "sourceId": 20,
+          "text": "An OpenAI model has disproved a central conjecture in discrete geometry",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " (May 2026). See also Quanta Magazine, "
+        },
+        {
+          "type": "source",
+          "sourceId": 21,
+          "text": "Why the Legendary Erdős Problems Are Falling to AI",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": ". I use the case here because it separates producing a difficult result from the process by which that result becomes inspectable and credible."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "The Lean Prover Community’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 22,
+          "text": "Did you prove it?",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " distinguishes verifying a proof from verifying that the formal statement corresponds to the claimed theorem."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The Lean Prover Community’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 22,
+          "text": "Did you prove it?",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " makes an important distinction between verifying a proof and verifying that the formal statement actually corresponds to the theorem someone claims to have proved. I borrow that distinction here because formal verification still depends on representing the original claim correctly."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "Google DeepMind’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 23,
+          "text": "Formal Conjectures",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " collects open mathematical conjectures as Lean 4 statements."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "Google DeepMind’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 23,
+          "text": "Formal Conjectures",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " collects open mathematical conjectures as Lean 4 statements, including a large collection drawn from Erdős problem lists. The project is intended in part as a benchmark for automated theorem proving. I use it here as an example of making the question itself precise enough that a later answer can be checked."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "The New Zealand Government’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 24,
+          "text": "Better Rules for Government Discovery Report",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " examined the translation gap across policy, legislative drafting, rules analysis, and software implementation."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The New Zealand Government’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 24,
+          "text": "Better Rules for Government Discovery Report",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " examined the translation gap across policy, legislative drafting, rules analysis, and software implementation. I use it here because it treats this translation problem as an institutional problem, not simply a technical one."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "The OECD’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 25,
+          "text": "Cracking the Code: Rulemaking for Humans and Machines",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " examines the idea of governments producing some rules in machine-consumable form."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "The OECD’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 25,
+          "text": "Cracking the Code: Rulemaking for Humans and Machines",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " examines the idea of governments producing some rules in machine-consumable form. Denis Merigoux, Nicolas Chataing, and Jonathan Protzenko’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 26,
+          "text": "Catala: A Programming Language for the Law",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " develops a shared medium for lawyers and programmers to represent certain computational parts of statutory law. "
+        },
+        {
+          "type": "source",
+          "sourceId": 27,
+          "text": "OpenFisca"
+        },
+        {
+          "type": "text",
+          "text": " is a related Rules as Code project. I use these examples not to suggest that politics can be reduced to code, but to show how structure can make translation between professional languages easier."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "I am using this phrase from T. M. Scanlon's "
+        },
+        {
+          "type": "source",
+          "sourceId": 16,
+          "text": "What We Owe to Each Other",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " in a institutional sense. When technical and policy institutions jointly shape systems that affect public life, neither can treat the knowledge or responsibilities of the other as someone else's problem."
+        }
+      ],
       "body": [
         {
           "type": "text",
@@ -179,7 +564,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 10,
       "readMore": true,
       "preview": [
         {
@@ -201,6 +586,90 @@
         {
           "type": "text",
           "text": " centres on whether conduct can be justified to others while respecting their separate interests, rather than securing agreement or producing a preferred overall outcome. I borrow that distinction to claim that the worlds of policy and technology do not need to agree on everything, but the decisions they make together should be defensible to the people affected by them. They may not owe one another agreement, but they do owe one another enough openness to make their decisions defensible to the people who will live with them."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "text",
+          "text": "OpenAI, "
+        },
+        {
+          "type": "source",
+          "sourceId": 28,
+          "text": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": "; Hugging Face, "
+        },
+        {
+          "type": "source",
+          "sourceId": 29,
+          "text": "Anatomy of a Frontier Lab Agent Intrusion",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "OpenAI, "
+        },
+        {
+          "type": "source",
+          "sourceId": 28,
+          "text": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": "; Hugging Face, "
+        },
+        {
+          "type": "source",
+          "sourceId": 29,
+          "text": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": ". Hugging Face’s reconstruction covers roughly 17,600 attacker actions across an intrusion that moved from OpenAI’s evaluation environment, through third-party infrastructure, and into Hugging Face’s systems. I use the case here because understanding what happened required evidence and coordination across organizational boundaries."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "readMore": true,
+      "preview": [
+        {
+          "type": "source",
+          "sourceId": 30,
+          "text": "Open Weights and American AI Leadership",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " (July 2026) acknowledges that once model weights are released, the original developer loses substantial control."
+        }
+      ],
+      "body": [
+        {
+          "type": "source",
+          "sourceId": 30,
+          "text": "Open Weights and American AI Leadership",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " (July 2026) acknowledges that once model weights are released, the original developer loses substantial control and modified versions become difficult to trace or reverse. The same statement argues that wider access can strengthen defensive capability and transparency. I use it here as one side of the open-weights governance debate, rather than as evidence that open weights are inherently safer."
         }
       ]
     }

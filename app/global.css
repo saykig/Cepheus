@@ -828,6 +828,10 @@ html[data-theme="dark"] .theme-toggle::after {
   padding-bottom: 0;
 }
 
+.technical-capacity-essay .essay-hero {
+  margin-bottom: 5rem;
+}
+
 .essay-hero-inner {
   margin-left: 272px;
 }
@@ -4614,6 +4618,10 @@ html {
 
   .essay-hero {
     margin-bottom: 1.75rem;
+  }
+
+  .technical-capacity-essay .essay-hero {
+    margin-bottom: 3.5rem;
   }
 
   .essay-hero h1 {

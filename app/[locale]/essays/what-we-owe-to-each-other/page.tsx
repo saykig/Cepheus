@@ -214,10 +214,10 @@ export default async function CepheusEssay({
             science, law, and other fields. Dario Amodei makes a similar
             admission near the beginning of <em>Machines of Loving Grace</em>:
             writing across so many domains made him realize how much better the
-            exercise would be with experts from those fields involved. I think
-            there is something important in that admission. No individual, and
-            probably no single institution, is supposed to understand all of
-            this on its own.
+            exercise would be with experts from those fields involved.
+            <FootnoteRef number={1} /> I think there is something important in
+            that admission. No individual, and probably no single institution,
+            is supposed to understand all of this on its own.
           </p>
           <p>
             I have found it helpful to think of these as three views of the same
@@ -249,7 +249,7 @@ export default async function CepheusEssay({
 
           <h2 id="what-is-expected-of-us">
             {labels.expected}
-            <FootnoteRef number={1} />
+            <FootnoteRef number={2} />
           </h2>
           <p>
             AI is often described as something that is simply happening to us,
@@ -343,8 +343,9 @@ export default async function CepheusEssay({
             intelligence does not make every other constraint disappear, as
             experiments still take time, institutions still have procedures, and
             human beings still have to decide whether something should actually
-            be used. And there is another possible bottleneck that I think
-            deserves much more attention: <strong>verification</strong>.
+            be used.<FootnoteRef number={3} /> And there is another possible
+            bottleneck that I think deserves much more attention:{' '}
+            <strong>verification</strong>.
           </p>
           <p>
             Mathematics offers an unusually interesting example of what this can
@@ -356,6 +357,7 @@ export default async function CepheusEssay({
             disproved a longstanding conjecture about its answer. External
             mathematicians subsequently checked the argument and produced
             human-written papers explaining and verifying the result.
+            <FootnoteRef number={4} />
           </p>
           <p>
             One of those tools is Lean, a formal proof system. In very simple
@@ -366,7 +368,7 @@ export default async function CepheusEssay({
             we intended to ask. In fact, the Lean community explicitly warns that
             this distinction matters: a formally valid proof is not useful if the
             formal statement does not correspond to the mathematical claim we
-            thought we were proving.
+            thought we were proving.<FootnoteRef number={5} />
           </p>
           <p>
             This is becoming particularly interesting alongside AI. DeepMind's
@@ -375,7 +377,7 @@ export default async function CepheusEssay({
             lists—into statements written in Lean. The point is partly to create
             problems against which automated theorem provers can work, but also
             to make the questions themselves precise enough that solutions can
-            eventually be formally checked.
+            eventually be formally checked.<FootnoteRef number={6} />
           </p>
           <p>
             I find this incredibly compelling, but also slightly frustrating as
@@ -419,15 +421,16 @@ export default async function CepheusEssay({
             project, for example, found what it called a translation gap between
             policy analysts and software developers. Each group had its own
             structured language and professional standards, but each subsequent
-            group had to reinterpret what the previous one produced. There is now
-            an entire Rules as Code movement built around related ideas. Catala,
-            a programming language designed specifically for statutory law, goes
-            further by giving lawyers and programmers a shared medium through
-            which certain computational parts of legislation can be represented
-            and tested. None of these projects makes politics mathematically
-            provable, nor should they. But they demonstrate something important:
-            professional boundaries become less costly when the information
-            crossing them has structure.
+            group had to reinterpret what the previous one produced.
+            <FootnoteRef number={7} /> There is now an entire Rules as Code
+            movement built around related ideas. Catala, a programming language
+            designed specifically for statutory law, goes further by giving
+            lawyers and programmers a shared medium through which certain
+            computational parts of legislation can be represented and tested.
+            None of these projects makes politics mathematically provable, nor
+            should they. But they demonstrate something important: professional
+            boundaries become less costly when the information crossing them has
+            structure.
           </p>
           <p>
             What made this problem feel less abstract to me was realizing how
@@ -440,6 +443,7 @@ export default async function CepheusEssay({
             knowledge, the problem is often not that information does not exist,
             but that it is stored differently, described differently, and made
             legible to entirely different professional communities.
+            <FootnoteRef number={8} />
           </p>
           <p>
             That is when I began thinking about building Writ. I wanted a way to
@@ -476,7 +480,7 @@ export default async function CepheusEssay({
           <p>
             Then, as people working in policy and technology, we have to ask
             ourselves: what is expected of us? More importantly, what do we owe
-            one another<FootnoteRef number={2} />, and what should that require
+            one another<FootnoteRef number={9} />, and what should that require
             of us? I do not think the answer is that engineers should become
             policymakers, or that policymakers need to understand every
             technical detail. These fields exist separately for good reasons.
@@ -524,7 +528,7 @@ export default async function CepheusEssay({
             Alignment, then, is not a matter of policy catching up with
             technology, or technology simply submitting to policy. The goal is
             not to arrive at some perfect agreement as we try to close this
-            gap.<FootnoteRef number={3} /> In regards to the aforementioned
+            gap.<FootnoteRef number={10} /> In regards to the aforementioned
             concept of Erdős problems and Lean, the lesson I take from mathematics
             is not that international affairs ought to become mathematics. It is
             almost the quite opposite. Mathematics can demand a degree of formal
@@ -554,7 +558,7 @@ export default async function CepheusEssay({
             tested. Hugging Face later reconstructed roughly 17,600 actions across
             the intrusion. OpenAI and Hugging Face then had to work across
             organizational boundaries to understand what the system had actually
-            done.
+            done.<FootnoteRef number={11} />
           </p>
           <p>
             The Hugging Face case is obviously a cybersecurity problem, but I
@@ -570,12 +574,13 @@ export default async function CepheusEssay({
           <p>
             Even the debate over what should follow from incidents like this is
             divided. A July 2026 open-weights statement backed by NVIDIA, Hugging
-            Face, OpenAI, Microsoft, and many other firms openly acknowledges that
+            Face, Microsoft, Meta, and many other firms openly acknowledges that
             once model weights are released, the original developer loses
             substantial control, and modified versions become difficult to trace
             or reverse. Yet the same statement argues that distributing access
             can improve security because defenders, researchers, and smaller
             organizations can inspect models and develop protections themselves.
+            <FootnoteRef number={12} />
           </p>
           <p>
             I have not yet figured out how to answer the three questions I
