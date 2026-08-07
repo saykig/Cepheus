@@ -85,9 +85,6 @@ export default async function CepheusEssay({
           <p className="essay-subtitle">
             {labels.subtitle}
           </p>
-          <p className="essay-meta">
-            <span className="author">Sara Kim</span>
-          </p>
         </div>
       </header>
 

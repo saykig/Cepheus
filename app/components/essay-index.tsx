@@ -1,7 +1,7 @@
 'use client'
 
 import type { CSSProperties } from 'react'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { getEssayTargetOffset } from './essay-scroll'
 import type { Locale } from 'app/lib/i18n'
 import { siteCopy } from 'app/lib/site-copy'
@@ -117,10 +117,6 @@ export function EssayIndex({
     }
   }, [])
 
-  const handleDownload = useCallback(() => {
-    window.print()
-  }, [])
-
   const activeIndex = flatSections.findIndex((section) => section.id === activeId)
 
   const renderIndexLink = (
@@ -200,30 +196,6 @@ export function EssayIndex({
       </nav>
 
       <div className="essay-rail-actions">
-        <button type="button" className="rail-download" onClick={handleDownload}>
-          <svg
-            width="13"
-            height="13"
-            viewBox="0 0 14 14"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M7 1.4v7.2M4 5.6 7 8.7l3-3.1"
-              stroke="currentColor"
-              strokeWidth="1.1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M2 10.2v1.3c0 .6.5 1.1 1.1 1.1h7.8c.6 0 1.1-.5 1.1-1.1v-1.3"
-              stroke="currentColor"
-              strokeWidth="1.1"
-              strokeLinecap="round"
-            />
-          </svg>
-          {copy.download}
-        </button>
         {updated ? <p className="rail-updated">{copy.lastUpdated} {updated}</p> : null}
       </div>
     </aside>

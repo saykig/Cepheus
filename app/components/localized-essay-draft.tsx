@@ -23,7 +23,6 @@ export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
         <div className="essay-hero-inner">
           <h1><span>{labels.titleLineOne}</span><span>{labels.titleLineTwo}</span></h1>
           <p className="essay-subtitle">{labels.subtitle}</p>
-          <p className="essay-meta"><span className="author">Sara Kim</span></p>
         </div>
       </header>
       <div className="essay-layout">
