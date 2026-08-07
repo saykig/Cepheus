@@ -6,6 +6,19 @@ Aesthetic lane: **antique-paper editorial meets quiet scientific instrument.** T
 
 ---
 
+## Canonical visual references
+
+The following files are the approved visual references for Cepheus:
+
+- `public/brand/cepheus-brand-home.png`
+- `public/brand/cepheus-brand-essay.png`
+
+For future UI, branding, social-preview, or visual work, inspect these image files directly.
+
+Do not recreate or reinterpret the brand from a written description when these references are available. The images themselves are the canonical visual references.
+
+---
+
 ## 1. Color
 
 OKLCH throughout. Neutrals are tinted toward the paper hue (never `#000` / `#fff`). Strategy: **restrained brand surface** (paper + ink + one olive accent), with a **committed categorical palette used only inside instruments**.
