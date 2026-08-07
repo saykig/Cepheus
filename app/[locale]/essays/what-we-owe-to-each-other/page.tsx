@@ -446,23 +446,40 @@ export default async function CepheusEssay({
             <FootnoteRef number={8} />
           </p>
           <p>
-            That is when I began thinking about building Writ. I wanted a way to
-            preserve the path between a political judgment and the evidence that
-            produced it, rather than allowing the conclusion to become detached
-            from its source. Writ is still at the pilot stage, but it is an
-            open-source domain-specific language and knowledge system for
-            political and global-affairs research.
+            That is when I began thinking about{' '}
+            <a
+              className="citation-link"
+              href="https://writewrit.vercel.app/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              building Writ
+            </a>
+            . I wanted a way to preserve the path between a political judgment
+            and the evidence that produced it, rather than allowing the
+            conclusion to become detached from its source. Writ is still at the
+            pilot stage, but it is an open-source domain-specific language and
+            knowledge system for political and global-affairs research.
           </p>
           <p>
-            Currently, this is how Writ works: a source comes first. From that
-            source, a researcher records a specific claim and the evidence
-            supporting it. Those records can then be organized into bodies of
-            knowledge and queried comparatively without losing the connection
-            between the conclusion and the material behind it. If sources
-            conflict, the disagreement can remain contested. If something is not
-            known, it can remain unknown. And when an analysis produces a
-            conclusion, the path back through the relevant records, and
-            ultimately to the source itself, remains visible.
+            Currently, this is{' '}
+            <a
+              className="citation-link"
+              href="https://writewrit.vercel.app/lab"
+              rel="noreferrer"
+              target="_blank"
+            >
+              how Writ works
+            </a>
+            : a source comes first. From that source, a researcher records a
+            specific claim and the evidence supporting it. Those records can
+            then be organized into bodies of knowledge and queried comparatively
+            without losing the connection between the conclusion and the
+            material behind it. If sources conflict, the disagreement can remain
+            contested. If something is not known, it can remain unknown. And
+            when an analysis produces a conclusion, the path back through the
+            relevant records, and ultimately to the source itself, remains
+            visible.
           </p>
           <p>
             Someone working in policy should be able to read the evidence and
