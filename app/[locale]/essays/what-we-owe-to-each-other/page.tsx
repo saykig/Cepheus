@@ -141,10 +141,10 @@ export default async function CepheusEssay({
             As a student, I had already watched ChatGPT and Claude develop at a
             pace that was difficult to reconcile with the slower world of laws,
             public institutions, and university disciplines. Their rapid
-            improvement made me wonder whether an equivalent policy world
-            existed around them. But the better question was not whether AI
-            policy existed. It clearly did. The real questions were more
-            difficult:
+            improvement of AI frontiers made me wonder whether an equivalent
+            policy world existed around them. And AI policy does exist today, but
+            trying to answer the below questions are much more difficult in
+            today's political landscape:
           </p>
           <ol className="essay-questions">
             <li>
@@ -205,6 +205,18 @@ export default async function CepheusEssay({
             A more realistic starting point is to make the relationships
             visible: who understands the technology, who can make the
             decisions, and where responsibility sits.
+          </p>
+          <p>
+            I should also say, quite candidly, that I would almost certainly gain
+            a great deal from writing this alongside people with deep expertise
+            and passions in biology, physics, mathematics, economics, computer
+            science, law, and other fields. Dario Amodei makes a similar
+            admission near the beginning of <em>Machines of Loving Grace</em>:
+            writing across so many domains made him realize how much better the
+            exercise would be with experts from those fields involved. I think
+            there is something important in that admission. No individual, and
+            probably no single institution, is supposed to understand all of
+            this on its own.
           </p>
           <p>
             I have found it helpful to think of these as three views of the same
