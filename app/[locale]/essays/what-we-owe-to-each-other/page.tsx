@@ -572,12 +572,6 @@ export default async function CepheusEssay({
             organizations can inspect models and develop protections themselves.
           </p>
           <p>
-            And this returns me to the much simpler problem I began with. The
-            people working on these systems and the people working on the
-            institutions around them probably need to be talking to one another
-            far more often than they currently do.
-          </p>
-          <p>
             I have not yet figured out how to answer the three questions I
             proposed at the beginning of this essay. But I do know that the
             answer is not to create one language in which everyone thinks. A
