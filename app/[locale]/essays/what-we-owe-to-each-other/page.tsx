@@ -455,41 +455,54 @@ export default async function CepheusEssay({
             >
               building Writ
             </a>
-            . I wanted a way to preserve the path between a political judgment
-            and the evidence that produced it, rather than allowing the
-            conclusion to become detached from its source. Writ is still at the
-            pilot stage, but it is an open-source domain-specific language and
-            knowledge system for political and global-affairs research.
+            . Writ is still a pilot, but the idea behind it is relatively
+            simple: to turn political and global-affairs research into
+            structured, traceable knowledge that both people and software can
+            read. It is a domain-specific language and knowledge system, and
+            what interests me most about it is what it might make possible
+            between these two worlds.
           </p>
           <p>
-            Currently, this is{' '}
+            What I would like Writ to borrow from systems such as Lean is not
+            mathematical certainty, but <strong>provenance and interoperability</strong>.
+            {' '}Provenance means that a judgment should remain connected to the
+            evidence and assumptions that produced it. Interoperability means
+            that the same underlying piece of knowledge should be usable across
+            different tools and professional communities without having to be
+            continually translated and reconstructed. Someone working in policy
+            should be able to read a claim, its evidence, and the reasoning
+            behind it in ordinary language, while an engineer should be able to
+            inspect that same material as structured data and build tools on top
+            of it. They should, in other words, be looking at the same underlying
+            object.
+          </p>
+          <p>
+            The{' '}
             <a
               className="citation-link"
               href="https://writewrit.vercel.app/lab"
               rel="noreferrer"
               target="_blank"
             >
-              how Writ works
+              current Writ pilot
             </a>
-            : a source comes first. From that source, a researcher records a
-            specific claim and the evidence supporting it. Those records can
-            then be organized into bodies of knowledge and queried comparatively
-            without losing the connection between the conclusion and the
-            material behind it. If sources conflict, the disagreement can remain
-            contested. If something is not known, it can remain unknown. And
-            when an analysis produces a conclusion, the path back through the
-            relevant records, and ultimately to the source itself, remains
-            visible.
+            {' '}begins to test this idea. It preserves sources, claims and
+            uncertainty in a structured form so that conclusions can still be
+            traced back to what produced them. I am cautiously optimistic that,
+            if such systems like this become useful enough, policy knowledge
+            could become easier to compare, update, inspect, and carry across
+            institutional boundaries without pretending that political judgment
+            can be reduced to code.
           </p>
           <p>
-            Someone working in policy should be able to read the evidence and
-            conclusions without needing to understand the code underneath them,
-            but an engineer should also be able to inspect the same material as
-            structured data, trace how it was represented, and build tools on top
-            of it. The point is not to force policymakers to become programmers,
-            or programmers to become policy analysts, as that is not the goal.
-            This would be better understood as a offering a tool to for both
-            worlds to have a shared object they can both inspect.
+            That would not close the gap between policy and technology on its
+            own. Nor is the goal to turn policymakers into programmers or
+            engineers into policy analysts. The more realistic ambition is to
+            make the knowledge produced in each world more legible to the other.
+            {' '}<strong>The gap becomes harder to bridge when every transfer of
+            knowledge also requires a new translation.</strong> Writ is currently
+            in an experimental stage in asking whether some of that distance can
+            instead be built into a shared structure from the beginning.
           </p>
           <h2 id="what-do-we-owe-to-each-other">
             {labels.owe}
