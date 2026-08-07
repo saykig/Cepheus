@@ -21,13 +21,18 @@ const text = Libre_Baskerville({
   variable: '--font-text',
 })
 
+const siteTitle = 'Cepheus'
+const siteDescription = 'Bridging the gap between policy and technology.'
+const homeOgImage =
+  '/og?kind=home&title=Cepheus&description=Bridging%20the%20gap%20between%20policy%20and%20technology.'
+
 const sharedMetadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Cepheus',
+    default: siteTitle,
     template: '%s | Cepheus',
   },
-  description: 'Bridging the gap between policy and technology.',
+  description: siteDescription,
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
@@ -47,12 +52,26 @@ const sharedMetadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'Cepheus',
-    description: 'Bridging the gap between policy and technology.',
+    title: siteTitle,
+    description: siteDescription,
     url: baseUrl,
-    siteName: 'Cepheus',
+    siteName: siteTitle,
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: homeOgImage,
+        width: 1200,
+        height: 630,
+        alt: 'Cepheus — Bridging the gap between policy and technology',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: [homeOgImage],
   },
   robots: {
     index: true,

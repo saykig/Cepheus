@@ -24,7 +24,43 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const labels = isLocale(locale) ? essayLabels[locale] : essayLabels.en
-  return { title: labels.titleLineOne + ' ' + labels.titleLineTwo, description: labels.subtitle }
+  const title = `${labels.titleLineOne} ${labels.titleLineTwo}`
+  const description = labels.subtitle
+  const pathname =
+    locale === 'en'
+      ? '/essays/what-we-owe-to-each-other'
+      : `/${locale}/essays/what-we-owe-to-each-other`
+  const image = `/og?${new URLSearchParams({
+    kind: 'essay',
+    title,
+    description,
+  }).toString()}`
+
+  return {
+    title,
+    description,
+    alternates: { canonical: pathname },
+    openGraph: {
+      title,
+      description,
+      url: pathname,
+      type: 'article',
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: `${title} — Cepheus essay`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+    },
+  }
 }
 
 function CitationLink({ children, id }: { children: ReactNode; id: number }) {
