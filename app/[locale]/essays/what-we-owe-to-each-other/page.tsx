@@ -442,17 +442,23 @@ export default async function CepheusEssay({
             legible to entirely different professional communities.
           </p>
           <p>
-            That is the problem I have been trying to work through with Writ,
-            which is still at its pilot stage. Writ is an open-source
-            domain-specific language and knowledge system for political and
-            global-affairs research. A source comes first. From that source, a
-            researcher records a specific claim and the evidence supporting it.
-            Those records can then be organized into bodies of knowledge and
-            queried comparatively without separating the conclusion from the
-            material that produced it. If sources conflict, the disagreement can
-            remain contested. If something is not known, it can remain unknown.
-            And if an analysis produces a conclusion, the path back through the
-            relevant records and ultimately to the source remains visible.
+            That is when I began thinking about building Writ. I wanted a way to
+            preserve the path between a political judgment and the evidence that
+            produced it, rather than allowing the conclusion to become detached
+            from its source. Writ is still at the pilot stage, but it is an
+            open-source domain-specific language and knowledge system for
+            political and global-affairs research.
+          </p>
+          <p>
+            Currently, this is how Writ works: a source comes first. From that
+            source, a researcher records a specific claim and the evidence
+            supporting it. Those records can then be organized into bodies of
+            knowledge and queried comparatively without losing the connection
+            between the conclusion and the material behind it. If sources
+            conflict, the disagreement can remain contested. If something is not
+            known, it can remain unknown. And when an analysis produces a
+            conclusion, the path back through the relevant records, and
+            ultimately to the source itself, remains visible.
           </p>
           <p>
             Someone working in policy should be able to read the evidence and
