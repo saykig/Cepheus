@@ -180,6 +180,12 @@
       "title": "Open Weights and American AI Leadership (July 2026).",
       "url": "https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf",
       "note": "An industry statement on the governance, security, and transparency implications of open model weights."
+    },
+    {
+      "id": 31,
+      "title": "Broad Institute, CRISPR Timeline.",
+      "url": "https://www.broadinstitute.org/what-broad/areas-focus/project-spotlight/crispr-timeline",
+      "note": "Traces CRISPR's path from early observations of unusual bacterial DNA sequences to practical gene-editing tools."
     }
   ],
   "footnotes": [
@@ -275,6 +281,25 @@
     {
       "id": 3,
       "readMore": true,
+      "body": [
+        {
+          "type": "text",
+          "text": "CRISPR is a useful example of how long specialized knowledge can take to accumulate. The unusual DNA sequences were first observed in bacteria in 1987, but their function was not understood at the time. It took roughly twenty-five years of work by researchers across several areas of biology before CRISPR was turned into a practical tool for editing genes. The Broad Institute’s "
+        },
+        {
+          "type": "source",
+          "sourceId": 31,
+          "text": "CRISPR Timeline"
+        },
+        {
+          "type": "text",
+          "text": " traces that development."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "readMore": true,
       "preview": [
         {
           "type": "text",
@@ -319,7 +344,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "readMore": true,
       "preview": [
         {
@@ -365,7 +390,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 6,
       "readMore": true,
       "preview": [
         {
@@ -401,7 +426,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "readMore": true,
       "preview": [
         {
@@ -437,7 +462,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 8,
       "readMore": true,
       "preview": [
         {
@@ -473,7 +498,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 9,
       "readMore": true,
       "preview": [
         {
@@ -528,7 +553,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": 10,
       "readMore": true,
       "preview": [
         {
@@ -564,7 +589,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": 11,
       "readMore": true,
       "preview": [
         {
@@ -590,7 +615,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": 12,
       "readMore": true,
       "preview": [
         {
@@ -646,7 +671,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": 13,
       "readMore": true,
       "preview": [
         {
