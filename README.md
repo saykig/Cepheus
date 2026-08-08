@@ -1,8 +1,6 @@
 # Cepheus
 
-Cepheus is a personal home for essays and projects on technology, policy, and global affairs.
-
-The work here is mostly concerned with the places where technical systems, public institutions, and political judgment begin to overlap. Essays are written to stand on their own, with interactive figures used where they help make an argument easier to see.
+Cepheus is a personal home for essays and projects on technology, policy, and global affairs. The work here is mostly concerned with the places where technical systems, public institutions, and political judgment begin to overlap. Essays are written to stand on their own, with interactive figures used where they help make an argument easier to see.
 
 [Visit Cepheus](https://cepheus-pons.org/)
 
