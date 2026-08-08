@@ -1,9 +1,8 @@
 # Cepheus
 <p align="center">
   <img
-    src="./public/brand/cepheus-readme-banner.jpeg"
-    alt="Cepheus — Mapping the gap. Aligning our future."
-    width="900"
+    src="./public/brand/cepheus-brand-home.jpeg"
+    width="1000"
   />
 </p>
 
