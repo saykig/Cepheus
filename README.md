@@ -1,4 +1,11 @@
 # Cepheus
+<p align="center">
+  <img
+    src="./public/brand/cepheus-readme-banner.jpeg"
+    alt="Cepheus — Mapping the gap. Aligning our future."
+    width="900"
+  />
+</p>
 
 Cepheus is a personal home for essays and projects on technology, policy, and global affairs. The work here is mostly concerned with the places where technical systems, public institutions, and political judgment begin to overlap. Essays are written to stand on their own, with interactive figures used where they help make an argument easier to see.
 
