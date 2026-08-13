@@ -1,4 +1,3 @@
-# Cepheus
 <p align="center">
   <img
     src="./public/brand/cepheus-brand-home.jpeg"
