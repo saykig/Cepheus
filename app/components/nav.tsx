@@ -24,6 +24,7 @@ export function Navbar({
   const unprefixedPath = stripLocale(pathname)
   const showHome = unprefixedPath !== '/'
   const isEssayRoute = unprefixedPath.startsWith('/essays')
+  const showProjects = process.env.NODE_ENV !== 'production'
   const [darkMode, setDarkMode] = useState(false)
   const [projectsOpen, setProjectsOpen] = useState(false)
   const projectsNavRef = useRef<HTMLElement>(null)
@@ -103,38 +104,40 @@ export function Navbar({
               </Link>
             </div>
           </nav>
-          <nav
-            aria-label={copy.projects}
-            className={`essay-nav project-nav${projectsOpen ? ' is-open' : ''}`}
-            onBlur={closeProjectsAfterFocusChange}
-            onFocus={() => setProjectsOpen(true)}
-            onMouseEnter={() => setProjectsOpen(true)}
-            onMouseLeave={() => setProjectsOpen(false)}
-            ref={projectsNavRef}
-          >
-            <button
-              aria-controls="projects-menu"
-              aria-expanded={projectsOpen}
-              aria-haspopup="true"
-              className="essay-trigger project-trigger"
-              onClick={() => setProjectsOpen((open) => !open)}
-              type="button"
+          {showProjects ? (
+            <nav
+              aria-label={copy.projects}
+              className={`essay-nav project-nav${projectsOpen ? ' is-open' : ''}`}
+              onBlur={closeProjectsAfterFocusChange}
+              onFocus={() => setProjectsOpen(true)}
+              onMouseEnter={() => setProjectsOpen(true)}
+              onMouseLeave={() => setProjectsOpen(false)}
+              ref={projectsNavRef}
             >
-              {copy.projects}
-            </button>
-            <div className="essay-menu project-menu" id="projects-menu">
-              <a
-                href="https://writewrit.vercel.app/"
-                rel="noreferrer"
-                target="_blank"
+              <button
+                aria-controls="projects-menu"
+                aria-expanded={projectsOpen}
+                aria-haspopup="true"
+                className="essay-trigger project-trigger"
+                onClick={() => setProjectsOpen((open) => !open)}
+                type="button"
               >
-                <span>Writ</span>
-                <span className="project-menu-description">
-                  {copy.writDescription}
-                </span>
-              </a>
-            </div>
-          </nav>
+                {copy.projects}
+              </button>
+              <div className="essay-menu project-menu" id="projects-menu">
+                <a
+                  href="https://writewrit.vercel.app/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <span>Writ</span>
+                  <span className="project-menu-description">
+                    {copy.writDescription}
+                  </span>
+                </a>
+              </div>
+            </nav>
+          ) : null}
         </div>
         {localeOptions.length > 1 ? (
           <label className="language-picker">
