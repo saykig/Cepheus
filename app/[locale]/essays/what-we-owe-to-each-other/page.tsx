@@ -133,8 +133,8 @@ export default async function CepheusEssay({
             {labels.firstCollision}
           </h2>
           <p>
-            In February 2026, while sitting in my office, I opened a Flipboard
-            notification about a confrontation between{' '}
+            In February 2026, I opened a Flipboard notification about a
+            confrontation between{' '}
             <CitationLink id={1}>
               Anthropic and the Pentagon in an AP article
             </CitationLink>.
@@ -146,9 +146,8 @@ export default async function CepheusEssay({
             autonomous weapons, arguing that current frontier systems remained
             too unreliable for certain high-stakes uses. Pentagon officials
             responded that a private company should not determine how the
-            military could lawfully use technology it had purchased. Both sides
-            claimed to be protecting national security. Both institutions
-            possessed something the other could not easily replace:{' '}
+            military could lawfully use technology it had purchased. Both
+            institutions possessed something the other could not easily replace:{' '}
             <strong>
               the government held public authority, while Anthropic held
               technical expertise and control over the system.
@@ -158,20 +157,7 @@ export default async function CepheusEssay({
           <p>
             At first, I read it as a dispute over one government contract, but it
             exposed a much larger institutional problem.{' '}
-            <strong>AI is being built in one world and governed in another.</strong>{' '}
-            The people developing the systems, the people legally empowered to
-            make public decisions, and the people who will bear the consequences
-            of failure are often not the same people.
-          </p>
-          <p>
-            The clash between Anthropic and the Pentagon gave institutional
-            form to a problem I had previously understood only in the abstract.
-            Governments cannot govern advanced AI without access to technical
-            knowledge. AI companies cannot independently determine the public
-            rules governing defense, security, surveillance, or biological risk.
-            And neither side can simply replace the other. Yet, the institutions
-            connecting them remain fragmented, temporary, and frequently
-            adversarial.
+            <strong>AI is being built in one world and governed in another.</strong>
           </p>
           <p>
             As a student, I had already watched ChatGPT and Claude develop at a
@@ -248,26 +234,6 @@ export default async function CepheusEssay({
           </section>
 
           <p>
-            I should also say, quite candidly, that I would almost certainly gain
-            a great deal from writing this alongside people with deep expertise
-            and passions in biology, physics, mathematics, economics, computer
-            science, law, and other fields. Dario Amodei makes a similar
-            admission near the beginning of{' '}
-            <a
-              className="citation-link"
-              href="https://darioamodei.com/essay/machines-of-loving-grace"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <em>Machines of Loving Grace</em>
-            </a>
-            : writing across so many domains made him realize how much better
-            the exercise would be with experts from those fields involved. I
-            think there is something important in
-            that admission. No individual, and probably no single institution,
-            is supposed to understand all of this on its own.
-          </p>
-          <p>
             I have found it helpful to think of these as three views of the same
             system. The Gap Matrix<FootnoteRef number={1} /> shows where
             technical knowledge and public authority separate. The Friction
@@ -293,9 +259,7 @@ export default async function CepheusEssay({
             passively. Models will become more capable, competition will
             intensify, and governments will eventually have to adapt. This
             language captures the speed of change, but it can also make
-            responsibility disappear. Before asking whether policy can keep up,
-            we should ask a more basic question:{' '}
-            <em>what is expected of us?</em>
+            responsibility disappear.
           </p>
           <p>
             Much of frontier AI is developed inside a small number of private
@@ -361,14 +325,18 @@ export default async function CepheusEssay({
             I therefore do not think the central problem is a simple shortage of
             expertise, as specialization itself is not the problem. In fact, it
             is probably one of the main reasons humanity has become capable of
-            doing extraordinarily difficult things.<FootnoteRef number={5} /> We
-            spend years learning the language, methods, assumptions, and history
-            of one field precisely because no person can know everything. But
-            our institutions tend to preserve those divisions long after the
-            problems themselves have stopped respecting them. We grow up moving
-            between separate subjects in school, and eventually become very good
-            at speaking to people who were trained to think about problems in
-            roughly the same way we were. Universities certainly create
+            doing extraordinarily difficult things.<FootnoteRef number={5} />
+          </p>
+          <p>
+            We spend years learning the language, methods, assumptions, and
+            history of one field precisely because no person can know everything.
+            But our institutions tend to preserve those divisions long after the
+            problems themselves have stopped respecting them.
+          </p>
+          <p>
+            We grow up moving between separate subjects in school, and eventually
+            become very good at speaking to people who were trained to think about
+            problems in roughly the same way we were. Universities certainly create
             interdisciplinary programs, laboratories, and research groups, but
             their basic architecture is still largely disciplinary.
           </p>
@@ -378,10 +346,12 @@ export default async function CepheusEssay({
             way Dario describes this problem is to ask what becomes the limiting
             factor once intelligence itself becomes much more abundant. More
             intelligence does not make every other constraint disappear, as
-            experiments still take time, institutions still have procedures, and
-            human beings still have to decide whether something should actually
-            be used.<FootnoteRef number={6} /> And there is another possible
-            bottleneck that I think deserves much more attention:{' '}
+            experiments still take time and human beings still have to decide
+            whether something should actually be used.<FootnoteRef number={6} />
+          </p>
+          <p>
+            And there is another possible bottleneck that I think deserves much
+            more attention:{' '}
             <strong>verification</strong>.
           </p>
           <p>
@@ -393,8 +363,7 @@ export default async function CepheusEssay({
             May 2026, an internal OpenAI model produced a construction that
             disproved a longstanding conjecture about its answer. External
             mathematicians subsequently checked the argument and produced
-            human-written papers explaining and verifying the result.
-            <FootnoteRef number={7} />
+            human-written papers explaining and verifying the result.<FootnoteRef number={7} />
           </p>
           <p>
             One of those tools is Lean, a formal proof system.<FootnoteRef number={8} /> In very simple
