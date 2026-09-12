@@ -1738,13 +1738,20 @@ html[data-theme="dark"] .theme-toggle::after {
   left: 0.29rem;
   width: 1px;
   transform: translateX(-50%);
-  background: linear-gradient(
-    to bottom,
-    var(--olive) 0%,
-    var(--olive) var(--scroll-percent),
-    var(--rule) var(--scroll-percent),
-    var(--rule) 100%
-  );
+  background: var(--rule);
+}
+
+.essay-scroll-index::after {
+  content: "";
+  position: absolute;
+  top: var(--essay-index-line-inset);
+  bottom: var(--essay-index-line-inset);
+  left: 0.29rem;
+  width: 1px;
+  background: var(--olive);
+  transform: translateX(-50%) scaleY(var(--scroll-progress, 0));
+  transform-origin: center top;
+  transition: transform 120ms linear;
 }
 
 .essay-index-item {

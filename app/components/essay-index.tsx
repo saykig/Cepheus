@@ -1,6 +1,5 @@
 'use client'
 
-import type { CSSProperties } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { getEssayTargetOffset } from './essay-scroll'
 import type { Locale } from 'app/lib/i18n'
@@ -41,8 +40,7 @@ export function EssayIndex({
   const copy = siteCopy[locale]
   const [activeId, setActiveId] = useState(sections[0]?.id)
   const [visibleChildId, setVisibleChildId] = useState<string | null>(null)
-  const [progress, setProgress] = useState(0)
-  const indexRef = useRef<HTMLElement>(null)
+  const sideRef = useRef<HTMLElement>(null)
   const visualProgressRef = useRef<{
     active: EssayVisualState
     target: EssayVisualState
@@ -119,6 +117,85 @@ export function EssayIndex({
     }
 
     const update = () => {
+      const index = sideRef.current?.querySelector<HTMLElement>(
+        '.essay-scroll-index',
+      )
+      const notesHeading = document.getElementById('essay-notes-title')
+      const indexRect = index?.getBoundingClientRect()
+
+      if (index && indexRect) {
+        const lineInset =
+          Number.parseFloat(
+            getComputedStyle(index).getPropertyValue(
+              '--essay-index-line-inset',
+            ),
+          ) || 32
+        const lineLength = Math.max(indexRect.height - lineInset * 2, 1)
+        const stops = sections.flatMap((section) => {
+          const element = document.getElementById(section.id)
+          const dot = index.querySelector<HTMLElement>(
+            `[data-index-section="${section.id}"] .essay-index-dot`,
+          )
+          if (!element || !dot) return []
+
+          const dotRect = dot.getBoundingClientRect()
+          return [
+            {
+              scroll:
+                window.scrollY +
+                element.getBoundingClientRect().top -
+                getEssayTargetOffset(section.id),
+              progress:
+                (dotRect.top +
+                  dotRect.height / 2 -
+                  indexRect.top -
+                  lineInset) /
+                lineLength,
+            },
+          ]
+        })
+        const finalScroll = notesHeading
+          ? window.scrollY +
+            notesHeading.getBoundingClientRect().top -
+            getEssayTargetOffset(notesHeading.id)
+          : document.documentElement.scrollHeight - window.innerHeight
+        const progressStops = [
+          ...stops,
+          {
+            scroll: Math.max(finalScroll, stops.at(-1)?.scroll ?? 0),
+            progress: 1,
+          },
+        ]
+        const nextStopIndex = progressStops.findIndex(
+          (stop) => stop.scroll > window.scrollY,
+        )
+        const nextStop = nextStopIndex === -1
+          ? progressStops.at(-1)
+          : progressStops[nextStopIndex]
+        const previousStop =
+          nextStopIndex <= 0
+            ? { scroll: progressStops[0]?.scroll ?? 0, progress: 0 }
+            : progressStops[nextStopIndex - 1]
+        const segmentLength = Math.max(
+          (nextStop?.scroll ?? 0) - previousStop.scroll,
+          1,
+        )
+        const segmentProgress = Math.min(
+          1,
+          Math.max(0, (window.scrollY - previousStop.scroll) / segmentLength),
+        )
+        const nextProgress =
+          previousStop.progress +
+          ((nextStop?.progress ?? previousStop.progress) -
+            previousStop.progress) *
+            segmentProgress
+
+        sideRef.current?.style.setProperty(
+          '--scroll-progress',
+          String(Math.min(1, Math.max(0, nextProgress))),
+        )
+      }
+
       const current = flatSections.reduce((active, section) => {
         const element = document.getElementById(section.id)
         if (!element) return active
@@ -174,38 +251,7 @@ export function EssayIndex({
         delete article.dataset.essayVisualPhase
       }
     }
-  }, [childSections, flatSections])
-
-  useEffect(() => {
-    const updateProgress = () => {
-      const index = indexRef.current
-      const activeItem = index?.querySelector<HTMLElement>(
-        `[data-index-section="${activeId}"]`,
-      )
-      const dot = activeItem?.querySelector<HTMLElement>('.essay-index-dot')
-      if (!index || !dot) return
-
-      const lineInset =
-        Number.parseFloat(
-          getComputedStyle(index).getPropertyValue('--essay-index-line-inset'),
-        ) || 32
-      const indexRect = index.getBoundingClientRect()
-      const dotRect = dot.getBoundingClientRect()
-      const lineLength = Math.max(indexRect.height - lineInset * 2, 1)
-      const next =
-        (dotRect.top + dotRect.height / 2 - indexRect.top - lineInset) /
-        lineLength
-
-      setProgress(Math.min(1, Math.max(0, next)))
-    }
-
-    const frame = window.requestAnimationFrame(updateProgress)
-    window.addEventListener('resize', updateProgress)
-    return () => {
-      window.cancelAnimationFrame(frame)
-      window.removeEventListener('resize', updateProgress)
-    }
-  }, [activeId, visibleChildId])
+  }, [childSections, flatSections, sections])
 
   useEffect(() => {
     const id = decodeURIComponent(window.location.hash.slice(1))
@@ -285,16 +331,11 @@ export function EssayIndex({
     <aside
       className="essay-side"
       aria-label={copy.contents}
-      style={
-        {
-          '--scroll-percent': `${progress * 100}%`,
-        } as CSSProperties
-      }
+      ref={sideRef}
     >
       <nav
         className="essay-scroll-index"
         aria-label={copy.sections}
-        ref={indexRef}
       >
         {sections.map((section) => {
           const childIds = section.children?.map((child) => child.id) ?? []
