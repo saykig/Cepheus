@@ -484,135 +484,41 @@
     {
       "id": 10,
       "readMore": true,
-      "body": [
+      "preview": [
         {
           "type": "text",
-          "text": "Conflict-event data offers a useful parallel because the difficulty is often not that data does not exist, but that different datasets make the world legible through different coding choices. UCDP, for example, defines state-based armed conflict through a contested incompatibility over government or territory and a threshold of at least 25 battle-related deaths in a calendar year, while ACLED collects real-time political violence and disorder events using a broader event-data structure. ACLED itself warns that care is needed when combining its data with datasets that use different units of analysis, and that findings may differ across datasets because of different scopes and methodologies. "
+          "text": "I am using this phrase from T. M. Scanlon's "
         },
         {
           "type": "source",
-          "sourceId": 32,
-          "text": "Kristine Eck’s comparison of UCDP GED and ACLED"
+          "sourceId": 16,
+          "text": "What We Owe to Each Other",
+          "italic": true
         },
         {
           "type": "text",
-          "text": " is useful because it shows how even adjacent, respected datasets can require substantial interpretive work before they can be responsibly compared."
+          "text": " in a institutional sense. When technical and policy institutions jointly shape systems that affect public life, neither can treat the knowledge or responsibilities of the other as someone else's problem."
+        }
+      ],
+      "body": [
+        {
+          "type": "text",
+          "text": "I am using this phrase from T. M. Scanlon's "
+        },
+        {
+          "type": "source",
+          "sourceId": 16,
+          "text": "What We Owe to Each Other",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": " in a institutional sense. When technical and policy institutions jointly shape systems that affect public life, neither can treat the knowledge or responsibilities of the other as someone else's problem."
         }
       ]
     },
     {
       "id": 11,
-      "readMore": true,
-      "body": [
-        {
-          "type": "text",
-          "text": "The OECD’s "
-        },
-        {
-          "type": "source",
-          "sourceId": 25,
-          "text": "Cracking the Code: Rulemaking for Humans and Machines",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " is useful here because it shows that the need for machine-consumable public rules has already been recognized. But it should not be mistaken for the thing it describes: it is a working paper, not an implemented corpus or dataset. Its abstract presents “Rules as Code” as a proposal and describes the paper as a guide to the concept’s potential and possible public-service applications. In that sense, it also illustrates the limitation I am describing in international relations: multilateral policy institutions often identify the need for a shared structure, but do not themselves provide the structured knowledge layer it calls for."
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "readMore": true,
-      "preview": [
-        {
-          "type": "text",
-          "text": "The OECD’s "
-        },
-        {
-          "type": "source",
-          "sourceId": 25,
-          "text": "Cracking the Code: Rulemaking for Humans and Machines",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " examines the idea of governments producing some rules in machine-consumable form."
-        }
-      ],
-      "body": [
-        {
-          "type": "text",
-          "text": "The OECD’s "
-        },
-        {
-          "type": "source",
-          "sourceId": 25,
-          "text": "Cracking the Code: Rulemaking for Humans and Machines",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " examines the idea of governments producing some rules in machine-consumable form. Denis Merigoux, Nicolas Chataing, and Jonathan Protzenko’s "
-        },
-        {
-          "type": "source",
-          "sourceId": 26,
-          "text": "Catala: A Programming Language for the Law",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " develops a shared medium for lawyers and programmers to represent certain computational parts of statutory law. "
-        },
-        {
-          "type": "source",
-          "sourceId": 27,
-          "text": "OpenFisca"
-        },
-        {
-          "type": "text",
-          "text": " is a related Rules as Code project. I use these examples not to suggest that politics can be reduced to code, but to show how structure can make translation between professional languages easier."
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "readMore": true,
-      "preview": [
-        {
-          "type": "text",
-          "text": "I am using this phrase from T. M. Scanlon's "
-        },
-        {
-          "type": "source",
-          "sourceId": 16,
-          "text": "What We Owe to Each Other",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " in a institutional sense. When technical and policy institutions jointly shape systems that affect public life, neither can treat the knowledge or responsibilities of the other as someone else's problem."
-        }
-      ],
-      "body": [
-        {
-          "type": "text",
-          "text": "I am using this phrase from T. M. Scanlon's "
-        },
-        {
-          "type": "source",
-          "sourceId": 16,
-          "text": "What We Owe to Each Other",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " in a institutional sense. When technical and policy institutions jointly shape systems that affect public life, neither can treat the knowledge or responsibilities of the other as someone else's problem."
-        }
-      ]
-    },
-    {
-      "id": 14,
       "readMore": true,
       "preview": [
         {
@@ -638,7 +544,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": 12,
       "readMore": true,
       "body": [
         {
@@ -658,7 +564,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": 13,
       "readMore": true,
       "body": [
         {

@@ -457,85 +457,13 @@ export default async function CepheusEssay({
             boundaries become less costly when the information crossing them has
             structure.
           </p>
-          <p>
-            What made this problem feel less abstract to me was realizing how
-            often I encountered the same fragmentation simply by trying to
-            understand AI governance.<FootnoteRef number={10} /> I would open one government report, which
-            led me to another framework, then a paper, then a legal document<FootnoteRef number={11} />, and
-            eventually to projects such as Catala or the OECD’s work on Rules as
-            Code. Before long, I had ten tabs open, all describing parts of the
-            same problem in completely different languages. In an era of abundant
-            knowledge, the problem is often not that information does not exist,
-            but that it is stored differently, described differently, and made
-            legible to entirely different professional communities.
-            <FootnoteRef number={12} />
-          </p>
-          <p>
-            That is when I began thinking about{' '}
-            <a
-              className="citation-link"
-              href="https://writewrit.vercel.app/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              building Writ
-            </a>
-            . Writ is still a pilot, but the idea behind it is relatively
-            simple: to turn political and global-affairs research into
-            structured, traceable knowledge that both people and software can
-            read. It is a domain-specific language and knowledge system, and
-            what interests me most about it is what it might make possible
-            between these two worlds.
-          </p>
-          <p>
-            What I would like Writ to borrow from systems such as Lean is not
-            mathematical certainty, but <strong>provenance and interoperability</strong>.
-            {' '}Provenance means that a judgment should remain connected to the
-            evidence and assumptions it is based on. Interoperability means
-            that the same underlying piece of knowledge should be usable across
-            different tools and professional communities without having to be
-            continually translated and reconstructed. Someone working in policy
-            should be able to read a claim, its evidence, and the reasoning
-            behind it in ordinary language, while an engineer should be able to
-            inspect that same material as structured data and build tools on top
-            of it. They should, in other words, be looking at the same underlying
-            object.
-          </p>
-          <p>
-            The{' '}
-            <a
-              className="citation-link"
-              href="https://writewrit.vercel.app/lab"
-              rel="noreferrer"
-              target="_blank"
-            >
-              current Writ pilot
-            </a>
-            {' '}begins to test this idea. It preserves sources, claims, and
-            uncertainty in a structured form so that conclusions can still be
-            traced back to the evidence behind them. I am cautiously optimistic that,
-            if such systems like this become useful enough, policy knowledge
-            could become easier to compare, update, inspect, and carry across
-            institutional boundaries without pretending that political judgment
-            can be reduced to code.
-          </p>
-          <p>
-            That would not close the gap between policy and technology on its
-            own. Nor is the goal to turn policymakers into programmers or
-            engineers into policy analysts. The more realistic ambition is to
-            make the knowledge in each world more legible to the other.
-            {' '}<strong>The gap becomes harder to bridge when every transfer of
-            knowledge also requires a new translation.</strong> Writ is currently
-            in an experimental stage in asking whether some of that distance can
-            instead be built into a shared structure from the beginning.
-          </p>
           <h2 id="what-do-we-owe-to-each-other">
             {labels.owe}
           </h2>
           <p>
             Then, as people working in policy and technology, we have to ask
             ourselves: what is expected of us? More importantly, what do we owe
-            one another<FootnoteRef number={13} />, and what should that require
+            one another<FootnoteRef number={10} />, and what should that require
             of us? I do not think the answer is that engineers should become
             policymakers, or that policymakers need to understand every
             technical detail. These fields exist separately for good reasons.
@@ -587,7 +515,7 @@ export default async function CepheusEssay({
             Alignment, then, is not a matter of policy catching up with
             technology, or technology simply submitting to policy. The goal is
             not to arrive at some perfect agreement as we try to close this
-            gap.<FootnoteRef number={14} /> In regards to the aforementioned
+            gap.<FootnoteRef number={11} /> In regards to the aforementioned
             concept of Erdős problems and Lean, the lesson I take from mathematics
             is not that international affairs ought to become mathematics. It is
             almost the quite opposite. Mathematics can demand a degree of formal
@@ -649,7 +577,7 @@ export default async function CepheusEssay({
           </p>
           <p>
             Even the debate over what should follow from incidents like this is
-            divided. A July 2026 open-weights statement<FootnoteRef number={15} /> backed by NVIDIA, Hugging
+            divided. A July 2026 open-weights statement<FootnoteRef number={12} /> backed by NVIDIA, Hugging
             Face, Microsoft, Meta, and many other firms openly acknowledges that
             once model weights are released, the original developer loses
             substantial control, and modified versions become difficult to trace
@@ -658,7 +586,7 @@ export default async function CepheusEssay({
             organizations can inspect models and develop protections themselves.
           </p>
           <p>
-            I have not yet figured out how to answer the three questions<FootnoteRef number={16} /> I
+            I have not yet figured out how to answer the three questions<FootnoteRef number={13} /> I
             proposed at the beginning of this essay. But I do know that the
             answer is not to create one language in which everyone thinks. A
             better way forward is to find ways for our different languages to
