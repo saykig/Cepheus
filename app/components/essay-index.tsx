@@ -42,7 +42,6 @@ export function EssayIndex({
   const [activeId, setActiveId] = useState(sections[0]?.id)
   const [visibleChildId, setVisibleChildId] = useState<string | null>(null)
   const [progress, setProgress] = useState(0)
-  const [noteOpacity, setNoteOpacity] = useState(1)
   const indexRef = useRef<HTMLElement>(null)
   const visualProgressRef = useRef<{
     active: EssayVisualState
@@ -120,8 +119,6 @@ export function EssayIndex({
     }
 
     const update = () => {
-      setNoteOpacity(Math.max(0.78, 1 - window.scrollY / 1800))
-
       const current = flatSections.reduce((active, section) => {
         const element = document.getElementById(section.id)
         if (!element) return active
@@ -290,15 +287,10 @@ export function EssayIndex({
       aria-label={copy.contents}
       style={
         {
-          '--note-opacity': noteOpacity,
           '--scroll-percent': `${progress * 100}%`,
         } as CSSProperties
       }
     >
-      <p className="essay-side-note">
-        {copy.sideNote}
-      </p>
-
       <nav
         className="essay-scroll-index"
         aria-label={copy.sections}

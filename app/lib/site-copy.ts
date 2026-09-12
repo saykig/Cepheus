@@ -17,7 +17,6 @@ type SiteCopy = {
   landingHint: string
   contents: string
   sections: string
-  sideNote: string
   download: string
   lastUpdated: string
 }
@@ -41,8 +40,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     landingHint: 'Click anywhere to trace a connection',
     contents: 'Essay contents',
     sections: 'Sections',
-    sideNote:
-      'AI is often built in one world and governed in another. Cepheus is an AI-for-policy project that maps the gaps between technological innovation and institutional responsibility.',
     download: 'Download report (PDF)',
     lastUpdated: 'Last updated',
   },
@@ -64,8 +61,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     landingHint: 'Нажмите в любом месте, чтобы провести связь',
     contents: 'Содержание эссе',
     sections: 'Разделы',
-    sideNote:
-      'Технологии часто создаются в одном мире, а регулируются в другом. Cepheus показывает расстояние между ними.',
     download: 'Скачать отчёт (PDF)',
     lastUpdated: 'Обновлено',
   },
@@ -87,8 +82,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     landingHint: '아무 곳이나 클릭해 연결을 그려 보세요',
     contents: '에세이 목차',
     sections: '섹션',
-    sideNote:
-      '기술은 한 세계에서 만들어지고 다른 세계에서 통치되곤 합니다. Cepheus는 그 사이의 거리를 그립니다.',
     download: '보고서 다운로드(PDF)',
     lastUpdated: '최근 업데이트',
   },
@@ -110,8 +103,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     landingHint: 'Cliquez n’importe où pour tracer un lien',
     contents: 'Sommaire de l’essai',
     sections: 'Sections',
-    sideNote:
-      'La technologie est souvent conçue dans un monde et gouvernée dans un autre. Cepheus cartographie la distance entre les deux.',
     download: 'Télécharger le rapport (PDF)',
     lastUpdated: 'Dernière mise à jour',
   },
@@ -133,8 +124,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     landingHint: '点击任意位置，描绘一条连接',
     contents: '文章目录',
     sections: '章节',
-    sideNote:
-      '技术往往诞生于一个世界，却由另一个世界治理。Cepheus 描绘两者之间的距离。',
     download: '下载报告（PDF）',
     lastUpdated: '最近更新',
   },
