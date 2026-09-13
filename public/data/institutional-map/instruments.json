@@ -1,0 +1,38 @@
+[
+  {
+    "id": "openai-mou",
+    "label": "Model-access memorandum",
+    "kind": "Memorandum of understanding",
+    "bindingness": "Not established from the announcement",
+    "sourceIds": [
+      "nist-mous-2024"
+    ]
+  },
+  {
+    "id": "anthropic-mou",
+    "label": "Model-access memorandum",
+    "kind": "Memorandum of understanding",
+    "bindingness": "Not established from the announcement",
+    "sourceIds": [
+      "nist-mous-2024"
+    ]
+  },
+  {
+    "id": "sonnet-evaluation",
+    "label": "Claude 3.5 Sonnet evaluation",
+    "kind": "Joint pre-deployment exercise",
+    "bindingness": "No regulatory power inferred",
+    "sourceIds": [
+      "joint-evaluation-2024"
+    ]
+  },
+  {
+    "id": "llnl-claude",
+    "label": "Claude for Enterprise deployment",
+    "kind": "Reported research deployment",
+    "bindingness": "Contract terms not established",
+    "sourceIds": [
+      "llnl-deployment-2025"
+    ]
+  }
+]

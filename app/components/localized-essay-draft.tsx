@@ -1,6 +1,4 @@
 import { EssayIndex } from './essay-index'
-import { FrontierScoreExplorer } from './frontier-score-explorer'
-import { GapMapMatrix } from './gap-map-matrix'
 import { InstitutionalLinkMap } from './institutional-link-map'
 import { essayDrafts } from 'app/lib/essay-drafts'
 import { essayLabels } from 'app/lib/essay-copy'
@@ -12,8 +10,8 @@ export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
   const labels = essayLabels[locale]
   const draft = essayDrafts[locale]
   const sections = [
-    { id: 'first-collision', title: labels.firstCollision, children: [{ id: 'gap-matrix', title: labels.gap }] },
-    { id: 'what-is-expected-of-us', title: labels.expected, children: [{ id: 'institutional-friction-explorer', title: labels.friction }] },
+    { id: 'first-collision', title: labels.firstCollision },
+    { id: 'what-is-expected-of-us', title: labels.expected },
     { id: 'what-do-we-owe-to-each-other', title: labels.owe, children: [{ id: 'cepheus-map', title: labels.link }] },
   ]
 
@@ -31,21 +29,11 @@ export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
           <h2 className="essay-opening-heading" id="first-collision">{labels.firstCollision}</h2>
           {draft.opening.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           <ol className="essay-questions">{draft.questions.map((question) => <li key={question}><strong>{question}</strong></li>)}</ol>
-          <section className="essay-visual-block" id="gap-matrix" data-essay-visual="gap">
-            <GapMapMatrix locale={locale} />
-            <p className="tool-caption">{draft.gapCaption}</p>
-          </section>
           {draft.bridge.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           <h2 id="what-is-expected-of-us">{labels.expected}</h2>
-          {draft.expected.map((paragraph, index) => (
+          {draft.expected.map((paragraph) => (
             <div key={paragraph}>
               <p>{paragraph}</p>
-              {index === 4 ? (
-                <section className="essay-visual-block" id="institutional-friction-explorer" data-essay-visual="friction">
-                  <FrontierScoreExplorer locale={locale} />
-                  <p className="tool-caption">{draft.frictionCaption}</p>
-                </section>
-              ) : null}
             </div>
           ))}
           <h2 id="what-do-we-owe-to-each-other">{labels.owe}</h2>

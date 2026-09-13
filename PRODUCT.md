@@ -24,7 +24,7 @@ Measured, essayistic, quietly ambitious. Concrete before abstract. Trusts the re
 ## Principles
 
 1. **The essay leads.** Instruments serve the argument. If a visualization does not help the reader think, cut it.
-2. **Illustrative, and honest about it.** Cepheus is a *proposed* platform; its data is synthetic and plausible, tied to real citations, never dressed up as live truth.
+2. **Evidence, with limits.** Cepheus is a *proposed* platform. The active institutional map uses sourced, provisional historical records with explicit limits. Earlier illustrative measurements are archived and do not appear in the essay.
 3. **One material.** Warm paper, brown ink, one olive accent. The data palette earns its color inside the instruments only.
 4. **Motion is ink.** Anything that animates should feel drawn, not slid. The charts and the landing share one hand.
 5. **Reachable by everyone.** Keyboard, screen reader, reduced motion, and small screens are first-class, not afterthoughts.

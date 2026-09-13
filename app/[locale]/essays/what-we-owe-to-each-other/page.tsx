@@ -8,14 +8,11 @@ import {
 } from 'app/components/essay-footnotes'
 import { EssayDisclosure } from 'app/components/essay-disclosure'
 import { EssayIndex } from 'app/components/essay-index'
-import { FrontierScoreExplorer } from 'app/components/frontier-score-explorer'
-import { GapMapMatrix } from 'app/components/gap-map-matrix'
 import { InstitutionalLinkMap } from 'app/components/institutional-link-map'
 import sourcesData from '../../../../public/data/sources.json'
 import { essayLabels } from 'app/lib/essay-copy'
 import { isLocale } from 'app/lib/i18n'
 import { LocalizedEssayDraft } from 'app/components/localized-essay-draft'
-import { TechnicalCapacityFigure } from 'app/components/technical-capacity-figure'
 
 export async function generateMetadata({
   params,
@@ -92,14 +89,10 @@ export default async function CepheusEssay({
     {
       id: 'first-collision',
       title: labels.firstCollision,
-      children: [{ id: 'gap-matrix', title: labels.gap }],
     },
     {
       id: 'what-is-expected-of-us',
       title: labels.expected,
-      children: [
-        { id: 'institutional-friction-explorer', title: labels.friction },
-      ],
     },
     {
       id: 'what-do-we-owe-to-each-other',
@@ -111,7 +104,7 @@ export default async function CepheusEssay({
   if (locale !== 'en') return <LocalizedEssayDraft locale={locale} />
 
   return (
-    <article className="essay-page technical-capacity-essay">
+    <article className="essay-page">
       <header className="essay-hero">
         <div className="essay-hero-inner">
           <h1>
@@ -153,7 +146,6 @@ export default async function CepheusEssay({
               technical expertise and control over the system.
             </strong>
           </p>
-          <TechnicalCapacityFigure />
           <p>
             At first, I read it as a dispute over one government contract, but it
             exposed a much larger institutional problem.{' '}
@@ -193,17 +185,7 @@ export default async function CepheusEssay({
             decisions, and where responsibility sits.
           </p>
 
-          <section
-            className="essay-visual-block"
-            id="gap-matrix"
-            data-essay-visual="gap"
-          >
-            <GapMapMatrix locale={locale} />
-            <p className="tool-caption">
-              Points below the diagonal have higher knowledge concentration than
-              public authority. These pilot points are illustrative values for the
-              visual only, not finalized or evidence-backed assessments.
-            </p>
+          <section>
             <EssayDisclosure title="Where do these institutions meet?">
               <p>
                 The answer may include procurement contracts, model-use policies,
@@ -234,13 +216,11 @@ export default async function CepheusEssay({
           </section>
 
           <p>
-            I have found it helpful to think of these as three views of the same
-            system. The Gap Matrix<FootnoteRef number={1} /> shows where
-            technical knowledge and public authority separate. The Friction
-            Index<FootnoteRef number={2} /> shows how that mismatch differs
-            across fields. The Institutional Link Map<FootnoteRef number={3} />
-            traces the dependencies and interfaces through which these
-            institutions might be connected.
+            I now start with named institutions<FootnoteRef number={1} /> and
+            documented mechanisms<FootnoteRef number={2} />. The Institutional
+            Link Map<FootnoteRef number={3} /> lets us inspect the agreements,
+            evaluations, and deployments through which institutions meet.
+            Each connection has a source and a limit to what it can establish.
           </p>
           <p>
             In this essay, I try to illustrate that the central governance
@@ -288,16 +268,7 @@ export default async function CepheusEssay({
             alone does not give them public legitimacy.
           </p>
 
-          <section
-            className="essay-visual-block"
-            id="institutional-friction-explorer"
-            data-essay-visual="friction"
-          >
-            <FrontierScoreExplorer locale={locale} />
-            <p className="tool-caption">
-              Adjust the weights to test how knowledge, authority, dependency,
-              and coordination change the ranking.
-            </p>
+          <section>
             <EssayDisclosure title="Who can actually decide?">
               <p>
                 Authority can include the power to regulate, procure, deploy,
@@ -307,7 +278,7 @@ export default async function CepheusEssay({
               <p>
                 For example, in cybersecurity, a government agency may issue
                 guidance or investigate an attack, while private companies still
-                control the affected networks and infrastructure. In military AI,
+                control the affected networks and infrastructure. In defence procurement and deployment,
                 elected governments and defence institutions hold authority over
                 military operations, but contractors and AI companies may control
                 the systems through which those decisions are carried out.

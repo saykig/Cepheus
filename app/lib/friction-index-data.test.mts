@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
-import frictionData from '../../public/data/annual-scores.json' with { type: 'json' }
+import frictionData from '../../archive/visualizations/2026-09-12/data/annual-scores.json' with { type: 'json' }
 
 const expectedTopicIds = ['ai-governance', 'cybersecurity']
 const expectedInstitutionIds = [

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { describe, it } from 'node:test'
-import pilotData from '../../public/data/gap-data.json' with { type: 'json' }
+import pilotData from '../../archive/visualizations/2026-09-12/data/gap-data.json' with { type: 'json' }
 
 const expectedTopics = [
   {

@@ -33,7 +33,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     backToTop: 'Back to top',
     tagline: 'Bridging the gap between policy and technology.',
     disclaimer:
-      'The instruments in this essay are illustrative. Cepheus is a proposed platform; the figures are synthetic and drawn from the cited sources to show how such a map might read.',
+      'Cepheus is a proposed platform. Its institutional map is a historical research pilot with sourced, provisional records and explicit limits.',
     dark: 'Switch to dark mode',
     light: 'Switch to light mode',
     language: 'Language',
@@ -54,7 +54,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     backToTop: 'Наверх',
     tagline: 'Преодолевая разрыв между политикой и технологиями.',
     disclaimer:
-      'Инструменты в этом эссе носят иллюстративный характер. Cepheus — предлагаемая платформа; данные синтетические и основаны на указанных источниках, чтобы показать, как могла бы выглядеть такая карта.',
+      'Cepheus — предлагаемая платформа. Карта институциональных связей — пилотное исследование исторических данных с источниками, предварительными записями и явными ограничениями.',
     dark: 'Включить тёмную тему',
     light: 'Включить светлую тему',
     language: 'Язык',
@@ -75,7 +75,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     backToTop: '맨 위로',
     tagline: '정책과 기술 사이의 간극을 잇습니다.',
     disclaimer:
-      '이 에세이의 도구는 설명을 위한 것입니다. Cepheus는 제안 단계의 플랫폼이며, 수치는 인용 자료를 바탕으로 구성한 합성 데이터로서 이러한 지도가 어떻게 읽힐 수 있는지 보여 줍니다.',
+      'Cepheus는 제안 단계의 플랫폼입니다. 제도 연결 지도는 출처와 한계를 명시한 잠정적 과거 기록을 사용하는 연구 시범 작업입니다.',
     dark: '어두운 모드로 전환',
     light: '밝은 모드로 전환',
     language: '언어',
@@ -96,7 +96,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     backToTop: 'Haut de page',
     tagline: 'Rapprocher les politiques publiques et la technologie.',
     disclaimer:
-      'Les instruments de cet essai sont illustratifs. Cepheus est une plateforme proposée ; les données sont synthétiques et tirées des sources citées afin de montrer à quoi une telle carte pourrait ressembler.',
+      'Cepheus est une plateforme proposée. Sa carte institutionnelle est une étude pilote historique, composée de liens provisoires accompagnés de sources et de limites explicites.',
     dark: 'Passer au thème sombre',
     light: 'Passer au thème clair',
     language: 'Langue',
@@ -117,7 +117,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     backToTop: '返回顶部',
     tagline: '弥合政策与技术之间的鸿沟。',
     disclaimer:
-      '本文中的工具仅作说明之用。Cepheus 是一个拟议中的平台；数据为依据所引来源构造的合成数据，用于展示这类地图可能呈现的方式。',
+      'Cepheus 是一个拟议中的平台。制度连接图是一项历史研究试点，使用附有来源、明确局限且尚待复核的记录。',
     dark: '切换到深色模式',
     light: '切换到浅色模式',
     language: '语言',

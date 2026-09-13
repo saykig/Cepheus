@@ -11,17 +11,13 @@ type Section = {
   children?: Section[]
 }
 
-type EssayVisualState = 'gap' | 'friction' | 'link'
+type EssayVisualState = 'link'
 type EssayVisualPhase = 'travel' | 'settling' | 'settled'
 
-// This is the single, explicit sequence shared by the essay index and its
-// three visual instruments. A heading begins the transition; its child visual
-// keeps the same state once the reader reaches the instrument itself.
+// The institutional map is the only active essay instrument.
 const SECTION_TO_VISUAL: Record<string, EssayVisualState> = {
-  'first-collision': 'gap',
-  'gap-matrix': 'gap',
-  'what-is-expected-of-us': 'friction',
-  'institutional-friction-explorer': 'friction',
+  'first-collision': 'link',
+  'what-is-expected-of-us': 'link',
   'what-do-we-owe-to-each-other': 'link',
   'cepheus-map': 'link',
 }
@@ -48,8 +44,8 @@ export function EssayIndex({
     initialized: boolean
     settleTimer: number | null
   }>({
-    active: 'gap',
-    target: 'gap',
+    active: 'link',
+    target: 'link',
     phase: 'settled',
     initialized: false,
     settleTimer: null,

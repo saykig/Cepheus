@@ -26,7 +26,7 @@ export const essayLabels: Record<Locale, EssayLabels> = {
     friction: 'The Friction',
     owe: 'What Do We Owe to Each Other?',
     link: 'The Link',
-    updated: 'August 2026',
+    updated: 'September 2026',
   },
   ru: {
     kicker: 'Связь Cepheus',
@@ -39,7 +39,7 @@ export const essayLabels: Record<Locale, EssayLabels> = {
     friction: 'Трение',
     owe: 'Что мы должны друг другу?',
     link: 'Связь',
-    updated: 'Август 2026',
+    updated: 'Сентябрь 2026',
   },
   ko: {
     kicker: 'Cepheus 연결',
@@ -52,7 +52,7 @@ export const essayLabels: Record<Locale, EssayLabels> = {
     friction: '마찰',
     owe: '우리는 서로에게 무엇을 빚지고 있는가?',
     link: '연결',
-    updated: '2026년 8월',
+    updated: '2026년 9월',
   },
   fr: {
     kicker: 'Le lien Cepheus',
@@ -65,7 +65,7 @@ export const essayLabels: Record<Locale, EssayLabels> = {
     friction: 'La friction',
     owe: 'Que nous devons-nous les uns aux autres ?',
     link: 'Le lien',
-    updated: 'Août 2026',
+    updated: 'Septembre 2026',
   },
   'zh-CN': {
     kicker: 'Cepheus 之链',
@@ -78,6 +78,6 @@ export const essayLabels: Record<Locale, EssayLabels> = {
     friction: '摩擦',
     owe: '我们彼此负有什么责任？',
     link: '连接',
-    updated: '2026年8月',
+    updated: '2026年9月',
   },
 }

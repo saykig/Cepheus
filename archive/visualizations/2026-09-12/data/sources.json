@@ -201,12 +201,16 @@
       "body": [
         {
           "type": "text",
-          "text": "Map nodes are named institutions. Biosecurity and cybersecurity are overlapping domain tags; defence is a separate use context. "
+          "text": "The Gap Matrix is intended to show where technical knowledge and public authority become separated across different fields. "
         },
         {
           "type": "link",
-          "text": "Read the node and domain definitions.",
-          "href": "https://github.com/saykig/cepheus/blob/main/research/institutional-map/METHODOLOGY.md"
+          "text": "View the Gap Matrix here.",
+          "href": "#gap-matrix"
+        },
+        {
+          "type": "text",
+          "text": " This link will move you to the visual elsewhere in the essay."
         }
       ]
     },
@@ -216,12 +220,16 @@
       "body": [
         {
           "type": "text",
-          "text": "A documented agreement, evaluation or deployment establishes a specific relationship. It does not by itself measure institutional dependence, authority or effectiveness. Unknown dates and present status remain unverified. "
+          "text": "The Friction Index is intended to compare how the distance between technical knowledge and public authority differs across fields. "
         },
         {
           "type": "link",
-          "text": "Read the evidence rules.",
-          "href": "https://github.com/saykig/cepheus/blob/main/research/institutional-map/METHODOLOGY.md"
+          "text": "View the Friction Index here.",
+          "href": "#institutional-friction-explorer"
+        },
+        {
+          "type": "text",
+          "text": " This link will move you to the visual elsewhere in the essay."
         }
       ]
     },
@@ -231,12 +239,16 @@
       "body": [
         {
           "type": "text",
-          "text": "The institutional map is a provisional historical sample with inspectable source records. It does not claim complete or current coverage. "
+          "text": "The Institutional Link Map is intended to show the dependencies, relationships, and interfaces connecting the institutions discussed in this essay. "
         },
         {
           "type": "link",
-          "text": "Explore the institutional map.",
+          "text": "View the Institutional Link Map here.",
           "href": "#cepheus-map"
+        },
+        {
+          "type": "text",
+          "text": " This link will move you to the visual elsewhere in the essay."
         }
       ]
     },

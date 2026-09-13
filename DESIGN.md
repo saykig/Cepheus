@@ -133,7 +133,7 @@ Shared **Tool Card**: header (title · inline info tooltip `ⓘ` · "About this 
 - **Tooltip / readout**: `--paper-bright`, `--edge`, `--radius-sm`, small; follows cursor or pins to a fixed readout slot.
 - **Line chart**: 1.6px strokes in series colors, round caps/joins; hover crosshair + dot; range toggles as a chip group.
 - **Scatter**: bubbles = series fill + hairline stroke; radius encodes a third measure (area-true: `r ∝ √value`); quadrant guides in `--rule-soft` with tracked-caps corner labels.
-- **Node-link**: nodes filled `--paper-bright`, stroked by kind color, radius by weight; edges `--rule` → series color when incident to selection, width by strength; selected node gets a focus ring.
+- **Node-link**: the active institutional map uses equal-size institution nodes and equal-weight relationship lines. Olive marks interaction, not power. Direct labels remain visible; selection opens the mechanism and sources inline. Domain filters overlap. No numerical strength or inferred importance controls the drawing.
 - **Sliders**: thin track (`--paper-deep`), olive fill, circular thumb with `--edge`; show the numeric value; keyboard operable.
 - **Filter chips**: pill row; selected = `--olive` text on `--olive` 12% fill + olive hairline; rest = `--ink-muted`.
 - **Numbers**: tabular; one decimal for scores; thousands grouped. **Loading**: a quiet ruled placeholder, never a spinner. **Empty**: a plain sentence.
@@ -160,4 +160,4 @@ Shared **Tool Card**: header (title · inline info tooltip `ⓘ` · "About this 
 
 ## 9. Content honesty
 
-Instrument data is illustrative (Cepheus is a proposal). Keep a light "illustrative, drawn from cited sources" note near the instruments, and wire every data point's citations to the References list. Never imply live or authoritative figures.
+The institutional map is a sourced historical research pilot. Keep its provisional status and record period visible; every relationship opens its source, locator, dates and limitations. Present status remains unverified until separately checked. Archived visualizations contain illustrative values and must not be restored as observations.

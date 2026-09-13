@@ -23,7 +23,7 @@ export const essayDrafts: Record<Exclude<Locale, 'en'>, EssayDraft> = {
     questions: ['У кого есть юридические или политические полномочия?', 'Кто контролирует технологию или инфраструктуру?', 'Почему нет надёжного института, соединяющего эти группы?'],
     bridge: [
       'Третий вопрос — ключевой. От нас требуется не идеальная координация и не единый институт, способный видеть всё. Реалистичнее сначала сделать отношения видимыми: кто понимает технологию, кто может принимать решения и на ком лежит ответственность.',
-      'Полезно рассматривать это как три вида одной системы. Матрица разрывов показывает, где расходятся технические знания и публичная власть. Индекс трения показывает, как это несоответствие меняется между областями. Карта институциональных связей прослеживает зависимости и механизмы, через которые институты могут быть соединены.',
+      'Карта институциональных связей показывает конкретные организации и документированные механизмы их взаимодействия. У каждой связи есть источник, дата и ограничения того, что она позволяет утверждать.',
       'В этом суть связи Cepheus. Проблема управления передовым ИИ заключается в расстоянии между теми, кто знает, теми, кто решает, и теми, кто несёт риск. Чем больше это расстояние, тем вероятнее, что политика окажется запоздалой, конфликтной или технически невыполнимой. Поэтому Cepheus предлагается как платформа политической аналитики, отображающая это расстояние между публичными и частными институтами.',
     ],
     expected: [
@@ -59,7 +59,7 @@ export const essayDrafts: Record<Exclude<Locale, 'en'>, EssayDraft> = {
     questions: ['누가 법적 또는 정치적 권한을 갖는가?', '누가 기술 또는 인프라를 통제하는가?', '왜 이 집단들을 잇는 신뢰할 만한 제도가 없는가?'],
     bridge: [
       '세 번째 질문이 핵심이다. 우리에게 요구되는 것은 완벽한 조정도, 모든 것을 보는 단일 기관도 아니다. 현실적인 출발점은 누가 기술을 이해하고, 누가 결정을 내리며, 책임이 어디에 놓이는지를 보이게 만드는 것이다.',
-      '이를 하나의 시스템을 보는 세 관점으로 생각할 수 있다. 간극 매트릭스는 기술 지식과 공적 권한이 갈라지는 곳을, 마찰 지수는 분야별 불일치를, 제도 연결 지도는 기관을 잇는 의존성과 접점을 보여 준다.',
+      '제도 연결 지도는 구체적인 기관과 문서로 확인된 연결 방식을 보여 준다. 각 연결에는 출처와 날짜, 그리고 그 자료로 확인할 수 있는 범위의 한계가 있다.',
       '이것이 Cepheus 연결의 핵심이다. 프런티어 AI 거버넌스의 문제는 아는 사람, 결정하는 사람, 위험을 감당하는 사람 사이의 거리에 있다. 거리가 멀수록 정책은 늦고 적대적이며 기술적으로 실행 불가능해질 가능성이 높다. Cepheus는 공공·민간 기관 사이의 거리를 그리는 정책 인텔리전스 플랫폼으로 제안된다.',
     ],
     expected: [
@@ -95,7 +95,7 @@ export const essayDrafts: Record<Exclude<Locale, 'en'>, EssayDraft> = {
     questions: ['Qui détient l’autorité juridique ou politique ?', 'Qui contrôle la technologie ou l’infrastructure ?', 'Pourquoi aucune institution fiable ne relie-t-elle ces groupes ?'],
     bridge: [
       'La troisième question est décisive. On ne nous demande ni une coordination parfaite ni une institution unique capable de tout voir. Un point de départ réaliste consiste à rendre les relations visibles : qui comprend la technologie, qui peut décider et où repose la responsabilité.',
-      'On peut y voir trois lectures d’un même système. La matrice des écarts montre où savoir technique et autorité publique se séparent. L’indice de friction compare ce décalage selon les domaines. La carte des liens institutionnels retrace les dépendances et les interfaces qui peuvent relier les institutions.',
+      'La carte des liens institutionnels présente des organisations précises et les mécanismes documentés qui les relient. Chaque lien possède une source, une date et des limites quant à ce que les données permettent d’établir.',
       'C’est le cœur du lien Cepheus. Le problème de gouvernance de l’IA de pointe réside dans la distance entre ceux qui savent, ceux qui décident et ceux qui supportent le risque. Plus elle est grande, plus la politique risque d’être tardive, conflictuelle ou techniquement impraticable. Cepheus est donc proposé comme plateforme d’intelligence publique cartographiant cette distance entre institutions publiques et privées.',
     ],
     expected: [
@@ -131,7 +131,7 @@ export const essayDrafts: Record<Exclude<Locale, 'en'>, EssayDraft> = {
     questions: ['谁拥有法律或政治权力？', '谁控制技术或基础设施？', '为什么没有可靠的机构连接这些群体？'],
     bridge: [
       '第三个问题最为关键。我们需要的不是完美协调，也不是一个能够看见一切的单一机构。更现实的起点是让关系变得可见：谁理解技术，谁能够作出决定，责任又落在哪里。',
-      '可以把它们理解为观察同一系统的三种视角。差距矩阵展示技术知识与公共权力在哪里分离；摩擦指数展示这种错位如何因领域而异；制度连接图则追踪连接机构的依赖关系和接口。',
+      '制度连接图展示具体机构及有文献记录的连接机制。每条连接都附有来源、日期，以及现有证据能够支持的结论范围。',
       '这就是 Cepheus 之链的核心。前沿 AI 的治理问题，在于知道的人、决定的人和承担风险的人之间的距离。距离越大，政策就越可能迟到、对抗或在技术上无法执行。因此，Cepheus 被设想为一个政策情报平台，用来描绘公共与私人机构之间的这种距离。',
     ],
     expected: [
