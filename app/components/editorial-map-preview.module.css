@@ -86,7 +86,7 @@
 .canvas:focus-visible { outline:2px solid var(--olive); outline-offset:3px; }
 
 /* Keep a usable hit area as the graph zooms; glyphs and ports retain their coordinates. */
-.nodeButton { position:absolute; top:50%; transform:translateY(-50%); display:block; width:max(138px,calc(44px / var(--graph-zoom,1))); height:max(44px,calc(44px / var(--graph-zoom,1))); padding:0; }
+.nodeButton { position:absolute; top:50%; transform:translateY(-50%); display:block; width:max(138px,calc(45px / var(--graph-zoom,1))); height:max(44px,calc(45px / var(--graph-zoom,1))); padding:0; }
 .mark { position:absolute; left:4px; top:50%; translate:0 -50%; }
 .labelSlot { position:absolute; left:24px; top:50%; translate:0 -50%; width:110px; }
 .institution[data-marker-side=right] .mark { left:122px; }
@@ -141,5 +141,5 @@
 /* The visible label shares the port's coordinate system, outside native button layout. */
 .institution > .labelSlot { top:22px; pointer-events:none; font:400 max(18px,calc(14px / var(--graph-zoom,1)))/1 var(--font-display),Georgia,serif; }
 /* The transparent target includes readable labels even when zoomed out. */
-.nodeButton { left:0; width:max(138px,calc(44px / var(--graph-zoom,1)),calc(24px + max(110px,calc(70px / var(--graph-zoom,1))))); }
-.institution[data-marker-side=right] .nodeButton { left:min(0px,calc(118px - max(110px,calc(70px / var(--graph-zoom,1))))); width:max(138px,calc(44px / var(--graph-zoom,1)),calc(20px + max(110px,calc(70px / var(--graph-zoom,1))))); }
+.nodeButton { left:0; width:max(138px,calc(45px / var(--graph-zoom,1)),calc(24px + max(110px,calc(70px / var(--graph-zoom,1))))); }
+.institution[data-marker-side=right] .nodeButton { left:min(0px,calc(118px - max(110px,calc(70px / var(--graph-zoom,1))))); width:max(138px,calc(45px / var(--graph-zoom,1)),calc(20px + max(110px,calc(70px / var(--graph-zoom,1))))); }

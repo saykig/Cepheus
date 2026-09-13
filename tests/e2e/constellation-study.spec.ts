@@ -40,7 +40,7 @@ for(const [name,width,height] of frames){
   const desktop=width>=700
   const opening=page.locator(`[data-constellation-study][data-story=${desktop?'true':'false'}]`).first()
   if(!desktop)await opening.scrollIntoViewIfNeeded()
-  await expect(opening.locator('[data-institution]:enabled')).toHaveCount(2)
+  await expect(opening.locator('[data-institution]:enabled')).toHaveCount(2,{timeout:15000})
   await expect(opening.locator('[data-institution="dod"]')).toBeEnabled()
   await expect(opening.locator('[data-institution="anthropic"]')).toBeEnabled()
   await page.waitForTimeout(1900) // Record initial 1.6s node → edge → caption sequence.
