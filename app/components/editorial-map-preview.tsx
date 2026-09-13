@@ -77,7 +77,7 @@ function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
     <motion.button ref={trigger} className={`${styles.nodeButton} nodrag nopan`} data-institution={id} disabled={!n.visible} tabIndex={!n.visible?-1:0}
       onFocus={e=>{if(e.currentTarget.matches(':focus-visible'))show()}}
       onBlur={e=>blur(e.relatedTarget)}
-      onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='Tab'&&!e.shiftKey&&open){e.preventDefault();panel.current?.querySelector('button')?.focus({preventScroll:true})}if(e.altKey&&e.key==='ArrowDown'){e.stopPropagation();e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus({preventScroll:true}))}}}
+      onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();show();setReading(true)}if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='Tab'&&!e.shiftKey&&open){e.preventDefault();panel.current?.querySelector('button')?.focus({preventScroll:true})}if(e.altKey&&e.key==='ArrowDown'){e.stopPropagation();e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus({preventScroll:true}))}}}
       onClick={()=>{show();setReading(true)}}
       aria-expanded={open} aria-controls={open?uid:undefined} aria-haspopup="dialog" aria-label={`${c.read} ${n.name}`}>
     </motion.button>
@@ -198,7 +198,7 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
   fittedFrame.current=frame
   void fit()
  },[fit,viewportInitialized,size.width,size.height,projection.bounds.height])
- const nodes=useMemo<EditorialNode[]>(()=>scene.nodes.map(n=>({id:n.id,type:'editorial',position:{x:n.position.x,y:n.position.y*projection.yScale},
+ const nodes=useMemo<EditorialNode[]>(()=>scene.nodes.map(n=>({id:n.id,type:'editorial',width:138,height:44,position:{x:n.position.x,y:n.position.y*projection.yScale},
   data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:n.visible&&activated&&cameraReady,arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:n.visible?'all':'none'},
  })),[scene.nodes,locale,activated,cameraReady,follow,projection])
  const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:e.visible&&activated&&cameraReady,incident:e.incident||!!hover&&(e.source===hover||e.target===hover),drawKey:`${step}-${traceVersion}`,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,activated,cameraReady,step,traceVersion,hover,focus])
