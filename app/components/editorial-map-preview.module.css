@@ -1,6 +1,6 @@
 .study { width:100%; min-width:0; color:var(--ink); }
 .canvas { width:100%; height:clamp(340px,55svh,480px); }
-.institution { width:138px; height:44px; position:relative; display:flex; align-items:center; background:var(--paper); }
+.institution { width:138px; height:44px; position:relative; display:flex; align-items:center; background:transparent; }
 .nodeButton { display:flex; align-items:center; gap:8px; width:100%; color:var(--ink); font:400 18px/1.15 var(--font-display),Georgia,serif; background:none; border:0; padding:4px; min-height:44px; cursor:pointer; }
 .mark { display:block; flex-shrink:0; width:12px; height:12px; border:1.2px solid var(--ink-soft); border-radius:50%; background:var(--paper); transition:background 180ms; }
 .institution[data-active=true] .mark,.nodeButton:hover .mark { background:var(--olive); border-color:var(--olive-deep); }
