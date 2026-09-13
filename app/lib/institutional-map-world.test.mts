@@ -46,10 +46,10 @@ test('settling is monotonic, bounded and finishes without bouncing',()=>{
  for(let time=0;time<=1600;time+=10){const current=settledFraction(time);assert.ok(current>=last&&current>=0&&current<=1);last=current}
  assert.equal(settledFraction(0),0);assert.equal(settledFraction(1100),1)
 })
-test('experimental renderer remains behind explicit preview context',async()=>{
+test('canonical essay uses the approved editorial renderer in every environment',async()=>{
  const wrapper=await readFile(new URL('../components/institutional-link-map.tsx',import.meta.url),'utf8')
- assert.ok(wrapper.includes('return preview ?'))
- assert.ok(wrapper.includes('<CurrentInstitutionalLinkMap {...props} />'))
+ assert.ok(wrapper.includes('return <Constellation {...props} />'))
+ assert.ok(wrapper.includes('m.EditorialMapPreview'));assert.ok(!wrapper.includes('CurrentInstitutionalLinkMap'))
  assert.ok(!wrapper.includes("process.env.NODE_ENV==='development'"))
  const route=await readFile(new URL('../[locale]/map-preview/page.tsx',import.meta.url),'utf8')
  assert.ok(route.includes("process.env.NODE_ENV !== 'development'"));assert.ok(route.includes('EditorialPreviewProvider'))

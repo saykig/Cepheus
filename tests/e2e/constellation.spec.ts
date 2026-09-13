@@ -3,17 +3,17 @@ import AxeBuilder from '@axe-core/playwright'
 const essay='/essays/what-we-owe-to-each-other'
 test('narrative, exploration, keyboard evidence, and provenance',async({page})=>{
  await page.goto(essay)
- const figure=page.locator('[data-constellation]:visible').first()
+ const figure=page.locator('[data-constellation-study]:visible').first()
  await expect(figure).toHaveAttribute('data-story-state','opening')
- await expect(figure.locator('[data-relationship-path]')).toHaveCount(1)
+ await expect(figure.locator('[data-world-edge][data-revealed=true]')).toHaveCount(1)
  await page.locator('[data-institutional-step="exploration"]').evaluate(el=>window.scrollTo(0,window.scrollY+el.getBoundingClientRect().top-innerHeight*.25))
  await expect(figure).toHaveAttribute('data-story-state','exploration')
- await expect(figure.locator('[data-relationship-path]')).toHaveCount(0)
+ await expect(figure.locator('[data-world-edge][data-revealed=true]')).toHaveCount(31)
  const node=figure.locator('[data-institution="anthropic"]')
- await node.focus();await page.keyboard.press('Enter')
- await expect(figure.getByRole('region',{name:'Anthropic evidence'})).toBeVisible()
+ await expect(node).toBeEnabled();await node.focus();await page.keyboard.press('Enter')
+ await expect(page.getByRole('dialog',{name:'Anthropic evidence'})).toBeVisible()
  await page.keyboard.press('Escape');await expect(node).toBeFocused()
- await node.click();await figure.getByRole('link',{name:'View evidence →'}).click()
+ await node.click();await page.getByRole('dialog',{name:'Anthropic evidence'}).getByRole('link').first().click()
  await expect(page.locator('h1')).toBeVisible()
  await expect(page.getByText('Atomic evidence',{exact:false}).first()).toBeVisible()
 })
@@ -30,17 +30,17 @@ for(const [width,height] of [[1440,900],[1280,800],[1024,768],[1180,820],[768,10
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
   await page.screenshot({path:`/tmp/cepheus-shots/${width}-opening.png`})
   await page.locator('#cepheus-map').evaluate(el=>window.scrollTo(0,scrollY+el.getBoundingClientRect().top-100))
-  const figures=page.locator('[data-constellation]:visible');const f=width>=1000&&height>=700?figures.first():page.locator('[data-constellation][data-story=false]:visible').last()
+  const figures=page.locator('[data-constellation-study]:visible');const f=width>=700&&height>=700?figures.first():page.locator('[data-constellation-study][data-story=false]:visible').last()
   await expect(f).toHaveAttribute('data-story-state','exploration')
-  await expect(f.locator('[data-relationship-path]')).toHaveCount(0)
+  await expect(f.locator('[data-world-edge][data-revealed=true]')).toHaveCount(31)
   for(const node of await f.locator('[data-institution]').all()){
    const box=await node.boundingBox();expect(box!.width).toBeGreaterThanOrEqual(44);expect(box!.height).toBeGreaterThanOrEqual(44)
   }
   await page.screenshot({path:`/tmp/cepheus-shots/${width}-explore.png`})
   await f.locator('[data-institution="anthropic"]').click()
-  await expect(f.getByRole('link',{name:'View evidence →'})).toBeVisible()
+  await expect(page.getByRole('dialog',{name:'Anthropic evidence'}).getByRole('link').first()).toBeVisible()
   await page.screenshot({path:`/tmp/cepheus-shots/${width}-card.png`})
-  const result=await new AxeBuilder({page}).include('[data-constellation]').analyze();expect(result.violations).toEqual([])
+  const result=await new AxeBuilder({page}).include('[data-constellation-study]').analyze();expect(result.violations).toEqual([])
  })
 }
 test('all footnotes return focus to their exact reference',async({page})=>{
@@ -70,7 +70,7 @@ test('public languages share the research story and evidence',async({page})=>{
   await expect(page.locator('[data-institutional-step]')).toHaveCount(6)
   await expect(page.locator('.language-picker option')).toHaveCount(5)
   await expect(page.locator('[data-story=true]')).toHaveAttribute('data-story-state','opening')
-  await expect(page.locator('[data-story=true] [data-relationship-path]')).toHaveCount(1)
+  await expect(page.locator('[data-story=true] [data-world-edge][data-revealed=true]')).toHaveCount(1)
  }
 })
 

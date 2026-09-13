@@ -29,7 +29,7 @@ async function expectAligned(graph:Locator) {
 
 // Acceptance records are intentionally retained for human motion review before promotion.
 test.use({video:'on',trace:'on',reducedMotion:'no-preference'})
-const route='/map-preview'
+const route='/essays/what-we-owe-to-each-other'
 const frames=[['desktop',1440,1000],['ipad-landscape',1180,820],['ipad-portrait',820,1180],['phone',390,844]] as const
 for(const [name,width,height] of frames){
  test(`study motion acceptance ${name}`,async({page},testInfo)=>{
