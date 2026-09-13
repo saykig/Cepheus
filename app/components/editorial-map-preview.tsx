@@ -154,6 +154,7 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   return <section className={styles.study} aria-label="Institutional links" data-story-state={storyStates[step].id} onKeyDown={e=>{if(e.key==='Escape'&&trail.length>1){e.preventDefault();setGuided(false);setTrail(t=>t.slice(0,-1));canvas.current?.focus({preventScroll:true})}}}>
     <div ref={canvas} className={styles.canvas} tabIndex={-1}>
       <ReactFlow proOptions={{hideAttribution:true}} onNodeClick={enableNodePointerEvents} nodes={animatedNodes} edges={graph.edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false} minZoom={.1} maxZoom={1.5} panOnDrag={true} panOnScroll={false} zoomOnScroll={false} zoomOnPinch={true} zoomOnDoubleClick={false} preventScrolling={false} aria-label="Follow an institution to reveal its connections" />
+      <span className={styles.gestureHint}>Drag to explore · Pinch to zoom<br />Zoom out to retrace your path</span>
     </div>
 
   </section>
