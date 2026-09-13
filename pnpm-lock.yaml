@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@xyflow/react@12.11.6': acc3af248061a617a20742329fb81b93d18a7a4e8b81adb184a45dbd73c0dfe7
+
 importers:
 
   .:
@@ -28,7 +31,7 @@ importers:
         version: 1.0.9(next@16.0.10(@playwright/test@1.63.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
       '@xyflow/react':
         specifier: ^12.11.6
-        version: 12.11.6(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 12.11.6(patch_hash=acc3af248061a617a20742329fb81b93d18a7a4e8b81adb184a45dbd73c0dfe7)(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       d3-force:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1503,7 +1506,7 @@ snapshots:
       next: 16.0.10(@playwright/test@1.63.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react: 19.2.3
 
-  '@xyflow/react@12.11.6(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@xyflow/react@12.11.6(patch_hash=acc3af248061a617a20742329fb81b93d18a7a4e8b81adb184a45dbd73c0dfe7)(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@xyflow/system': 0.0.82
       classcat: 5.0.5
