@@ -111,7 +111,7 @@ test('reduced motion and keyboard keep study evidence usable',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});await page.goto(route+'#cepheus-map')
  const graph=page.locator('[data-constellation-study][data-story=true]')
  await expect(graph).toHaveAttribute('data-story-state','exploration')
- const node=graph.locator('[data-institution="anthropic"]');await node.focus();await node.press('Enter')
+ const node=graph.locator('[data-institution="anthropic"]');await expect(node).toBeEnabled();await node.focus();await node.press('Enter')
  const card=page.getByRole('dialog',{name:'Anthropic evidence'});await expect(card).toBeVisible()
  await node.press('Tab');await expect(card.getByRole('button',{name:'Read about Anthropic'})).toBeFocused()
  await page.keyboard.press('Escape');await expect(node).toBeFocused();await expect(card).toBeHidden()

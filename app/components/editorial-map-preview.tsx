@@ -150,9 +150,14 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
   if(!canvas.current)return
   const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){setActivated(true);io.disconnect()}},{threshold:.05})
   io.observe(canvas.current)
-  const ro=new ResizeObserver(([entry])=>setSize(old=>old.width===entry.contentRect.width&&old.height===entry.contentRect.height?old:{width:entry.contentRect.width,height:entry.contentRect.height}))
+  let resizeFrame=0
+  const ro=new ResizeObserver(([entry])=>{
+   const next={width:entry.contentRect.width,height:entry.contentRect.height}
+   cancelAnimationFrame(resizeFrame)
+   resizeFrame=requestAnimationFrame(()=>setSize(old=>old.width===next.width&&old.height===next.height?old:next))
+  })
   ro.observe(canvas.current)
-  return()=>{io.disconnect();ro.disconnect()}
+  return()=>{io.disconnect();ro.disconnect();cancelAnimationFrame(resizeFrame)}
  },[])
  useEffect(()=>{
   if(!story)return
