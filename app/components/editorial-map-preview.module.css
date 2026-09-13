@@ -71,3 +71,4 @@
 
 .labelSlot { position:relative; display:grid; flex:1; text-align:left; }
 .movingLabel { display:block; grid-area:1 / 1; }
+@media(min-width:700px) and (min-height:480px) and (max-height:699px) { .canvas { height:clamp(180px,40svh,270px); } }

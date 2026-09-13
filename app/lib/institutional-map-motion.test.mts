@@ -32,3 +32,13 @@ test('interrupted transitions reuse existing node positions',()=>{
   assert.equal(nodes[0].x,32);assert.equal(nodes[0].y,74)
   simulation.stop()
 })
+test('new nodes visibly travel across several animation frames before settling',()=>{
+  const {nodes,simulation}=createInstitutionMotion(targets,edges,new Map(),1,300)
+  const start=nodes.map(n=>({x:n.x,y:n.y}))
+  simulation.tick(4) // 100ms at the presentation's 40Hz simulation clock
+  const early=nodes.map(n=>({x:n.x,y:n.y}))
+  simulation.tick(12) // 400ms
+  assert.ok(nodes.some((n,i)=>Math.hypot(n.x-early[i].x,n.y-early[i].y)>10))
+  assert.ok(nodes.every((n,i)=>Math.hypot(n.x-start[i].x,n.y-start[i].y)>100))
+  simulation.stop()
+})

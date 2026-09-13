@@ -82,15 +82,24 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   const direction=useRef(1)
   const previousStep=useRef(initialStep)
   const [reduced, setReduced] = useState(false)
+  const [onScreen,setOnScreen]=useState(false)
   const [size,setSize] = useState({width:440,height:460})
   const canvas=useRef<HTMLDivElement>(null)
   const origin = trail[trail.length-1]
   const { setViewport } = useReactFlow()
   useEffect(() => { const q = matchMedia('(prefers-reduced-motion: reduce)'); const update = () => setReduced(q.matches); update(); q.addEventListener('change', update); return () => q.removeEventListener('change', update) }, [])
+  useEffect(()=>{
+    if(!canvas.current)return
+    const observer=new IntersectionObserver(([entry])=>{
+      setOnScreen(entry.isIntersecting&&entry.intersectionRatio>=.12)
+    },{threshold:[0,.12]})
+    observer.observe(canvas.current)
+    return()=>observer.disconnect()
+  },[])
   useEffect(()=>{if(!canvas.current)return;const observer=new ResizeObserver(([entry])=>setSize({width:entry.contentRect.width,height:entry.contentRect.height}));observer.observe(canvas.current);return()=>observer.disconnect()},[])
   useEffect(()=>{
     if(!story)return
-    const media=matchMedia('(min-width: 700px) and (min-height: 700px)')
+    const media=matchMedia('(min-width: 700px) and (min-height: 480px)')
     let detach=()=>{}
     const attach=()=>{
       detach();if(!media.matches)return
@@ -136,8 +145,9 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
     return {nodes,edges,height:Math.max(44,next.length*62),width:next.length?328:138,focusX}
   },[trail,origin,follow,showReading,guided,step])
   const [animatedNodes, setAnimatedNodes] = useState<EditorialNode[]>(graph.nodes)
-  const currentNodes = useRef(graph.nodes)
+  const currentNodes = useRef<EditorialNode[]>([])
   useEffect(() => {
+    if(!onScreen)return
     const prior=new Map(currentNodes.current.map(n=>[n.id,n]))
     const outgoing=currentNodes.current.filter(n=>!graph.nodes.some(target=>target.id===n.id))
     const travel=direction.current
@@ -151,10 +161,10 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
     const started=performance.now()
     let progress=0
     // Motion owns the springy presence envelope; D3 owns node positions and collisions.
-    const presence=animate(0,1,{type:'spring',stiffness:135,damping:22,onUpdate:value=>{progress=Math.max(0,Math.min(1,value))}})
+    const presence=animate(0,1,{type:'spring',stiffness:80,damping:18,onUpdate:value=>{progress=Math.max(0,Math.min(1,value))}})
     let frame=0;let ticks=0
     const draw=(now:number)=>{
-      const wanted=Math.min(100,Math.floor((now-started)/(1000/60)))
+      const wanted=Math.min(100,Math.floor((now-started)/(1000/40)))
       if(wanted>ticks){simulation.tick(wanted-ticks);ticks=wanted}
       const current:EditorialNode[]=graph.nodes.map((n,index)=>({...n,
         data:{...n.data,direction:travel},
@@ -170,12 +180,12 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
     }
     frame=requestAnimationFrame(draw)
     return()=>{cancelAnimationFrame(frame);simulation.stop();presence.stop()}
-  },[graph,reduced])
+  },[graph,reduced,onScreen])
   useEffect(()=>{
     const zoom=Math.min(1.1,(size.width-20)/graph.width,(size.height-32)/graph.height)
     void setViewport({x:(size.width-graph.width*zoom)/2-graph.focusX*zoom,y:(size.height-graph.height*zoom)/2,zoom},{duration:reduced?0:620})
   },[size,graph.width,graph.height,graph.focusX,setViewport,reduced])
-  return <section className={styles.study} aria-label="Institutional links" data-story-state={storyStates[step].id} onKeyDown={e=>{if(e.key==='Escape'&&trail.length>1){e.preventDefault();setGuided(false);setTrail(t=>t.slice(0,-1));canvas.current?.focus({preventScroll:true})}}}>
+  return <section className={styles.study} aria-label="Institutional links" data-story-state={storyStates[step].id} data-motion={reduced?'reduced':onScreen?'visible':'waiting'} onKeyDown={e=>{if(e.key==='Escape'&&trail.length>1){e.preventDefault();setGuided(false);setTrail(t=>t.slice(0,-1));canvas.current?.focus({preventScroll:true})}}}>
     <div ref={canvas} className={styles.canvas} tabIndex={-1}>
       <ReactFlow proOptions={{hideAttribution:true}} onNodeClick={enableNodePointerEvents} nodes={animatedNodes} edges={graph.edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false} minZoom={.1} maxZoom={1.5} panOnDrag={true} panOnScroll={false} zoomOnScroll={false} zoomOnPinch={true} zoomOnDoubleClick={false} preventScrolling={false} aria-label="Follow an institution to reveal its connections" />
       <span className={styles.gestureHint}>Drag to explore · Pinch to zoom<br />Zoom out to retrace your path</span>
