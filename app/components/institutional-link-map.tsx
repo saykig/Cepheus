@@ -11,6 +11,7 @@ import type { Bundle } from '../lib/institutional-map-types'
 import { storyStates, resolveStoryStep, storyRelationship } from '../lib/institutional-map-story'
 import type { Locale } from '../lib/i18n'
 import styles from './institutional-link-map.module.css'
+import { scrollToEssayTarget } from './essay-scroll'
 
 const data=bundle as unknown as Bundle
 const publishedIds=new Set(data.relationships.map(r=>r.id))
@@ -23,7 +24,17 @@ const copy={
 }
 const SelectionContext=createContext<ReturnType<typeof useSelection>|null>(null)
 function useSelection(){const [selected,setSelected]=useState<string|null>(null);const [chosen,setChosen]=useState<string|null>(null);const [owner,setOwner]=useState<string|null>(null);return {selected,setSelected,chosen,setChosen,owner,setOwner}}
-export function ConstellationSession({children}:{children:ReactNode}){const value=useSelection();return <SelectionContext.Provider value={value}>{children}</SelectionContext.Provider>}
+export function ConstellationSession({children}:{children:ReactNode}){const value=useSelection();
+ useEffect(()=>{
+  let cancelled=false;let frame=0
+  // WebKit can restore a fragment before the streamed body/fonts have settled.
+  // Reconcile only a failed top-of-page restoration, never an intentional scroll.
+  const reconcile=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{if(cancelled||scrollY>1||!location.hash)return;let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{return};scrollToEssayTarget(id)})}
+  void document.fonts.ready.then(()=>{if(!cancelled)reconcile()})
+  window.addEventListener('pageshow',reconcile)
+  return()=>{cancelled=true;cancelAnimationFrame(frame);window.removeEventListener('pageshow',reconcile)}
+ },[])
+ return <SelectionContext.Provider value={value}>{children}</SelectionContext.Provider>}
 export function InstitutionalLinkMap({locale='en',story=false,initialStep=5}:{locale?:Locale;story?:boolean;initialStep?:number}) {
  const [plotSize,setPlotSize]=useState({width:600,height:600})
  const uid=useId();const root=useRef<HTMLElement>(null);const trigger=useRef<HTMLButtonElement|null>(null)
