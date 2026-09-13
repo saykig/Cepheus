@@ -1,36 +1,56 @@
-'use client'
+ 'use client'
 
-import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+/* THESIS: One stable institutional world revealed as the argument expands.
+   OWN-WORLD: Cepheus paper, brown ink, olive, editorial labels and a restrained grid.
+   STORY: DoD–Anthropic first; public decisions, interfaces, evaluation, provenance, exploration.
+   FIRST VIEWPORT: Wide opposing institutions inside the existing sticky essay frame.
+   FORM: Preview-only staged reveal; fixed identities, damped nearby settling, traced SVG ink. */
+import { createContext, useContext, type CSSProperties, useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { createInstitutionMotion, institutionViewport, institutionPresence } from '../lib/institutional-map-motion'
-import { ReactFlow, ReactFlowProvider, Handle, Position, BaseEdge, getBezierPath, useReactFlow, type NodeProps, type EdgeProps, type Node, type Edge } from '@xyflow/react'
+import { motion, useReducedMotion } from 'motion/react'
+import { ReactFlow, ReactFlowProvider, Handle, Position, useReactFlow, useUpdateNodeInternals, useViewport, type NodeProps, type EdgeProps, type Node, type Edge } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import bundle from '../../public/data/institutional-map/constellation.json'
 import { storyStates, resolveStoryStep } from '../lib/institutional-map-story'
+import { institutionalScene, worldBounds, routedInstitutionPath, settledFraction, timing, worldProjection } from '../lib/institutional-map-world'
+import { institutionViewport } from '../lib/institutional-map-motion'
 import type { Bundle } from '../lib/institutional-map-types'
+import type { Locale } from '../lib/i18n'
 import styles from './editorial-map-preview.module.css'
-
-const data = bundle as unknown as Bundle
-const institution = (id: string) => data.institutions.find(i => i.id === id)!
-const neighbors = (id: string) => Array.from(new Set(data.relationships.filter(r => r.source === id || r.target === id).map(r => r.source === id ? r.target : r.source))).sort((a,b) => institution(a).label.localeCompare(institution(b).label))
-type EditorialNode = Node<{ label: string; name: string; active: boolean; direction?: number; exiting?: boolean; follow: () => void }, 'editorial'>
-function InstitutionNode({ data: n }: NodeProps<EditorialNode>) {
+const data=bundle as unknown as Bundle
+const institution=(id:string)=>data.institutions.find(i=>i.id===id)!
+const EvidenceSession=createContext<{owner:string|null;setOwner:(id:string|null)=>void}|null>(null)
+const labels={
+  en:{read:'Read about',close:'Close institution details',follow:'Follow connections',method:'Evidence & methodology',how:'How to read',explore:'Explore institutions'},
+  ru:{read:'Об институте',close:'Закрыть',follow:'Исследовать связи',method:'Источники и методология',how:'Как читать',explore:'Исследовать институты'},
+  ko:{read:'기관 소개',close:'닫기',follow:'연결 탐색',method:'근거 및 방법론',how:'읽는 방법',explore:'기관 살펴보기'},
+  fr:{read:'À propos de',close:'Fermer',follow:'Explorer les liens',method:'Sources et méthodologie',how:'Comment lire',explore:'Explorer les institutions'},
+  'zh-CN':{read:'了解',close:'关闭',follow:'探索连接',method:'证据与方法',how:'如何阅读',explore:'探索机构'},
+}
+type EditorialNode = Node<{ label: string; name: string; locale: Locale; active: boolean; markerSide: 'left' | 'right'; visible: boolean; arriving: boolean; follow: (relationshipId: string) => void }, 'editorial'>
+function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
+  const updateNodeInternals=useUpdateNodeInternals()
+  const {zoom}=useViewport()
+  useLayoutEffect(()=>{updateNodeInternals(id)},[id,n.markerSide,updateNodeInternals])
   const reduceMotion=useReducedMotion()
+  const session=useContext(EvidenceSession)
+  const c=labels[n.locale]
+  const prefix=n.locale==='en'?'':`/${n.locale}`
   const [open,setOpen]=useState(false)
   const [reading,setReading]=useState(false)
+  const [chosen,setChosen]=useState('')
   const [position,setPosition]=useState({left:0,top:0})
   const trigger=useRef<HTMLButtonElement>(null)
   const panel=useRef<HTMLDivElement>(null)
   const timer=useRef<ReturnType<typeof setTimeout>|null>(null)
-  const pointer=useRef('mouse')
-  const uid=useId()
+    const uid=useId()
   const cancel=()=>{if(timer.current)clearTimeout(timer.current)}
   const close=()=>{cancel();setOpen(false)}
-  const deferClose=()=>{cancel();timer.current=setTimeout(close,180)}
-  const show=()=>{if(n.exiting)return;cancel();setOpen(true)}
+  const deferClose=()=>{cancel();timer.current=setTimeout(()=>{if(!panel.current?.contains(document.activeElement)&&document.activeElement!==trigger.current)close()},180)}
+  const show=()=>{if(!n.visible)return;cancel();session?.setOwner(uid);setOpen(true)}
   useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current)},[])
-  useEffect(()=>{if(n.exiting)close()},[n.exiting])
+  useEffect(()=>{if(!n.visible)close()},[n.visible])
+  useEffect(()=>{if(session?.owner!==uid)setOpen(false)},[session?.owner,uid])
   useLayoutEffect(()=>{
     if(!open||!trigger.current||!panel.current)return
     const box=trigger.current.getBoundingClientRect()
@@ -38,158 +58,160 @@ function InstitutionNode({ data: n }: NodeProps<EditorialNode>) {
     const width=panel.current.offsetWidth
     setPosition({left:Math.max(12,Math.min(box.left,innerWidth-width-12)),top:box.bottom+height+8<innerHeight?box.bottom+6:Math.max(12,box.top-height-6)})
   },[open,reading])
-  useEffect(()=>{if(!open)return;window.addEventListener('resize',close);window.addEventListener('scroll',close);return()=>{window.removeEventListener('resize',close);window.removeEventListener('scroll',close)}},[open])
-  const id=data.institutions.find(i=>i.name===n.name)!.id
+  useEffect(()=>{
+    if(!open)return
+    const outside=(e:PointerEvent)=>{if(e.target instanceof globalThis.Node&&!panel.current?.contains(e.target)&&!trigger.current?.contains(e.target))close()}
+    window.addEventListener('resize',close);window.addEventListener('scroll',close);document.addEventListener('pointerdown',outside)
+    return()=>{window.removeEventListener('resize',close);window.removeEventListener('scroll',close);document.removeEventListener('pointerdown',outside)}
+  },[open])
   const records=data.relationships.filter(r=>r.source===id||r.target===id)
-  const follow=()=>{close();n.follow()}
+  const follow=()=>{const relationshipId=chosen||records[0]?.id;if(relationshipId){close();n.follow(relationshipId)}}
   const blur=(target:EventTarget|null)=>{if(target instanceof globalThis.Node&&(panel.current?.contains(target)||trigger.current?.contains(target)))return;deferClose()}
-  return <div className={styles.institution} data-active={n.active} data-peek={open} onPointerEnter={e=>{if(e.pointerType==='mouse')show()}} onPointerLeave={e=>{if(e.pointerType==='mouse')deferClose()}}>
-    <Handle type="target" position={Position.Left} className={styles.handle} />
-    <button ref={trigger} className={`${styles.nodeButton} nodrag nopan`} disabled={n.exiting} tabIndex={n.exiting?-1:0}
-      onPointerDown={e=>{pointer.current=e.pointerType}}
+  return <motion.div initial={{opacity:0}} animate={{opacity:n.visible?(n.active?1:.85):0}} transition={reduceMotion?{duration:0}:{duration:n.visible?1.1:.9}} aria-hidden={!n.visible} className={styles.institution} style={{'--graph-zoom':zoom} as CSSProperties} data-active={n.active} data-peek={open} data-marker-side={n.markerSide} onPointerEnter={e=>{if(e.pointerType==='mouse')show()}} onPointerLeave={e=>{if(e.pointerType==='mouse')deferClose()}}>
+    <Handle type="target" position={n.markerSide==='right'?Position.Right:Position.Left} className={styles.handle}
+      style={{left:n.markerSide==='right'?128:10,top:22,right:'auto',bottom:'auto',transform:'translate(-50%,-50%)'}} />
+    <motion.button initial={{y:14}} animate={{y:n.visible?0:14}} transition={reduceMotion?{duration:0}:{duration:timing.settle/1000,ease:(t:number)=>settledFraction(t*timing.settle)}} ref={trigger} className={`${styles.nodeButton} nodrag nopan`} data-institution={id} disabled={!n.visible} tabIndex={!n.visible?-1:0}
       onFocus={e=>{if(e.currentTarget.matches(':focus-visible'))show()}}
       onBlur={e=>blur(e.relatedTarget)}
-      onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='ArrowDown'){e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus())}}}
-      onClick={e=>{if(n.active||pointer.current==='touch'&&e.detail!==0){show();if(n.active)setReading(true)}else follow()}}
-      aria-expanded={open} aria-controls={open?uid:undefined} aria-haspopup="dialog" aria-label={n.active?`Read about ${n.name}`:`Follow ${n.name}`}>
-      <motion.span className={styles.mark} animate={{scale:n.exiting ? .65 : 1,opacity:n.exiting?0:1}} transition={{duration:reduceMotion?0:.22}}/>
-      <span className={styles.labelSlot}><AnimatePresence initial={false} mode="popLayout">{!n.exiting&&<motion.span key={n.label} className={styles.movingLabel} initial={{opacity:0,y:(n.direction??1)*9}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-(n.direction??1)*8}} transition={reduceMotion?{duration:0}:{type:'spring',stiffness:210,damping:25}}>{n.label}</motion.span>}</AnimatePresence></span>
-    </button>
-    <Handle type="source" position={Position.Right} className={styles.handle} />
-    {open&&createPortal(<div ref={panel} id={uid} role="dialog" aria-label={`About ${n.label}`} className={styles.hoverPanel} style={position}
-      onPointerEnter={cancel} onPointerLeave={deferClose} onFocusCapture={cancel} onBlur={e=>blur(e.relatedTarget)} onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();trigger.current?.focus({preventScroll:true});close()}}}>
-      <div className={styles.tabHeading}><button onClick={()=>setReading(v=>!v)} aria-expanded={reading}>Read about {n.label} <span aria-hidden="true">{reading?'−':'+'}</span></button><button aria-label="Close institution details" onClick={()=>{trigger.current?.focus({preventScroll:true});close()}}>×</button></div>
+      onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='Tab'&&!e.shiftKey&&open){e.preventDefault();panel.current?.querySelector('button')?.focus()}if(e.altKey&&e.key==='ArrowDown'){e.stopPropagation();e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus())}}}
+      onClick={()=>{show();setReading(true)}}
+      aria-expanded={open} aria-controls={open?uid:undefined} aria-haspopup="dialog" aria-label={`${c.read} ${n.name}`}>
+      <motion.span className={styles.mark} animate={{backgroundColor:n.active?'var(--olive)':'var(--paper)'}} transition={reduceMotion?{duration:0}:{duration:.45,delay:n.arriving?1.5:0}}/>
+      <span className={styles.labelSlot}>{n.label}</span>
+    </motion.button>
+    <Handle type="source" position={Position.Right} className={styles.handle}
+      style={{left:n.markerSide==='right'?128:10,top:22,right:'auto',bottom:'auto',transform:'translate(-50%,-50%)'}} />
+    {open&&createPortal(<div ref={panel} id={uid} role="dialog" aria-label={`${n.label} evidence`} className={styles.hoverPanel} style={position}
+      onPointerEnter={cancel} onPointerLeave={deferClose} onFocusCapture={cancel} onBlur={e=>blur(e.relatedTarget)} onKeyDown={e=>{
+        if(e.key==='Escape'){e.stopPropagation();trigger.current?.focus({preventScroll:true});close()}
+        if(e.key==='Tab'){
+          const controls=Array.from(panel.current?.querySelectorAll<HTMLElement>('button,a[href],select,summary')??[]).filter(el=>el.getClientRects().length>0)
+          if(e.shiftKey&&e.target===controls[0]){e.preventDefault();trigger.current?.focus({preventScroll:true})}
+          if(!e.shiftKey&&e.target===controls[controls.length-1]){
+            e.preventDefault();close()
+            const siblings=Array.from(trigger.current?.closest('[data-constellation-study]')?.querySelectorAll<HTMLButtonElement>('[data-institution]:not(:disabled),[aria-label="Map controls"] button')??[])
+            const next=siblings[siblings.indexOf(trigger.current!)+1]
+            if(next)next.focus({preventScroll:true});else {trigger.current?.focus({preventScroll:true});close()}
+          }
+        }
+      }}>
+
+      <div className={styles.tabHeading}><button onClick={()=>setReading(v=>!v)} aria-expanded={reading}>{c.read} {n.label} <span aria-hidden="true">{reading?'−':'+'}</span></button><button aria-label={c.close} onClick={()=>{trigger.current?.focus({preventScroll:true});close()}}>×</button></div>
       {reading&&<div className={styles.evidence}><h3>{n.name}</h3><p>{institution(id).kind}</p>{records.map(r=>{
         const counterpart=institution(r.source===id?r.target:r.source)
-        return <a key={r.id} className={styles.record} href={`/institutional-links/${r.id}`}><strong>{counterpart.label} ↗</strong><span>{data['relation-types'].find(t=>t.id===r.type)?.label}</span><small>{r.announcedOn??r.observedBy??'Date in evidence'} · {r.currentStatus}</small></a>
-      })}<a className={styles.method} href="/institutional-links">Evidence & methodology →</a></div>}
-      {!n.active&&<button className={styles.followAction} onClick={follow}>Follow connections →</button>}
+        return <a key={r.id} className={styles.record} href={`${prefix}/institutional-links/${r.id}`}><strong>{counterpart.label} ↗</strong><span>{data['relation-types'].find(t=>t.id===r.type)?.label}</span><small>Directly documented · {r.announcedOn??r.observedBy??'Date in evidence'} · {r.eventStatus}<br />{r.currentStatus} · checked {r.currentStatusCheckedOn??'not established'}</small>
+          {data['analytical-relations'].filter(a=>a.relationshipIds.includes(r.id)).map(a=><small key={a.id}><strong>Reviewed analytical assessment</strong><br />{a.shortLabel}</small>)}</a>
+      })}
+        <details className={styles.methodDetails}><summary>{c.how}</summary><p>Circles are named institutions; connecting lines represent documented interfaces. Grouping is categorical. Faint lines are directly documented interfaces; selected paths can be traced without changing the institutional world. Position, distance and motion measure no quantity. Missing links are not evidence of absence. Evidence cutoff: 12 Sep 2026.</p><p>Source → evidence → instrument → interface → separately reviewed analysis.</p></details>
+        <a className={styles.method} href={`${prefix}/institutional-links`}>{c.method} →</a>
+        {n.locale!=='en'&&<p>Research records and analytical assessments are in their original English.</p>}
+      </div>}
+      <label className={styles.choose}>Documented connection<select value={chosen||records[0]?.id||''} onChange={e=>setChosen(e.target.value)}>{records.map(r=><option key={r.id} value={r.id}>{institution(r.source===id?r.target:r.source).label} · {data['relation-types'].find(t=>t.id===r.type)?.label}</option>)}</select></label>
+      {<button className={styles.followAction} onClick={follow}>{c.follow} →</button>}
     </div>,document.body)}
+  </motion.div>
+}
+
+type InkData={visible:boolean;highlighted:boolean;incident:boolean;retained:boolean;lane:number;drawKey:string;label:string;reverse:boolean}
+function InkEdge(props:EdgeProps<Edge<InkData>>) {
+ const reduced=useReducedMotion()
+ const e=props.data!
+ const path=routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane)
+ const visible=e.visible
+ const trace=e.reverse?routedInstitutionPath(props.targetX,props.targetY,props.sourceX,props.sourceY,-e.lane):path
+ return <g aria-hidden="true" data-world-edge={props.id} data-revealed={visible}>
+  <motion.path d={path} fill="none" className={styles.worldInk} initial={{pathLength:0,opacity:0}}
+   animate={{pathLength:visible?1:0,opacity:visible?(e.incident||e.retained? .45:.18):0}}
+   transition={reduced?{duration:0}:{pathLength:{duration:visible?1.05:.7,delay:visible?.55:0,ease:'easeInOut'},opacity:{duration:.6}}}/>
+  {e.highlighted&&visible&&<motion.path key={e.drawKey} d={trace} fill="none" className={styles.worldTrace}
+   initial={{pathLength:0}} animate={{pathLength:1}} transition={reduced?{duration:0}:{duration:1.05,delay:.55,ease:'easeInOut'}} data-traced-interface={props.id}/>}
+ </g>
+}
+const nodeTypes={editorial:InstitutionNode}
+const edgeTypes={ink:InkEdge}
+function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;locale:Locale}) {
+ const reduced=useReducedMotion()
+ const [step,setStep]=useState(initialStep)
+ const [followed,setFollowed]=useState<string[]>([])
+ const [focus,setFocus]=useState<string|null>(null)
+ const [selected,setSelected]=useState<string|null>(null)
+ const [traceVersion,setTraceVersion]=useState(0)
+ const [owner,setOwner]=useState<string|null>(null)
+ const [activated,setActivated]=useState(false)
+ const [size,setSize]=useState({width:0,height:0})
+ const projection=useMemo(()=>worldProjection(size),[size])
+ const canvas=useRef<HTMLDivElement>(null)
+ const {setViewport,viewportInitialized,zoomIn,zoomOut}=useReactFlow()
+ const scene=useMemo(()=>institutionalScene(data,step,followed,focus,selected),[step,followed,focus,selected])
+ const [hover,setHover]=useState<string|null>(null)
+ useEffect(()=>{
+  if(!canvas.current)return
+  const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){setActivated(true);io.disconnect()}},{threshold:.05})
+  io.observe(canvas.current)
+  const ro=new ResizeObserver(([entry])=>setSize(old=>old.width===entry.contentRect.width&&old.height===entry.contentRect.height?old:{width:entry.contentRect.width,height:entry.contentRect.height}))
+  ro.observe(canvas.current)
+  return()=>{io.disconnect();ro.disconnect()}
+ },[])
+ useEffect(()=>{
+  if(!story)return
+  const media=matchMedia('(min-width:700px) and (min-height:700px)')
+  let cleanup=()=>{}
+  const attach=()=>{
+   cleanup();if(!media.matches)return
+   const markers=Array.from(document.querySelectorAll<HTMLElement>('[data-institutional-step]'))
+   let frame=0
+   const update=()=>{frame=0;const next=resolveStoryStep(markers.map(m=>m.getBoundingClientRect().top),innerWidth<1000?innerHeight*.62:innerHeight*.4);setStep(previous=>previous===next?previous:next)}
+   const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)}
+   const observer=new IntersectionObserver(schedule,{rootMargin:'-40% 0px -59% 0px'})
+   markers.forEach(m=>observer.observe(m))
+   const resize=new ResizeObserver(schedule);const body=document.querySelector('.essay-body');if(body)resize.observe(body)
+   for(const event of ['scroll','resize','hashchange','popstate','pageshow'])window.addEventListener(event,schedule,{passive:true})
+   update();cleanup=()=>{observer.disconnect();resize.disconnect();cancelAnimationFrame(frame);for(const event of ['scroll','resize','hashchange','popstate','pageshow'])window.removeEventListener(event,schedule)}
+  }
+  attach();media.addEventListener('change',attach);return()=>{cleanup();media.removeEventListener('change',attach)}
+ },[story])
+ useEffect(()=>{setSelected(null);setFocus(null);setFollowed([]);setOwner(null)},[step])
+ const follow=useCallback((institutionId:string,relationshipId:string)=>{
+  setFocus(institutionId);setSelected(relationshipId);setFollowed(ids=>ids.includes(relationshipId)?ids:[...ids,relationshipId]);setTraceVersion(n=>n+1)
+  canvas.current?.focus({preventScroll:true})
+ },[])
+ const fit=useCallback(()=>{const viewport=institutionViewport(size,projection.bounds);if(viewport)void setViewport(viewport,{duration:0})},[size,projection,setViewport])
+ // Fixed world dimensions: story/follow/selection never trigger camera changes.
+ useEffect(()=>{if(viewportInitialized)fit()},[fit,viewportInitialized])
+ const nodes=useMemo<EditorialNode[]>(()=>scene.nodes.map(n=>({id:n.id,type:'editorial',position:{x:n.position.x,y:n.position.y*projection.yScale},
+  data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:n.visible&&activated,arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:n.visible?'all':'none'},
+ })),[scene.nodes,locale,activated,follow,projection])
+ const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:e.visible&&activated,incident:e.incident||!!hover&&(e.source===hover||e.target===hover),drawKey:`${step}-${traceVersion}`,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,activated,step,traceVersion,hover,focus])
+ const active=selected??storyStates[step].relationshipId
+ const relation=data.relationships.find(r=>r.id===active)
+ const prefix=locale==='en'?'':`/${locale}`
+ const overview=()=>{setSelected(null);setFocus(null);setFollowed([]);setHover(null)}
+ return <EvidenceSession.Provider value={useMemo(()=>({owner,setOwner}),[owner])}>
+ <section className={styles.study} data-constellation-study data-story={story} data-story-state={storyStates[step].id} aria-label="Institutional constellation study">
+  <div className={styles.storyHeading}>{storyStates[step].title}</div>
+  <div ref={canvas} className={styles.canvas} tabIndex={0} role="group" aria-label="Institutional field. Drag to pan, pinch to zoom. Plus and minus zoom; zero fits the world."
+   onKeyDown={e=>{
+    if(e.target===canvas.current){if(['+','=','-','0'].includes(e.key)){e.preventDefault();if(e.key==='0')fit();else if(e.key==='-')void zoomOut({duration:reduced?0:200});else void zoomIn({duration:reduced?0:200})}}
+    if(e.target instanceof HTMLElement&&e.target.hasAttribute('data-institution')&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)&&!e.altKey){e.preventDefault();const buttons=Array.from(canvas.current?.querySelectorAll<HTMLButtonElement>('[data-institution]:not(:disabled)')??[]);const index=buttons.indexOf(e.target as HTMLButtonElement);buttons[(index+(['ArrowRight','ArrowDown'].includes(e.key)?1:-1)+buttons.length)%buttons.length]?.focus({preventScroll:true})}
+   }}>
+   <ReactFlow proOptions={{hideAttribution:true}} nodes={nodes} edges={edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes}
+    nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false}
+    minZoom={.2} maxZoom={2} panOnDrag panOnScroll={false} zoomOnScroll={false} zoomOnPinch zoomOnDoubleClick={false} preventScrolling={false}
+    onNodeMouseEnter={(_,n)=>setHover(n.id)} onNodeMouseLeave={()=>setHover(null)} onNodeClick={()=>{}}/>
+   <div className={styles.cameraControls} aria-label="Map controls"><button onClick={()=>void zoomOut({duration:reduced?0:200})} aria-label="Zoom out">−</button><button onClick={()=>void zoomIn({duration:reduced?0:200})} aria-label="Zoom in">+</button><button onClick={fit}>Fit</button></div>
   </div>
+  <div className={styles.storyCaption}>
+   {relation?<motion.a key={`${active}-${traceVersion}`} initial={{opacity:0}} animate={{opacity:1}} transition={reduced?{duration:0}:{delay:1.6,duration:.4}} href={`${prefix}/institutional-links/${relation.id}`}>
+    <span>Directly documented · {data['relation-types'].find(t=>t.id===relation.type)?.label}</span>
+    {step===4?<span>Source → evidence → instrument → interface → analysis</span>:<span>{institution(relation.source).label} ↔ {institution(relation.target).label}</span>}
+   </motion.a>:<span>Select an institution to trace an interface.</span>}
+   {selected&&<button onClick={overview}>{step===5?'Return to overview':'Return to story'}</button>}
+  </div>
+  {relation&&data['analytical-relations'].filter(a=>a.relationshipIds.includes(relation.id)).slice(0,1).map(a=><div className={styles.analysis} key={a.id}><span>Reviewed analytical assessment</span> {a.shortLabel}</div>)}
+  <details className={styles.legend}><summary>How to read</summary><p>Groups are presentation categories. Position, distance, circle size and motion measure no power or dependence. Faint lines are directly documented interfaces; analytical assessments are labeled separately.</p><a href={`${prefix}/institutional-links`}>Evidence & methodology →</a></details>
+  <noscript><p><a href={`${prefix}/institutional-links`}>Read the institutional evidence index.</a></p></noscript>
+ </section></EvidenceSession.Provider>
 }
-function InkEdge(props: EdgeProps) {
-  const [path] = getBezierPath(props)
-  return <BaseEdge id={props.id} path={path} className={styles.inkEdge} interactionWidth={20} />
+export function EditorialMapPreview({story=false,initialStep=5,locale='en'}:{initialInstitution?:string;story?:boolean;initialStep?:number;locale?:Locale}) {
+ return <ReactFlowProvider><MapStudy story={story} initialStep={initialStep} locale={locale}/></ReactFlowProvider>
 }
-const nodeTypes = { editorial: InstitutionNode }
-const edgeTypes = { ink: InkEdge }
-const enableNodePointerEvents = () => {}
-
-function MapStudy({ initialInstitution, story, initialStep }: { initialInstitution: string; story: boolean; initialStep: number }) {
-  const [trail, setTrail] = useState([initialInstitution])
-  const [step,setStep]=useState(initialStep)
-  const [guided,setGuided]=useState(true)
-  const direction=useRef(1)
-  const previousStep=useRef(initialStep)
-  const [reduced, setReduced] = useState(false)
-  const [onScreen,setOnScreen]=useState(false)
-  const [size,setSize] = useState({width:440,height:460})
-  const canvas=useRef<HTMLDivElement>(null)
-  const origin = trail[trail.length-1]
-  const { setViewport, viewportInitialized } = useReactFlow()
-  useEffect(() => { const q = matchMedia('(prefers-reduced-motion: reduce)'); const update = () => setReduced(q.matches); update(); q.addEventListener('change', update); return () => q.removeEventListener('change', update) }, [])
-  useEffect(()=>{
-    if(!canvas.current)return
-    const observer=new IntersectionObserver(([entry])=>{
-      setOnScreen(entry.isIntersecting&&entry.intersectionRatio>=.12)
-    },{threshold:[0,.12]})
-    observer.observe(canvas.current)
-    return()=>observer.disconnect()
-  },[])
-  useEffect(()=>{if(!canvas.current)return;const observer=new ResizeObserver(([entry])=>setSize({width:entry.contentRect.width,height:entry.contentRect.height}));observer.observe(canvas.current);return()=>observer.disconnect()},[])
-  useEffect(()=>{
-    if(!story)return
-    const media=matchMedia('(min-width: 700px) and (min-height: 480px)')
-    let detach=()=>{}
-    const attach=()=>{
-      detach();if(!media.matches)return
-      const markers=Array.from(document.querySelectorAll<HTMLElement>('[data-institutional-step]'))
-      let frame=0
-      const update=()=>{frame=0;setStep(resolveStoryStep(markers.map(m=>m.getBoundingClientRect().top),innerHeight*.4))}
-      const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)}
-      const observer=new ResizeObserver(schedule)
-      const body=document.querySelector('.essay-body');if(body)observer.observe(body)
-      for(const event of ['scroll','resize','hashchange','popstate','pageshow'])window.addEventListener(event,schedule,{passive:true})
-      update()
-      detach=()=>{observer.disconnect();cancelAnimationFrame(frame);for(const event of ['scroll','resize','hashchange','popstate','pageshow'])window.removeEventListener(event,schedule)}
-    }
-    attach();media.addEventListener('change',attach)
-    return()=>{detach();media.removeEventListener('change',attach)}
-  },[story])
-  useEffect(()=>{
-    if(!story)return
-    direction.current=step>=previousStep.current?1:-1
-    previousStep.current=step
-    const relation=data.relationships.find(r=>r.id===storyStates[step].relationshipId)
-    setTrail([relation?.source??(step===1?'dod':'anthropic')]);setGuided(true)
-  },[step,story])
-  const follow=useCallback((id:string)=>{
-    direction.current=trail.includes(id)?-1:1
-    setGuided(false)
-    setTrail(previous=>previous.includes(id)?previous.slice(0,previous.indexOf(id)+1):[...previous,id])
-    requestAnimationFrame(()=>canvas.current?.focus({preventScroll:true}))
-  },[trail])
-  const showReading=useCallback(()=>{},[])
-  const graph = useMemo(() => {
-    // This is an exploration trail, not a hierarchy inferred from the research.
-    const allowed=guided?storyStates[step].institutions:null
-    const next=neighbors(origin).filter(id=>!trail.includes(id)&&(!allowed||allowed.some(allowedId=>allowedId===id)))
-    const middle=Math.max(0,next.length-1)*62/2
-    const nodes:EditorialNode[]=trail.map((id,index)=>({id,type:'editorial',position:{x:index*190,y:middle},data:{label:institution(id).label,name:institution(id).name,active:id===origin,follow:id===origin?showReading:()=>follow(id)}}))
-    const edges:Edge[]=trail.slice(1).map((id,index)=>({id:`${trail[index]}--${id}`,source:trail[index],target:id,type:'ink'}))
-    const focusX=(trail.length-1)*190
-    next.forEach((id,index)=>{
-      nodes.push({id,type:'editorial',position:{x:focusX+190,y:index*62},data:{label:institution(id).label,name:institution(id).name,active:false,follow:()=>follow(id)}})
-      edges.push({id:`${origin}--${id}`,source:origin,target:id,type:'ink'})
-    })
-    return {nodes,edges,height:Math.max(44,next.length*62),width:next.length?328:138,focusX}
-  },[trail,origin,follow,showReading,guided,step])
-  const [animatedNodes, setAnimatedNodes] = useState<EditorialNode[]>(graph.nodes)
-  const currentNodes = useRef<EditorialNode[]>(graph.nodes)
-  useEffect(() => {
-    const prior=new Map(currentNodes.current.map(n=>[n.id,n]))
-    const outgoing=currentNodes.current.filter(n=>!graph.nodes.some(target=>target.id===n.id))
-    const travel=direction.current
-    if(reduced||!onScreen){
-      currentNodes.current=graph.nodes
-      setAnimatedNodes(graph.nodes)
-      return
-    }
-    const {nodes:particles,simulation}=createInstitutionMotion(graph.nodes,graph.edges,
-      new Map(currentNodes.current.map(n=>[n.id,n.position])),travel,graph.height)
-    const started=performance.now()
-    let frame=0;let ticks=0
-    const draw=(now:number)=>{
-      const progress=institutionPresence(now-started)
-      const wanted=Math.min(100,Math.floor((now-started)/(1000/40)))
-      if(wanted>ticks){simulation.tick(wanted-ticks);ticks=wanted}
-      const current:EditorialNode[]=graph.nodes.map((n,index)=>({...n,
-        data:{...n.data,direction:travel},
-        style:{opacity:prior.has(n.id)?1:.35+.65*progress,pointerEvents:'all'},
-        position:{x:particles[index].x,y:particles[index].y}}))
-      const exiting:EditorialNode[]=progress<.995?outgoing.map(n=>({...n,
-        data:{...n.data,exiting:true,direction:travel},
-        style:{opacity:(1-progress)*Number(n.style?.opacity??1),pointerEvents:'none'},
-        position:{x:n.position.x+Math.sin(progress*Math.PI)*24,y:n.position.y-travel*220*progress}})):[]
-      currentNodes.current=[...current,...exiting]
-      setAnimatedNodes(currentNodes.current)
-      if((ticks<100&&simulation.alpha()>.003)||progress<.995)frame=requestAnimationFrame(draw)
-    }
-    frame=requestAnimationFrame(draw)
-    return()=>{cancelAnimationFrame(frame);simulation.stop()}
-  },[graph,reduced,onScreen])
-  useEffect(()=>{
-    if(!viewportInitialized)return
-    const viewport=institutionViewport(size,graph)
-    if(!viewport)return
-    void setViewport(viewport,{duration:reduced?0:620})
-  },[size,graph.width,graph.height,graph.focusX,setViewport,viewportInitialized,reduced])
-  return <section className={styles.study} aria-label="Institutional links" data-story-state={storyStates[step].id} data-motion={reduced?'reduced':onScreen?'visible':'waiting'} onKeyDown={e=>{if(e.key==='Escape'&&trail.length>1){e.preventDefault();setGuided(false);setTrail(t=>t.slice(0,-1));canvas.current?.focus({preventScroll:true})}}}>
-    <div ref={canvas} className={styles.canvas} tabIndex={-1}>
-      <ReactFlow proOptions={{hideAttribution:true}} onNodeClick={enableNodePointerEvents} nodes={animatedNodes} edges={graph.edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false} minZoom={.1} maxZoom={1.5} panOnDrag={true} panOnScroll={false} zoomOnScroll={false} zoomOnPinch={true} zoomOnDoubleClick={false} preventScrolling={false} aria-label="Follow an institution to reveal its connections" />
-      <span className={styles.gestureHint}>Drag to explore · Pinch to zoom<br />Zoom out to retrace your path</span>
-    </div>
-
-  </section>
-}
-export function EditorialMapPreview({initialInstitution='anthropic',story=false,initialStep=5}:{initialInstitution?:string;story?:boolean;initialStep?:number}){return <ReactFlowProvider><MapStudy initialInstitution={initialInstitution} story={story} initialStep={initialStep} /></ReactFlowProvider>}
