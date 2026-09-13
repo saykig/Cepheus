@@ -30,3 +30,16 @@ Writ is an open-source pilot for turning political, legal, and institutional res
 The broader aim is to make the same body of policy knowledge legible in two directions: readable by researchers and policymakers, while also structured enough for engineers and software to inspect and build on. It preserves provenance, uncertainty, and disagreement rather than reducing political judgment to code.
 
 [Visit Writ](https://writewrit.vercel.app/) · [GitHub](https://github.com/saykig/Writ)
+
+
+## Institutional research and development
+
+The essay now includes a bounded constellation with separately reviewed observations, qualitative attributes and analytical assessments. The current release is **1.0.0-rc.1**, pending author editorial sign-off.
+
+- [Research methodology](research/METHODOLOGY.md), [record contract](research/SCHEMA.md), [canonical data](research/data/), [preserved v0.1](research/releases/v0.1/).
+- [Design](docs/DESIGN.md), [product](docs/PRODUCT.md), [retired research](docs/archive/).
+- [Public evidence index](https://cepheus-pons.org/institutional-links) is introduced by this unmerged change; it becomes available after deployment.
+
+Run `pnpm install`, then `pnpm dev` for the local preview. `pnpm research:validate` checks canonical research; `pnpm research:export` builds the approved publication bundle and deterministic D3 coordinates. `pnpm test`, `pnpm typecheck`, `pnpm build` and `pnpm test:e2e` cover research and reading behavior. Browser setup: `pnpm exec playwright install chromium webkit`.
+
+Active export tooling lives in `tooling/`. Root `public/` is the Next.js runtime directory and contains the generated publication bundle, essay citation registry and brand assets. Canonical research and archived material are not served as runtime datasets. No obsolete synthetic-data generator is part of the build.

@@ -70,3 +70,6 @@
 }
 .mechanism { width:max-content; max-width:140px; padding:.3rem .4rem; }
 @container(max-width:400px){.mechanism{max-width:120px}}
+
+.card a,.caption a,.lineage { display:inline-flex; align-items:center; min-height:44px; }
+.card:focus { outline:none; }

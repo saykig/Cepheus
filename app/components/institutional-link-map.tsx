@@ -6,7 +6,7 @@
    FIRST VIEWPORT: Prose at left, quiet equal marks at right; opening focuses DoD and Anthropic.
    FORM: User-specified clustered bubbles, deterministic build layout, explicit six-state story. */
 import { createContext, useContext, useEffect, useId, useRef, useState, type ReactNode } from 'react'
-import bundle from '../../public/data/institutional-map/bundle.json'
+import bundle from '../../public/data/institutional-map/constellation.json'
 import type { Bundle } from '../lib/institutional-map-types'
 import { storyStates, resolveStoryStep, storyRelationship } from '../lib/institutional-map-story'
 import type { Locale } from '../lib/i18n'
@@ -51,10 +51,12 @@ export function InstitutionalLinkMap({locale='en',story=false,initialStep=5}:{lo
   attach();media.addEventListener('change',attach);return()=>{cleanup();media.removeEventListener('change',attach)}
  },[story])
  useEffect(()=>{const plot=root.current?.querySelector('[data-plot]');if(!plot)return;const observer=new ResizeObserver(([entry])=>{if(entry.contentRect.width)setPlotSize({width:entry.contentRect.width,height:entry.contentRect.height})});observer.observe(plot);return()=>observer.disconnect()},[])
+ useEffect(()=>{if(!selected)return;const card=root.current?.querySelector<HTMLElement>('[data-evidence-card]');card?.focus({preventScroll:true});if(innerWidth<1000)card?.scrollIntoView({block:'nearest',behavior:'instant'})},[selected])
  const focusId=selected??hover
  const incident=data.relationships.filter(r=>r.source===focusId||r.target===focusId)
  const narrative=storyRelationship(step,publishedIds)
- const relationship=data.relationships.find(r=>r.id===(selected?(chosen??incident[0]?.id):hover?incident[0]?.id:narrative))
+ const preview=incident.find(r=>r.id===narrative)?.id??incident[0]?.id
+ const relationship=data.relationships.find(r=>r.id===(selected?(chosen??preview):hover?preview:narrative))
  const institution=data.institutions.find(i=>i.id===selected)
  const mechanism=data['relation-types'].find(t=>t.id===relationship?.type)
  const assessments=relationship?data['analytical-relations'].filter(a=>a.relationshipIds.includes(relationship.id)):[]
@@ -91,7 +93,7 @@ export function InstitutionalLinkMap({locale='en',story=false,initialStep=5}:{lo
    <div className={styles.readout}>
     {step===4&&relationship?<a className={styles.lineage} href={`${prefix}/institutional-links/${relationship.id}`}>Source → evidence → instrument → interface{assessments.length?' → analysis':''}</a>:assessments[0]?<span className={styles.analysis}><span>Reviewed analysis</span>{assessments.find(a=>a.type==='transitional-operational-dependence')?.shortLabel??assessments[0].shortLabel}</span>:<span className={styles.hint}>Select an institution to follow one interface.</span>}
    </div>
-   {institution?<section id={`${uid}-card`} className={styles.card} aria-label={`${institution.label} evidence`}>
+   {institution?<section data-evidence-card tabIndex={-1} id={`${uid}-card`} className={styles.card} aria-label={`${institution.label} evidence`}>
     <div className={styles.cardHeading}><h3>{institution.name}</h3><button type="button" onClick={close}>{c.close}</button></div>
     <p>{institution.kind}</p>
     <label className={styles.selectLabel}>Documented interface<select value={relationship?.id??''} onChange={e=>setChosen(e.target.value)}>{incident.map(r=><option key={r.id} value={r.id}>{data['relation-types'].find(t=>t.id===r.type)?.label} · {data.institutions.find(i=>i.id===(r.source===selected?r.target:r.source))?.label}</option>)}</select></label>

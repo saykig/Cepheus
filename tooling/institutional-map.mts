@@ -4,10 +4,10 @@ import Ajv from 'ajv'
 import { materialCollections,validateResearch,researchHash,reviewedCollections } from '../app/lib/institutional-map-validation.ts'
 import {storyStates} from '../app/lib/institutional-map-story.ts'
 import type { Bundle } from '../app/lib/institutional-map-types.ts'
-const dir=new URL('../research/institutional-map/data/',import.meta.url)
+const dir=new URL('../research/data/',import.meta.url)
 const names=[...materialCollections,'reviews','release']
 const data=Object.fromEntries(await Promise.all(names.map(async k=>[k,JSON.parse(await readFile(new URL(`${k}.json`,dir),'utf8'))]))) as Bundle
-const schema=JSON.parse(await readFile(new URL('../research/institutional-map/schema/dataset.schema.json',import.meta.url),'utf8'))
+const schema=JSON.parse(await readFile(new URL('../research/schema/dataset.schema.json',import.meta.url),'utf8'))
 const ajv=new Ajv({allErrors:true,strict:false});const check=ajv.compile(schema)
 if(!check(data))throw new Error(ajv.errorsText(check.errors))
 const errors=validateResearch(data);if(errors.length)throw new Error(errors.join('\n'))
@@ -33,4 +33,6 @@ for(const state of storyStates){
 const exportErrors=validateResearch(approved,true);if(exportErrors.length)throw new Error(exportErrors.join('\n'))
 await mkdir(new URL('../public/data/institutional-map/',import.meta.url),{recursive:true})
 await writeFile(new URL('../public/data/institutional-map/bundle.json',import.meta.url),JSON.stringify(approved,null,2)+'\n')
+const view={institutions:approved.institutions.map(({id,label,name,kind,group})=>({id,label,name,kind,group})),relationships:approved.relationships.map(({id,source,target,type,announcedOn,observedBy,eventStatus,currentStatus,currentStatusCheckedOn})=>({id,source,target,type,announcedOn,observedBy,eventStatus,currentStatus,currentStatusCheckedOn})),'relation-types':approved['relation-types'].map(({id,label})=>({id,label})),'analytical-relations':approved['analytical-relations'].map(({id,type,relationshipIds,shortLabel})=>({id,type,relationshipIds,shortLabel})),release:approved.release,layout:approved.layout}
+await writeFile(new URL('../public/data/institutional-map/constellation.json',import.meta.url),JSON.stringify(view,null,2)+'\n')
 console.log(`Exported ${approved.institutions.length} institutions, ${approved.relationships.length} documented interfaces, ${approved['analytical-relations'].length} assessments; ${data.release.version}.`)

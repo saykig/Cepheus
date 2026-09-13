@@ -23,6 +23,15 @@ export function validateResearch(data: Bundle, production = false): string[] {
     refs('evidence',r.evidenceIds??[],r.id);refs('evidence',r.counterEvidenceIds??[],r.id)
     if((r.counterEvidenceIds?.length??0)>0 && !r.conflictDisposition && !r.reasoning && !r.derivation)fail(`undisposed conflict ${r.id}`)
   }
+  const cells=data.coverage?.cells??[]
+  const expected=data.coverage?.cohort?.flatMap((developer:string)=>data.coverage.families.map((family:string)=>`${developer}/${family}`))??[]
+  if(expected.length!==30||cells.length!==30||new Set(cells.map((c:any)=>`${c.developer}/${c.family}`)).size!==30||cells.some((c:any)=>!expected.includes(`${c.developer}/${c.family}`)))fail('incomplete mandatory coverage grid')
+  for(const c of cells){
+    if(!['institutional','developer'].every(p=>c.searchParties?.includes(p))||c.queries?.length<2||!c.indexUrls?.length||!c.queryLogIds?.length)fail(`unreproducible coverage ${c.id}`)
+    refs('search-log',c.queryLogIds??[],c.id);refs('sources',c.inspectedSourceIds??[],c.id)
+    if(!production)refs('relationships',c.relationshipIds??[],c.id)
+    if(!c.result||!c.limitations||!Array.isArray(c.exclusions)||!Array.isArray(c.retrievalFailures))fail(`incomplete coverage disposition ${c.id}`)
+  }
   for(const e of data.evidence){ref('sources',e.sourceId,e.id);if(e.supportMode!=='direct'||!e.claim||!e.locator||!e.limitation)fail(`non-atomic or unlocated evidence ${e.id}`);if(data.sources.find(s=>s.id===e.sourceId)?.version!==e.sourceVersion)fail(`source version mismatch ${e.id}`)}
   for(const s of data.sources){if(!s.primary||!s.url?.startsWith('https://')||!s.version)fail(`primary source/version missing ${s.id}`);for(const d of [s.publishedOn,s.revisedOn])if(d&&d>data.release.evidenceCutoff)fail(`source after cutoff ${s.id}`)}
   for(const r of [...data.institutions,...data.instruments])refs('sources',r.sourceIds??[],r.id)

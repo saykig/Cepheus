@@ -30,7 +30,7 @@ for(const [width,height] of [[1440,900],[1280,800],[1024,768],[1180,820],[768,10
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
   await page.screenshot({path:`/tmp/cepheus-shots/${width}-opening.png`})
   await page.locator('#cepheus-map').evaluate(el=>window.scrollTo(0,scrollY+el.getBoundingClientRect().top-100))
-  const figures=page.locator('[data-constellation]:visible');const f=width>=1000&&height>=700?figures.first():figures.last()
+  const figures=page.locator('[data-constellation]:visible');const f=width>=1000&&height>=700?figures.first():page.locator('[data-constellation][data-story=false]:visible').last()
   await expect(f).toHaveAttribute('data-story-state','exploration')
   await expect(f.locator('[data-relationship-path]')).toHaveCount(0)
   for(const node of await f.locator('[data-institution]').all()){

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { materialCollections, reviewedCollections, validateResearch, researchHash } from './institutional-map-validation.ts'
 import { resolveStoryStep, storyStates } from './institutional-map-story.ts'
 import type { Bundle } from './institutional-map-types.ts'
-const load=()=>Object.fromEntries([...materialCollections,'reviews','release'].map(k=>[k,JSON.parse(readFileSync(new URL(`../../research/institutional-map/data/${k}.json`,import.meta.url),'utf8'))])) as Bundle
+const load=()=>Object.fromEntries([...materialCollections,'reviews','release'].map(k=>[k,JSON.parse(readFileSync(new URL(`../../research/data/${k}.json`,import.meta.url),'utf8'))])) as Bundle
 const fresh=()=>{const d=load();for(const k of reviewedCollections)for(const r of d[k])r.publicationStatus='provisional';d.reviews=[];return d}
 const rejects=(mutate:(d:Bundle)=>void,pattern:RegExp)=>{const d=fresh();mutate(d);assert.match(validateResearch(d).join('\n'),pattern)}
 test('canonical research passes semantic validation',()=>assert.deepEqual(validateResearch(load()),[]))
@@ -32,3 +32,6 @@ test('synthetic scores forbidden',()=>rejects(d=>d.institutions[0].score=100,/sy
 test('owner signoff is required for v1.0',()=>rejects(d=>{d.release.version='1.0.0';d.release.editorialSignoff=null},/editorial signoff/))
 test('scroll state supports reverse scrolling and reload at depth',()=>{assert.equal(resolveStoryStep([-2000,-1500,-1000,-500,100,700],300),4);assert.equal(resolveStoryStep([-500,100,500,900,1300,1700],300),1);assert.equal(resolveStoryStep([500,900,1300],300),0)})
 test('six explicit states, overview has no edge',()=>{assert.equal(storyStates.length,6);assert.equal(storyStates[5].relationshipId,null);assert.equal(storyStates[0].relationshipId,'dod-anthropic-contested')})
+
+test('all thirty developer-family cells are required',()=>rejects(d=>d.coverage.cells.pop(),/incomplete mandatory coverage/))
+test('both parties and publication indexes must be searched',()=>rejects(d=>d.coverage.cells[0].searchParties=['developer'],/unreproducible coverage/))
