@@ -45,36 +45,36 @@
   },
   {
     "id": "i-google-caisi-2026",
-    "label": "Model access",
-    "kind": "access-agreement",
+    "label": "Evaluation agreement",
+    "kind": "evaluation-agreement",
     "bindingness": "Unknown; not inferred from announcement",
     "sourceIds": [
       "caisi-2026"
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary"
+    "coder": "codex-research-checker"
   },
   {
     "id": "i-microsoft-caisi-2026",
-    "label": "Model access",
-    "kind": "access-agreement",
+    "label": "Evaluation agreement",
+    "kind": "evaluation-agreement",
     "bindingness": "Unknown; not inferred from announcement",
     "sourceIds": [
       "caisi-2026"
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary"
+    "coder": "codex-research-checker"
   },
   {
     "id": "i-xai-caisi-2026",
-    "label": "Model access",
-    "kind": "access-agreement",
+    "label": "Evaluation agreement",
+    "kind": "evaluation-agreement",
     "bindingness": "Unknown; not inferred from announcement",
     "sourceIds": [
       "caisi-2026"
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary"
+    "coder": "codex-research-checker"
   },
   {
     "id": "i-microsoft-uk-2026",
@@ -284,5 +284,49 @@
     ],
     "publicationStatus": "provisional",
     "coder": "codex-primary"
+  },
+  {
+    "id": "fable-safeguard-evaluation",
+    "label": "Fable safeguard red-teaming",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable to historical evaluation event",
+    "sourceIds": [
+      "anthropic-fable-suspension"
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-research-checker"
+  },
+  {
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "id": "microsoft-classified-instrument",
+    "label": "Microsoft classified deployment agreement",
+    "kind": "Announced deployment agreement",
+    "bindingness": "Executed terms not inspected",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ]
+  },
+  {
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "id": "openai-classified-instrument",
+    "label": "Openai classified deployment agreement",
+    "kind": "Announced deployment agreement",
+    "bindingness": "Executed terms not inspected",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ]
+  },
+  {
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "id": "google-classified-instrument",
+    "label": "Google classified deployment agreement",
+    "kind": "Announced deployment agreement",
+    "bindingness": "Executed terms not inspected",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ]
   }
 ]

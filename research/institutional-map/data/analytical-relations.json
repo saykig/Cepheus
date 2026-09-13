@@ -56,7 +56,8 @@
     "sufficiencyMet": true,
     "assessedOn": "2026-09-12",
     "coder": "codex-primary",
-    "publicationStatus": "provisional"
+    "publicationStatus": "provisional",
+    "outcome": "established"
   },
   {
     "id": "dod-anthropic-contested-assessment",
@@ -73,7 +74,8 @@
       "court-use",
       "feb-dispute",
       "march-removal",
-      "judgment-august"
+      "judgment-august",
+      "dod-lawful-use"
     ],
     "counterEvidenceIds": [
       "contractual-control"
@@ -83,45 +85,37 @@
         "id": "documented-use",
         "met": true,
         "evidenceIds": [
-          "court-use",
-          "feb-dispute",
-          "march-removal",
-          "judgment-august"
+          "court-use"
         ],
-        "reason": "See linked evidence and rubric-bound reasoning."
+        "reason": "Court confirms defense use across the historical period."
       },
       {
         "id": "conflicting-conditions",
         "met": true,
         "evidenceIds": [
-          "court-use",
-          "feb-dispute",
-          "march-removal",
-          "judgment-august"
+          "dod-lawful-use",
+          "feb-dispute"
         ],
-        "reason": "See linked evidence and rubric-bound reasoning."
+        "reason": "Departmental policy requires any-lawful-use terms; supplier refuses removal of two restrictions."
       },
       {
         "id": "institutional-action",
         "met": true,
         "evidenceIds": [
-          "court-use",
-          "feb-dispute",
           "march-removal",
           "judgment-august"
         ],
-        "reason": "See linked evidence and rubric-bound reasoning."
+        "reason": "Government removal/designation and later judicial findings make this an institutional dispute with consequences."
       },
       {
         "id": "technical-control-distinguished",
         "met": true,
         "evidenceIds": [
-          "court-use",
-          "feb-dispute",
-          "march-removal",
-          "judgment-august"
+          "contractual-control",
+          "court-static-deployment",
+          "court-update-gate"
         ],
-        "reason": "See linked evidence and rubric-bound reasoning."
+        "reason": "Contractual conditions differ from technological enforcement; deployment approval and model provision are divided."
       }
     ],
     "derivation": "The February–August 2026 episode is a contested contractual interface with consequential government and judicial action.",
@@ -133,8 +127,9 @@
     "necessityMet": true,
     "sufficiencyMet": true,
     "assessedOn": "2026-09-12",
-    "coder": "codex-primary",
-    "publicationStatus": "provisional"
+    "coder": "codex-research-checker",
+    "publicationStatus": "provisional",
+    "outcome": "established"
   },
   {
     "id": "dod-anthropic-dependence-unresolved",
@@ -150,10 +145,16 @@
       "dod-reliance"
     ],
     "evidenceIds": [
-      "court-use"
+      "court-use",
+      "anthropic-mission-use",
+      "court-model-provision",
+      "court-update-gate",
+      "dod-update-cadence"
     ],
     "counterEvidenceIds": [
-      "contractual-control",
+      "court-static-deployment",
+      "dod-modular-intent",
+      "anthropic-transition-offer",
       "march-removal"
     ],
     "conditions": [
@@ -168,31 +169,42 @@
       {
         "id": "consequential-provider-control",
         "met": false,
-        "evidenceIds": [],
-        "reason": "Not established from inspected evidence."
+        "evidenceIds": [
+          "court-model-provision",
+          "court-update-gate",
+          "dod-update-cadence"
+        ],
+        "reason": "Model provision and divided deployment controls are documented, but the particular function’s need for continuing Anthropic provision rather than existing static models is unresolved. No remote-veto requirement is imposed."
       },
       {
         "id": "constrained-substitution",
         "met": false,
-        "evidenceIds": [],
-        "reason": "Not established from inspected evidence."
+        "evidenceIds": [
+          "dod-modular-intent",
+          "anthropic-transition-offer"
+        ],
+        "reason": "Replacement objectives and transition offer are not an alternatives assessment. Required migration time/cost and functional equivalence remain unestablished."
       },
       {
         "id": "identified-function",
-        "met": false,
-        "evidenceIds": [],
-        "reason": "Not established from inspected evidence."
+        "met": true,
+        "evidenceIds": [
+          "anthropic-mission-use",
+          "court-use"
+        ],
+        "reason": "Specific defense/intelligence functions are reported by the provider, with defense use corroborated by the court; magnitude is not established."
       }
     ],
-    "derivation": "Unresolved: this evidence set does not yet establish every necessary dependence condition.",
-    "assessment": "Unresolved: this evidence set does not yet establish every necessary dependence condition.",
+    "derivation": "Operational dependence remains unresolved: recurrent use, identified functions and divided lifecycle control are documented, but function-specific continuing provision and constrained substitution are not established.",
+    "assessment": "Operational dependence remains unresolved: recurrent use, identified functions and divided lifecycle control are documented, but function-specific continuing provision and constrained substitution are not established.",
     "limitations": [
       "Not a finding of independence. Preserve candidate for additional operational and substitution evidence."
     ],
     "necessityMet": false,
     "sufficiencyMet": false,
     "assessedOn": "2026-09-12",
-    "coder": "codex-primary",
-    "publicationStatus": "provisional"
+    "coder": "codex-research-checker",
+    "publicationStatus": "provisional",
+    "outcome": "unresolved"
   }
 ]

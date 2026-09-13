@@ -5,15 +5,15 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": "2026-05-05",
+    "lastConfirmedOn": "2024-08-29",
     "sourceIds": [
       "nist-mous-2024",
       "caisi-2026"
     ],
     "queries": [
-      "openai us-aisi agreement 2026 termination amendment expiry superseded"
+      "\"openai\" \"us-aisi\" access agreement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -33,15 +33,15 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": "2026-05-05",
+    "lastConfirmedOn": "2024-08-29",
     "sourceIds": [
       "nist-mous-2024",
       "caisi-2026"
     ],
     "queries": [
-      "anthropic us-aisi agreement 2026 termination amendment expiry superseded"
+      "\"anthropic\" \"us-aisi\" access agreement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -67,9 +67,9 @@
       "sonnet-report"
     ],
     "queries": [
-      "us-aisi anthropic agreement 2026 termination amendment expiry superseded"
+      "\"US AISI\" \"anthropic\" evaluation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -95,9 +95,9 @@
       "sonnet-report"
     ],
     "queries": [
-      "uk-aisi anthropic agreement 2026 termination amendment expiry superseded"
+      "\"UK AISI\" \"anthropic\" evaluation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -123,9 +123,9 @@
       "sonnet-report"
     ],
     "queries": [
-      "us-aisi uk-aisi agreement 2026 termination amendment expiry superseded"
+      "\"US AISI\" \"uk-aisi\" joint evaluation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -145,16 +145,16 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": "2026-07-09",
+    "lastConfirmedOn": "2025-07-09",
     "sourceIds": [
       "llnl-deployment-2025",
       "llnl-confirmation",
       "llnl-sandbox"
     ],
     "queries": [
-      "anthropic llnl agreement 2026 termination amendment expiry superseded"
+      "\"anthropic\" \"llnl\" deployment 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -179,9 +179,9 @@
       "caisi-2026"
     ],
     "queries": [
-      "google caisi agreement 2026 termination amendment expiry superseded"
+      "\"google\" \"caisi\" evaluation agreement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -206,9 +206,9 @@
       "caisi-2026"
     ],
     "queries": [
-      "microsoft caisi agreement 2026 termination amendment expiry superseded"
+      "\"microsoft\" \"caisi\" evaluation agreement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -233,9 +233,9 @@
       "caisi-2026"
     ],
     "queries": [
-      "xai caisi agreement 2026 termination amendment expiry superseded"
+      "\"xai\" \"caisi\" evaluation agreement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -260,9 +260,9 @@
       "microsoft-evaluation"
     ],
     "queries": [
-      "microsoft uk-aisi agreement 2026 termination amendment expiry superseded"
+      "\"microsoft\" \"uk-aisi\" cooperation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -282,16 +282,16 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": "2026-08-27",
+    "lastConfirmedOn": "2025-07-14",
     "sourceIds": [
       "court-august",
       "court-april",
       "cdao-awards"
     ],
     "queries": [
-      "cdao anthropic agreement 2026 termination amendment expiry superseded"
+      "\"cdao\" \"anthropic\" procurement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -316,9 +316,9 @@
       "cdao-awards"
     ],
     "queries": [
-      "cdao openai agreement 2026 termination amendment expiry superseded"
+      "\"cdao\" \"openai\" procurement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -343,9 +343,9 @@
       "cdao-awards"
     ],
     "queries": [
-      "cdao google agreement 2026 termination amendment expiry superseded"
+      "\"cdao\" \"google\" procurement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -370,9 +370,9 @@
       "cdao-awards"
     ],
     "queries": [
-      "cdao xai agreement 2026 termination amendment expiry superseded"
+      "\"cdao\" \"xai\" procurement 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -392,14 +392,14 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": null,
+    "lastConfirmedOn": "2026-07-31",
     "sourceIds": [
       "eu-code"
     ],
     "queries": [
-      "anthropic eu-ai-office agreement 2026 termination amendment expiry superseded"
+      "\"anthropic\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -419,14 +419,14 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": null,
+    "lastConfirmedOn": "2026-07-31",
     "sourceIds": [
       "eu-code"
     ],
     "queries": [
-      "openai eu-ai-office agreement 2026 termination amendment expiry superseded"
+      "\"openai\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -446,14 +446,14 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": null,
+    "lastConfirmedOn": "2026-07-31",
     "sourceIds": [
       "eu-code"
     ],
     "queries": [
-      "google eu-ai-office agreement 2026 termination amendment expiry superseded"
+      "\"google\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -473,14 +473,14 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": null,
+    "lastConfirmedOn": "2026-07-31",
     "sourceIds": [
       "eu-code"
     ],
     "queries": [
-      "microsoft eu-ai-office agreement 2026 termination amendment expiry superseded"
+      "\"microsoft\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -500,14 +500,14 @@
     "asOf": "2026-09-12",
     "checkedOn": "2026-09-12",
     "result": "unresolved/unknown",
-    "lastConfirmedOn": null,
+    "lastConfirmedOn": "2026-07-31",
     "sourceIds": [
       "eu-code"
     ],
     "queries": [
-      "xai eu-ai-office agreement 2026 termination amendment expiry superseded"
+      "\"xai\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -533,9 +533,9 @@
       "uk-openai-mou"
     ],
     "queries": [
-      "dsit openai agreement 2026 termination amendment expiry superseded"
+      "\"dsit\" \"openai\" cooperation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -561,9 +561,9 @@
       "uk-anthropic-mou"
     ],
     "queries": [
-      "dsit anthropic agreement 2026 termination amendment expiry superseded"
+      "\"dsit\" \"anthropic\" cooperation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -589,9 +589,9 @@
       "uk-google-deepmind-mou"
     ],
     "queries": [
-      "dsit google agreement 2026 termination amendment expiry superseded"
+      "\"dsit\" \"google\" cooperation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -616,9 +616,9 @@
       "uk-anthropic-pilot"
     ],
     "queries": [
-      "anthropic gds agreement 2026 termination amendment expiry superseded"
+      "\"anthropic\" \"gds\" cooperation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -643,9 +643,9 @@
       "caisi-gsa"
     ],
     "queries": [
-      "caisi gsa agreement 2026 termination amendment expiry superseded"
+      "\"caisi\" \"gsa\" cooperation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -670,9 +670,9 @@
       "caisi-openmined"
     ],
     "queries": [
-      "caisi openmined agreement 2026 termination amendment expiry superseded"
+      "\"caisi\" \"openmined\" cooperation 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -697,9 +697,9 @@
       "llnl-sandbox"
     ],
     "queries": [
-      "openai llnl agreement 2026 termination amendment expiry superseded"
+      "\"openai\" \"llnl\" availability 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -724,9 +724,9 @@
       "llnl-sandbox"
     ],
     "queries": [
-      "anthropic llnl agreement 2026 termination amendment expiry superseded"
+      "\"anthropic\" \"llnl\" availability 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
@@ -753,20 +753,129 @@
       "anthropic-february"
     ],
     "queries": [
-      "dod anthropic agreement 2026 termination amendment expiry superseded"
+      "\"dod\" \"anthropic\" contested use 2026 amendment termination expiry status before:2026-09-13"
     ],
-    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "queryExecution": "Executed 12 September 2026; see status-search-log.json. Results are discovery leads, not all inspected primary documents.",
     "checks": {
       "amendments": "unknown",
       "expiry": "unknown",
       "termination": "investigated within listed sources",
       "restrictions": "investigated within listed sources",
       "succession": "see succession.json",
-      "conflicts": "August district judgment changes legal status; contractual restrictions were not technologically enforceable. Separate relief and appellate status remain unresolved at cutoff."
+      "conflicts": "August district judgment incorporated; separate DC statutory proceedings and postjudgment relief not conclusively resolved through cutoff. CourtListener retrieval failed; docket mirror last updated August3."
     },
     "limitations": [
       "Status reflects named inspected sources; no uninterrupted continuity inferred."
     ],
     "basis": "explicit-event"
+  },
+  {
+    "id": "status-uk-anthropic-fable-evaluation",
+    "relationshipId": "uk-anthropic-fable-evaluation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2026-06-12",
+    "sourceIds": [
+      "anthropic-fable-suspension",
+      "parliament-ai-update-september"
+    ],
+    "queries": [
+      "UK AISI Anthropic Fable evaluation 2026 suspension status"
+    ],
+    "queryExecution": "Family and primary-source status inspection; no separate relationship query executed.",
+    "checks": {
+      "amendments": "not applicable to completed historical event",
+      "expiry": "not applicable",
+      "termination": "model access suspension explicitly reported",
+      "restrictions": "September ministerial incident-specific restriction inspected; not generalised to every evaluation",
+      "succession": "explicit UK AISI renaming, see succession.json",
+      "conflicts": "June model suspension and September incident-specific restrictions qualify continuing access, not occurrence of earlier reported testing."
+    },
+    "limitations": [
+      "No claim of currently available Fable access."
+    ],
+    "basis": "explicit-event"
+  },
+  {
+    "id": "status-microsoft-dod-classified",
+    "relationshipId": "microsoft-dod-classified",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-01",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ],
+    "queries": [
+      "site.war.gov \"Classified Networks AI Agreements\" September termination amended"
+    ],
+    "queryExecution": "Executed 2026-09-12; official current page and company searches inspected.",
+    "checks": {
+      "amendments": "Current eight-company version has no amendment date.",
+      "expiry": "Unknown; full instrument not public in inspected source.",
+      "termination": "No affirmative continuing-status evidence obtained.",
+      "restrictions": "Lawful operational use announced; actual classified instrument not inspected.",
+      "succession": "SpaceX not substituted for xAI.",
+      "conflicts": "Version discrepancy retained."
+    },
+    "limitations": [
+      "Announced availability is not a functional substitution assessment."
+    ],
+    "basis": "status-unknown"
+  },
+  {
+    "id": "status-openai-dod-classified",
+    "relationshipId": "openai-dod-classified",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-01",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ],
+    "queries": [
+      "site.war.gov \"Classified Networks AI Agreements\" September termination amended"
+    ],
+    "queryExecution": "Executed 2026-09-12; official current page and company searches inspected.",
+    "checks": {
+      "amendments": "Current eight-company version has no amendment date.",
+      "expiry": "Unknown; full instrument not public in inspected source.",
+      "termination": "No affirmative continuing-status evidence obtained.",
+      "restrictions": "Lawful operational use announced; actual classified instrument not inspected.",
+      "succession": "SpaceX not substituted for xAI.",
+      "conflicts": "Version discrepancy retained."
+    },
+    "limitations": [
+      "Announced availability is not a functional substitution assessment."
+    ],
+    "basis": "status-unknown"
+  },
+  {
+    "id": "status-google-dod-classified",
+    "relationshipId": "google-dod-classified",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-01",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ],
+    "queries": [
+      "site.war.gov \"Classified Networks AI Agreements\" September termination amended"
+    ],
+    "queryExecution": "Executed 2026-09-12; official current page and company searches inspected.",
+    "checks": {
+      "amendments": "Current eight-company version has no amendment date.",
+      "expiry": "Unknown; full instrument not public in inspected source.",
+      "termination": "No affirmative continuing-status evidence obtained.",
+      "restrictions": "Lawful operational use announced; actual classified instrument not inspected.",
+      "succession": "SpaceX not substituted for xAI.",
+      "conflicts": "Version discrepancy retained."
+    },
+    "limitations": [
+      "Announced availability is not a functional substitution assessment."
+    ],
+    "basis": "status-unknown"
   }
 ]

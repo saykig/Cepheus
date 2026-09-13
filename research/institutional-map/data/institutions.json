@@ -17,16 +17,17 @@
   {
     "id": "uk-aisi",
     "label": "UK AISI",
-    "name": "UK AI Safety Institute",
+    "name": "UK AI Security Institute",
     "kind": "Public research unit",
     "jurisdiction": "United Kingdom",
-    "note": "Historical name used in the 2024 evaluation.",
+    "note": "Named AI Safety Institute in 2024 sources; renamed 14 February 2025. Dated relationships retain their own provenance.",
     "sourceIds": [
-      "joint-evaluation-2024"
+      "joint-evaluation-2024",
+      "uk-aisi-renaming"
     ],
     "group": "evaluation",
     "publicationStatus": "provisional",
-    "coder": "codex-primary"
+    "coder": "codex-research-checker"
   },
   {
     "id": "openai",
@@ -89,14 +90,14 @@
   {
     "id": "google",
     "label": "Google",
-    "name": "Google LLC",
+    "name": "Google",
     "kind": "Model developer",
     "jurisdiction": "United States",
     "group": "developers",
     "sourceIds": [
       "uk-google-deepmind-mou"
     ],
-    "note": "MoU explicitly names Google LLC; Google DeepMind is the named operational identity. Corporate award/legal entities not silently equated.",
+    "note": "Named Google organization. UK MoU identifies Google LLC; CAISI announcement names its Google DeepMind unit. Legal contracting identity is not inferred from organizational brand.",
     "publicationStatus": "provisional",
     "coder": "codex-primary"
   },

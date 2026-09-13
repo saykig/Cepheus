@@ -1,151 +1,187 @@
-# Institutional relationships: research pilot v0.1
+# Institutional links — research and publication protocol
 
-Prepared 12 September 2026. This replaces the institutional map's illustrative
-weights with inspectable, dated relationship records. It is an exploratory
-research design, not a comprehensive or independently reviewed dataset.
+Release candidate for evidence through **12 September 2026**. The release manifest
+retains `1.0.0-rc.1` until the owner signs off on the reviewed research fingerprint.
+Agent checking is disclosed; it is not external expert review.
 
-## Question and unit of analysis
+**OBSERVATION IS NOT ANALYSIS. ANALYSIS IS PERMITTED. ANALYSIS MUST BE TRACEABLE.**
 
-Who is connected to whom, by which documented mechanism, in which domain and
-period? A record describes one relationship between two named institutions,
-through an identified instrument or event. Different mechanisms between the
-same institutions remain separate records.
+## Research question and boundary
 
-The initial purposive sample covers five institutions and six relationships in
-US/UK model access, evaluation and research deployment. Sources describe events
-in 2024–2025; the latest substantive deployment source is dated July 2025. The NIST announcement also carries a later institutional-name notice, not a new access event. Sources were
-consulted on 12 September 2026. This is a historical sample, **not a current
-network as of the consultation date**. No claim of geographic, institutional or
-domain completeness is made. A missing edge means not documented in this sample.
+How are technical control, public authority, evaluation capacity, information
+access and operational reliance distributed across a bounded set of frontier-AI
+institutions, and through which documented interfaces do they interact?
 
-## Institutions, domains and mechanisms
+The observation period is 1 January 2024–12 September 2026. The primary geography
+is the US, UK and EU. Earlier sources may establish institutional context but do
+not automatically create an in-period relationship. The systematic search floor
+is Anthropic, OpenAI, Google/Google DeepMind, Microsoft and xAI across six families:
+US public evaluation, UK public evaluation, UK strategic cooperation, US defence,
+EU compliance interfaces and LLNL research/deployment. `data/coverage.json`
+records all 30 cells and evidence-triggered additions. This is not a global census.
 
-Nodes are named organizations or identifiable organizational units. A unit such
-as US AISI is attributed to NIST in its record. Historical names are displayed
-with their period; institutional succession does not silently transfer an old
-agreement to a new entity. Universities as a collective, industries, and policy
-fields are not institution nodes. A specific university or laboratory can be.
+Admit named providers, public institutions or research organizations only where
+an inspected source explicitly establishes participation in an admitted interface.
+Do not add organizations for symmetry. Organizational units are identified as
+units; contracting entities are not silently replaced with product brands or
+parents. An announcement naming an organization may support an organizational
+agreement record with the legal signatory explicitly unknown. A contract-award
+record requires resolved awardee identity. Generic category nodes are prohibited.
+Co-membership in a programme cannot establish bilateral collaboration.
 
-Domains are overlapping tags attached to relationships, not exclusive buckets:
+## Three distinct units of analysis
 
-| Domain | Inclusion rule |
-| --- | --- |
-| Biosecurity | The source explicitly relates the mechanism to biological risk, protective research or biosecurity evaluation. Biology alone is insufficient. |
-| Cybersecurity | The source explicitly relates it to digital security, cyber risk or cyber capability evaluation. |
-| Cross-domain AI | The mechanism addresses general-purpose models or evaluation across risk domains. Not a substitute for all unspecified records. |
+1. **Observed interface:** named endpoints connected by a documented instrument
+   or event. Preserve source → atomic proposition → instrument → relationship.
+   Announcement, agreement, actual access, testing and deployment are different
+   observations. Relation definitions and arrow rules live in `relation-types.json`.
+2. **Coded attribute:** an institution in a specified function, jurisdiction and
+   period, assessed under an explicit construct definition and ordinal rubric.
+   `attribute-rubrics.json` defines authority, information access, evaluation
+   capacity, technical control, substitution and operational reliance. Anchors
+   are author-defined qualitative judgments, not validated numerical measures.
+   Adjacent anchors that cannot be distinguished remain unresolved. No ordinal
+   anchor is converted to an interval, a total, a ranking or a time series.
+3. **Analytical relationship:** a scoped finding with a published derivation rule,
+   necessary conditions, input relationships/attributes, evidence, counterevidence
+   and limitations. The conjunction of the specified conditions must support an
+   established result. An unresolved assessment can publish as unresolved; it
+   does not establish independence or absence of the hypothesized relationship.
 
-Defence, civilian public services, and research are **use contexts**, stored
-separately from domains. Military use can intersect cyber or biosecurity, but
-does not imply either. Nuclear/radiological safety, infrastructure, health and
-autonomous weapons need their own inclusion rules if later evidence warrants
-them. They are research candidates, not empty decorative filters in the pilot.
+Contractual restrictions, technical control over provision and deployment, and
+operational dependence are separate constructs. A restriction is not a remote
+kill switch. A deployed static model can remain technically controlled by its
+operator while its replacement, continuing licence, support or new capabilities
+involve a provider. Dependence need not involve a remote veto. It does require an
+identified operational function and consequential constraints on substitution,
+within an explicit time horizon. Procurement alone is insufficient. Conversely,
+the absence of a remote veto is not sufficient to disprove dependence.
 
-An institution inherits visible domain membership only through a visible edge.
-Two organizations' membership in the same programme does not automatically
-create a bilateral collaboration between them.
+The dependency investigation actively searches contracts, government testimony,
+migration requirements, switching costs, available alternatives and unique
+capability requirements. General contractor burdens cannot silently be assigned
+to a named military function. A promise of alternatives is not demonstrated
+functional equivalence; a transition period is not permanent irreplaceability.
+Findings may be narrowed to divided control or recurrent reliance when evidence
+cannot establish the stronger result. Rubric changes are disclosed and reviewed,
+not made silently to secure a desired conclusion.
 
-## Evidence and admission
+## Sources and atomic evidence
 
-The public data directory contains separate `sources.json`, `evidence.json`,
-`institutions.json`, `instruments.json` and `relationships.json` records.
+Prefer legislation, contracts, full agreements, evaluation reports and official
+institutional publications. Company documents support facts about that company's
+arrangements, with attribution and limits. Secondary reporting discovers or
+corroborates claims; it does not replace a usable primary source. A court judgment
+is primary even when retrieved from a document mirror; distinguish its findings
+from allegations in filings and from another case's procedural status.
 
-1. Record a primary document's publisher, URL, publication/revision dates and
-   consultation date. A bibliography entry alone is not evidence for an edge.
-2. Extract a narrow factual proposition and a stable locator (section, paragraph,
-   article, page or table). Record what the source does not establish.
-3. Identify both institutions and the mechanism. Separate a public announcement
-   of an agreement from evidence that an evaluation or deployment occurred.
-4. Code domain, context, jurisdiction, direction and temporal status; explain
-   those choices in the relationship's rationale. Link supporting and conflicting
-   evidence. An empty counterevidence list means none recorded, not none exists.
-5. Mark the record `provisional`. Independent checking may promote it to
-   `reviewed`; this initial release has not received that review.
+Each proposition records a source version and a stable section/page/paragraph
+locator, the narrow claim and what it does not establish. Sources retain
+publication, revision and retrieval dates separately. `source-versions.json`
+records a SHA-256 of retrievable bytes or an explicit capture failure. A byte hash
+identifies the retrieved representation, not a guarantee that a mutable website
+will retain it. A blocked byte capture does not erase independently inspected
+text, and is visibly disclosed. Sources without usable content cannot support a
+published proposition. A stable document locator plus recorded version is required.
 
-Government notices can support announcements and completed public activities.
-Company statements support **company-reported** activities, not independent
-findings of effectiveness. Contracts, legislation and full evaluation reports
-are preferred for their underlying terms. A source must name the parties and
-mechanism; merely discussing them together is insufficient. Unsupported
-candidate links stay in the research backlog, outside the rendered graph.
+Material conflicts require a recorded disposition. Do not delete a contradiction
+because a newer source is more convenient. For example, the August 2026 district
+ruling corrects claims about contractual versus technical control and specific
+legal outcomes; it does not settle separate litigation or disprove every possible
+dependency. Later source versions cannot establish earlier wording automatically.
 
-## Direction and meaning
+## Time, status and institutional succession
 
-| Relation | Meaning of the arrow / line |
-| --- | --- |
-| Model access | Model provider → recipient of access. |
-| Evaluation | Evaluating institution → model provider whose system was evaluated. |
-| Research deployment | Supplier → institution reported to be using its system. |
-| Joint evaluation | Undirected: named institutions conducted a shared exercise. |
+`announcedOn`, `observedBy`, effective dates and status-check date are distinct.
+Unknown dates remain null. Publication dates can bound an observation but must
+not be presented as the unreported test or contract date. Explicitly record day,
+month or upper-bound precision. Never infer current activity from a null end date.
 
-These predicates are descriptive. Procurement does not prove dependence;
-dependence would require separate evidence of an operational requirement and
-the constraints on substitution. Evaluation access does not establish
-regulatory authority, and a voluntary standard does not establish a compulsory
-obligation. No pilot edge measures authority, influence, effectiveness or risk.
+For every admitted relationship inspect both-party records and relevant indexes;
+search amendments, implementation, expiry, termination, restrictions, succession
+and conflicting accounts through the cutoff. Store executed queries, inspected
+sources and unresolved gaps in `status-checks.json` and the search logs. “Last
+confirmed” is a dated observation, not uninterrupted continuity. Allowed results:
+active/current; ended/expired; superseded; terminated; historical event only;
+unresolved/unknown. Active/current requires affirmative evidence of continuity.
+Historical events remain inspectable even if access later ended. Where later
+restrictions do not name an affected agreement, do not transfer them to every edge.
 
-Instruments appear in the selected edge's evidence panel, keeping the main map
-legible. A future instrument-node view must preserve the original relationship
-ID so one relationship is not counted twice merely because it is drawn in two
-segments. An MoU is not assumed binding without its terms.
+`succession.json` distinguishes renaming from replacement or re-establishment.
+Old agreements do not automatically transfer to successors. A transfer needs its
+own evidence. Historical US AISI and CAISI remain distinguishable; functional
+cluster placement does not resolve legal or institutional succession.
 
-## Time, status and uncertainty
+## Coverage and uncertainty
 
-`announcedOn`, `observedBy`, `effectiveFrom`, `effectiveTo` and
-`currentStatusCheckedOn` are distinct. Unknown dates are `null`, never filled
-with publication dates. A null end date does not mean an ongoing relationship.
-`eventStatus` describes the documented event (announced, conducted or reported
-deployment); `currentStatus` is separate and is `unverified` for this pilot.
+Search each developer–family cell on both parties' domains and inspect relevant
+publication/register pages. Preserve exact executed queries, discoveries,
+inspections, exclusions and retrieval failures. Search-result URLs are discovery
+logs, not a claim every returned page was inspected. Cell “searched—supported”
+means a candidate interface was found, not automatic publication. “Searched—
+unsupported” means the executed search did not establish an admissible interface;
+it does not establish absence. “Blocked” means an unresolved access or identity
+barrier prevented completion. A cell can contain supported records and additional
+blocked candidates. The release displays limitations rather than a completeness
+percentage. Substantive expansion requires a recorded reason and triggering evidence.
 
-Evidence basis is shown as official notice, joint report or company report.
-We do not assign numeric confidence. Review status describes checking, not the
-strength or importance of the relationship. Disputed or superseded records
-must retain their history and counterevidence; do not silently overwrite them.
+Domains are non-exclusive relationship tags: biosecurity requires explicit
+biological-risk/protective research evidence; cybersecurity requires digital
+security/cyber-risk evidence; cross-domain AI concerns general-purpose models or
+cross-risk arrangements. Defence and public services are use contexts, not
+invented research domains. The primary visual has no decorative domain filters.
 
-## Display and reproducibility
+## Review and release gate
 
-The interface joins records by stable IDs, filters relationships by domain,
-then displays their endpoints. It does not aggregate scores. Every edge opens
-its mechanism, dates, evidence basis, provenance, locator and limitation.
-All provisional records are labelled as a research pilot. Missing referenced
-records, invalid directions and unsupported edges fail validation.
+The workflow is candidate → provisional → reviewed → published, with rejected
+and withdrawn states retained. A separate checker examines source support,
+endpoint identity, predicate/direction, date/status, rubric anchoring, analytical
+derivation, counterevidence and limits. The coder cannot approve their own record.
+When the checker materially recodes a record, the original coder independently
+checks that corrected record. Reviewer identity and human/agent type are public.
 
-Nodes have equal size; lines have equal weight. Arrow direction follows the
-predicate above. Dashed versus solid lines distinguish model access from other
-mechanisms, with labels available on focus and selection. Color indicates
-selection only. Positions are manually arranged for readability in a separate
-layout file; position, distance and centrality have **no measured meaning**.
-Multiple mechanisms between the same parties receive separate curves.
+Approvals bind a canonical SHA-256 of the material research collections, including
+search and status logs. Publication-state changes do not change the evidence hash;
+evidence, reasoning, source version, scope or rubric changes invalidate approvals.
+This deliberately conservative whole-research hash may require rechecking more
+records than a per-record dependency graph would. No automatic “approved” field
+is generated merely because schema validation passes.
 
-Read the source → evidence → relationship chain in the JSON files. Run
-`npm test` for referential, temporal, scope and publication invariants, and
-`npm run typecheck` for the consuming interface. These checks cannot determine
-whether a source supports a claim: that requires substantive review.
+Only published records enter the visualization, with dependency closure enforced.
+Reviewed unknowns may publish when their uncertainty is explicit. The candidate
+repository may contain unreviewed material. The owner must approve the current
+fingerprint before `release.json` becomes `1.0.0`; neither agent review nor passing
+software tests substitutes for that editorial decision. The public methodology
+link is pinned to a commit containing this protocol.
 
-## Expansion plan
+## Visual grammar and audit
 
-First review the six pilot links against the underlying MoUs and evaluation
-report, then check present status and institutional succession. Next add a
-documented civilian cybersecurity collaboration, named academic partners and
-a defence procurement case. For each, record alternative explanations and
-scope before adding it to the graph. Expand jurisdiction coverage deliberately;
-do not fill a desired visual shape by selecting convenient sources.
+React renders equal-size institutional marks from deterministic coordinates
+produced by D3 during export. There is no runtime simulation, link force, charge
+or centrality calculation. Functional clusters are public decisions, model
+developers and evaluation/research; they are categorical and not mutually
+exclusive political identities. Position, distance, circle size and line width
+measure no quantity. One contextual mechanism is foregrounded; exploration
+normally shows no edges. A separate annotation identifies analytical findings.
 
-Rejected automatic migrations: the legacy CISA → OpenAI reporting requirement,
-NATO DIANA → OpenAI partnership and Universities → Anthropic research partnership
-have no edge-specific evidence in the old dataset. Their absence here is not a
-finding that those relationships do not exist.
+Explicit essay markers select six states: opening, public decisions, interfaces,
+technical knowledge, provenance and exploration. Ordinary scrolling and a small
+IntersectionObserver implementation suffice; Scrollama adds no required behavior.
+The evidence routes preserve the full chain from an analytical finding through
+attributes and observed interfaces to exact sources. Keyboard selection and
+non-hover evidence access use the same model as pointer interaction.
 
-## Paused measurements
+## Reproduction and limits of validation
 
-The Gap Matrix, Friction Index and capability/capacity chart are removed from
-essay rendering in every environment. Their code and data are archived with
-recovery instructions. The existing gap-matrix evidence work is retained as
-reference research; its ordinal-to-100 aggregation is **not adopted** here.
-No axis score, inferred historical series, balance line, ranking or numerical
-dependency strength is generated by this methodology.
+Run `pnpm research:validate`, `pnpm test`, `pnpm typecheck`, `pnpm research:export`,
+`pnpm build` and `pnpm test:e2e`. Ajv checks structure; TypeScript validation checks
+identity, provenance, date/status, publication and analytical invariants. Negative
+fixtures reject co-mention edges, automatic dependence/authority/compliance,
+successor inheritance, unreviewed publication, stale hashes and synthetic scores.
+Substantive source support cannot be proved by a schema: separate inspection is
+required. UI testing covers story transitions, audit routes, keyboard operation,
+responsive reading, reduced motion and axe accessibility checks.
 
-## Changelog
-
-- v0.1, 12 September 2026: five named institutions; six dated relationship
-  records from three primary sources; domain/context separation; source-level
-  disclosure; legacy visuals paused. All substantive coding remains provisional.
+The original v0.1 is preserved in `releases/v0.1/`. Retired Gap Matrix research is
+methodological history only: none of its ordinal-to-100 conversions, synthetic
+series, rankings or numerical dependency weights enters this object.

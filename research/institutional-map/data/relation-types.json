@@ -52,5 +52,17 @@
     "label": "Contested use",
     "direction": "public user → provider",
     "definition": "Dated dispute over conditions for use of a named provider system; no dependency inferred."
+  },
+  {
+    "id": "evaluation-agreement",
+    "label": "Evaluation agreement",
+    "direction": "undirected",
+    "definition": "Named parties announce an agreement for evaluation or testing research. Does not establish particular access rights, actual model access, or completed evaluation."
+  },
+  {
+    "id": "deployment-agreement",
+    "label": "Deployment agreement",
+    "direction": "undirected",
+    "definition": "Named parties announce an agreement to deploy a provider capability in an identified environment. This records the agreement, not completed integration, equivalence to another system, procurement value, or operational dependence."
   }
 ]

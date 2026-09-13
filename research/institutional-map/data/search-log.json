@@ -44,7 +44,8 @@
       "https://www.nist.gov/blogs/caisi-research-blog/analyzing-transcripts-ai-agent-evaluations",
       "https://www.nist.gov/document/us-aisi-uk-aisi-joint-testing-report-upgrade-claude-35-sonnet-111924",
       "https://www.nccoe.nist.gov/sites/default/files/2026-01/Cyber%20AI%20Profile%20Workshop%20Slides%20-%20January%202026_1.pdf"
-    ]
+    ],
+    "id": "search-1"
   },
   {
     "family": "us-evaluation",
@@ -83,7 +84,8 @@
       "https://www.nist.gov/news-events/news-updates/topic/2800826",
       "https://www.nccoe.nist.gov/sites/default/files/2026-01/Cyber%20AI%20Profile%20Workshop%20Slides%20-%20January%202026_1.pdf",
       "https://www.nist.gov/system/files/documents/2025/09/30/CAISI_Evaluation_of_DeepSeek_AI_Models.pdf"
-    ]
+    ],
+    "id": "search-2"
   },
   {
     "family": "uk-evaluation",
@@ -126,7 +128,8 @@
       "https://www.aisi.gov.uk/blog/pre-deployment-evaluation-of-anthropics-upgraded-claude-3-5-sonnet",
       "https://www.aisi.gov.uk/about",
       "https://www.aisi.gov.uk/research/uk-aisi-alignment-evaluation-case-study"
-    ]
+    ],
+    "id": "search-3"
   },
   {
     "family": "uk-evaluation",
@@ -162,7 +165,8 @@
       "https://www.aisi.gov.uk/frontier-ai-trends-report",
       "https://www.aisi.gov.uk/",
       "https://www.aisi.gov.uk/blog/principles-for-safeguard-evaluation"
-    ]
+    ],
+    "id": "search-4"
   },
   {
     "family": "uk-cooperation",
@@ -211,7 +215,8 @@
       "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/702810/180425_BEIS_AI_Sector_Deal__4_.pdf",
       "https://assets.publishing.service.gov.uk/media/684ad3ba31f1fc7d0801ab84/Annex_F_-_Briefing_of_the_meeting_with_Microsoft.pdf",
       "https://assets.publishing.service.gov.uk/media/65c1e41663a23d000dc8224f/a-pro-innovation-approach-to-ai-regulation-amended-governement-response-print-ready.pdf"
-    ]
+    ],
+    "id": "search-5"
   },
   {
     "family": "uk-cooperation",
@@ -253,7 +258,8 @@
       "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/717697/Joint_Statement_-_19_June_2018.pdf",
       "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1145586/11857435_NS_IR_Refresh_2023_Supply_AllPages_Revision_7_WEB_PDF.pdf",
       "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/674881/Security_and_Defence.pdf"
-    ]
+    ],
+    "id": "search-6"
   },
   {
     "family": "us-defence",
@@ -301,7 +307,8 @@
       "https://www.ai.mil/Latest/Blog/Article-Display/Article/3940311/continuous-bounty-practicing-what-we-preach/",
       "https://www.ai.mil/Industry/Tradewinds/",
       "https://www.ai.mil/Latest/Blog/Article-Display/Article/4014886/cdao-and-diu-host-joint-industry-day-focused-on-speed-to-scale-partnership/"
-    ]
+    ],
+    "id": "search-7"
   },
   {
     "family": "us-defence",
@@ -343,7 +350,8 @@
       "https://www.ai.mil/Leadership/Bio-Page/Article/3940370/cameron-stanley/",
       "https://www.ai.mil/Latest/Blog/Article-Display/Article/4014886/cdao-and-diu-host-joint-industry-day-focused-on-speed-to-scale-partnership/",
       "https://www.ai.mil/Latest/Blog/Article-Display/Article/3940311/continuous-bounty-practicing-what-we-preach/"
-    ]
+    ],
+    "id": "search-8"
   },
   {
     "family": "eu-compliance",
@@ -391,7 +399,8 @@
       "https://digital-strategy.ec.europa.eu/en/node/13990/printable/pdf",
       "https://digital-strategy.ec.europa.eu/en/node/13028/printable/pdf",
       "https://disinfocode.eu/eu-elections-2024/"
-    ]
+    ],
+    "id": "search-9"
   },
   {
     "family": "eu-compliance",
@@ -432,7 +441,8 @@
       "https://digital-strategy.ec.europa.eu/en/node/13990/printable/pdf",
       "https://digital-strategy.ec.europa.eu/en/node/13028/printable/pdf",
       "https://disinfocode.eu/eu-elections-2024/"
-    ]
+    ],
+    "id": "search-10"
   },
   {
     "family": "llnl",
@@ -478,7 +488,8 @@
       "https://hpc.llnl.gov/about-livermore-computing/ai-ml-lc/lc-llm-model-download-decision-guide",
       "https://www.llnl.gov/join-our-team/careers/find-your-job/engineering/nif/3743990014281336",
       "https://www.llnl.gov/join-our-team/careers/find-your-job/all/phd/3743990012499846"
-    ]
+    ],
+    "id": "search-11"
   },
   {
     "family": "llnl",
@@ -519,7 +530,8 @@
       "https://www.llnl.gov/join-our-team/careers/find-your-job/all/global/3743990014651061",
       "https://www.llnl.gov/join-our-team/careers/find-your-job/computing/all/3743990013651526",
       "https://www.llnl.gov/join-our-team/careers/find-your-job/all/Artificial%20Intelligence/3743990013651526"
-    ]
+    ],
+    "id": "search-12"
   },
   {
     "family": "us-evaluation",
@@ -569,7 +581,8 @@
       "https://cdn.openai.com/global-affairs/keeping-users-safe-in-the-age-of-ai-oct25.pdf",
       "https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf",
       "https://assets.anthropic.com/m/8eb43d8f1f8895f/original/Anthropic-Voluntary-Commitments-Web-Archive.pdf"
-    ]
+    ],
+    "id": "search-13"
   },
   {
     "family": "us-evaluation",
@@ -610,7 +623,8 @@
       "https://learn.microsoft.com/en-us/azure/governance/policy/samples/nist-sp-800-53-r5",
       "https://learn.microsoft.com/en-us/azure/azure-local/assurance/azure-stack-security-standards?view=azloc-2603",
       "https://www.microsoft.com/ro-ro/trust-center/security/secure-future-initiative/sfi-progress-report-july-2026"
-    ]
+    ],
+    "id": "search-14"
   },
   {
     "family": "uk-evaluation",
@@ -659,7 +673,8 @@
       "https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf",
       "https://www-cdn.anthropic.com/files/4zrzovbb/website/0a58d567024a8b448ff15158ebc3625328dfcc1f.pdf",
       "https://deepmind.google/gemini/gemini_1_report.pdf"
-    ]
+    ],
+    "id": "search-15"
   },
   {
     "family": "uk-evaluation",
@@ -700,7 +715,8 @@
       "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
       "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/08/Learning-from-other-Domains-to-Advance-AI-Evaluation-and-Testing_-v3-1.pdf",
       "https://info.microsoft.com/rs/157-GQE-382/images/EN-WBNR-Other-PDFSREVM51331.pdf?version=0"
-    ]
+    ],
+    "id": "search-16"
   },
   {
     "family": "uk-cooperation",
@@ -750,7 +766,8 @@
       "https://cdn.openai.com/global-affairs/openai-us-infrastructure-blueprint-sep-2025.pdf",
       "https://cdn.openai.com/pdf/openai-eu-economic-blueprint-jan-2026.pdf",
       "https://cdn.openai.com/global-affairs/b89a7434-7cb9-47a7-b4a7-b50b1a1a0afc/openai-uk-ai-and-copyright-consultation.pdf"
-    ]
+    ],
+    "id": "search-17"
   },
   {
     "family": "uk-cooperation",
@@ -791,7 +808,8 @@
       "https://download.microsoft.com/documents/uk/government/Generating_Value_with_ICT_in_Public_Sector.pdf",
       "https://download.microsoft.com/download/F/0/6/F06C54F0-D0B9-418F-825E-3C1340F780B7/Digital_Transformation_in_the_Cloud_eBook_EN_US.pdf",
       "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/wmcfx/documents/presentations/EU_DoC_2026_062122.pdf"
-    ]
+    ],
+    "id": "search-18"
   },
   {
     "family": "us-defence",
@@ -840,7 +858,8 @@
       "https://www-cdn.anthropic.com/74ee25a84fd2f6c97450872b9fe0b4f760d7e478.pdf",
       "https://www-cdn.anthropic.com/471bd07290603ee509a5ea0d5ccf131ea5897232/anthropic-vertex-commercial-terms-march-2024.pdf",
       "https://cdn.openai.com/global-affairs/ostp-rfi/ec680b75-d539-4653-b297-8bcf6e5f7686/openai-response-ostp-nsf-rfi-notice-request-for-information-on-the-development-of-an-artificial-intelligence-ai-action-plan.pdf?_bhlid=5d352af87751abbfdff8ac2a682ce1f77e1b3c99"
-    ]
+    ],
+    "id": "search-19"
   },
   {
     "family": "us-defence",
@@ -882,7 +901,8 @@
       "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/mcaps-MSFT-GSA-Commercial-Supplier-Agreement-Terms.pdf",
       "https://local.microsoft.com/wp-content/uploads/2026/02/FY26-Community-Benefits-in-Renewable-Energy-White-Paper_Final_Feb2026.pdf",
       "https://download.microsoft.com/download/D/A/4/DA48799A-5BE1-489F-A8C0-673C362784AE/FINAL-PROCUREMENT-GUIDE1.pdf"
-    ]
+    ],
+    "id": "search-20"
   },
   {
     "family": "eu-compliance",
@@ -932,7 +952,8 @@
       "https://cdn.openai.com/global-affairs/2dbdb523-1a9f-4552-971d-e0948ae2abca/openai-eu-economic-blueprint-apr-2025.pdf?_bhlid=b77ec42a2af6f0298b2156f341618d94afe9b403",
       "https://resources.anthropic.com/hubfs/The%202026%20State%20of%20AI%20Agents%20Report.pdf?_bhlid=f5832f1e00cadd0eaf3ef8debb58fa368031c9de",
       "https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf?media_author_id=77888340147&media_id=3843784667434984174_77888340147&ranking_info_token=GCA4NDUzMjEzNmI0Yzk0OTExODI2MzAyODNlZDBhNzE0MiWwvf4GJtbMsZoNGBMzODQzNzg0MjQ3NzQ0NTg4NjIwKANjY28A"
-    ]
+    ],
+    "id": "search-21"
   },
   {
     "family": "eu-compliance",
@@ -973,7 +994,8 @@
       "https://learn.microsoft.com/th-th/partner-center/announcements/2026-june",
       "https://blogs.microsoft.com/wp-content/uploads/prod/sites/73/2021/09/microsoft-response-to-the-european-commission-consultation-on-the-artifical-intelligence-act.pdf",
       "https://x.ai/legal/data-processing-addendum"
-    ]
+    ],
+    "id": "search-22"
   },
   {
     "family": "llnl",
@@ -1023,7 +1045,8 @@
       "https://www-cdn.anthropic.com/7449887b6715e3a35f362b1301e5b5d8a6b116e5.pdf",
       "https://assets.anthropic.com/m/24a47b00f10301cd/original/Anthropic-Responsible-Scaling-Policy-2024-10-15.pdf?_bhlid=b1d7a7b926a6fc1d411c9b4d3e1ee5160010b8ed&trk=public_post_comment-text",
       "https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf"
-    ]
+    ],
+    "id": "search-23"
   },
   {
     "family": "llnl",
@@ -1065,6 +1088,7 @@
       "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
       "https://fpc.microsoft.com/_entity/annotation/d84e18f0-1e22-f111-88b2-7c1e52157f8b",
       "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/bizapps/Microsoft-Copilot-Studio-Licensing-Guide-May-2026-PUB.pdf"
-    ]
+    ],
+    "id": "search-24"
   }
 ]

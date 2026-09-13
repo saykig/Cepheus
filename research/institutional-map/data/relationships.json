@@ -267,8 +267,8 @@
     "id": "google-caisi-2026",
     "source": "google",
     "target": "caisi",
-    "type": "access-agreement",
-    "directed": true,
+    "type": "evaluation-agreement",
+    "directed": false,
     "instrumentId": "i-google-caisi-2026",
     "domains": [],
     "contexts": [
@@ -288,12 +288,12 @@
     "currentStatusCheckedOn": "2026-09-12",
     "currentStatus": "unresolved/unknown",
     "eventStatus": "Announced",
-    "rationale": "provider → recipient",
+    "rationale": "Undirected agreement for evaluation and research; no particular access entitlement or completed test inferred.",
     "limitations": [
       "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
     "statusCheckId": "status-google-caisi-2026",
@@ -303,8 +303,8 @@
     "id": "microsoft-caisi-2026",
     "source": "microsoft",
     "target": "caisi",
-    "type": "access-agreement",
-    "directed": true,
+    "type": "evaluation-agreement",
+    "directed": false,
     "instrumentId": "i-microsoft-caisi-2026",
     "domains": [],
     "contexts": [
@@ -324,12 +324,12 @@
     "currentStatusCheckedOn": "2026-09-12",
     "currentStatus": "unresolved/unknown",
     "eventStatus": "Announced",
-    "rationale": "provider → recipient",
+    "rationale": "Undirected agreement for evaluation and research; no particular access entitlement or completed test inferred.",
     "limitations": [
       "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
     "statusCheckId": "status-microsoft-caisi-2026",
@@ -339,8 +339,8 @@
     "id": "xai-caisi-2026",
     "source": "xai",
     "target": "caisi",
-    "type": "access-agreement",
-    "directed": true,
+    "type": "evaluation-agreement",
+    "directed": false,
     "instrumentId": "i-xai-caisi-2026",
     "domains": [],
     "contexts": [
@@ -360,12 +360,12 @@
     "currentStatusCheckedOn": "2026-09-12",
     "currentStatus": "unresolved/unknown",
     "eventStatus": "Announced",
-    "rationale": "provider → recipient",
+    "rationale": "Undirected agreement for evaluation and research; no particular access entitlement or completed test inferred.",
     "limitations": [
       "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
     "statusCheckId": "status-xai-caisi-2026",
@@ -798,23 +798,23 @@
       "uk-anthropic-followup"
     ],
     "counterEvidenceIds": [],
-    "announcedOn": "2025-02-13",
+    "announcedOn": "2025-02-14",
     "observedBy": "2025-02-13",
     "effectiveFrom": null,
     "effectiveTo": null,
     "currentStatusCheckedOn": "2026-09-12",
     "currentStatus": "unresolved/unknown",
-    "eventStatus": "Announced",
+    "eventStatus": "Signed 13 February; published 14 February 2025",
     "rationale": "undirected",
     "limitations": [
       "Voluntary memorandum; does not establish delivery of every contemplated activity."
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
     "statusCheckId": "status-uk-anthropic-cooperation",
-    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+    "conflictDisposition": "Government signature block dates signature 13 February; publication is 14 February. These are distinct events."
   },
   {
     "id": "uk-google-cooperation",
@@ -993,10 +993,11 @@
     "eventStatus": "Announced",
     "rationale": "provider → host",
     "limitations": [
-      "Availability is not a direct contract, utilization measure or continuity of another product."
+      "Availability is not a direct contract, utilization measure or continuity of another product.",
+      "Documents coding-agent client availability. Default model-service endpoints are LivAI or LLamaMe; provider-operated model service, procurement and actual usage volumes are not established."
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
     "statusCheckId": "status-openai-llnl-coding",
@@ -1029,10 +1030,11 @@
     "eventStatus": "Announced",
     "rationale": "provider → host",
     "limitations": [
-      "Availability is not a direct contract, utilization measure or continuity of another product."
+      "Availability is not a direct contract, utilization measure or continuity of another product.",
+      "Documents coding-agent client availability. Default model-service endpoints are LivAI or LLamaMe; provider-operated model service, procurement and actual usage volumes are not established."
     ],
     "publicationStatus": "provisional",
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
     "statusCheckId": "status-anthropic-llnl-coding",
@@ -1078,5 +1080,180 @@
     "basis": "direct",
     "statusCheckId": "status-dod-anthropic-contested",
     "conflictDisposition": "August district judgment changes legal status; contractual restrictions were not technologically enforceable. Separate relief and appellate status remain unresolved at cutoff."
+  },
+  {
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "fable-access-suspension",
+      "aisi-september-restrictions"
+    ],
+    "id": "uk-anthropic-fable-evaluation",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "directed": true,
+    "instrumentId": "fable-safeguard-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "uk-fable-redteaming"
+    ],
+    "announcedOn": "2026-06-12",
+    "observedBy": "2026-06-12",
+    "eventStatus": "Conducted",
+    "rationale": "Named evaluator to model provider; supplier-reported prelaunch safeguard testing.",
+    "type": "evaluation",
+    "publicationStatus": "provisional",
+    "coder": "codex-research-checker",
+    "limitations": [
+      "Supplier account; no evaluator-specific report or exact dates inspected.",
+      "Separate suspension and incident restrictions do not undo the historical event or establish continuing access."
+    ],
+    "statusCheckId": "status-uk-anthropic-fable-evaluation",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "June model suspension and September incident-specific restrictions qualify continuing access, not occurrence of earlier reported testing."
+  },
+  {
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "id": "microsoft-dod-classified",
+    "source": "microsoft",
+    "target": "dod",
+    "directed": false,
+    "type": "deployment-agreement",
+    "instrumentId": "microsoft-classified-instrument",
+    "evidenceIds": [
+      "microsoft-classified-agreement"
+    ],
+    "counterEvidenceIds": [],
+    "basis": "direct",
+    "announcedOn": "2026-05-01",
+    "observedBy": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "publication-day; names observed at cutoff",
+    "eventStatus": "Announced",
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-microsoft-dod-classified",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "rationale": "Announcement explicitly connects each named company with Department; not provider-to-provider collaboration.",
+    "limitations": [
+      "Exact legal signatory and deployment completion unresolved.",
+      "Current page version is the dated observation; no silent continuity or update-date inference."
+    ],
+    "conflictDisposition": "Contemporary seven-company reporting versus current eight-company page concerns source version. No inference of amendment date; this named party appears in both lists.",
+    "endpointIdentity": {
+      "sourceName": "Microsoft",
+      "legalSignatory": null,
+      "unit": "named organization in official announcement"
+    }
+  },
+  {
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "id": "openai-dod-classified",
+    "source": "openai",
+    "target": "dod",
+    "directed": false,
+    "type": "deployment-agreement",
+    "instrumentId": "openai-classified-instrument",
+    "evidenceIds": [
+      "openai-classified-agreement"
+    ],
+    "counterEvidenceIds": [],
+    "basis": "direct",
+    "announcedOn": "2026-05-01",
+    "observedBy": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "publication-day; names observed at cutoff",
+    "eventStatus": "Announced",
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-openai-dod-classified",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "rationale": "Announcement explicitly connects each named company with Department; not provider-to-provider collaboration.",
+    "limitations": [
+      "Exact legal signatory and deployment completion unresolved.",
+      "Current page version is the dated observation; no silent continuity or update-date inference."
+    ],
+    "conflictDisposition": "Contemporary seven-company reporting versus current eight-company page concerns source version. No inference of amendment date; this named party appears in both lists.",
+    "endpointIdentity": {
+      "sourceName": "OpenAI",
+      "legalSignatory": null,
+      "unit": "named organization in official announcement"
+    }
+  },
+  {
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "id": "google-dod-classified",
+    "source": "google",
+    "target": "dod",
+    "directed": false,
+    "type": "deployment-agreement",
+    "instrumentId": "google-classified-instrument",
+    "evidenceIds": [
+      "google-classified-agreement"
+    ],
+    "counterEvidenceIds": [],
+    "basis": "direct",
+    "announcedOn": "2026-05-01",
+    "observedBy": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "publication-day; names observed at cutoff",
+    "eventStatus": "Announced",
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-google-dod-classified",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "rationale": "Announcement explicitly connects each named company with Department; not provider-to-provider collaboration.",
+    "limitations": [
+      "Exact legal signatory and deployment completion unresolved.",
+      "Current page version is the dated observation; no silent continuity or update-date inference."
+    ],
+    "conflictDisposition": "Contemporary seven-company reporting versus current eight-company page concerns source version. No inference of amendment date; this named party appears in both lists.",
+    "endpointIdentity": {
+      "sourceName": "Google",
+      "legalSignatory": null,
+      "unit": "named organization in official announcement"
+    }
   }
 ]

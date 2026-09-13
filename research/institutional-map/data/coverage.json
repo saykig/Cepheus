@@ -1,0 +1,1394 @@
+{
+  "cohort": [
+    "Anthropic",
+    "OpenAI",
+    "Google DeepMind",
+    "Microsoft",
+    "xAI"
+  ],
+  "families": [
+    "us-evaluation",
+    "uk-evaluation",
+    "uk-cooperation",
+    "us-defence",
+    "eu-compliance",
+    "llnl"
+  ],
+  "cells": [
+    {
+      "id": "anthropic--us-evaluation",
+      "developer": "Anthropic",
+      "family": "us-evaluation",
+      "queryLogIds": [
+        "search-1",
+        "search-13"
+      ],
+      "queries": [
+        {
+          "q": "Anthropic NIST CAISI AISI agreement evaluation 2026",
+          "domains": [
+            "nist.gov"
+          ]
+        },
+        {
+          "q": "NIST CAISI AISI agreement evaluation 2026 agreement Anthropic",
+          "domains": [
+            "anthropic.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.nist.gov/caisi"
+      ],
+      "inspectedSourceIds": [
+        "caisi-2026",
+        "joint-evaluation-2024",
+        "nist-mous-2024",
+        "sonnet-report"
+      ],
+      "relationshipIds": [
+        "anthropic-us-access",
+        "us-anthropic-evaluation"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "anthropic--uk-evaluation",
+      "developer": "Anthropic",
+      "family": "uk-evaluation",
+      "queryLogIds": [
+        "search-3",
+        "search-15"
+      ],
+      "queries": [
+        {
+          "q": "Anthropic UK AI Security Institute evaluation access 2026",
+          "domains": [
+            "aisi.gov.uk"
+          ]
+        },
+        {
+          "q": "UK AI Security Institute evaluation access 2026 agreement Anthropic",
+          "domains": [
+            "anthropic.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.aisi.gov.uk/blog"
+      ],
+      "inspectedSourceIds": [
+        "anthropic-fable-suspension",
+        "joint-evaluation-2024",
+        "parliament-ai-update-september",
+        "sonnet-report"
+      ],
+      "relationshipIds": [
+        "uk-anthropic-evaluation",
+        "uk-anthropic-fable-evaluation"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "anthropic--uk-cooperation",
+      "developer": "Anthropic",
+      "family": "uk-cooperation",
+      "queryLogIds": [
+        "search-5",
+        "search-17"
+      ],
+      "queries": [
+        {
+          "q": "Anthropic UK DSIT memorandum strategic cooperation 2026",
+          "domains": [
+            "gov.uk"
+          ]
+        },
+        {
+          "q": "UK DSIT memorandum strategic cooperation 2026 agreement Anthropic",
+          "domains": [
+            "anthropic.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+      ],
+      "inspectedSourceIds": [
+        "uk-anthropic-mou",
+        "uk-anthropic-pilot"
+      ],
+      "relationshipIds": [
+        "uk-anthropic-cooperation",
+        "anthropic-gds-pilot"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "anthropic--us-defence",
+      "developer": "Anthropic",
+      "family": "us-defence",
+      "queryLogIds": [
+        "search-7",
+        "search-19"
+      ],
+      "queries": [
+        {
+          "q": "Anthropic DoD CDAO contract procurement deployment termination 2026",
+          "domains": [
+            "ai.mil"
+          ]
+        },
+        {
+          "q": "DoD CDAO contract procurement deployment termination 2026 agreement Anthropic",
+          "domains": [
+            "anthropic.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.ai.mil/News/"
+      ],
+      "inspectedSourceIds": [
+        "anthropic-february",
+        "cdao-awards",
+        "court-april",
+        "court-august"
+      ],
+      "relationshipIds": [
+        "anthropic-cdao-award",
+        "dod-anthropic-contested"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [
+        "Underlying procurement instruments/registries not available in inspected material."
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "anthropic--eu-compliance",
+      "developer": "Anthropic",
+      "family": "eu-compliance",
+      "queryLogIds": [
+        "search-9",
+        "search-21"
+      ],
+      "queries": [
+        {
+          "q": "Anthropic European Commission AI Office code general purpose signatory 2026",
+          "domains": [
+            "digital-strategy.ec.europa.eu"
+          ]
+        },
+        {
+          "q": "European Commission AI Office code general purpose signatory 2026 agreement Anthropic",
+          "domains": [
+            "anthropic.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+      ],
+      "inspectedSourceIds": [
+        "eu-code"
+      ],
+      "relationshipIds": [
+        "anthropic-eu-code"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "anthropic--llnl",
+      "developer": "Anthropic",
+      "family": "llnl",
+      "queryLogIds": [
+        "search-11",
+        "search-23"
+      ],
+      "queries": [
+        {
+          "q": "Anthropic LLNL model deployment use 2026",
+          "domains": [
+            "llnl.gov"
+          ]
+        },
+        {
+          "q": "LLNL model deployment use 2026 agreement Anthropic",
+          "domains": [
+            "anthropic.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://hpc.llnl.gov/technical-bulletins"
+      ],
+      "inspectedSourceIds": [
+        "llnl-confirmation",
+        "llnl-deployment-2025",
+        "llnl-sandbox"
+      ],
+      "relationshipIds": [
+        "anthropic-llnl-deployment",
+        "anthropic-llnl-coding"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence.",
+        "LLNL current Using LLMs guidance inspected: OpenAI example via managed LivAI, no named Microsoft/Google/xAI interface established by this page. Bulletin index retrieval failed; no exhaustive registry claim."
+      ],
+      "retrievalFailures": [
+        {
+          "url": "https://hpc.llnl.gov/technical-bulletins",
+          "failure": "Browser retrieval failed; inspected directly discoverable bulletins and current LLM guidance."
+        }
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "openai--us-evaluation",
+      "developer": "OpenAI",
+      "family": "us-evaluation",
+      "queryLogIds": [
+        "search-1",
+        "search-13"
+      ],
+      "queries": [
+        {
+          "q": "OpenAI NIST CAISI AISI agreement evaluation 2026",
+          "domains": [
+            "nist.gov"
+          ]
+        },
+        {
+          "q": "NIST CAISI AISI agreement evaluation 2026 agreement OpenAI",
+          "domains": [
+            "openai.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.nist.gov/caisi"
+      ],
+      "inspectedSourceIds": [
+        "caisi-2026",
+        "nist-mous-2024"
+      ],
+      "relationshipIds": [
+        "openai-us-access"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "openai--uk-evaluation",
+      "developer": "OpenAI",
+      "family": "uk-evaluation",
+      "queryLogIds": [
+        "search-3",
+        "search-15"
+      ],
+      "queries": [
+        {
+          "q": "OpenAI UK AI Security Institute evaluation access 2026",
+          "domains": [
+            "aisi.gov.uk"
+          ]
+        },
+        {
+          "q": "UK AI Security Institute evaluation access 2026 agreement OpenAI",
+          "domains": [
+            "openai.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.aisi.gov.uk/blog"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "searched—unsupported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "openai--uk-cooperation",
+      "developer": "OpenAI",
+      "family": "uk-cooperation",
+      "queryLogIds": [
+        "search-5",
+        "search-17"
+      ],
+      "queries": [
+        {
+          "q": "OpenAI UK DSIT memorandum strategic cooperation 2026",
+          "domains": [
+            "gov.uk"
+          ]
+        },
+        {
+          "q": "UK DSIT memorandum strategic cooperation 2026 agreement OpenAI",
+          "domains": [
+            "openai.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+      ],
+      "inspectedSourceIds": [
+        "uk-openai-mou",
+        "uk-openai-status"
+      ],
+      "relationshipIds": [
+        "uk-openai-cooperation"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "openai--us-defence",
+      "developer": "OpenAI",
+      "family": "us-defence",
+      "queryLogIds": [
+        "search-7",
+        "search-19"
+      ],
+      "queries": [
+        {
+          "q": "OpenAI DoD CDAO contract procurement deployment termination 2026",
+          "domains": [
+            "ai.mil"
+          ]
+        },
+        {
+          "q": "DoD CDAO contract procurement deployment termination 2026 agreement OpenAI",
+          "domains": [
+            "openai.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.ai.mil/News/"
+      ],
+      "inspectedSourceIds": [
+        "cdao-awards",
+        "dod-classified-agreements"
+      ],
+      "relationshipIds": [
+        "openai-cdao-award",
+        "openai-dod-classified"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [
+        "Underlying procurement instruments/registries not available in inspected material."
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "openai--eu-compliance",
+      "developer": "OpenAI",
+      "family": "eu-compliance",
+      "queryLogIds": [
+        "search-9",
+        "search-21"
+      ],
+      "queries": [
+        {
+          "q": "OpenAI European Commission AI Office code general purpose signatory 2026",
+          "domains": [
+            "digital-strategy.ec.europa.eu"
+          ]
+        },
+        {
+          "q": "European Commission AI Office code general purpose signatory 2026 agreement OpenAI",
+          "domains": [
+            "openai.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+      ],
+      "inspectedSourceIds": [
+        "eu-code"
+      ],
+      "relationshipIds": [
+        "openai-eu-code"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "openai--llnl",
+      "developer": "OpenAI",
+      "family": "llnl",
+      "queryLogIds": [
+        "search-11",
+        "search-23"
+      ],
+      "queries": [
+        {
+          "q": "OpenAI LLNL model deployment use 2026",
+          "domains": [
+            "llnl.gov"
+          ]
+        },
+        {
+          "q": "LLNL model deployment use 2026 agreement OpenAI",
+          "domains": [
+            "openai.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://hpc.llnl.gov/technical-bulletins"
+      ],
+      "inspectedSourceIds": [
+        "llnl-sandbox"
+      ],
+      "relationshipIds": [
+        "openai-llnl-coding"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence.",
+        "LLNL current Using LLMs guidance inspected: OpenAI example via managed LivAI, no named Microsoft/Google/xAI interface established by this page. Bulletin index retrieval failed; no exhaustive registry claim."
+      ],
+      "retrievalFailures": [
+        {
+          "url": "https://hpc.llnl.gov/technical-bulletins",
+          "failure": "Browser retrieval failed; inspected directly discoverable bulletins and current LLM guidance."
+        }
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "google--us-evaluation",
+      "developer": "Google DeepMind",
+      "family": "us-evaluation",
+      "queryLogIds": [
+        "search-1",
+        "search-13"
+      ],
+      "queries": [
+        {
+          "q": "Google DeepMind NIST CAISI AISI agreement evaluation 2026",
+          "domains": [
+            "nist.gov"
+          ]
+        },
+        {
+          "q": "NIST CAISI AISI agreement evaluation 2026 agreement Google DeepMind",
+          "domains": [
+            "deepmind.google"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.nist.gov/caisi"
+      ],
+      "inspectedSourceIds": [
+        "caisi-2026"
+      ],
+      "relationshipIds": [
+        "google-caisi-2026"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "google--uk-evaluation",
+      "developer": "Google DeepMind",
+      "family": "uk-evaluation",
+      "queryLogIds": [
+        "search-3",
+        "search-15"
+      ],
+      "queries": [
+        {
+          "q": "Google DeepMind UK AI Security Institute evaluation access 2026",
+          "domains": [
+            "aisi.gov.uk"
+          ]
+        },
+        {
+          "q": "UK AI Security Institute evaluation access 2026 agreement Google DeepMind",
+          "domains": [
+            "deepmind.google"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.aisi.gov.uk/blog"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "searched—unsupported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "google--uk-cooperation",
+      "developer": "Google DeepMind",
+      "family": "uk-cooperation",
+      "queryLogIds": [
+        "search-5",
+        "search-17"
+      ],
+      "queries": [
+        {
+          "q": "Google DeepMind UK DSIT memorandum strategic cooperation 2026",
+          "domains": [
+            "gov.uk"
+          ]
+        },
+        {
+          "q": "UK DSIT memorandum strategic cooperation 2026 agreement Google DeepMind",
+          "domains": [
+            "deepmind.google"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+      ],
+      "inspectedSourceIds": [
+        "uk-google-deepmind-mou",
+        "uk-google-status"
+      ],
+      "relationshipIds": [
+        "uk-google-cooperation"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "google--us-defence",
+      "developer": "Google DeepMind",
+      "family": "us-defence",
+      "queryLogIds": [
+        "search-7",
+        "search-19"
+      ],
+      "queries": [
+        {
+          "q": "Google DeepMind DoD CDAO contract procurement deployment termination 2026",
+          "domains": [
+            "ai.mil"
+          ]
+        },
+        {
+          "q": "DoD CDAO contract procurement deployment termination 2026 agreement Google DeepMind",
+          "domains": [
+            "deepmind.google"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.ai.mil/News/"
+      ],
+      "inspectedSourceIds": [
+        "cdao-awards"
+      ],
+      "relationshipIds": [
+        "google-cdao-award"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [
+        "Underlying procurement instruments/registries not available in inspected material."
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "google--eu-compliance",
+      "developer": "Google DeepMind",
+      "family": "eu-compliance",
+      "queryLogIds": [
+        "search-9",
+        "search-21"
+      ],
+      "queries": [
+        {
+          "q": "Google DeepMind European Commission AI Office code general purpose signatory 2026",
+          "domains": [
+            "digital-strategy.ec.europa.eu"
+          ]
+        },
+        {
+          "q": "European Commission AI Office code general purpose signatory 2026 agreement Google DeepMind",
+          "domains": [
+            "deepmind.google"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+      ],
+      "inspectedSourceIds": [
+        "eu-code"
+      ],
+      "relationshipIds": [
+        "google-eu-code"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "google--llnl",
+      "developer": "Google DeepMind",
+      "family": "llnl",
+      "queryLogIds": [
+        "search-11",
+        "search-23"
+      ],
+      "queries": [
+        {
+          "q": "Google DeepMind LLNL model deployment use 2026",
+          "domains": [
+            "llnl.gov"
+          ]
+        },
+        {
+          "q": "LLNL model deployment use 2026 agreement Google DeepMind",
+          "domains": [
+            "deepmind.google"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://hpc.llnl.gov/technical-bulletins"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "blocked",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence.",
+        "LLNL current Using LLMs guidance inspected: OpenAI example via managed LivAI, no named Microsoft/Google/xAI interface established by this page. Bulletin index retrieval failed; no exhaustive registry claim."
+      ],
+      "retrievalFailures": [
+        {
+          "url": "https://hpc.llnl.gov/technical-bulletins",
+          "failure": "Browser retrieval failed; inspected directly discoverable bulletins and current LLM guidance."
+        }
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "microsoft--us-evaluation",
+      "developer": "Microsoft",
+      "family": "us-evaluation",
+      "queryLogIds": [
+        "search-2",
+        "search-14"
+      ],
+      "queries": [
+        {
+          "q": "Microsoft NIST CAISI AISI agreement evaluation 2026",
+          "domains": [
+            "nist.gov"
+          ]
+        },
+        {
+          "q": "NIST CAISI AISI agreement evaluation 2026 agreement Microsoft",
+          "domains": [
+            "microsoft.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.nist.gov/caisi"
+      ],
+      "inspectedSourceIds": [
+        "caisi-2026"
+      ],
+      "relationshipIds": [
+        "microsoft-caisi-2026"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "microsoft--uk-evaluation",
+      "developer": "Microsoft",
+      "family": "uk-evaluation",
+      "queryLogIds": [
+        "search-4",
+        "search-16"
+      ],
+      "queries": [
+        {
+          "q": "Microsoft UK AI Security Institute evaluation access 2026",
+          "domains": [
+            "aisi.gov.uk"
+          ]
+        },
+        {
+          "q": "UK AI Security Institute evaluation access 2026 agreement Microsoft",
+          "domains": [
+            "microsoft.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.aisi.gov.uk/blog"
+      ],
+      "inspectedSourceIds": [
+        "microsoft-evaluation"
+      ],
+      "relationshipIds": [
+        "microsoft-uk-2026"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "microsoft--uk-cooperation",
+      "developer": "Microsoft",
+      "family": "uk-cooperation",
+      "queryLogIds": [
+        "search-6",
+        "search-18"
+      ],
+      "queries": [
+        {
+          "q": "Microsoft UK DSIT memorandum strategic cooperation 2026",
+          "domains": [
+            "gov.uk"
+          ]
+        },
+        {
+          "q": "UK DSIT memorandum strategic cooperation 2026 agreement Microsoft",
+          "domains": [
+            "microsoft.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "searched—unsupported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "microsoft--us-defence",
+      "developer": "Microsoft",
+      "family": "us-defence",
+      "queryLogIds": [
+        "search-8",
+        "search-20"
+      ],
+      "queries": [
+        {
+          "q": "Microsoft DoD CDAO contract procurement deployment termination 2026",
+          "domains": [
+            "ai.mil"
+          ]
+        },
+        {
+          "q": "DoD CDAO contract procurement deployment termination 2026 agreement Microsoft",
+          "domains": [
+            "microsoft.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.ai.mil/News/"
+      ],
+      "inspectedSourceIds": [
+        "dod-classified-agreements"
+      ],
+      "relationshipIds": [
+        "microsoft-dod-classified"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [
+        "Underlying procurement instruments/registries not available in inspected material."
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "microsoft--eu-compliance",
+      "developer": "Microsoft",
+      "family": "eu-compliance",
+      "queryLogIds": [
+        "search-10",
+        "search-22"
+      ],
+      "queries": [
+        {
+          "q": "Microsoft European Commission AI Office code general purpose signatory 2026",
+          "domains": [
+            "digital-strategy.ec.europa.eu"
+          ]
+        },
+        {
+          "q": "European Commission AI Office code general purpose signatory 2026 agreement Microsoft",
+          "domains": [
+            "microsoft.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+      ],
+      "inspectedSourceIds": [
+        "eu-code"
+      ],
+      "relationshipIds": [
+        "microsoft-eu-code"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "microsoft--llnl",
+      "developer": "Microsoft",
+      "family": "llnl",
+      "queryLogIds": [
+        "search-12",
+        "search-24"
+      ],
+      "queries": [
+        {
+          "q": "Microsoft LLNL model deployment use 2026",
+          "domains": [
+            "llnl.gov"
+          ]
+        },
+        {
+          "q": "LLNL model deployment use 2026 agreement Microsoft",
+          "domains": [
+            "microsoft.com"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://hpc.llnl.gov/technical-bulletins"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "blocked",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence.",
+        "LLNL current Using LLMs guidance inspected: OpenAI example via managed LivAI, no named Microsoft/Google/xAI interface established by this page. Bulletin index retrieval failed; no exhaustive registry claim."
+      ],
+      "retrievalFailures": [
+        {
+          "url": "https://hpc.llnl.gov/technical-bulletins",
+          "failure": "Browser retrieval failed; inspected directly discoverable bulletins and current LLM guidance."
+        }
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "xai--us-evaluation",
+      "developer": "xAI",
+      "family": "us-evaluation",
+      "queryLogIds": [
+        "search-2",
+        "search-14"
+      ],
+      "queries": [
+        {
+          "q": "xAI NIST CAISI AISI agreement evaluation 2026",
+          "domains": [
+            "nist.gov"
+          ]
+        },
+        {
+          "q": "NIST CAISI AISI agreement evaluation 2026 agreement xAI",
+          "domains": [
+            "x.ai"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.nist.gov/caisi"
+      ],
+      "inspectedSourceIds": [
+        "caisi-2026"
+      ],
+      "relationshipIds": [
+        "xai-caisi-2026"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "xai--uk-evaluation",
+      "developer": "xAI",
+      "family": "uk-evaluation",
+      "queryLogIds": [
+        "search-4",
+        "search-16"
+      ],
+      "queries": [
+        {
+          "q": "xAI UK AI Security Institute evaluation access 2026",
+          "domains": [
+            "aisi.gov.uk"
+          ]
+        },
+        {
+          "q": "UK AI Security Institute evaluation access 2026 agreement xAI",
+          "domains": [
+            "x.ai"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.aisi.gov.uk/blog"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "searched—unsupported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "xai--uk-cooperation",
+      "developer": "xAI",
+      "family": "uk-cooperation",
+      "queryLogIds": [
+        "search-6",
+        "search-18"
+      ],
+      "queries": [
+        {
+          "q": "xAI UK DSIT memorandum strategic cooperation 2026",
+          "domains": [
+            "gov.uk"
+          ]
+        },
+        {
+          "q": "UK DSIT memorandum strategic cooperation 2026 agreement xAI",
+          "domains": [
+            "x.ai"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "searched—unsupported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "xai--us-defence",
+      "developer": "xAI",
+      "family": "us-defence",
+      "queryLogIds": [
+        "search-8",
+        "search-20"
+      ],
+      "queries": [
+        {
+          "q": "xAI DoD CDAO contract procurement deployment termination 2026",
+          "domains": [
+            "ai.mil"
+          ]
+        },
+        {
+          "q": "DoD CDAO contract procurement deployment termination 2026 agreement xAI",
+          "domains": [
+            "x.ai"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://www.ai.mil/News/"
+      ],
+      "inspectedSourceIds": [
+        "cdao-awards"
+      ],
+      "relationshipIds": [
+        "xai-cdao-award"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [
+        "Underlying procurement instruments/registries not available in inspected material."
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "xai--eu-compliance",
+      "developer": "xAI",
+      "family": "eu-compliance",
+      "queryLogIds": [
+        "search-10",
+        "search-22"
+      ],
+      "queries": [
+        {
+          "q": "xAI European Commission AI Office code general purpose signatory 2026",
+          "domains": [
+            "digital-strategy.ec.europa.eu"
+          ]
+        },
+        {
+          "q": "European Commission AI Office code general purpose signatory 2026 agreement xAI",
+          "domains": [
+            "x.ai"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+      ],
+      "inspectedSourceIds": [
+        "eu-code"
+      ],
+      "relationshipIds": [
+        "xai-eu-code"
+      ],
+      "result": "searched—supported",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
+      ],
+      "retrievalFailures": [],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    },
+    {
+      "id": "xai--llnl",
+      "developer": "xAI",
+      "family": "llnl",
+      "queryLogIds": [
+        "search-12",
+        "search-24"
+      ],
+      "queries": [
+        {
+          "q": "xAI LLNL model deployment use 2026",
+          "domains": [
+            "llnl.gov"
+          ]
+        },
+        {
+          "q": "LLNL model deployment use 2026 agreement xAI",
+          "domains": [
+            "x.ai"
+          ]
+        }
+      ],
+      "searchParties": [
+        "institutional",
+        "developer"
+      ],
+      "indexUrls": [
+        "https://hpc.llnl.gov/technical-bulletins"
+      ],
+      "inspectedSourceIds": [],
+      "relationshipIds": [],
+      "result": "blocked",
+      "exclusions": [
+        "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence.",
+        "LLNL current Using LLMs guidance inspected: OpenAI example via managed LivAI, no named Microsoft/Google/xAI interface established by this page. Bulletin index retrieval failed; no exhaustive registry claim."
+      ],
+      "retrievalFailures": [
+        {
+          "url": "https://hpc.llnl.gov/technical-bulletins",
+          "failure": "Browser retrieval failed; inspected directly discoverable bulletins and current LLM guidance."
+        }
+      ],
+      "limitations": "Supported denotes an observed candidate, not automatic publication. Unknown private arrangements and continuing status remain outside what this search establishes."
+    }
+  ],
+  "geography": [
+    "United States",
+    "United Kingdom",
+    "European Union"
+  ],
+  "period": {
+    "from": "2024-01-01",
+    "through": "2026-09-12"
+  },
+  "inclusionRule": "Named provider/public/research institution participating in an edge-specific admitted mechanism. The five-developer grid is a floor, not the institutional ontology.",
+  "expansions": [
+    {
+      "institutionId": "gsa",
+      "evidenceIds": [
+        "e-caisi-gsa-cooperation"
+      ],
+      "reason": "Named agreement bridges evaluation and federal procurement."
+    },
+    {
+      "institutionId": "openmined",
+      "evidenceIds": [
+        "e-caisi-openmined-research"
+      ],
+      "reason": "Named CRADA supplies evaluation infrastructure."
+    },
+    {
+      "institutionId": "gds",
+      "evidenceIds": [
+        "e-anthropic-gds-pilot"
+      ],
+      "reason": "Named delivery unit in government assistant project."
+    }
+  ],
+  "exclusions": [
+    {
+      "candidate": "Moonshot AI / Kimi K3",
+      "sourceUrl": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+      "reason": "Provider outside release geography. Discovered US/UK evaluation is recorded as out of scope, not absent."
+    },
+    {
+      "candidate": "DeepSeek and Z.ai",
+      "sourceUrl": "https://www.nist.gov/caisi",
+      "reason": "Foreign provider evaluations outside primary release geography."
+    },
+    {
+      "candidate": "NATO / Palantir MSS",
+      "sourceUrl": "https://www.ncia.nato.int/newsroom/news/nato-acquires-aienabled-warfighting-system",
+      "reason": "Documented acquisition; no necessity established for this release’s selected model-specific narrative. Retained discovered candidate for next scope review."
+    },
+    {
+      "candidate": "Other EU code signatories",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+      "reason": "Search floor plus substantive-necessity expansion, not every registry entry. No visual-balance admission."
+    },
+    {
+      "candidate": "Unnamed US export-control issuing agency",
+      "sourceUrl": "https://www.anthropic.com/news/fable-mythos-access",
+      "reason": "No exact issuer identified; do not create generic government endpoint."
+    },
+    {
+      "candidate": "EU compulsory-access attribute",
+      "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng",
+      "reason": "Current-text primary retrieval redirected; implementing regulation robot check. Preserve as blocked research, not absent authority."
+    },
+    {
+      "candidate": "Other companies in May classified-network announcement",
+      "sourceUrl": "https://www.war.gov/News/Releases/Release/Article/4475177/classified-networks-ai-agreements/",
+      "reason": "Named deployment agreements discovered; additional actor admission held for function-specific necessity review. SpaceX is not silently substituted for xAI."
+    },
+    {
+      "candidate": "Microsoft enterprise agreement / Dell Federal Systems",
+      "sourceUrl": "https://dodcio.defense.gov/In-the-News/Article/4503278/modernizing-the-arsenal-of-freedom-dow-awards-97b-microsoft-enterprise-agreemen/",
+      "reason": "Awardee is Dell Federal Systems, L.P.; do not encode a direct Microsoft procurement merely from software branding. General enterprise bundle not a model-specific deployment finding."
+    },
+    {
+      "candidate": "Microsoft–OpenAI April 2026 licensing amendment",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/",
+      "reason": "Inspected private licensing interface; retained expansion candidate. No need established to explain selected public interfaces; not treated as government substitution evidence."
+    }
+  ],
+  "releaseLimitations": [
+    "Search coverage is not an exhaustive ontology or proof of absence.",
+    "Private procurement instruments and postjudgment appellate/relief status remain partly blocked.",
+    "All 30 cells have both-party searches; publication depends on record-specific review."
+  ]
+}

@@ -287,15 +287,15 @@
   },
   {
     "id": "aisi-approach",
-    "title": "Approach to evaluations",
-    "publisher": "UK AISI",
-    "url": "https://www.aisi.gov.uk/blog/our-approach-to-evaluations",
-    "publishedOn": null,
+    "title": "AI Safety Institute approach to evaluations",
+    "publisher": "DSIT / AI Safety Institute",
+    "url": "https://www.gov.uk/government/publications/ai-safety-institute-approach-to-evaluations/ai-safety-institute-approach-to-evaluations",
+    "publishedOn": "2024-02-09",
     "revisedOn": null,
     "accessedOn": "2026-09-12",
     "basis": "Primary institutional document",
     "primary": true,
-    "version": "retrieved-2026-09-12",
+    "version": "published-2024-02-09",
     "versionNote": "Dated publisher version plus retrieval date; byte fingerprint recorded separately when retrieval succeeds. Dynamic pages may change."
   },
   {
@@ -323,5 +323,70 @@
     "primary": true,
     "version": "2025-09-25",
     "versionNote": "Dated publisher version plus retrieval date; byte fingerprint recorded separately when retrieval succeeds. Dynamic pages may change."
+  },
+  {
+    "id": "dod-ai-strategy-2026",
+    "title": "Artificial Intelligence Strategy for the Department of War",
+    "publisher": "Secretary of War / Department of Defense",
+    "url": "https://media.defense.gov/2026/Jan/12/2003855671/-1/-1/0/ARTIFICIAL-INTELLIGENCE-STRATEGY-FOR-THE-DEPARTMENT-OF-WAR.PDF",
+    "publishedOn": null,
+    "revisedOn": null,
+    "accessedOn": "2026-09-12",
+    "basis": "Signed departmental memorandum, dated 9 January 2026; hosting path dated 12 January",
+    "primary": true,
+    "version": "signed-2026-01-09",
+    "versionNote": "Signed memorandum date distinct from hosting path; byte fingerprint pending."
+  },
+  {
+    "id": "uk-aisi-renaming",
+    "title": "Tackling AI security risks to unleash growth and deliver Plan for Change",
+    "publisher": "DSIT / AI Security Institute",
+    "url": "https://www.gov.uk/government/news/tackling-ai-security-risks-to-unleash-growth-and-deliver-plan-for-change",
+    "publishedOn": "2025-02-14",
+    "revisedOn": null,
+    "accessedOn": "2026-09-12",
+    "basis": "Primary institutional publication, independently inspected by separate agent checker",
+    "primary": true,
+    "version": "published-2025-02-14",
+    "versionNote": "Publisher date; source-version fingerprint pending."
+  },
+  {
+    "id": "anthropic-fable-suspension",
+    "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/news/fable-mythos-access",
+    "publishedOn": "2026-06-12",
+    "revisedOn": null,
+    "accessedOn": "2026-09-12",
+    "basis": "Primary institutional publication, independently inspected by separate agent checker",
+    "primary": true,
+    "version": "published-2026-06-12",
+    "versionNote": "Publisher date; source-version fingerprint pending."
+  },
+  {
+    "id": "parliament-ai-update-september",
+    "title": "Artificial intelligence update, HCWS314",
+    "publisher": "UK Parliament / Minister for Artificial Intelligence",
+    "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-09-07/hcws314",
+    "publishedOn": "2026-09-07",
+    "revisedOn": null,
+    "accessedOn": "2026-09-12",
+    "basis": "Primary institutional publication, independently inspected by separate agent checker",
+    "primary": true,
+    "version": "published-2026-09-07",
+    "versionNote": "Publisher date; source-version fingerprint pending."
+  },
+  {
+    "id": "dod-classified-agreements",
+    "title": "Classified Networks AI Agreements",
+    "publisher": "US Department of Defense (Department of War publication)",
+    "url": "https://www.war.gov/News/Releases/Release/Article/4475177/classified-networks-ai-agreements/",
+    "publishedOn": "2026-05-01",
+    "revisedOn": null,
+    "accessedOn": "2026-09-12",
+    "basis": "Official announcement of named bilateral agreements; not programme co-membership.",
+    "primary": true,
+    "version": "consulted-2026-09-12",
+    "versionNote": "Current page names eight companies. Contemporary AP reporting named seven; amendment date is not stated. No assumption that every current name appeared in original version."
   }
 ]

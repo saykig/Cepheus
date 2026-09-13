@@ -47,21 +47,23 @@
     "id": "dod-claude-control",
     "institutionId": "anthropic",
     "rubricId": "technical-control",
-    "value": "unresolved",
-    "context": "DoW deployed Claude Gov use restrictions, 2025–2026",
+    "value": "shared-constrained",
+    "context": "Anthropic provision and replacement of Claude models for DoW, contrasted with deployed operational control; 2025\u2013August 2026",
     "jurisdiction": "United States",
     "assessedOn": "2026-08-27",
     "evidenceIds": [
-      "contractual-control"
+      "court-model-provision",
+      "court-update-gate"
     ],
     "counterEvidenceIds": [
-      "court-use"
+      "contractual-control",
+      "court-static-deployment"
     ],
-    "reasoning": "Court rejects technical enforceability of specified usage restrictions; evidence does not settle all development, hosting and update controls. Neither dominant nor little overall model control is warranted.",
+    "reasoning": "Anthropic provides model artifacts and responds to feedback; DoW and cloud providers independently gate operational deployment. Existing deployed models are outside Anthropic technical alteration or shutdown. Consequential functions are divided across institutions, satisfying shared/constrained control without attributing a real-time veto.",
     "limitations": [
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "publicationStatus": "provisional"
   },
   {
@@ -77,34 +79,37 @@
       "march-removal"
     ],
     "counterEvidenceIds": [
-      "judgment-august"
+      "dod-modular-intent",
+      "anthropic-transition-offer"
     ],
-    "reasoning": "Use and removal efforts establish neither equivalent viable replacements nor the cost/time of substitution. Further operational evidence required.",
+    "reasoning": "Modular replacement is a departmental objective and the supplier offered transition assistance. Neither demonstrates an equivalent replacement for a named function or migration time/cost. Materially constrained substitution and ready substitutability both remain unresolved.",
     "limitations": [
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "publicationStatus": "provisional"
   },
   {
     "id": "dod-reliance",
     "institutionId": "dod",
     "rubricId": "operational-reliance",
-    "value": "unresolved",
-    "context": "Claude Gov support to defence functions",
+    "value": "meaningful",
+    "context": "Repeated Claude/Claude Gov assistance in defense and intelligence work, with supplier-reported planning, analysis and cyber functions; 2024\u2013February 2026",
     "jurisdiction": "United States",
     "assessedOn": "2026-08-27",
     "evidenceIds": [
-      "court-use"
+      "court-use",
+      "anthropic-mission-use"
     ],
     "counterEvidenceIds": [
-      "contractual-control"
+      "anthropic-transition-offer",
+      "march-removal"
     ],
-    "reasoning": "Use is documented. Aggregate evidence in this record does not yet distinguish recurring assistance from mission-critical embedded operation.",
+    "reasoning": "Court-confirmed defense use since 2024 and Claude Gov use since March 2025, combined with specific supplier-reported operational functions, supports recurrent assistance. Workflow penetration and essentiality are not independently established enough to distinguish substantial or mission-relevant anchors. Transition efforts do not establish independence.",
     "limitations": [
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "publicationStatus": "provisional"
   },
   {
@@ -112,20 +117,18 @@
     "institutionId": "uk-aisi",
     "rubricId": "public-authority",
     "value": "limited",
-    "context": "Evaluation and advice, not binding regulatory adjudication",
+    "context": "February 2024 stated evaluation and advisory remit",
     "jurisdiction": "United Kingdom",
-    "assessedOn": "2026-09-12",
+    "assessedOn": "2024-02-09",
     "evidenceIds": [
       "aisi-remit"
     ],
-    "counterEvidenceIds": [
-      "aisi-resources"
-    ],
+    "counterEvidenceIds": [],
     "reasoning": "Self-described supplementary evaluation and policy-advice remit supports advisory anchor. It does not code the powers of DSIT or UK government as a whole.",
     "limitations": [
-      "Coding applies only to stated context and date, not a permanent institutional rank."
+      "Historical institutional remit. Later capacity, legislative changes or government powers require separate evidence. Limited denotes advisory remit here, not limited binding authority."
     ],
-    "coder": "codex-primary",
+    "coder": "codex-research-checker",
     "publicationStatus": "provisional"
   },
   {
