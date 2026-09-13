@@ -119,22 +119,26 @@ function InkEdge(props:EdgeProps<Edge<InkData>>) {
  const path=routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane)
  const visible=e.visible
  const [drawn,setDrawn]=useState(false)
+ const [completedFollow,setCompletedFollow]=useState(0)
+ // Reveal history controls presence; only current attention controls darkness.
+ const contextOpacity=e.incident ? .3 : .14
  const trace=e.reverse?routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane,true):path
  return <g aria-hidden="true" data-world-edge={props.id} data-source-institution={props.source} data-target-institution={props.target} data-revealed={visible}>
   <motion.path data-base-edge={props.id} d={path} fill="none" className={styles.worldInk} initial={false}
-   animate={{pathLength:1,opacity:visible&&(drawn||reduced)?(e.incident||e.retained ? .45 : .18):0}}
-   transition={reduced?{duration:0}:{opacity:{duration:.6}}}/>
+   animate={{pathLength:1,opacity:visible?contextOpacity:0}}
+   transition={reduced?{duration:0}:{opacity:{duration:.45}}}/>
   <motion.path d={path} fill="none" className={styles.worldTrace} initial={false}
-   animate={{pathLength:1,opacity:visible&&e.highlighted&&(drawn||reduced)?1:0}}
-   transition={reduced?{duration:0}:{opacity:{duration:.6}}}
+   animate={{pathLength:1,opacity:visible&&e.highlighted&&(drawn||reduced)&&(e.followVersion===0||e.followVersion===completedFollow||reduced)?.95:0}}
+   transition={reduced?{duration:0}:{opacity:{duration:.45}}}
    data-traced-interface={visible&&e.highlighted?props.id:undefined}/>
   <motion.path d={path} fill="none" className={styles.worldTrace} data-first-reveal={visible&&!drawn?props.id:undefined}
-   initial={false} animate={{pathLength:e.revealed?1:0,opacity:visible&&!drawn?1:0}}
-   transition={reduced?{duration:0}:{pathLength:{duration:1.05,delay:drawn?0:.55,ease:'easeInOut'},opacity:{duration:.6}}}
-   onAnimationComplete={()=>{if(e.revealed&&!drawn)setDrawn(true)}}/>
+   initial={false} animate={{pathLength:e.revealed?1:0,opacity:visible&&!drawn?(e.highlighted?.95:contextOpacity):0}}
+   transition={reduced?{duration:0}:{pathLength:{duration:1.05,delay:drawn?0:.55,ease:'easeInOut'},opacity:{duration:.45}}}
+   onUpdate={latest=>{if(e.revealed&&!drawn&&Number(latest.pathLength)>=1)setDrawn(true)}}/>
   {e.followVersion>0&&visible&&<motion.path key={e.followVersion} d={trace} fill="none" className={styles.worldTrace}
    initial={{pathLength:reduced?1:0,opacity:1}} animate={{pathLength:1,opacity:0}}
-   transition={reduced?{duration:0}:{pathLength:{duration:1.05,delay:.55,ease:'easeInOut'},opacity:{duration:.4,delay:1.6}}}/>}
+   transition={reduced?{duration:0}:{pathLength:{duration:1.05,delay:.55,ease:'easeInOut'},opacity:{duration:.4,delay:1.6}}}
+   onUpdate={latest=>{if(Number(latest.pathLength)>=1)setCompletedFollow(e.followVersion)}}/>}
  </g>
 }
 const nodeTypes={editorial:InstitutionNode}
