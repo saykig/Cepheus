@@ -1,8 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { localizeHref, stripLocale, type Locale } from 'app/lib/i18n'
+import { stripLocale, type Locale } from 'app/lib/i18n'
 import { siteCopy } from 'app/lib/site-copy'
 
 export default function Footer({ locale }: { locale: Locale }) {
@@ -26,16 +25,12 @@ export default function Footer({ locale }: { locale: Locale }) {
         </div>
 
         <nav className="colophon-nav" aria-label={copy.footer}>
-          <Link href={localizeHref('/', locale)}>{copy.home}</Link>
           <button type="button" onClick={toTop}>
             {copy.backToTop}
           </button>
         </nav>
       </div>
 
-      <p className="colophon-note">
-        {copy.disclaimer}
-      </p>
     </footer>
   )
 }
