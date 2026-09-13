@@ -34,10 +34,11 @@ export function createInstitutionMotion(
 export function institutionViewport(
   size: { width: number; height: number },
   graph: { width: number; height: number; focusX: number },
+  padding = { horizontal: 10, vertical: 16 },
 ) {
   if (![size.width, size.height, graph.width, graph.height, graph.focusX].every(Number.isFinite)
     || size.width <= 20 || size.height <= 32 || graph.width <= 0 || graph.height <= 0) return null
-  const zoom = Math.max(.1, Math.min(1.1, (size.width - 20) / graph.width, (size.height - 32) / graph.height))
+  const zoom = Math.max(.1, Math.min(1.1, (size.width - padding.horizontal * 2) / graph.width, (size.height - padding.vertical * 2) / graph.height))
   return { x: (size.width - graph.width * zoom) / 2 - graph.focusX * zoom,
     y: (size.height - graph.height * zoom) / 2, zoom }
 }

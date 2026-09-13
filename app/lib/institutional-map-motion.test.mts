@@ -62,3 +62,14 @@ test('presence completes from elapsed time even after a suspended animation fram
   assert.equal(institutionPresence(700),1)
   assert.equal(institutionPresence(60000),1)
 })
+
+test('world framing leaves room for opening endpoints and zoom-independent labels',()=>{
+ for(const size of [{width:530,height:650},{width:350,height:540},{width:756,height:410}]){
+  const v=institutionViewport(size,{width:780,height:820,focusX:0},{horizontal:64,vertical:32})!
+  const left=v.x+26*v.zoom
+  const right=v.x+(610+24)*v.zoom+Math.max(110*v.zoom,70)
+  assert.ok(left>=24)
+  assert.ok(right<=size.width-24)
+  assert.ok(v.x+(610+10)*v.zoom<size.width-32)
+ }
+})

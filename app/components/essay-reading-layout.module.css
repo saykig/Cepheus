@@ -34,12 +34,9 @@
 
 @media(max-width:360px){.page { padding-top:140px; }}
 @media(max-height:699px) and (min-width:700px){.page{padding-inline:32px}}
-/* Keep the local editorial graph beside the prose, including narrow browser panels. */
-@media(min-width:700px) and (min-height:480px) {
- .page:has(:global([data-motion])) :global(.essay-hero) { max-width:53%; }
- .page:has(:global([data-motion])) :global(.essay-layout) { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:clamp(20px,3vw,48px); align-items:start; }
- .page:has(:global([data-motion])) :global(.essay-body) { min-width:0; max-width:none; }
- .page:has(:global([data-motion])) .storySide { display:block; position:sticky; top:calc(88px + env(safe-area-inset-top)); align-self:start; order:0; background:transparent; border:0; }
- .page:has(:global([data-motion])) .inlineMap,.page:has(:global([data-motion])) .mobileMoment { display:none; }
- .page:has(:global([data-motion])) .endnotes { max-width:53%; }
+
+/* The study keeps one persistent world, including final exploration. */
+@media(min-width:700px) and (max-width:999px) and (min-height:700px) {
+ .storySide:has([data-constellation-study][data-story-state=exploration]) { position:sticky; }
+ .page:has([data-constellation-study]) .inlineMap { display:none; }
 }
