@@ -26,11 +26,5 @@ export function stripLocale(pathname: string) {
   return isLocale(parts[1] ?? '') ? `/${parts.slice(2).join('/')}` : pathname
 }
 
-export const draftLocalesEnabled =
-  process.env.NEXT_PUBLIC_ENABLE_DRAFT_LOCALES === 'true' ||
-  process.env.NODE_ENV === 'development' ||
-  process.env.VERCEL_ENV === 'preview'
-
-export const selectableLocales: readonly Locale[] = draftLocalesEnabled
-  ? locales
-  : [defaultLocale]
+// All supported languages are available in every deployment environment.
+export const selectableLocales: readonly Locale[] = locales

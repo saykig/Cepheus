@@ -37,8 +37,8 @@ structural slugs. Locale preference persists in the `cepheus-locale` cookie.
 
 Copy lives in typed locale dictionaries and is consumed by shared page and
 instrument components. Missing dataset translations fall back to English.
-Draft locales are visible in development and Vercel preview builds; production
-keeps the selector hidden unless `NEXT_PUBLIC_ENABLE_DRAFT_LOCALES=true` is set.
+The language selector is visible in development, preview and production, with
+all five supported languages available.
 Draft routes are marked `noindex` until editorial review is complete.
 
 The permanent essay redirect reads its source path from the production-only
