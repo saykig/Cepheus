@@ -211,14 +211,6 @@ export default async function CepheusEssay({
           </section>
 
           <p data-institutional-step="interfaces">
-            I now start with named institutions and
-            documented mechanisms. The Institutional
-            Link Map lets us inspect the agreements,
-            evaluations, and deployments through which institutions meet.
-            Each connection has a source and a limit to what it can establish.
-            Analytical assessments make their additional reasoning inspectable.
-          </p>
-          <p>
             In this essay, I try to illustrate that the central governance
             problem of frontier AI lies in the distance between those who
             understand it most deeply and those who decide how it should be
