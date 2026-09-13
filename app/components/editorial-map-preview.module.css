@@ -30,3 +30,19 @@
 @media(min-width:700px) and (max-width:999px) { .canvas { height:280px; }.study:has(.disclosure[open]) .canvas { height:180px; }.evidence { max-height:160px; } }
 @media(max-width:699px) { .canvas { height:420px; }.study:has(.disclosure[open]) .canvas { height:320px; }.evidence { max-height:none; } }
 @media(prefers-reduced-motion:reduce) { .mark { transition:none; }.inkEdge { animation:none; } }
+.institution { pointer-events:all; }
+.institution[data-peek=true] .nodeButton { color:var(--olive-deep); }
+.institution[data-peek=true] .mark { background:var(--olive-deep); border-color:var(--olive-deep); }
+.hoverPanel { position:fixed; z-index:100; width:270px; max-width:calc(100vw - 24px); background:var(--paper-raise); color:var(--ink); border:1px solid var(--rule-strong); padding:4px 12px; font-family:var(--font-text),Georgia,serif; transform-origin:top left; animation:unfold 180ms ease-out; }
+.tabHeading { display:flex; align-items:center; gap:12px; }
+.tabHeading button { background:none; border:0; color:var(--olive-deep); cursor:pointer; min-height:44px; font:16px var(--font-display),Georgia,serif; text-align:left; }
+.tabHeading button:first-child { flex:1; }.tabHeading button:last-child { min-width:44px; text-align:right; }
+.tabHeading button span { margin-left:8px; }
+.hoverPanel .evidence { max-height:min(290px,50svh); overflow:auto; overscroll-behavior:contain; padding:0 0 8px; }
+.hoverPanel .evidence h3 { font:400 21px/1.2 var(--font-display),Georgia,serif; }
+.hoverPanel .record { display:flex; flex-direction:column; gap:5px; font-size:12px; }
+.hoverPanel .record small { font-size:10px; color:var(--ink-muted); line-height:1.5; }
+.followAction { background:none; border:0; border-top:1px solid var(--rule); width:100%; text-align:left; color:var(--olive-deep); font:12px var(--font-text),Georgia,serif; min-height:44px; cursor:pointer; }
+.hoverPanel a:focus-visible,.hoverPanel button:focus-visible { outline:2px solid var(--olive); outline-offset:2px; }
+@keyframes unfold { from { opacity:0; transform:translateY(-5px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+@media(prefers-reduced-motion:reduce){.hoverPanel{animation:none}}

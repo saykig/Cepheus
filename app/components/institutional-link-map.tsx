@@ -41,7 +41,7 @@ export function ConstellationSession({children}:{children:ReactNode}){const valu
  return <SelectionContext.Provider value={value}>{children}</SelectionContext.Provider>}
 export function InstitutionalLinkMap(props: {locale?:Locale;story?:boolean;initialStep?:number}) {
  const preview=useContext(EditorialPreviewContext)
- return preview ? <EditorialMapPreview initialInstitution={props.initialStep===0?'dod':'anthropic'} /> : <CurrentInstitutionalLinkMap {...props} />
+ return preview ? <EditorialMapPreview initialInstitution={props.initialStep===0?'dod':props.initialStep===2?'dsit':'anthropic'} story={props.story} initialStep={props.initialStep??5} /> : <CurrentInstitutionalLinkMap {...props} />
 }
 function CurrentInstitutionalLinkMap({locale='en',story=false,initialStep=5}:{locale?:Locale;story?:boolean;initialStep?:number}) {
  const [plotSize,setPlotSize]=useState({width:600,height:600})
