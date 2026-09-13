@@ -1,4 +1,4 @@
-import { EssayIndex } from './essay-index'
+import readingLayout from 'app/components/essay-reading-layout.module.css'
 import { InstitutionalLinkMap } from './institutional-link-map'
 import { essayDrafts } from 'app/lib/essay-drafts'
 import { essayLabels } from 'app/lib/essay-copy'
@@ -9,14 +9,9 @@ type DraftLocale = Exclude<Locale, 'en'>
 export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
   const labels = essayLabels[locale]
   const draft = essayDrafts[locale]
-  const sections = [
-    { id: 'first-collision', title: labels.firstCollision },
-    { id: 'what-is-expected-of-us', title: labels.expected },
-    { id: 'what-do-we-owe-to-each-other', title: labels.owe, children: [{ id: 'cepheus-map', title: labels.link }] },
-  ]
 
   return (
-    <article className="essay-page">
+    <article className={`essay-page ${readingLayout.page}`}>
       <header className="essay-hero">
         <div className="essay-hero-inner">
           <h1><span>{labels.titleLineOne}</span><span>{labels.titleLineTwo}</span></h1>
@@ -24,7 +19,6 @@ export function LocalizedEssayDraft({ locale }: { locale: DraftLocale }) {
         </div>
       </header>
       <div className="essay-layout">
-        <EssayIndex sections={sections} updated={labels.updated} locale={locale} />
         <div className="essay-body">
           <h2 className="essay-opening-heading" id="first-collision">{labels.firstCollision}</h2>
           {draft.opening.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

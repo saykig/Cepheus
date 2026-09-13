@@ -1,0 +1,16 @@
+/* The retired index no longer reserves a column in the essay. */
+.page :global(.essay-hero) {
+  max-width: 780px;
+}
+
+.page :global(.essay-hero-inner) {
+  margin-left: 0;
+}
+
+.page :global(.essay-layout) {
+  display: block;
+}
+
+.page :global(.essay-body) {
+  max-width: 780px;
+}

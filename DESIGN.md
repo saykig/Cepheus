@@ -95,7 +95,7 @@ Body measure **62–68ch**. Numerals in data prefer tabular alignment (`font-var
 
 Scale (rem): `--space-3xs .25` · `--space-2xs .5` · `--space-xs .75` · `--space-sm 1` · `--space-md 1.5` · `--space-lg 2.25` · `--space-xl 3.5` · `--space-2xl 5.5`.
 
-Vary spacing for rhythm; do not pad everything equally. Section gap is generous (`--space-2xl`); tight groupings inside instruments. Reading layout: `220px` rail + `minmax(0, 720px)` column; instruments may break the column to a wider `760–860px` measure.
+Vary spacing for rhythm; do not pad everything equally. Section gap is generous (`--space-2xl`); tight groupings inside instruments. Reading layout: one left-aligned column, capped at `780px`, within the essay page. The title, prose and instruments share the same left edge. The section index is retired; no sidebar space is reserved.
 
 ---
 

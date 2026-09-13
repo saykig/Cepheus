@@ -7,7 +7,7 @@ import {
   FootnoteRef,
 } from 'app/components/essay-footnotes'
 import { EssayDisclosure } from 'app/components/essay-disclosure'
-import { EssayIndex } from 'app/components/essay-index'
+import readingLayout from 'app/components/essay-reading-layout.module.css'
 import { InstitutionalLinkMap } from 'app/components/institutional-link-map'
 import sourcesData from '../../../../public/data/sources.json'
 import { essayLabels } from 'app/lib/essay-copy'
@@ -85,26 +85,11 @@ export default async function CepheusEssay({
   const { locale } = await params
   if (!isLocale(locale)) notFound()
   const labels = essayLabels[locale]
-  const sections = [
-    {
-      id: 'first-collision',
-      title: labels.firstCollision,
-    },
-    {
-      id: 'what-is-expected-of-us',
-      title: labels.expected,
-    },
-    {
-      id: 'what-do-we-owe-to-each-other',
-      title: labels.owe,
-      children: [{ id: 'cepheus-map', title: labels.link }],
-    },
-  ]
 
   if (locale !== 'en') return <LocalizedEssayDraft locale={locale} />
 
   return (
-    <article className="essay-page">
+    <article className={`essay-page ${readingLayout.page}`}>
       <header className="essay-hero">
         <div className="essay-hero-inner">
           <h1>
@@ -118,7 +103,6 @@ export default async function CepheusEssay({
       </header>
 
       <div className="essay-layout">
-        <EssayIndex sections={sections} updated={labels.updated} locale={locale} />
 
         <EssayFootnoteProvider>
           <div className="essay-body">
