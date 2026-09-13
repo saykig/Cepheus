@@ -6,6 +6,10 @@
    FIRST VIEWPORT: Prose at left, quiet equal marks at right; opening focuses DoD and Anthropic.
    FORM: User-specified clustered bubbles, deterministic build layout, explicit six-state story. */
 import { createContext, useContext, useEffect, useId, useRef, useState, type ReactNode } from 'react'
+import dynamic from 'next/dynamic'
+import { EditorialPreviewContext } from './editorial-preview-context'
+const EditorialMapPreview = dynamic(() => import('./editorial-map-preview').then(m => m.EditorialMapPreview))
+
 import bundle from '../../public/data/institutional-map/constellation.json'
 import type { Bundle } from '../lib/institutional-map-types'
 import { storyStates, resolveStoryStep, storyRelationship } from '../lib/institutional-map-story'
@@ -35,7 +39,11 @@ export function ConstellationSession({children}:{children:ReactNode}){const valu
   return()=>{cancelled=true;cancelAnimationFrame(frame);window.removeEventListener('pageshow',reconcile)}
  },[])
  return <SelectionContext.Provider value={value}>{children}</SelectionContext.Provider>}
-export function InstitutionalLinkMap({locale='en',story=false,initialStep=5}:{locale?:Locale;story?:boolean;initialStep?:number}) {
+export function InstitutionalLinkMap(props: {locale?:Locale;story?:boolean;initialStep?:number}) {
+ const preview=useContext(EditorialPreviewContext)
+ return preview ? <EditorialMapPreview initialInstitution={props.initialStep===0?'dod':'anthropic'} /> : <CurrentInstitutionalLinkMap {...props} />
+}
+function CurrentInstitutionalLinkMap({locale='en',story=false,initialStep=5}:{locale?:Locale;story?:boolean;initialStep?:number}) {
  const [plotSize,setPlotSize]=useState({width:600,height:600})
  const uid=useId();const root=useRef<HTMLElement>(null);const trigger=useRef<HTMLButtonElement|null>(null)
  const [step,setStep]=useState(initialStep);const [hover,setHover]=useState<string|null>(null)
