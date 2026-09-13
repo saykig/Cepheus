@@ -68,3 +68,6 @@
   font:400 10px/1.65 var(--font-text),Georgia,serif;
   max-width:calc(100% - 24px);
 }
+
+.labelSlot { position:relative; display:grid; flex:1; text-align:left; }
+.movingLabel { display:block; grid-area:1 / 1; }

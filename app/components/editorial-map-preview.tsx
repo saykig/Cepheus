@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { AnimatePresence, animate, motion, useReducedMotion } from 'motion/react'
+import { createInstitutionMotion } from '../lib/institutional-map-motion'
 import { ReactFlow, ReactFlowProvider, Handle, Position, BaseEdge, getBezierPath, useReactFlow, type NodeProps, type EdgeProps, type Node, type Edge } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import bundle from '../../public/data/institutional-map/constellation.json'
@@ -12,8 +14,9 @@ import styles from './editorial-map-preview.module.css'
 const data = bundle as unknown as Bundle
 const institution = (id: string) => data.institutions.find(i => i.id === id)!
 const neighbors = (id: string) => Array.from(new Set(data.relationships.filter(r => r.source === id || r.target === id).map(r => r.source === id ? r.target : r.source))).sort((a,b) => institution(a).label.localeCompare(institution(b).label))
-type EditorialNode = Node<{ label: string; name: string; active: boolean; exiting?: boolean; follow: () => void }, 'editorial'>
+type EditorialNode = Node<{ label: string; name: string; active: boolean; direction?: number; exiting?: boolean; follow: () => void }, 'editorial'>
 function InstitutionNode({ data: n }: NodeProps<EditorialNode>) {
+  const reduceMotion=useReducedMotion()
   const [open,setOpen]=useState(false)
   const [reading,setReading]=useState(false)
   const [position,setPosition]=useState({left:0,top:0})
@@ -49,7 +52,8 @@ function InstitutionNode({ data: n }: NodeProps<EditorialNode>) {
       onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='ArrowDown'){e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus())}}}
       onClick={e=>{if(n.active||pointer.current==='touch'&&e.detail!==0){show();if(n.active)setReading(true)}else follow()}}
       aria-expanded={open} aria-controls={open?uid:undefined} aria-haspopup="dialog" aria-label={n.active?`Read about ${n.name}`:`Follow ${n.name}`}>
-      <span className={styles.mark}/><span>{n.label}</span>
+      <motion.span className={styles.mark} animate={{scale:n.exiting ? .65 : 1,opacity:n.exiting?0:1}} transition={{duration:reduceMotion?0:.22}}/>
+      <span className={styles.labelSlot}><AnimatePresence initial={false} mode="popLayout">{!n.exiting&&<motion.span key={n.label} className={styles.movingLabel} initial={{opacity:0,y:(n.direction??1)*9}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-(n.direction??1)*8}} transition={reduceMotion?{duration:0}:{type:'spring',stiffness:210,damping:25}}>{n.label}</motion.span>}</AnimatePresence></span>
     </button>
     <Handle type="source" position={Position.Right} className={styles.handle} />
     {open&&createPortal(<div ref={panel} id={uid} role="dialog" aria-label={`About ${n.label}`} className={styles.hoverPanel} style={position}
@@ -75,6 +79,8 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   const [trail, setTrail] = useState([initialInstitution])
   const [step,setStep]=useState(initialStep)
   const [guided,setGuided]=useState(true)
+  const direction=useRef(1)
+  const previousStep=useRef(initialStep)
   const [reduced, setReduced] = useState(false)
   const [size,setSize] = useState({width:440,height:460})
   const canvas=useRef<HTMLDivElement>(null)
@@ -103,14 +109,17 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   },[story])
   useEffect(()=>{
     if(!story)return
+    direction.current=step>=previousStep.current?1:-1
+    previousStep.current=step
     const relation=data.relationships.find(r=>r.id===storyStates[step].relationshipId)
     setTrail([relation?.source??(step===1?'dod':'anthropic')]);setGuided(true)
   },[step,story])
   const follow=useCallback((id:string)=>{
+    direction.current=trail.includes(id)?-1:1
     setGuided(false)
     setTrail(previous=>previous.includes(id)?previous.slice(0,previous.indexOf(id)+1):[...previous,id])
     requestAnimationFrame(()=>canvas.current?.focus({preventScroll:true}))
-  },[])
+  },[trail])
   const showReading=useCallback(()=>{},[])
   const graph = useMemo(() => {
     // This is an exploration trail, not a hierarchy inferred from the research.
@@ -129,24 +138,39 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   const [animatedNodes, setAnimatedNodes] = useState<EditorialNode[]>(graph.nodes)
   const currentNodes = useRef(graph.nodes)
   useEffect(() => {
-    const start = performance.now()
-    const previous=new Map(currentNodes.current.map(n=>[n.id,n]))
-    const parentPosition=previous.get(origin)?.position??graph.nodes[0].position
-    const from=new Map(graph.nodes.map(n=>[n.id,previous.get(n.id)?.position??parentPosition]))
+    const prior=new Map(currentNodes.current.map(n=>[n.id,n]))
     const outgoing=currentNodes.current.filter(n=>!graph.nodes.some(target=>target.id===n.id))
-    let frame=0
-    const animate=(now:number)=>{
-      const t=reduced?1:Math.min(1,(now-start)/620)
-      const ease=1-Math.pow(1-t,4)
-      const next=graph.nodes.map(n=>{const p=from.get(n.id)!;return {...n,style:{opacity:previous.has(n.id)?1:ease,pointerEvents:'all' as const},position:{x:p.x+(n.position.x-p.x)*ease,y:p.y+(n.position.y-p.y)*ease}}})
-      const exiting:EditorialNode[]=t<1?outgoing.map(n=>({...n,data:{...n.data,exiting:true},style:{opacity:(1-ease)*Number(n.style?.opacity??1),pointerEvents:'none'},position:{x:n.position.x-80*ease,y:n.position.y}})):[]
-      currentNodes.current=[...next,...exiting]
-      setAnimatedNodes(currentNodes.current)
-      if(t<1)frame=requestAnimationFrame(animate)
+    const travel=direction.current
+    if(reduced){
+      currentNodes.current=graph.nodes
+      setAnimatedNodes(graph.nodes)
+      return
     }
-    frame=requestAnimationFrame(animate)
-    return()=>cancelAnimationFrame(frame)
-  },[graph,origin,reduced])
+    const {nodes:particles,simulation}=createInstitutionMotion(graph.nodes,graph.edges,
+      new Map(currentNodes.current.map(n=>[n.id,n.position])),travel,graph.height)
+    const started=performance.now()
+    let progress=0
+    // Motion owns the springy presence envelope; D3 owns node positions and collisions.
+    const presence=animate(0,1,{type:'spring',stiffness:135,damping:22,onUpdate:value=>{progress=Math.max(0,Math.min(1,value))}})
+    let frame=0;let ticks=0
+    const draw=(now:number)=>{
+      const wanted=Math.min(100,Math.floor((now-started)/(1000/60)))
+      if(wanted>ticks){simulation.tick(wanted-ticks);ticks=wanted}
+      const current:EditorialNode[]=graph.nodes.map((n,index)=>({...n,
+        data:{...n.data,direction:travel},
+        style:{opacity:prior.has(n.id)?1:progress,pointerEvents:'all'},
+        position:{x:particles[index].x,y:particles[index].y}}))
+      const exiting:EditorialNode[]=progress<.995?outgoing.map(n=>({...n,
+        data:{...n.data,exiting:true,direction:travel},
+        style:{opacity:(1-progress)*Number(n.style?.opacity??1),pointerEvents:'none'},
+        position:{x:n.position.x+Math.sin(progress*Math.PI)*24,y:n.position.y-travel*220*progress}})):[]
+      currentNodes.current=[...current,...exiting]
+      setAnimatedNodes(currentNodes.current)
+      if((ticks<100&&simulation.alpha()>.003)||progress<.995)frame=requestAnimationFrame(draw)
+    }
+    frame=requestAnimationFrame(draw)
+    return()=>{cancelAnimationFrame(frame);simulation.stop();presence.stop()}
+  },[graph,reduced])
   useEffect(()=>{
     const zoom=Math.min(1.1,(size.width-20)/graph.width,(size.height-32)/graph.height)
     void setViewport({x:(size.width-graph.width*zoom)/2-graph.focusX*zoom,y:(size.height-graph.height*zoom)/2,zoom},{duration:reduced?0:620})

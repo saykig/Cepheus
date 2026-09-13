@@ -23,3 +23,9 @@ Sorted institution IDs and fixed D3 collision ticks generate categorical coordin
 One contextual line/token represents a directly documented mechanism. A separate restrained label identifies reviewed analysis. Opening, public decisions, interfaces, technical knowledge, provenance and exploration are explicit narrative states. Overview starts with zero edges. User selection exposes a compact nonmodal card; full evidence lives on its own route.
 
 Interaction targets are at least 44px; visible circles are smaller. Keyboard focus, arrow navigation, Enter/Space, Escape, reduced motion, normal scrolling and non-hover evidence access are required. No state-by-state screen-reader announcements. Responsive presentations use the same publication dataset and story model. Small layouts expand the plot vertically rather than shrinking typography into illegibility.
+
+## Local map motion study
+
+The development-only `/en/map-preview` reuses the essay and published research bundle. React Flow renders transparent editorial labels and olive marks above a fading graph-paper surface. Scroll markers select the existing six story states; clicking explores a trail and panning/zooming can reveal earlier institutions. Hover/focus opens reading details, with touch actions available.
+
+This preview uses a bounded D3 simulation on copied presentation nodes: target springs, equal collision radii and weak link attraction let institutions settle after each section change. Forces encode no research quantity. Motion animates presence and labels; forward/reverse scroll chooses entry and exit direction. Transitions are cancelled on replacement/unmount and reduced motion uses stationary target positions. Production constellation behaviour remains governed by the contract above.
