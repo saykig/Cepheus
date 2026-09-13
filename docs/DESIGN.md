@@ -8,7 +8,7 @@ Use the existing `app/global.css` tokens: paper, brown ink, olive accents and su
 
 Title/subtitle share the prose's left edge. At ≥1000px width and ≥700px height, prose and sticky visual use approximately 53/47 of the available width with a 24–48px gap. The figure starts beside the opening and releases before Notes. At 700–999px width and ≥700px height, a compact top-sticky view uses roughly 32–40% of the viewport, then releases at exploration. Phones and short windows read in normal flow, with only three deliberate visual moments.
 
-Phone prose remains 18px at 1.65 line-height with 20px page padding. Superscript notes are .65em, transparent, with enlarged touch targets and exact backlinks. Header and content accommodate 320px width, safe areas, zoom and orientation changes.
+Phone prose remains 18px at 1.65 line-height with 20px page padding. Superscript notes are .65em, transparent, with enlarged touch targets and exact backlinks. Hover or keyboard focus previews a floating paper tooltip card; click/tap keeps it open without scrolling. Escape, Close, or an outside press dismisses it. “View in Notes” explicitly navigates to the numbered endnote. Cards keep citation links usable and fit within the viewport. Header and content accommodate 320px width, safe areas, zoom and orientation changes.
 
 ## Constellation contract
 
