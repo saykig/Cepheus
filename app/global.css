@@ -1458,7 +1458,7 @@ html[data-theme="dark"] .theme-toggle::after {
 }
 
 .essay-endnotes li + li {
-  margin-top: 0.85rem;
+  margin-top: 0.55rem;
 }
 
 .essay-endnotes .citation-link em {
