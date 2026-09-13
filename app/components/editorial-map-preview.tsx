@@ -67,20 +67,20 @@ function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
   const records=data.relationships.filter(r=>r.source===id||r.target===id)
   const follow=()=>{const relationshipId=chosen||records[0]?.id;if(relationshipId){close();n.follow(relationshipId)}}
   const blur=(target:EventTarget|null)=>{if(target instanceof globalThis.Node&&(panel.current?.contains(target)||trigger.current?.contains(target)))return;deferClose()}
-  return <motion.div initial={{opacity:0}} animate={{opacity:n.visible?(n.active?1:.85):0}} transition={reduceMotion?{duration:0}:{duration:n.visible?1.1:.9}} aria-hidden={!n.visible} className={styles.institution} style={{'--graph-zoom':zoom} as CSSProperties} data-active={n.active} data-peek={open} data-marker-side={n.markerSide} onPointerEnter={e=>{if(e.pointerType==='mouse')show()}} onPointerLeave={e=>{if(e.pointerType==='mouse')deferClose()}}>
-    <Handle type="target" position={n.markerSide==='right'?Position.Right:Position.Left} className={styles.handle}
-      style={{left:n.markerSide==='right'?128:10,top:22,right:'auto',bottom:'auto',transform:'translate(-50%,-50%)'}} />
-    <motion.button initial={{y:14}} animate={{y:n.visible?0:14}} transition={reduceMotion?{duration:0}:{duration:timing.settle/1000,ease:(t:number)=>settledFraction(t*timing.settle)}} ref={trigger} className={`${styles.nodeButton} nodrag nopan`} data-institution={id} disabled={!n.visible} tabIndex={!n.visible?-1:0}
+  return <motion.div initial={{opacity:0,y:14}} animate={{opacity:n.visible?(n.active?1:.85):0,y:n.visible?0:14}} onUpdate={()=>updateNodeInternals(id)} transition={reduceMotion?{duration:0}:{opacity:{duration:n.visible?1.1:.9},y:{duration:timing.settle/1000,ease:(t:number)=>settledFraction(t*timing.settle)}}} aria-hidden={!n.visible} className={styles.institution} style={{'--graph-zoom':zoom} as CSSProperties} data-active={n.active} data-peek={open} data-marker-side={n.markerSide} onPointerEnter={e=>{if(e.pointerType==='mouse')show()}} onPointerLeave={e=>{if(e.pointerType==='mouse')deferClose()}}>
+    <span className={styles.port} data-circle-port>
+      <motion.span className={styles.mark} animate={{backgroundColor:n.active?'var(--olive)':'var(--paper)'}} transition={reduceMotion?{duration:0}:{duration:.45,delay:n.arriving?1.5:0}}/>
+      <Handle type="target" position={Position.Left} className={styles.handle}/>
+      <Handle type="source" position={Position.Right} className={styles.handle}/>
+    </span>
+    <motion.button ref={trigger} className={`${styles.nodeButton} nodrag nopan`} data-institution={id} disabled={!n.visible} tabIndex={!n.visible?-1:0}
       onFocus={e=>{if(e.currentTarget.matches(':focus-visible'))show()}}
       onBlur={e=>blur(e.relatedTarget)}
-      onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='Tab'&&!e.shiftKey&&open){e.preventDefault();panel.current?.querySelector('button')?.focus()}if(e.altKey&&e.key==='ArrowDown'){e.stopPropagation();e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus())}}}
+      onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='Tab'&&!e.shiftKey&&open){e.preventDefault();panel.current?.querySelector('button')?.focus({preventScroll:true})}if(e.altKey&&e.key==='ArrowDown'){e.stopPropagation();e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus({preventScroll:true}))}}}
       onClick={()=>{show();setReading(true)}}
       aria-expanded={open} aria-controls={open?uid:undefined} aria-haspopup="dialog" aria-label={`${c.read} ${n.name}`}>
-      <motion.span className={styles.mark} animate={{backgroundColor:n.active?'var(--olive)':'var(--paper)'}} transition={reduceMotion?{duration:0}:{duration:.45,delay:n.arriving?1.5:0}}/>
-      <span className={styles.labelSlot}>{n.label}</span>
+      <span className={styles.labelSlot} data-institution-label><span className={styles.movingLabel}>{n.label}</span></span>
     </motion.button>
-    <Handle type="source" position={Position.Right} className={styles.handle}
-      style={{left:n.markerSide==='right'?128:10,top:22,right:'auto',bottom:'auto',transform:'translate(-50%,-50%)'}} />
     {open&&createPortal(<div ref={panel} id={uid} role="dialog" aria-label={`${n.label} evidence`} className={styles.hoverPanel} style={position}
       onPointerEnter={cancel} onPointerLeave={deferClose} onFocusCapture={cancel} onBlur={e=>blur(e.relatedTarget)} onKeyDown={e=>{
         if(e.key==='Escape'){e.stopPropagation();trigger.current?.focus({preventScroll:true});close()}
@@ -89,7 +89,7 @@ function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
           if(e.shiftKey&&e.target===controls[0]){e.preventDefault();trigger.current?.focus({preventScroll:true})}
           if(!e.shiftKey&&e.target===controls[controls.length-1]){
             e.preventDefault();close()
-            const siblings=Array.from(trigger.current?.closest('[data-constellation-study]')?.querySelectorAll<HTMLButtonElement>('[data-institution]:not(:disabled),[aria-label="Map controls"] button')??[])
+            const siblings=Array.from(trigger.current?.closest('[data-constellation-study]')?.querySelectorAll<HTMLButtonElement>('[data-institution]:not(:disabled)')??[])
             const next=siblings[siblings.indexOf(trigger.current!)+1]
             if(next)next.focus({preventScroll:true});else {trigger.current?.focus({preventScroll:true});close()}
           }
@@ -119,7 +119,7 @@ function InkEdge(props:EdgeProps<Edge<InkData>>) {
  const path=routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane)
  const visible=e.visible
  const trace=e.reverse?routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane,true):path
- return <g aria-hidden="true" data-world-edge={props.id} data-revealed={visible}>
+ return <g aria-hidden="true" data-world-edge={props.id} data-source-institution={props.source} data-target-institution={props.target} data-revealed={visible}>
   <motion.path d={path} fill="none" className={styles.worldInk} initial={{pathLength:0,opacity:0}}
    animate={{pathLength:visible?1:0,opacity:visible?(e.incident||e.retained? .45:.18):0}}
    transition={reduced?{duration:0}:{pathLength:{duration:visible?1.05:.7,delay:visible?.55:0,ease:'easeInOut'},opacity:{duration:.6}}}/>
@@ -182,33 +182,23 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
   data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:n.visible&&activated,arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:n.visible?'all':'none'},
  })),[scene.nodes,locale,activated,follow,projection])
  const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:e.visible&&activated,incident:e.incident||!!hover&&(e.source===hover||e.target===hover),drawKey:`${step}-${traceVersion}`,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,activated,step,traceVersion,hover,focus])
- const active=selected??storyStates[step].relationshipId
- const relation=data.relationships.find(r=>r.id===active)
  const prefix=locale==='en'?'':`/${locale}`
- const overview=()=>{setSelected(null);setFocus(null);setFollowed([]);setHover(null)}
  return <EvidenceSession.Provider value={useMemo(()=>({owner,setOwner}),[owner])}>
  <section className={styles.study} data-constellation-study data-story={story} data-story-state={storyStates[step].id} aria-label={`Institutional constellation study — ${story ? 'essay companion' : storyStates[initialStep].title}`}>
-  <div className={styles.storyHeading}>{storyStates[step].title}</div>
   <div ref={canvas} className={styles.canvas} tabIndex={0} role="group" aria-label="Institutional field. Drag to pan, pinch to zoom. Plus and minus zoom; zero fits the world."
    onKeyDown={e=>{
-    if(e.target===canvas.current){if(['+','=','-','0'].includes(e.key)){e.preventDefault();if(e.key==='0')fit();else if(e.key==='-')void zoomOut({duration:reduced?0:200});else void zoomIn({duration:reduced?0:200})}}
+    if(e.target===canvas.current){if(e.key==='Escape'){setSelected(null);setFocus(null);setFollowed([]);setHover(null)}if(['+','=','-','0'].includes(e.key)){e.preventDefault();if(e.key==='0'){fit();setSelected(null);setFocus(null);setFollowed([]);setHover(null)}else if(e.key==='-')void zoomOut({duration:reduced?0:200});else void zoomIn({duration:reduced?0:200})}}
     if(e.target instanceof HTMLElement&&e.target.hasAttribute('data-institution')&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)&&!e.altKey){e.preventDefault();const buttons=Array.from(canvas.current?.querySelectorAll<HTMLButtonElement>('[data-institution]:not(:disabled)')??[]);const index=buttons.indexOf(e.target as HTMLButtonElement);buttons[(index+(['ArrowRight','ArrowDown'].includes(e.key)?1:-1)+buttons.length)%buttons.length]?.focus({preventScroll:true})}
    }}>
    <ReactFlow proOptions={{hideAttribution:true}} nodes={nodes} edges={edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes}
     autoPanOnNodeFocus={false} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false}
     minZoom={.2} maxZoom={2} panOnDrag panOnScroll={false} zoomOnScroll={false} zoomOnPinch zoomOnDoubleClick={false} preventScrolling={false}
     onNodeMouseEnter={(_,n)=>setHover(n.id)} onNodeMouseLeave={()=>setHover(null)} onNodeClick={()=>{}}/>
-   <div className={styles.cameraControls} aria-label="Map controls"><button onClick={()=>void zoomOut({duration:reduced?0:200})} aria-label="Zoom out">−</button><button onClick={()=>void zoomIn({duration:reduced?0:200})} aria-label="Zoom in">+</button><button onClick={fit}>Fit</button></div>
   </div>
-  <div className={styles.storyCaption}>
-   {relation?<motion.a key={`${active}-${traceVersion}`} initial={{opacity:0}} animate={{opacity:1}} transition={reduced?{duration:0}:{delay:1.6,duration:.4}} href={`${prefix}/institutional-links/${relation.id}`}>
-    <span>Directly documented · {data['relation-types'].find(t=>t.id===relation.type)?.label}</span>
-    {step===4?<span>Source → evidence → instrument → interface → analysis</span>:<span>{institution(relation.source).label} ↔ {institution(relation.target).label}</span>}
-   </motion.a>:<span>Select an institution to trace an interface.</span>}
-   {selected&&<button onClick={overview}>{step===5?'Return to overview':'Return to story'}</button>}
-  </div>
-  {relation&&data['analytical-relations'].filter(a=>a.relationshipIds.includes(relation.id)).slice(0,1).map(a=><div className={styles.analysis} key={a.id}><span>Reviewed analytical assessment</span> {a.shortLabel}</div>)}
+  <div className={styles.captionRow}>
   <details className={styles.legend}><summary>How to read</summary><p>Groups are presentation categories. Position, distance, circle size and motion measure no power or dependence. Faint lines are directly documented interfaces; analytical assessments are labeled separately.</p><a href={`${prefix}/institutional-links`}>Evidence & methodology →</a></details>
+  <span className={styles.gestureHint}>Drag to explore · Pinch to zoom</span>
+  </div>
   <noscript><p><a href={`${prefix}/institutional-links`}>Read the institutional evidence index.</a></p></noscript>
  </section></EvidenceSession.Provider>
 }

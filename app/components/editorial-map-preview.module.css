@@ -101,27 +101,19 @@
 /* V2 study: the world fits once; state changes never change the canvas dimensions. */
 .canvas { height:min(72svh,760px); min-height:480px; }
 .canvas::before { inset:-20px -8px; mask-image:radial-gradient(ellipse at center,#000 38%,transparent 78%); }
-.storyHeading { color:var(--ink-muted); font:400 16px var(--font-display),Georgia,serif; margin:0 0 12px; }
 .nodeButton { font-size:max(18px,calc(14px / var(--graph-zoom,1))); }
 .labelSlot { width:max(110px,calc(70px / var(--graph-zoom,1))); }
 .institution[data-marker-side=right] .labelSlot { left:auto; right:20px; }
 .mark { transition:background 450ms,border-color 450ms; }
 .worldInk,.worldTrace { stroke:var(--olive); stroke-width:1; vector-effect:non-scaling-stroke; pointer-events:none; }
 .worldTrace { stroke:var(--olive-deep); stroke-width:1.2; }
-.cameraControls { position:absolute; bottom:0; right:0; display:flex; z-index:5; background:var(--paper); }
-.cameraControls button,.storyCaption button { border:0; background:none; color:var(--olive-deep); min-width:44px; min-height:44px; font:inherit; font-size:12px; cursor:pointer; }
-.storyCaption { min-height:58px; font-size:12px; line-height:1.55; color:var(--ink-muted); display:flex; justify-content:space-between; gap:12px; }
-.storyCaption a { color:var(--olive-deep); text-decoration:none; }
-.storyCaption a span { display:block; }
-.analysis { font-size:11px; line-height:1.6; color:var(--ink-muted); }
-.analysis>span { color:var(--olive-deep); }
 .legend { font-size:11px; line-height:1.6; color:var(--ink-muted); }
 .legend summary { min-height:44px; align-content:center; cursor:pointer; }
 .legend a { color:var(--olive-deep); }
 .choose { display:block; font-size:11px; }
 .choose select { display:block; width:100%; min-height:44px; color:var(--ink); background:var(--paper); border:1px solid var(--rule); font:inherit; margin-block:5px; }
 .hoverPanel { width:260px; }
-@media(min-width:700px) and (max-width:999px) { .canvas { min-height:0; height:clamp(300px,35svh,420px); }.storyCaption { min-height:42px; }.storyHeading { margin-bottom:4px; } }
+@media(min-width:700px) and (max-width:999px) { .canvas { min-height:0; height:clamp(300px,35svh,420px); } }
 @media(max-width:699px) { .canvas { min-height:0; height:540px; }.hoverPanel { max-height:calc(100dvh - 24px); overflow:auto; } }
 @media(prefers-reduced-motion:reduce) { .mark { transition:none; } }
 
@@ -129,3 +121,19 @@
 
 /* Settle the visible mark/label without moving React Flow’s measured line ports. */
 .nodeButton { translate:0 -50%; transform:none; }
+
+/* One shared circle port anchors both ink layers, independent of the hit target. */
+.port { position:absolute; left:10px; top:22px; width:0; height:0; pointer-events:none; }
+.institution[data-marker-side=right] .port { left:128px; }
+.port .mark,.institution[data-marker-side=right] .port .mark { left:0; top:0; translate:-50% -50%; }
+.port .handle { width:0; height:0; left:0; top:0; right:auto; bottom:auto; transform:translate(-50%,-50%); }
+.captionRow { position:relative; font-size:10px; line-height:1.65; color:var(--ink-muted); }
+.captionRow .gestureHint { position:absolute; top:0; right:0; bottom:auto; min-height:44px; display:flex; align-items:center; margin:0; white-space:nowrap; }
+.captionRow .legend { font-size:10px; }
+.captionRow .legend summary { width:fit-content; min-height:44px; }
+.captionRow .legend p { margin-top:8px; }
+
+/* Visible labels share the circle axis; zoom-expanded hit areas stay independent. */
+.labelSlot { height:44px; display:flex; align-items:center; justify-content:flex-start; line-height:1; }
+.movingLabel { display:block; line-height:1; }
+.institution[data-marker-side=right] .labelSlot { justify-content:flex-end; }
