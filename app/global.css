@@ -1287,7 +1287,7 @@ html[data-theme="dark"] .theme-toggle::after {
 }
 
 .essay-disclosure {
-  margin-top: 0.65rem;
+  margin-block: 1.35rem;
   overflow: hidden;
   border: 1px solid color-mix(in oklab, var(--olive) 20%, var(--rule));
   border-radius: 6px;
@@ -1320,7 +1320,7 @@ html[data-theme="dark"] .theme-toggle::after {
   .essay-visual-block > .essay-disclosure {
     box-sizing: border-box;
     width: min(100%, var(--essay-reading-width));
-    margin-top: 0.65rem;
+    margin-top: 1.35rem;
   }
 }
 
