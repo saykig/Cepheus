@@ -38,8 +38,12 @@ The essay now includes a bounded constellation with separately reviewed observat
 
 - [Research methodology](research/METHODOLOGY.md), [record contract](research/SCHEMA.md), [canonical data](research/data/), [preserved v0.1](research/releases/v0.1/).
 - [Design](docs/DESIGN.md), [product](docs/PRODUCT.md), [retired research](docs/archive/).
-- [Public evidence index](https://cepheus-pons.org/institutional-links) is introduced by this unmerged change; it becomes available after deployment.
+- [Public evidence index](https://cepheus-pons.org/institutional-links) provides published findings and their provenance.
 
 Run `pnpm install`, then `pnpm dev` for the local preview. `pnpm research:validate` checks canonical research; `pnpm research:export` builds the approved publication bundle and deterministic D3 coordinates. `pnpm test`, `pnpm typecheck`, `pnpm build` and `pnpm test:e2e` cover research and reading behavior. Browser setup: `pnpm exec playwright install chromium webkit`.
 
-Active export tooling lives in `tooling/`. Root `public/` is the Next.js runtime directory and contains the generated publication bundle, essay citation registry and brand assets. Canonical research and archived material are not served as runtime datasets. No obsolete synthetic-data generator is part of the build.
+Active export tooling lives in `internal/tooling/`. Root `public/` is the Next.js runtime directory and contains the generated publication bundle, essay citation registry and brand assets. Canonical research and archived material are not served as runtime datasets. No obsolete synthetic-data generator is part of the build.
+
+Tests live in [internal/tests](internal/tests/); export tooling lives in
+[internal/tooling](internal/tooling/). See the [current constellation contract](docs/CONSTELLATION-V2.md)
+and [cleanup audit](research/audit/repository-cleanup.md) for retained/deleted material.

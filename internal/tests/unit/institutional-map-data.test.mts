@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { describe, it } from 'node:test'
-import institutions from '../../research/releases/v0.1/institutions.json' with { type: 'json' }
-import relationships from '../../research/releases/v0.1/relationships.json' with { type: 'json' }
-import evidence from '../../research/releases/v0.1/evidence.json' with { type: 'json' }
-import sources from '../../research/releases/v0.1/sources.json' with { type: 'json' }
-import instruments from '../../research/releases/v0.1/instruments.json' with { type: 'json' }
-import layout from '../../research/releases/v0.1/layout.json' with { type: 'json' }
+import institutions from '../../../research/releases/v0.1/institutions.json' with { type: 'json' }
+import relationships from '../../../research/releases/v0.1/relationships.json' with { type: 'json' }
+import evidence from '../../../research/releases/v0.1/evidence.json' with { type: 'json' }
+import sources from '../../../research/releases/v0.1/sources.json' with { type: 'json' }
+import instruments from '../../../research/releases/v0.1/instruments.json' with { type: 'json' }
+import layout from '../../../research/releases/v0.1/layout.json' with { type: 'json' }
 
 const ids = (items: {id: string}[]) => new Set(items.map((item) => item.id))
 const institutionIds = ids(institutions), sourceIds = ids(sources), evidenceIds = ids(evidence), instrumentIds = ids(instruments)
@@ -68,7 +68,7 @@ describe('Institutional map evidence admission', () => {
     }
   })
   it('keeps paused visualizations out of English and localized essay rendering', async () => {
-    const files = ['../[locale]/essays/what-we-owe-to-each-other/page.tsx', '../components/localized-essay-draft.tsx']
+    const files = ['../../../app/[locale]/essays/what-we-owe-to-each-other/page.tsx', '../../../app/components/localized-essay-draft.tsx']
     for (const file of files) {
       const source = await readFile(new URL(file, import.meta.url), 'utf8')
       for (const component of ['GapMapMatrix', 'FrontierScoreExplorer', 'TechnicalCapacityFigure']) assert.ok(!source.includes(component), `${component} reintroduced into ${file}`)

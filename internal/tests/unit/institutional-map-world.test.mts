@@ -1,9 +1,9 @@
 import {test} from 'node:test'
 import assert from 'node:assert/strict'
 import {readFile} from 'node:fs/promises'
-import projection from '../../public/data/institutional-map/constellation.json' with {type:'json'}
-import type {Bundle} from './institutional-map-types.ts'
-import {institutionalWorld,institutionalScene,worldBounds,settledFraction,routedInstitutionPath,worldProjection} from './institutional-map-world.ts'
+import projection from '../../../public/data/institutional-map/constellation.json' with {type:'json'}
+import type {Bundle} from '../../../app/lib/institutional-map-types.ts'
+import {institutionalWorld,institutionalScene,worldBounds,settledFraction,routedInstitutionPath,worldProjection} from '../../../app/lib/institutional-map-world.ts'
 const data=projection as unknown as Bundle
 
 test('preview retains one fixed world through six stages and reverse scrolling',()=>{
@@ -47,11 +47,11 @@ test('settling is monotonic, bounded and finishes without bouncing',()=>{
  assert.equal(settledFraction(0),0);assert.equal(settledFraction(1100),1)
 })
 test('canonical essay uses the approved editorial renderer in every environment',async()=>{
- const wrapper=await readFile(new URL('../components/institutional-link-map.tsx',import.meta.url),'utf8')
+ const wrapper=await readFile(new URL('../../../app/components/institutional-link-map.tsx',import.meta.url),'utf8')
  assert.ok(wrapper.includes('return <Constellation {...props} />'))
  assert.ok(wrapper.includes('m.EditorialMapPreview'));assert.ok(!wrapper.includes('CurrentInstitutionalLinkMap'))
  assert.ok(!wrapper.includes("process.env.NODE_ENV==='development'"))
- const route=await readFile(new URL('../[locale]/map-preview/page.tsx',import.meta.url),'utf8')
+ const route=await readFile(new URL('../../../app/[locale]/map-preview/page.tsx',import.meta.url),'utf8')
  assert.ok(route.includes("process.env.NODE_ENV !== 'development'"));assert.ok(route.includes('EditorialPreviewProvider'))
 })
 

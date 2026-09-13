@@ -1,10 +1,10 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { materialCollections, reviewedCollections, validateResearch, researchHash } from './institutional-map-validation.ts'
-import { resolveStoryStep, storyStates } from './institutional-map-story.ts'
-import type { Bundle } from './institutional-map-types.ts'
-const load=()=>Object.fromEntries([...materialCollections,'reviews','release'].map(k=>[k,JSON.parse(readFileSync(new URL(`../../research/data/${k}.json`,import.meta.url),'utf8'))])) as Bundle
+import { materialCollections, reviewedCollections, validateResearch, researchHash } from '../../../app/lib/institutional-map-validation.ts'
+import { resolveStoryStep, storyStates } from '../../../app/lib/institutional-map-story.ts'
+import type { Bundle } from '../../../app/lib/institutional-map-types.ts'
+const load=()=>Object.fromEntries([...materialCollections,'reviews','release'].map(k=>[k,JSON.parse(readFileSync(new URL(`../../../research/data/${k}.json`,import.meta.url),'utf8'))])) as Bundle
 const fresh=()=>{const d=load();for(const k of reviewedCollections)for(const r of d[k])r.publicationStatus='provisional';d.reviews=[];return d}
 const rejects=(mutate:(d:Bundle)=>void,pattern:RegExp)=>{const d=fresh();mutate(d);assert.match(validateResearch(d).join('\n'),pattern)}
 test('canonical research passes semantic validation',()=>assert.deepEqual(validateResearch(load()),[]))

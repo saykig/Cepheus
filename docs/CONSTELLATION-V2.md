@@ -23,13 +23,18 @@ The study reuses the published projection, existing explicit story markers, loca
 - IntersectionObserver chapter transitions: https://github.com/russellsamora/scrollama
 - Categorical clustered marks: https://observablehq.com/@d3/clustered-bubbles
 
-## Verification status
+## Verification
 
-Research/model tests and typecheck pass. Model tests enforce stable identities/positions across forward and reverse stages, opening/final membership, endpoint validity, persistent Follow context, nonquantitative separation, monotonic bounded settling, and preview isolation.
+The promoted baseline passed research validation, all 46 unit tests, typecheck,
+production build, deterministic export and all 46 Chromium/WebKit browser checks
+in CI at `d0e0f38`. The author approved the v2 visual for the public essay.
 
-`tests/e2e/constellation-study.spec.ts` records video and traces for desktop, landscape tablet, portrait tablet and phone, including initial load, chapter expansion, provenance, full exploration, Follow, manual pan/zoom and return. It captures stills and runs axe and keyboard checks. These browser acceptance tests have **not been executed locally**: the approved localhost browser access was denied because its admin policy could not be verified, and alternative localhost access cannot be used to bypass that denial. Recorded artifacts and human motion review remain required; code and unit tests do not constitute visual acceptance.
-
-Promotion to the canonical essay is explicitly pending visual, responsive, motion and accessibility acceptance. Do not merge this study as a finished production renderer.
+`internal/tests/e2e/constellation-study.spec.ts` records video, traces and stills for
+desktop, landscape tablet, portrait tablet and phone. It checks opening framing,
+chapter transitions, full exploration, Follow, manual pan/zoom, label/edge
+alignment, keyboard access, reduced motion and axe accessibility. The companion
+reading tests cover additional viewport sizes, evidence routes, notes and languages.
+Tests run remotely in CI; these results do not imply local interactive browser access.
 
 ## Production promotion
 

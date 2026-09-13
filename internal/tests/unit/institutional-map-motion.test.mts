@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { createInstitutionMotion, institutionViewport, institutionPresence } from './institutional-map-motion.ts'
+import { createInstitutionMotion, institutionViewport, institutionPresence } from '../../../app/lib/institutional-map-motion.ts'
 
 const targets=[{id:'a',position:{x:0,y:93}},...Array.from({length:4},(_,i)=>({id:`b${i}`,position:{x:190,y:i*62}}))]
 const edges=targets.slice(1).map(n=>({source:'a',target:n.id}))

@@ -16,4 +16,4 @@ Four CDAO award chains remain provisional because exact legal awardee identity i
 
 ## Repository audit
 
-Canonical research is flattened into `research/`. Documentation and genuine retired research are under `docs/`. Active export tooling is under `tooling/`; obsolete synthetic generators, duplicate source snapshots, retired chart components and their dedicated styles/tests are deleted. `public/` stays at root for Next.js runtime assets. v0.1 is preserved under `research/releases/v0.1/`. Existing user-local configuration/reference directories and uncommitted retired-figure styling were preserved outside the PR changes.
+Canonical research is flattened into `research/`. Documentation and genuine retired research are under `docs/`. Active export tooling is under `internal/tooling/`; obsolete synthetic generators, duplicate source snapshots, retired chart components and their dedicated styles/tests are deleted. `public/` stays at root for Next.js runtime assets. v0.1 is preserved under `research/releases/v0.1/`. Existing user-local configuration/reference directories and uncommitted retired-figure styling were preserved outside the PR changes.
