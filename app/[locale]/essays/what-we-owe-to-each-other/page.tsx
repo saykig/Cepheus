@@ -8,7 +8,7 @@ import {
 } from 'app/components/essay-footnotes'
 import { EssayDisclosure } from 'app/components/essay-disclosure'
 import readingLayout from 'app/components/essay-reading-layout.module.css'
-import { InstitutionalLinkMap } from 'app/components/institutional-link-map'
+import { ConstellationSession, InstitutionalLinkMap } from 'app/components/institutional-link-map'
 import sourcesData from '../../../../public/data/sources.json'
 import { essayLabels } from 'app/lib/essay-copy'
 import { isLocale } from 'app/lib/i18n'
@@ -102,7 +102,7 @@ export default async function CepheusEssay({
         </div>
       </header>
 
-      <EssayFootnoteProvider>
+      <EssayFootnoteProvider><ConstellationSession>
       <div className="essay-layout">
           <div className="essay-body">
           <h2 className="essay-opening-heading" id="first-collision" data-institutional-step="opening">
@@ -140,6 +140,7 @@ export default async function CepheusEssay({
             when continued operational use required a managed replacement period.
             Whether the same constraint persisted in September remains unresolved.
           </p>
+          <div className={readingLayout.mobileMoment}><InstitutionalLinkMap locale={locale} initialStep={0} /></div>
           <p>
             At first, I read it as a dispute over one government contract, but it
             exposed a much larger institutional problem.{' '}
@@ -210,9 +211,9 @@ export default async function CepheusEssay({
           </section>
 
           <p data-institutional-step="interfaces">
-            I now start with named institutions<FootnoteRef number={1} /> and
-            documented mechanisms<FootnoteRef number={2} />. The Institutional
-            Link Map<FootnoteRef number={3} /> lets us inspect the agreements,
+            I now start with named institutions and
+            documented mechanisms. The Institutional
+            Link Map lets us inspect the agreements,
             evaluations, and deployments through which institutions meet.
             Each connection has a source and a limit to what it can establish.
             Analytical assessments make their additional reasoning inspectable.
@@ -227,7 +228,7 @@ export default async function CepheusEssay({
 
           <h2 id="what-is-expected-of-us">
             {labels.expected}
-            <FootnoteRef number={4} />
+            <FootnoteRef number={1} />
           </h2>
           <p>
             AI is often described as something that is simply happening to us,
@@ -236,6 +237,7 @@ export default async function CepheusEssay({
             language captures the speed of change, but it can also make
             responsibility disappear.
           </p>
+          <div className={readingLayout.mobileMoment}><InstitutionalLinkMap locale={locale} initialStep={2} /></div>
           <p data-institutional-step="technical-knowledge">
             Much of frontier AI is developed inside a small number of private
             companies. These companies recruit the technical talent, operate the
@@ -291,7 +293,7 @@ export default async function CepheusEssay({
             I therefore do not think the central problem is a simple shortage of
             expertise, as specialization itself is not the problem. In fact, it
             is probably one of the main reasons humanity has become capable of
-            doing extraordinarily difficult things.<FootnoteRef number={5} />
+            doing extraordinarily difficult things.<FootnoteRef number={2} />
           </p>
           <p>
             We spend years learning the language, methods, assumptions, and
@@ -313,7 +315,7 @@ export default async function CepheusEssay({
             factor once intelligence itself becomes much more abundant. More
             intelligence does not make every other constraint disappear, as
             experiments still take time and human beings still have to decide
-            whether something should actually be used.<FootnoteRef number={6} />
+            whether something should actually be used.<FootnoteRef number={3} />
           </p>
           <p>
             And there is another possible bottleneck that I think deserves much
@@ -329,10 +331,10 @@ export default async function CepheusEssay({
             May 2026, an internal OpenAI model produced a construction that
             disproved a longstanding conjecture about its answer. External
             mathematicians subsequently checked the argument and produced
-            human-written papers explaining and verifying the result.<FootnoteRef number={7} />
+            human-written papers explaining and verifying the result.<FootnoteRef number={4} />
           </p>
           <p>
-            One of those tools is Lean, a formal proof system.<FootnoteRef number={8} /> In very simple
+            One of those tools is Lean, a formal proof system.<FootnoteRef number={5} /> In very simple
             terms, Lean allows mathematicians to express a mathematical statement
             with extraordinary precision and then check whether a proposed proof
             actually establishes it. It does not decide which theorem matters,
@@ -344,7 +346,7 @@ export default async function CepheusEssay({
           </p>
           <p>
             This is becoming particularly interesting alongside AI. DeepMind's
-            Formal Conjectures<FootnoteRef number={9} /> project is turning large collections of open
+            Formal Conjectures<FootnoteRef number={6} /> project is turning large collections of open
             mathematical problems—including hundreds drawn from Erdős's problem
             lists—into statements written in Lean. The point is partly to create
             problems against which automated theorem provers can work, but also
@@ -429,7 +431,7 @@ export default async function CepheusEssay({
           <p>
             Then, as people working in policy and technology, we have to ask
             ourselves: what is expected of us? More importantly, what do we owe
-            one another<FootnoteRef number={10} />, and what should that require
+            one another<FootnoteRef number={7} />, and what should that require
             of us? I do not think the answer is that engineers should become
             policymakers, or that policymakers need to understand every
             technical detail. These fields exist separately for good reasons.
@@ -500,7 +502,7 @@ export default async function CepheusEssay({
             describe.
           </p>
           <p>
-            I have not yet figured out how to answer the three questions<FootnoteRef number={11} /> I
+            I have not yet figured out how to answer the three questions<FootnoteRef number={8} /> I
             proposed at the beginning of this essay. But I do know that the
             answer is not to create one language in which everyone thinks. A
             better way forward is to find ways for our different languages to
@@ -514,7 +516,7 @@ export default async function CepheusEssay({
           <aside className={readingLayout.storySide} aria-label="Institutional constellation"><InstitutionalLinkMap locale={locale} story initialStep={0} /></aside>
       </div>
       <div className={readingLayout.endnotes}><EssayEndnotes /></div>
-      </EssayFootnoteProvider>
+      </ConstellationSession></EssayFootnoteProvider>
     </article>
   )
 }

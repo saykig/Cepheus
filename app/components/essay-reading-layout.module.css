@@ -4,12 +4,32 @@
 .page :global(.essay-body) { max-width:780px; }
 .storySide { display:none; }
 .endnotes { max-width:780px; }
-@media(min-width:1120px) and (min-height:700px) {
- .page :global(.essay-hero) { max-width:54%; }
+.mobileMoment { margin:2.5rem 0; }
+@media(min-width:1000px) and (min-height:700px) {
+ .page { padding-inline:clamp(32px,4vw,72px); }
+ .page :global(.essay-hero) { max-width:53%; }
  .page :global(.essay-title),.page :global(.essay-hero h1) { font-size:clamp(3rem,4.7vw,4.4rem); }
- .page :global(.essay-layout) { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:clamp(32px,4vw,64px); align-items:start; }
+ .page :global(.essay-layout) { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:clamp(24px,3vw,48px); align-items:start; }
  .page :global(.essay-body) { min-width:0; max-width:none; }
- .storySide { display:block; position:sticky; top:96px; max-height:calc(100svh - 116px); overflow-y:auto; scrollbar-width:thin; }
- .inlineMap { display:none; }
+ .storySide { display:block; position:sticky; top:calc(88px + env(safe-area-inset-top)); align-self:start; }
+ .inlineMap,.mobileMoment { display:none; }
  .endnotes { max-width:52%; }
 }
+@media(min-width:700px) and (max-width:999px) and (min-height:700px) {
+ .page { padding-inline:32px; }
+ .page :global(.essay-layout) { display:flex; flex-direction:column; }
+ .storySide { display:block; order:-1; position:sticky; top:calc(72px + env(safe-area-inset-top)); z-index:5; width:100%; background:var(--paper); border-bottom:1px solid var(--rule); }
+ .storySide:has([data-story-state=exploration]) { position:static; }
+ .mobileMoment { display:none; }
+ .inlineMap { margin-block:2rem; }
+ .page :global(.essay-body) { width:100%; }
+}
+@media(max-width:699px) {
+ .page { padding-inline:max(20px,env(safe-area-inset-left)); }
+ .page :global(.essay-body) { font-size:18px; line-height:1.65; }
+ .page :global(.essay-body p) { font-size:inherit; line-height:inherit; }
+ .page :global(.essay-hero h1) { font-size:clamp(2.5rem,10vw,3.6rem); }
+}
+.page { width:min(100%,1440px); padding-bottom:max(48px,env(safe-area-inset-bottom)); }
+
+@media(max-width:360px){.page { padding-top:140px; }}

@@ -185,3 +185,9 @@ responsive reading, reduced motion and axe accessibility checks.
 The original v0.1 is preserved in `releases/v0.1/`. Retired Gap Matrix research is
 methodological history only: none of its ordinal-to-100 conversions, synthetic
 series, rankings or numerical dependency weights enters this object.
+
+## Function-specific substitution investigation
+
+The release includes a separately checked March 2026 transitional-dependence assessment. Its unit is the transition away from existing Claude-enabled operational assistance, as of the March 24 CIO testimony. The March 6 removal memo's continued-license provisions and the testimony jointly establish that replacement was managed while use continued. This is a temporal analytical inference, not a claim that 180 days was a measured minimum switching time. The memo's conditional exception rule does not establish that any exception was actually granted.
+
+Provider-specific model artifacts and licensing are distinct from technical control over an installed copy. The August 27 court record indicates that the provider could not alter or switch off the deployed static model and that customer/cloud approval gated replacement. Later multi-provider agreements and modularity policies are counterevidence to permanent exclusivity, but do not prove parity for an identified operational function. September dependence remains unresolved. Detailed searches, rejected inferences, blocked primary records and potential follow-ups are preserved in `data/dependency-investigation.json`.

@@ -1,31 +1,11 @@
-# Institutional map: first working direction
+# Institutional constellation — implemented direction
 
-Visitor mode: Read. A reader of the Cepheus essay should understand a connection
-before being asked to interpret a score or read an institutional profile.
+A reader should be able to read the essay and audit a finding. The essay's prose and title align left. A quiet right-hand constellation persists on capable desktop/landscape-tablet viewports; portrait tablets use a compact top-sticky figure; phones receive opening, interface and final exploration moments in normal flow.
 
-The existing paper, ink, type and olive interaction color remain. The network
-is capped at 780px and starts with equal nodes, direct labels and domain filters.
-Profiles, evidence, dates and methodological qualifications open progressively.
-A keyboard-accessible list offers another way to choose the same relationships.
-No additional data animation runs in the essay's right margin.
+One publication bundle, one deterministic categorical geometry, one six-state model: opening → public decisions → interfaces → technical knowledge → provenance → exploration. Explicit essay markers drive a small IntersectionObserver with scroll/history/resize reconciliation. No prose parsing, scroll-jacking, runtime D3, link force or centrality encoding.
 
-Selection is the focal interaction: choose a named institution, follow one
-mechanism, then open its evidence and limits. Hover and keyboard focus preview
-edge labels; click, Enter or Space pin the detail. Escape and Close return to
-the triggering control. Domain selection resets details and filters edges first.
-Layout positions remain stable across filters to avoid suggesting a change in
-measured distance. Reduced motion removes transitions. Record copy is English
-with an explicit notice in draft locales.
+Observable clustered bubbles supplies the visual grammar, not the color palette. Cepheus paper, brown ink, olive focus and existing serif type remain. Equal marks have 44px minimum targets. One documented mechanism appears at a time; overview has no edges. A separately labeled annotation identifies reviewed analysis, including properly unresolved assessments. Selection shows a compact evidence card, with full provenance at `/institutional-links/[relationshipId]`.
 
-This pass explores a compact inline visual rather than a scrolling narrative.
-A later scroll-linked version could reveal an access agreement and subsequent
-evaluation in order, but only after chronology and current status are reviewed.
-It must retain manual navigation and reduced-motion behavior. Expanding the
-number of records should precede adding search, jurisdiction controls or a
-separate instrument-node view; their usefulness should be tested against real
-content volume rather than anticipated complexity.
+Hover/focus previews; Enter/Space selects; arrows navigate institutional marks; Escape closes and returns focus. No scroll-state announcements. Evidence remains available without hover and on the server-rendered index without JavaScript. Footnotes are ordinary superscript anchors and exact-return links.
 
-Outstanding research: independent source coding review, underlying MoU terms,
-current status, named cybersecurity and academic counterparties, procurement,
-and more jurisdictions. The pilot must not be described as a completed map of
-public authority or an up-to-date account of defence AI.
+The candidate publishes a historical March transition constraint, divided technical control, access-constrained evaluation and correctly unresolved September dependence. It does not visually suggest a permanent provider veto or causal power from network geometry.

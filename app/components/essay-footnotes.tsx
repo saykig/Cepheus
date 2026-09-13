@@ -1,107 +1,15 @@
 'use client'
-
 import type { MouseEvent, ReactNode } from 'react'
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
 import sourcesData from '../../public/data/sources.json'
 import { scrollToEssayTarget } from './essay-scroll'
-
-type FootnoteSegment =
-  | {
-      type: 'text' | 'source'
-      text: string
-      sourceId?: number
-      italic?: boolean
-    }
-  | {
-      type: 'link'
-      text: string
-      href: string
-    }
-  | {
-      type: 'list'
-      items: string[]
-    }
-
-type Footnote = {
-  id: number
-  readMore: boolean
-  preview?: FootnoteSegment[]
-  body: FootnoteSegment[]
+import styles from './essay-footnotes.module.css'
+type FootnoteSegment = {type:'text'|'source';text:string;sourceId?:number;italic?:boolean}|{type:'link';text:string;href:string}|{type:'list';items:string[]}
+const footnotes=sourcesData.footnotes
+export function EssayFootnoteProvider({children}:{children:ReactNode}) {return children}
+function jump(event:MouseEvent<HTMLAnchorElement>,id:string){
+ if(event.metaKey||event.ctrlKey||event.altKey||event.shiftKey||event.button!==0)return
+ event.preventDefault();scrollToEssayTarget(id,true)
 }
-
-type FootnoteContextValue = {
-  openId: number | null
-  setOpenId: (id: number | null) => void
-  closeAll: () => void
-}
-
-const FootnoteContext = createContext<FootnoteContextValue | null>(null)
-const footnotes = sourcesData.footnotes as Footnote[]
-
-function blurActiveFootnote() {
-  const active = document.activeElement
-  if (
-    active instanceof HTMLElement &&
-    active.closest('[data-footnote-control]')
-  ) {
-    active.blur()
-  }
-}
-
-export function EssayFootnoteProvider({ children }: { children: ReactNode }) {
-  const [openId, setOpenId] = useState<number | null>(null)
-
-  const closeAll = useCallback(() => {
-    setOpenId(null)
-    blurActiveFootnote()
-  }, [])
-
-  useEffect(() => {
-    const handlePointerDown = (event: PointerEvent) => {
-      const target = event.target
-      if (
-        target instanceof Element &&
-        target.closest('[data-footnote-control]')
-      ) {
-        return
-      }
-      setOpenId(null)
-    }
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Escape') return
-      closeAll()
-    }
-
-    document.addEventListener('pointerdown', handlePointerDown)
-    document.addEventListener('keydown', handleKeyDown)
-    return () => {
-      document.removeEventListener('pointerdown', handlePointerDown)
-      document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [closeAll])
-
-  return (
-    <FootnoteContext.Provider value={{ openId, setOpenId, closeAll }}>
-      {children}
-    </FootnoteContext.Provider>
-  )
-}
-
-function useFootnotes() {
-  const context = useContext(FootnoteContext)
-  if (!context) {
-    throw new Error('Footnotes must be rendered inside EssayFootnoteProvider')
-  }
-  return context
-}
-
 function FootnoteContent({ segments }: { segments: FootnoteSegment[] }) {
   return segments.map((segment, index) => {
     if (segment.type === 'text') {
@@ -151,74 +59,8 @@ function FootnoteContent({ segments }: { segments: FootnoteSegment[] }) {
   })
 }
 
-export function FootnoteRef({ number }: { number: number }) {
-  const { openId, setOpenId } = useFootnotes()
-  const note = footnotes.find((item) => item.id === number)
 
-  if (!note) return <sup>{number}</sup>
-
-  const isTouchOpen = openId === number
-  const panelId = `footnote-popover-${number}`
-
-  const handleTrigger = () => {
-    if (!window.matchMedia('(hover: none)').matches) return
-    setOpenId(isTouchOpen ? null : number)
-  }
-
-  return (
-    <span
-      className={`footnote-control${isTouchOpen ? ' is-touch-open' : ''}`}
-      data-footnote-control
-    >
-      <button
-        type="button"
-        className="footnote-ref"
-        id={`footnote-ref-${number}`}
-        aria-controls={panelId}
-        aria-describedby={panelId}
-        aria-label={`Footnote ${number}`}
-        onClick={handleTrigger}
-      >
-        {number}
-      </button>
-      <span
-        className="footnote-popover"
-        id={panelId}
-        role="note"
-        aria-label={`Footnote ${number}`}
-      >
-        <FootnoteContent segments={note.body} />
-      </span>
-    </span>
-  )
+export function FootnoteRef({number}:{number:number}){
+ return <sup className={styles.reference}><a id={`footnote-ref-${number}`} href={`#footnote-${number}`} aria-label={`Footnote ${number}`} onClick={e=>jump(e,`footnote-${number}`)}>{number}</a></sup>
 }
-
-export function EssayEndnotes() {
-  const handleBackToText = (
-    event: MouseEvent<HTMLAnchorElement>,
-    number: number,
-  ) => {
-    event.preventDefault()
-    scrollToEssayTarget(`footnote-ref-${number}`, true)
-  }
-
-  return (
-    <section className="essay-endnotes" aria-labelledby="essay-notes-title">
-      <h3 id="essay-notes-title">Notes</h3>
-      <ol>
-        {footnotes.map((note) => (
-          <li id={`footnote-${note.id}`} key={note.id}>
-            <FootnoteContent segments={note.body} />{' '}
-            <a
-              className="footnote-back"
-              href={`#footnote-ref-${note.id}`}
-              onClick={(event) => handleBackToText(event, note.id)}
-            >
-              Back to text
-            </a>
-          </li>
-        ))}
-      </ol>
-    </section>
-  )
-}
+export function EssayEndnotes(){return <section className="essay-endnotes" aria-labelledby="essay-notes-title"><h3 id="essay-notes-title">Notes</h3><ol>{footnotes.map(note=><li tabIndex={-1} id={`footnote-${note.id}`} key={note.id}><FootnoteContent segments={note.body as FootnoteSegment[]}/>{' '}<a className={styles.back} href={`#footnote-ref-${note.id}`} onClick={e=>jump(e,`footnote-ref-${note.id}`)}>Back to text<span className={styles.sr}> {note.id}</span></a></li>)}</ol></section>}
