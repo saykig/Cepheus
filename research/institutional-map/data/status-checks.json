@@ -1,0 +1,772 @@
+[
+  {
+    "id": "status-openai-us-access",
+    "relationshipId": "openai-us-access",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-05",
+    "sourceIds": [
+      "nist-mous-2024",
+      "caisi-2026"
+    ],
+    "queries": [
+      "openai us-aisi agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Later renegotiation announcement is not mapped to a particular 2024 instrument; predecessor continuity unresolved."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-anthropic-us-access",
+    "relationshipId": "anthropic-us-access",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-05",
+    "sourceIds": [
+      "nist-mous-2024",
+      "caisi-2026"
+    ],
+    "queries": [
+      "anthropic us-aisi agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Later renegotiation announcement is not mapped to a particular 2024 instrument; predecessor continuity unresolved."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-us-anthropic-evaluation",
+    "relationshipId": "us-anthropic-evaluation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2024-11-19",
+    "sourceIds": [
+      "joint-evaluation-2024",
+      "sonnet-report"
+    ],
+    "queries": [
+      "us-aisi anthropic agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Model-release dates conflict within the full report; report publication supplies conservative upper bound. No exact testing date asserted."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "explicit-event"
+  },
+  {
+    "id": "status-uk-anthropic-evaluation",
+    "relationshipId": "uk-anthropic-evaluation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2024-11-19",
+    "sourceIds": [
+      "joint-evaluation-2024",
+      "sonnet-report"
+    ],
+    "queries": [
+      "uk-aisi anthropic agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Model-release dates conflict within the full report; report publication supplies conservative upper bound. No exact testing date asserted."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "explicit-event"
+  },
+  {
+    "id": "status-us-uk-evaluation",
+    "relationshipId": "us-uk-evaluation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2024-11-19",
+    "sourceIds": [
+      "joint-evaluation-2024",
+      "sonnet-report"
+    ],
+    "queries": [
+      "us-aisi uk-aisi agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Model-release dates conflict within the full report; report publication supplies conservative upper bound. No exact testing date asserted."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "explicit-event"
+  },
+  {
+    "id": "status-anthropic-llnl-deployment",
+    "relationshipId": "anthropic-llnl-deployment",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-07-09",
+    "sourceIds": [
+      "llnl-deployment-2025",
+      "llnl-confirmation",
+      "llnl-sandbox"
+    ],
+    "queries": [
+      "anthropic llnl agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Coding-agent availability in July 2026 is a different product/interface and cannot verify the Enterprise deployment agreement."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-google-caisi-2026",
+    "relationshipId": "google-caisi-2026",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-05",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "queries": [
+      "google caisi agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-microsoft-caisi-2026",
+    "relationshipId": "microsoft-caisi-2026",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-05",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "queries": [
+      "microsoft caisi agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-xai-caisi-2026",
+    "relationshipId": "xai-caisi-2026",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-05",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "queries": [
+      "xai caisi agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-microsoft-uk-2026",
+    "relationshipId": "microsoft-uk-2026",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-05-05",
+    "sourceIds": [
+      "microsoft-evaluation"
+    ],
+    "queries": [
+      "microsoft uk-aisi agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-anthropic-cdao-award",
+    "relationshipId": "anthropic-cdao-award",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-08-27",
+    "sourceIds": [
+      "court-august",
+      "court-april",
+      "cdao-awards"
+    ],
+    "queries": [
+      "cdao anthropic agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Court accounts establish cancellation actions and later legal reversal on specified claims; precise award reinstatement and current performance unknown."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-openai-cdao-award",
+    "relationshipId": "openai-cdao-award",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2025-07-14",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "queries": [
+      "cdao openai agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-google-cdao-award",
+    "relationshipId": "google-cdao-award",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2025-07-14",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "queries": [
+      "cdao google agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-xai-cdao-award",
+    "relationshipId": "xai-cdao-award",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2025-07-14",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "queries": [
+      "cdao xai agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-anthropic-eu-code",
+    "relationshipId": "anthropic-eu-code",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": null,
+    "sourceIds": [
+      "eu-code"
+    ],
+    "queries": [
+      "anthropic eu-ai-office agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-openai-eu-code",
+    "relationshipId": "openai-eu-code",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": null,
+    "sourceIds": [
+      "eu-code"
+    ],
+    "queries": [
+      "openai eu-ai-office agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-google-eu-code",
+    "relationshipId": "google-eu-code",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": null,
+    "sourceIds": [
+      "eu-code"
+    ],
+    "queries": [
+      "google eu-ai-office agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-microsoft-eu-code",
+    "relationshipId": "microsoft-eu-code",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": null,
+    "sourceIds": [
+      "eu-code"
+    ],
+    "queries": [
+      "microsoft eu-ai-office agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-xai-eu-code",
+    "relationshipId": "xai-eu-code",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": null,
+    "sourceIds": [
+      "eu-code"
+    ],
+    "queries": [
+      "xai eu-ai-office agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-uk-openai-cooperation",
+    "relationshipId": "uk-openai-cooperation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-07-02",
+    "sourceIds": [
+      "uk-openai-status",
+      "uk-openai-mou"
+    ],
+    "queries": [
+      "dsit openai agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-uk-anthropic-cooperation",
+    "relationshipId": "uk-anthropic-cooperation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-01-27",
+    "sourceIds": [
+      "uk-anthropic-pilot",
+      "uk-anthropic-mou"
+    ],
+    "queries": [
+      "dsit anthropic agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-uk-google-cooperation",
+    "relationshipId": "uk-google-cooperation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-02-25",
+    "sourceIds": [
+      "uk-google-status",
+      "uk-google-deepmind-mou"
+    ],
+    "queries": [
+      "dsit google agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-anthropic-gds-pilot",
+    "relationshipId": "anthropic-gds-pilot",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-01-27",
+    "sourceIds": [
+      "uk-anthropic-pilot"
+    ],
+    "queries": [
+      "anthropic gds agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "Independent maintenance is an intended project outcome; it limits any claim of permanent supplier dependence."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-caisi-gsa-cooperation",
+    "relationshipId": "caisi-gsa-cooperation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-03-18",
+    "sourceIds": [
+      "caisi-gsa"
+    ],
+    "queries": [
+      "caisi gsa agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-caisi-openmined-research",
+    "relationshipId": "caisi-openmined-research",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-03-27",
+    "sourceIds": [
+      "caisi-openmined"
+    ],
+    "queries": [
+      "caisi openmined agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-openai-llnl-coding",
+    "relationshipId": "openai-llnl-coding",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-07-09",
+    "sourceIds": [
+      "llnl-sandbox"
+    ],
+    "queries": [
+      "openai llnl agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-anthropic-llnl-coding",
+    "relationshipId": "anthropic-llnl-coding",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "unresolved/unknown",
+    "lastConfirmedOn": "2026-07-09",
+    "sourceIds": [
+      "llnl-sandbox"
+    ],
+    "queries": [
+      "anthropic llnl agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "No material conflict recorded; no absence of conflict inferred."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "unresolved"
+  },
+  {
+    "id": "status-dod-anthropic-contested",
+    "relationshipId": "dod-anthropic-contested",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2026-08-27",
+    "sourceIds": [
+      "court-august",
+      "court-april",
+      "anthropic-february"
+    ],
+    "queries": [
+      "dod anthropic agreement 2026 termination amendment expiry superseded"
+    ],
+    "queryExecution": "Family searches recorded in search-log.json; relationship-specific query remains queued unless separately recorded.",
+    "checks": {
+      "amendments": "unknown",
+      "expiry": "unknown",
+      "termination": "investigated within listed sources",
+      "restrictions": "investigated within listed sources",
+      "succession": "see succession.json",
+      "conflicts": "August district judgment changes legal status; contractual restrictions were not technologically enforceable. Separate relief and appellate status remain unresolved at cutoff."
+    },
+    "limitations": [
+      "Status reflects named inspected sources; no uninterrupted continuity inferred."
+    ],
+    "basis": "explicit-event"
+  }
+]

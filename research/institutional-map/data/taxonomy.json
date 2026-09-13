@@ -1,0 +1,33 @@
+{
+  "domains": [
+    {
+      "id": "biosecurity",
+      "definition": "Explicit biological-risk evaluation or protective research, not biology alone."
+    },
+    {
+      "id": "cybersecurity",
+      "definition": "Explicit cyber capability, risk, safeguard or security work."
+    },
+    {
+      "id": "model-behaviour",
+      "definition": "Alignment, autonomy, safeguards or model behaviour evaluation."
+    },
+    {
+      "id": "cross-domain-ai",
+      "definition": "General-purpose or explicitly multi-domain mechanism; retained pilot tag, no inferred risk domain."
+    }
+  ],
+  "unknown": null,
+  "contexts": [
+    "Research",
+    "Defence",
+    "Public services",
+    "Regulatory compliance"
+  ],
+  "groups": {
+    "public": "Public decisions / governance",
+    "developers": "Model developers",
+    "evaluation": "Evaluation / research"
+  },
+  "spatialMeaning": "Categorical functional grouping only. Equal marks. Distance and position do not measure authority, dependence, influence, importance or effectiveness."
+}

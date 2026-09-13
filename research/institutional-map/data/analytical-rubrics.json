@@ -1,0 +1,48 @@
+[
+  {
+    "id": "evaluation-access-constraint",
+    "label": "Evaluation constrained by access",
+    "definition": "Independent evaluation conclusions are materially bounded by documented access/time limits for an identified exercise.",
+    "requiredConditions": [
+      "completed-independent-test",
+      "explicit-access-limitation",
+      "bounded-inference"
+    ],
+    "rule": "All conditions necessary; their conjunction sufficient for the bounded assessment, not for global provider dependence.",
+    "requiredAttributeRubrics": [
+      "evaluation-capacity"
+    ]
+  },
+  {
+    "id": "contested-contractual-interface",
+    "label": "Contested contractual interface",
+    "definition": "Documented use and conflicting positions on contractual conditions trigger consequential institutional action.",
+    "requiredConditions": [
+      "documented-use",
+      "conflicting-conditions",
+      "institutional-action",
+      "technical-control-distinguished"
+    ],
+    "rule": "All conditions necessary and jointly sufficient for a dated contested-interface finding. No dependency conclusion follows.",
+    "requiredAttributeRubrics": [
+      "technical-control"
+    ]
+  },
+  {
+    "id": "operational-dependence",
+    "label": "Operational dependence",
+    "definition": "A specified institutional function relies on a provider-controlled capability and faces materially constrained substitution.",
+    "requiredConditions": [
+      "identified-operational-use",
+      "consequential-provider-control",
+      "constrained-substitution",
+      "identified-function"
+    ],
+    "rule": "All conditions necessary, jointly sufficient only for the named function, time and horizon. Control may include demonstrated continuing supply/update access, not merely remote shutdown. Contract restrictions alone insufficient. Counterevidence must be resolved.",
+    "requiredAttributeRubrics": [
+      "technical-control",
+      "substitution",
+      "operational-reliance"
+    ]
+  }
+]

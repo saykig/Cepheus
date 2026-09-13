@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-rc.1",
+  "evidenceCutoff": "2026-09-12",
+  "periodStart": "2024-01-01",
+  "status": "editorial-signoff-pending",
+  "editorialSignoff": null,
+  "productionRule": "Only separately reviewed and published records. Release-candidate status remains visible until owner signs final manifest.",
+  "methodologyCommit": "0adce9d8267fbb91cd341403d2c58f623fe77298",
+  "limitations": [
+    "Not globally comprehensive.",
+    "Coverage search floor is systematic; unsupported cells do not establish absence.",
+    "Private contract terms and some current status remain unknown.",
+    "Agent substantive review is not external expert review."
+  ]
+}

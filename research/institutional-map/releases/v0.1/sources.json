@@ -1,0 +1,32 @@
+[
+  {
+    "id": "nist-mous-2024",
+    "title": "US AISI agreements with Anthropic and OpenAI",
+    "publisher": "NIST",
+    "url": "https://www.nist.gov/news-events/news/2024/08/us-ai-safety-institute-signs-agreements-regarding-ai-safety-research",
+    "publishedOn": "2024-08-29",
+    "revisedOn": "2026-05-04",
+    "accessedOn": "2026-09-12",
+    "basis": "Official announcement"
+  },
+  {
+    "id": "joint-evaluation-2024",
+    "title": "Pre-deployment evaluation of upgraded Claude 3.5 Sonnet",
+    "publisher": "NIST / US AISI and UK AISI",
+    "url": "https://www.nist.gov/news-events/news/2024/11/pre-deployment-evaluation-anthropics-upgraded-claude-35-sonnet",
+    "publishedOn": "2024-11-19",
+    "revisedOn": "2025-03-20",
+    "accessedOn": "2026-09-12",
+    "basis": "Joint evaluation report"
+  },
+  {
+    "id": "llnl-deployment-2025",
+    "title": "LLNL expands Claude for Enterprise use",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and",
+    "publishedOn": "2025-07-09",
+    "revisedOn": "2025-07-11",
+    "accessedOn": "2026-09-12",
+    "basis": "Company report"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "uk-sonnet-capacity",
+    "institutionId": "uk-aisi",
+    "rubricId": "evaluation-capacity",
+    "value": "substantial-access-constrained",
+    "context": "Claude 3.5 Sonnet 2024 pre-deployment exercise",
+    "jurisdiction": "United Kingdom",
+    "assessedOn": "2024-11-19",
+    "evidenceIds": [
+      "independent-tests",
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "reasoning": "Completed independent tests establish capacity; explicit limited testing access narrows conclusions. Independent method design counters inference of provider-directed findings.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "us-sonnet-capacity",
+    "institutionId": "us-aisi",
+    "rubricId": "evaluation-capacity",
+    "value": "substantial-access-constrained",
+    "context": "Claude 3.5 Sonnet 2024 pre-deployment exercise",
+    "jurisdiction": "United States",
+    "assessedOn": "2024-11-19",
+    "evidenceIds": [
+      "independent-tests",
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "reasoning": "Completed independent assessment plus explicit access/time limitation satisfies anchor. Not a statement of current CAISI resources.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "dod-claude-control",
+    "institutionId": "anthropic",
+    "rubricId": "technical-control",
+    "value": "unresolved",
+    "context": "DoW deployed Claude Gov use restrictions, 2025–2026",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-08-27",
+    "evidenceIds": [
+      "contractual-control"
+    ],
+    "counterEvidenceIds": [
+      "court-use"
+    ],
+    "reasoning": "Court rejects technical enforceability of specified usage restrictions; evidence does not settle all development, hosting and update controls. Neither dominant nor little overall model control is warranted.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "dod-substitution",
+    "institutionId": "dod",
+    "rubricId": "substitution",
+    "value": "unresolved",
+    "context": "Replacing Claude Gov for specified defence workflows",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-08-27",
+    "evidenceIds": [
+      "court-use",
+      "march-removal"
+    ],
+    "counterEvidenceIds": [
+      "judgment-august"
+    ],
+    "reasoning": "Use and removal efforts establish neither equivalent viable replacements nor the cost/time of substitution. Further operational evidence required.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "dod-reliance",
+    "institutionId": "dod",
+    "rubricId": "operational-reliance",
+    "value": "unresolved",
+    "context": "Claude Gov support to defence functions",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-08-27",
+    "evidenceIds": [
+      "court-use"
+    ],
+    "counterEvidenceIds": [
+      "contractual-control"
+    ],
+    "reasoning": "Use is documented. Aggregate evidence in this record does not yet distinguish recurring assistance from mission-critical embedded operation.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "uk-public-remit",
+    "institutionId": "uk-aisi",
+    "rubricId": "public-authority",
+    "value": "limited",
+    "context": "Evaluation and advice, not binding regulatory adjudication",
+    "jurisdiction": "United Kingdom",
+    "assessedOn": "2026-09-12",
+    "evidenceIds": [
+      "aisi-remit"
+    ],
+    "counterEvidenceIds": [
+      "aisi-resources"
+    ],
+    "reasoning": "Self-described supplementary evaluation and policy-advice remit supports advisory anchor. It does not code the powers of DSIT or UK government as a whole.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "uk-information",
+    "institutionId": "uk-aisi",
+    "rubricId": "information-access",
+    "value": "unresolved",
+    "context": "Compulsion of access to non-public frontier checkpoints",
+    "jurisdiction": "United Kingdom",
+    "assessedOn": "2026-09-12",
+    "evidenceIds": [
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "reasoning": "A limited voluntary exercise cannot prove absence of all compulsory authority. No jurisdiction-wide classification from this evidence.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  }
+]

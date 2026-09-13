@@ -1,0 +1,196 @@
+[
+  {
+    "reviewStatus": "provisional",
+    "currentStatus": "unverified",
+    "currentStatusCheckedOn": null,
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [],
+    "id": "openai-us-access",
+    "source": "openai",
+    "target": "us-aisi",
+    "kind": "Model access",
+    "directed": true,
+    "instrumentId": "openai-mou",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "openai-access"
+    ],
+    "announcedOn": "2024-08-29",
+    "observedBy": "2024-08-29",
+    "eventStatus": "Announced",
+    "rationale": "Provider \u2192 recipient; no claim of compulsory access."
+  },
+  {
+    "reviewStatus": "provisional",
+    "currentStatus": "unverified",
+    "currentStatusCheckedOn": null,
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [],
+    "id": "anthropic-us-access",
+    "source": "anthropic",
+    "target": "us-aisi",
+    "kind": "Model access",
+    "directed": true,
+    "instrumentId": "anthropic-mou",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "anthropic-access"
+    ],
+    "announcedOn": "2024-08-29",
+    "observedBy": "2024-08-29",
+    "eventStatus": "Announced",
+    "rationale": "Provider \u2192 recipient; model access is distinct from evaluation."
+  },
+  {
+    "reviewStatus": "provisional",
+    "currentStatus": "unverified",
+    "currentStatusCheckedOn": null,
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [],
+    "id": "us-anthropic-evaluation",
+    "source": "us-aisi",
+    "target": "anthropic",
+    "kind": "Evaluation",
+    "directed": true,
+    "instrumentId": "sonnet-evaluation",
+    "domains": [
+      "biosecurity",
+      "cybersecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "joint-evaluation",
+      "evaluation-domains"
+    ],
+    "announcedOn": null,
+    "observedBy": "2024-10-22",
+    "eventStatus": "Conducted",
+    "rationale": "Evaluator \u2192 provider; domains follow the reported exercise."
+  },
+  {
+    "reviewStatus": "provisional",
+    "currentStatus": "unverified",
+    "currentStatusCheckedOn": null,
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [],
+    "id": "uk-anthropic-evaluation",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "kind": "Evaluation",
+    "directed": true,
+    "instrumentId": "sonnet-evaluation",
+    "domains": [
+      "biosecurity",
+      "cybersecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "joint-evaluation",
+      "evaluation-domains"
+    ],
+    "announcedOn": null,
+    "observedBy": "2024-10-22",
+    "eventStatus": "Conducted",
+    "rationale": "Evaluator \u2192 provider; unpublished findings remain unavailable."
+  },
+  {
+    "reviewStatus": "provisional",
+    "currentStatus": "unverified",
+    "currentStatusCheckedOn": null,
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [],
+    "id": "us-uk-evaluation",
+    "source": "us-aisi",
+    "target": "uk-aisi",
+    "kind": "Joint evaluation",
+    "directed": false,
+    "instrumentId": "sonnet-evaluation",
+    "domains": [
+      "biosecurity",
+      "cybersecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "joint-evaluation",
+      "evaluation-domains"
+    ],
+    "announcedOn": null,
+    "observedBy": "2024-10-22",
+    "eventStatus": "Conducted",
+    "rationale": "Undirected: a shared exercise, not a hierarchy."
+  },
+  {
+    "reviewStatus": "provisional",
+    "currentStatus": "unverified",
+    "currentStatusCheckedOn": null,
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [],
+    "id": "anthropic-llnl-deployment",
+    "source": "anthropic",
+    "target": "llnl",
+    "kind": "Research deployment",
+    "directed": true,
+    "instrumentId": "llnl-claude",
+    "domains": [
+      "biosecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research",
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "llnl-deployment"
+    ],
+    "announcedOn": "2025-07-09",
+    "observedBy": "2025-07-09",
+    "eventStatus": "Reported deployment",
+    "rationale": "Supplier \u2192 research user. Defence context follows the reported national-security applications."
+  }
+]

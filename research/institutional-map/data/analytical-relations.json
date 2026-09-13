@@ -1,0 +1,198 @@
+[
+  {
+    "id": "uk-sonnet-access-constraint",
+    "type": "evaluation-access-constraint",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "relationshipIds": [
+      "uk-anthropic-evaluation"
+    ],
+    "attributeIds": [
+      "uk-sonnet-capacity"
+    ],
+    "evidenceIds": [
+      "independent-tests",
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "conditions": [
+      {
+        "id": "completed-independent-test",
+        "met": true,
+        "evidenceIds": [
+          "independent-tests",
+          "access-limits"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "explicit-access-limitation",
+        "met": true,
+        "evidenceIds": [
+          "independent-tests",
+          "access-limits"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "bounded-inference",
+        "met": true,
+        "evidenceIds": [
+          "independent-tests",
+          "access-limits"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      }
+    ],
+    "derivation": "The 2024 evaluation was substantive but constrained by its access and testing window.",
+    "assessment": "The 2024 evaluation was substantive but constrained by its access and testing window.",
+    "limitations": [
+      "Historical exercise only; not current provider dependence, regulatory authority, or compromised findings.",
+      "Report does not establish who caused the time limit."
+    ],
+    "necessityMet": true,
+    "sufficiencyMet": true,
+    "assessedOn": "2026-09-12",
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "dod-anthropic-contested-assessment",
+    "type": "contested-contractual-interface",
+    "source": "dod",
+    "target": "anthropic",
+    "relationshipIds": [
+      "dod-anthropic-contested"
+    ],
+    "attributeIds": [
+      "dod-claude-control"
+    ],
+    "evidenceIds": [
+      "court-use",
+      "feb-dispute",
+      "march-removal",
+      "judgment-august"
+    ],
+    "counterEvidenceIds": [
+      "contractual-control"
+    ],
+    "conditions": [
+      {
+        "id": "documented-use",
+        "met": true,
+        "evidenceIds": [
+          "court-use",
+          "feb-dispute",
+          "march-removal",
+          "judgment-august"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "conflicting-conditions",
+        "met": true,
+        "evidenceIds": [
+          "court-use",
+          "feb-dispute",
+          "march-removal",
+          "judgment-august"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "institutional-action",
+        "met": true,
+        "evidenceIds": [
+          "court-use",
+          "feb-dispute",
+          "march-removal",
+          "judgment-august"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "technical-control-distinguished",
+        "met": true,
+        "evidenceIds": [
+          "court-use",
+          "feb-dispute",
+          "march-removal",
+          "judgment-august"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      }
+    ],
+    "derivation": "The February–August 2026 episode is a contested contractual interface with consequential government and judicial action.",
+    "assessment": "The February–August 2026 episode is a contested contractual interface with consequential government and judicial action.",
+    "limitations": [
+      "This analysis distinguishes contractual conditions from technical enforcement.",
+      "August judgment does not establish resumed service or the final outcome of every proceeding."
+    ],
+    "necessityMet": true,
+    "sufficiencyMet": true,
+    "assessedOn": "2026-09-12",
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  },
+  {
+    "id": "dod-anthropic-dependence-unresolved",
+    "type": "operational-dependence",
+    "source": "dod",
+    "target": "anthropic",
+    "relationshipIds": [
+      "dod-anthropic-contested"
+    ],
+    "attributeIds": [
+      "dod-claude-control",
+      "dod-substitution",
+      "dod-reliance"
+    ],
+    "evidenceIds": [
+      "court-use"
+    ],
+    "counterEvidenceIds": [
+      "contractual-control",
+      "march-removal"
+    ],
+    "conditions": [
+      {
+        "id": "identified-operational-use",
+        "met": true,
+        "evidenceIds": [
+          "court-use"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "consequential-provider-control",
+        "met": false,
+        "evidenceIds": [],
+        "reason": "Not established from inspected evidence."
+      },
+      {
+        "id": "constrained-substitution",
+        "met": false,
+        "evidenceIds": [],
+        "reason": "Not established from inspected evidence."
+      },
+      {
+        "id": "identified-function",
+        "met": false,
+        "evidenceIds": [],
+        "reason": "Not established from inspected evidence."
+      }
+    ],
+    "derivation": "Unresolved: this evidence set does not yet establish every necessary dependence condition.",
+    "assessment": "Unresolved: this evidence set does not yet establish every necessary dependence condition.",
+    "limitations": [
+      "Not a finding of independence. Preserve candidate for additional operational and substitution evidence."
+    ],
+    "necessityMet": false,
+    "sufficiencyMet": false,
+    "assessedOn": "2026-09-12",
+    "coder": "codex-primary",
+    "publicationStatus": "provisional"
+  }
+]

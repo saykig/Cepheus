@@ -1,0 +1,28 @@
+[
+  {
+    "id": "us-aisi-caisi",
+    "predecessorId": "us-aisi",
+    "successorId": "caisi",
+    "kind": "re-established",
+    "date": "2025-06",
+    "datePrecision": "month",
+    "sourceIds": [
+      "nist-mous-2024"
+    ],
+    "transferRelationshipIds": [],
+    "limitations": "No automatic inheritance; new agreements have separate records."
+  },
+  {
+    "id": "uk-aisi-name",
+    "predecessorId": "uk-aisi",
+    "successorId": "uk-aisi",
+    "kind": "name-change",
+    "date": "2025-02-14",
+    "datePrecision": "day",
+    "sourceIds": [
+      "aisi-approach"
+    ],
+    "transferRelationshipIds": [],
+    "limitations": "Same institutional ID, historical name preserved in dated evidence; no transfer of agreements inferred."
+  }
+]
