@@ -64,3 +64,12 @@ test('reverse scrolling, deep reload, rotation and history',async({page})=>{
 test('evidence index is available without JavaScript',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto('/institutional-links');await expect(page.getByText('Published analytical assessments')).toBeVisible();await context.close()
 })
+test('public languages share the research story and evidence',async({page})=>{
+ for(const locale of ['ru','ko','fr','zh-CN']){
+  await page.goto(`/${locale}${essay}`)
+  await expect(page.locator('[data-institutional-step]')).toHaveCount(6)
+  await expect(page.locator('.language-picker option')).toHaveCount(5)
+  await expect(page.locator('[data-story=true]')).toHaveAttribute('data-story-state','opening')
+  await expect(page.locator('[data-story=true] [data-relationship-path]')).toHaveCount(1)
+ }
+})

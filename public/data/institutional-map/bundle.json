@@ -12182,7 +12182,7 @@
     "status": "editorial-signoff-pending",
     "editorialSignoff": null,
     "productionRule": "Only separately reviewed and published records. Release-candidate status remains visible until owner signs final manifest.",
-    "methodologyCommit": "48e7a2a",
+    "methodologyCommit": "0c353e7",
     "limitations": [
       "Not globally comprehensive.",
       "Coverage search floor is systematic; unsupported cells do not establish absence.",

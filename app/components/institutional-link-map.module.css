@@ -73,3 +73,7 @@
 
 .card a,.caption a,.lineage { display:inline-flex; align-items:center; min-height:44px; }
 .card:focus { outline:none; }
+@media(max-width:699px), (max-height:699px){
+ .figure:not([data-story-state=exploration]) .plot { height:280px; aspect-ratio:auto; }
+ .figure:not([data-story-state=exploration]) .readout { min-height:2.4rem; }
+}
