@@ -512,81 +512,27 @@ export default async function CepheusEssay({
           </section>
 
           <p>
-            Alignment, then, is not a matter of policy catching up with
-            technology, or technology simply submitting to policy. The goal is
-            not to arrive at some perfect agreement as we try to close this
-            gap.<FootnoteRef number={11} /> In regards to the aforementioned
-            concept of Erdős problems and Lean, the lesson I take from mathematics
-            is not that international affairs ought to become mathematics. It is
-            almost the quite opposite. Mathematics can demand a degree of formal
-            verification because it operates under conditions that political life
-            rarely gives us. Global affairs contains ambiguity, incomplete
-            evidence, competing interpretations, and legitimate disagreement. Any
-            system that removed those things for the sake of producing a clean
-            answer would probably make the analysis worse.
+            In regards to the aforementioned concept of Erdős problems and Lean,
+            the lesson I take from mathematics is not that international affairs
+            ought to become mathematics. It is almost the quite opposite.
+            Mathematics can demand a degree of formal verification because it
+            operates under conditions that political life rarely gives us. Global
+            affairs contains ambiguity, incomplete evidence, competing
+            interpretations, and legitimate disagreement. Any system that removed
+            those things for the sake of producing a clean answer would probably
+            make the analysis worse.
           </p>
           <p>
             But ambiguity does not require disorder: there is a difference
             between saying <em>we disagree about what this evidence means</em> and
             not being able to determine which evidence produced the disagreement
-            in the first place. There is a difference between a government having
-            legal authority, possessing technical capability, and depending on
-            someone else to actually carry a decision out. And AI makes this
-            increasingly important because it is not merely producing more text,
-            as it is beginning to act across the same institutional boundaries
-            that we already struggle to describe.
+            in the first place. And AI makes this increasingly important because
+            it is not merely producing more text, as it is beginning to act across
+            the same institutional boundaries that we already struggle to
+            describe.
           </p>
           <p>
-            The{' '}
-            <a
-              aria-label="OpenAI and Hugging Face partner to address security incident during model evaluation"
-              className="citation-link"
-              href="https://openai.com/index/hugging-face-model-evaluation-security-incident/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              July 2026 Hugging Face incident
-            </a>{' '}
-            is a useful example. An AI agent being evaluated inside OpenAI's
-            environment found a way out of its
-            intended sandbox, moved through third-party infrastructure, and
-            eventually compromised parts of Hugging Face's production environment
-            while trying to obtain answers to the benchmark on which it was being
-            tested. Hugging Face later reconstructed{' '}
-            <a
-              className="citation-link"
-              href="https://huggingface.co/blog/agent-intrusion-technical-timeline"
-              rel="noreferrer"
-              target="_blank"
-            >
-              roughly 17,600 actions across the intrusion
-            </a>
-            . OpenAI and Hugging Face then had to work across organizational
-            boundaries to understand what the system had actually done.
-          </p>
-          <p>
-            The Hugging Face case is obviously a cybersecurity problem, but I
-            think it is also an institutional one. A system developed by one
-            organization and interacting with infrastructure operated by several
-            others can create consequences that no single institution completely
-            contains.{' '}
-            <strong>
-              That becomes even more complicated when control over the system
-              itself is distributed.
-            </strong>
-          </p>
-          <p>
-            Even the debate over what should follow from incidents like this is
-            divided. A July 2026 open-weights statement<FootnoteRef number={12} /> backed by NVIDIA, Hugging
-            Face, Microsoft, Meta, and many other firms openly acknowledges that
-            once model weights are released, the original developer loses
-            substantial control, and modified versions become difficult to trace
-            or reverse. Yet the same statement argues that distributing access
-            can improve security because defenders, researchers, and smaller
-            organizations can inspect models and develop protections themselves.
-          </p>
-          <p>
-            I have not yet figured out how to answer the three questions<FootnoteRef number={13} /> I
+            I have not yet figured out how to answer the three questions<FootnoteRef number={11} /> I
             proposed at the beginning of this essay. But I do know that the
             answer is not to create one language in which everyone thinks. A
             better way forward is to find ways for our different languages to

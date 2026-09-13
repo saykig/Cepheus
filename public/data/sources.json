@@ -513,25 +513,8 @@
         },
         {
           "type": "text",
-          "text": " in a institutional sense. When technical and policy institutions jointly shape systems that affect public life, neither can treat the knowledge or responsibilities of the other as someone else's problem."
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "readMore": true,
-      "preview": [
-        {
-          "type": "source",
-          "sourceId": 17,
-          "text": "Scanlon's contractualism"
+          "text": " in a institutional sense. When technical and policy institutions jointly shape systems that affect public life, neither can treat the knowledge or responsibilities of the other as someone else's problem. "
         },
-        {
-          "type": "text",
-          "text": " centres on whether conduct can be justified to others while respecting their separate interests, rather than securing agreement or producing a preferred overall outcome."
-        }
-      ],
-      "body": [
         {
           "type": "source",
           "sourceId": 17,
@@ -544,27 +527,7 @@
       ]
     },
     {
-      "id": 12,
-      "readMore": true,
-      "body": [
-        {
-          "type": "text",
-          "text": "I treat "
-        },
-        {
-          "type": "source",
-          "sourceId": 30,
-          "text": "Open Weights and American AI Leadership",
-          "italic": true
-        },
-        {
-          "type": "text",
-          "text": " (July 2026) as one side of the open-weights governance debate, rather than as evidence that open weights are inherently safer."
-        }
-      ]
-    },
-    {
-      "id": 13,
+      "id": 11,
       "readMore": true,
       "body": [
         {
