@@ -49,7 +49,7 @@ function InstitutionNode({ data: n }: NodeProps<EditorialNode>) {
       onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='ArrowDown'){e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus())}}}
       onClick={e=>{if(n.active||pointer.current==='touch'&&e.detail!==0){show();if(n.active)setReading(true)}else follow()}}
       aria-expanded={open} aria-controls={open?uid:undefined} aria-haspopup="dialog" aria-label={n.active?`Read about ${n.name}`:`Follow ${n.name}`}>
-      <span className={styles.mark}/><span>{n.label}</span>{!n.active&&<span className={styles.forward} aria-hidden="true">›</span>}
+      <span className={styles.mark}/><span>{n.label}</span>
     </button>
     <Handle type="source" position={Position.Right} className={styles.handle} />
     {open&&createPortal(<div ref={panel} id={uid} role="dialog" aria-label={`About ${n.label}`} className={styles.hoverPanel} style={position}
@@ -78,9 +78,8 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   const [reduced, setReduced] = useState(false)
   const [size,setSize] = useState({width:440,height:460})
   const canvas=useRef<HTMLDivElement>(null)
-  const back=useRef<HTMLButtonElement>(null)
   const origin = trail[trail.length-1]
-  const { setViewport, fitView } = useReactFlow()
+  const { setViewport } = useReactFlow()
   useEffect(() => { const q = matchMedia('(prefers-reduced-motion: reduce)'); const update = () => setReduced(q.matches); update(); q.addEventListener('change', update); return () => q.removeEventListener('change', update) }, [])
   useEffect(()=>{if(!canvas.current)return;const observer=new ResizeObserver(([entry])=>setSize({width:entry.contentRect.width,height:entry.contentRect.height}));observer.observe(canvas.current);return()=>observer.disconnect()},[])
   useEffect(()=>{
@@ -110,7 +109,7 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   const follow=useCallback((id:string)=>{
     setGuided(false)
     setTrail(previous=>previous.includes(id)?previous.slice(0,previous.indexOf(id)+1):[...previous,id])
-    requestAnimationFrame(()=>back.current?.focus({preventScroll:true}))
+    requestAnimationFrame(()=>canvas.current?.focus({preventScroll:true}))
   },[])
   const showReading=useCallback(()=>{},[])
   const graph = useMemo(() => {
@@ -152,10 +151,9 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
     const zoom=Math.min(1.1,(size.width-20)/graph.width,(size.height-32)/graph.height)
     void setViewport({x:(size.width-graph.width*zoom)/2-graph.focusX*zoom,y:(size.height-graph.height*zoom)/2,zoom},{duration:reduced?0:620})
   },[size,graph.width,graph.height,graph.focusX,setViewport,reduced])
-  return <section className={styles.study} aria-label="Institutional links" data-story-state={storyStates[step].id} onKeyDown={e=>{if(e.key==='Escape'&&trail.length>1){e.preventDefault();setGuided(false);setTrail(t=>t.slice(0,-1));back.current?.focus()}}}>
-    <div className={styles.toolbar}><button ref={back} disabled={trail.length===1} onClick={()=>{setGuided(false);setTrail(t=>t.slice(0,-1))}} aria-label={trail.length>1?`Back to ${institution(trail[trail.length-2]).label}`:'At the start'}>← {trail.length>1?institution(trail[trail.length-2]).label:'Institutional links'}</button><button onClick={()=>void fitView({padding:.15,duration:reduced?0:620,minZoom:.1,maxZoom:1.1})} aria-label="Show the whole explored trail">↔</button><button onClick={()=>{setGuided(false);setTrail([initialInstitution])}} aria-label="Reset exploration">↺</button></div>
-    <div ref={canvas} className={styles.canvas}>
-      <ReactFlow onNodeClick={enableNodePointerEvents} nodes={animatedNodes} edges={graph.edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false} minZoom={.1} maxZoom={1.5} panOnDrag={true} panOnScroll={false} zoomOnScroll={false} zoomOnPinch={true} zoomOnDoubleClick={false} preventScrolling={false} aria-label="Follow an institution to reveal its connections" />
+  return <section className={styles.study} aria-label="Institutional links" data-story-state={storyStates[step].id} onKeyDown={e=>{if(e.key==='Escape'&&trail.length>1){e.preventDefault();setGuided(false);setTrail(t=>t.slice(0,-1));canvas.current?.focus({preventScroll:true})}}}>
+    <div ref={canvas} className={styles.canvas} tabIndex={-1}>
+      <ReactFlow proOptions={{hideAttribution:true}} onNodeClick={enableNodePointerEvents} nodes={animatedNodes} edges={graph.edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false} minZoom={.1} maxZoom={1.5} panOnDrag={true} panOnScroll={false} zoomOnScroll={false} zoomOnPinch={true} zoomOnDoubleClick={false} preventScrolling={false} aria-label="Follow an institution to reveal its connections" />
     </div>
 
   </section>

@@ -1,14 +1,9 @@
 .study { width:100%; min-width:0; color:var(--ink); }
-.toolbar { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-.toolbar button { background:none; border:0; color:var(--olive-deep); font:13px var(--font-display),Georgia,serif; padding:6px 0; min-width:44px; min-height:44px; text-align:left; cursor:pointer; }
-.toolbar button:last-child { text-align:right; font-size:20px; }
-.toolbar button:disabled { color:var(--ink-muted); cursor:default; }
 .canvas { width:100%; height:clamp(340px,55svh,480px); }
 .institution { width:138px; height:44px; position:relative; display:flex; align-items:center; background:var(--paper); }
 .nodeButton { display:flex; align-items:center; gap:8px; width:100%; color:var(--ink); font:400 18px/1.15 var(--font-display),Georgia,serif; background:none; border:0; padding:4px; min-height:44px; cursor:pointer; }
 .mark { display:block; flex-shrink:0; width:12px; height:12px; border:1.2px solid var(--ink-soft); border-radius:50%; background:var(--paper); transition:background 180ms; }
 .institution[data-active=true] .mark,.nodeButton:hover .mark { background:var(--olive); border-color:var(--olive-deep); }
-.forward { margin-left:auto; color:var(--olive-deep); font-size:18px; }
 .handle { opacity:0; width:1px; height:1px; pointer-events:none; border:0; }
 .inkEdge { stroke:var(--olive); stroke-width:1; stroke-dasharray:1200; stroke-dashoffset:0; animation:trace 850ms cubic-bezier(.16,1,.3,1) both; }
 @keyframes trace { from { stroke-dashoffset:1200; } to { stroke-dashoffset:0; } }
@@ -46,3 +41,5 @@
 .hoverPanel a:focus-visible,.hoverPanel button:focus-visible { outline:2px solid var(--olive); outline-offset:2px; }
 @keyframes unfold { from { opacity:0; transform:translateY(-5px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
 @media(prefers-reduced-motion:reduce){.hoverPanel{animation:none}}
+
+.canvas:focus { outline:none; }
