@@ -28,11 +28,11 @@
 .institution { pointer-events:all; }
 .institution[data-peek=true] .nodeButton { color:var(--olive-deep); }
 .institution[data-peek=true] .mark { background:var(--olive-deep); border-color:var(--olive-deep); }
-.hoverPanel { position:fixed; z-index:100; width:270px; max-width:calc(100vw - 24px); background:var(--paper-raise); color:var(--ink); border:1px solid var(--rule-strong); padding:4px 12px; font-family:var(--font-text),Georgia,serif; transform-origin:top left; animation:unfold 180ms ease-out; }
-.tabHeading { display:flex; align-items:center; gap:12px; }
-.tabHeading button { background:none; border:0; color:var(--olive-deep); cursor:pointer; min-height:44px; font:16px var(--font-display),Georgia,serif; text-align:left; }
+.hoverPanel { position:fixed; z-index:100; width:220px; max-width:calc(100vw - 24px); background:var(--paper-raise); color:var(--ink); border:0; padding:2px 8px; font-family:var(--font-text),Georgia,serif; transform-origin:top left; animation:unfold 180ms ease-out; }
+.tabHeading { display:flex; align-items:center; gap:6px; }
+.tabHeading button { background:none; border:0; color:var(--olive-deep); cursor:pointer; min-height:44px; font:14px var(--font-display),Georgia,serif; text-align:left; }
 .tabHeading button:first-child { flex:1; }.tabHeading button:last-child { min-width:44px; text-align:right; }
-.tabHeading button span { margin-left:8px; }
+.tabHeading button span { margin-left:4px; }
 .hoverPanel .evidence { max-height:min(290px,50svh); overflow:auto; overscroll-behavior:contain; padding:0 0 8px; }
 .hoverPanel .evidence h3 { font:400 21px/1.2 var(--font-display),Georgia,serif; }
 .hoverPanel .record { display:flex; flex-direction:column; gap:5px; font-size:12px; }
