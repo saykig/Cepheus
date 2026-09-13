@@ -61,8 +61,8 @@ function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
   useEffect(()=>{
     if(!open)return
     const outside=(e:PointerEvent)=>{if(e.target instanceof globalThis.Node&&!panel.current?.contains(e.target)&&!trigger.current?.contains(e.target))close()}
-    window.addEventListener('resize',close);window.addEventListener('scroll',close);document.addEventListener('pointerdown',outside)
-    return()=>{window.removeEventListener('resize',close);window.removeEventListener('scroll',close);document.removeEventListener('pointerdown',outside)}
+    window.addEventListener('resize',close);window.addEventListener('scroll',deferClose);document.addEventListener('pointerdown',outside)
+    return()=>{window.removeEventListener('resize',close);window.removeEventListener('scroll',deferClose);document.removeEventListener('pointerdown',outside)}
   },[open])
   const records=data.relationships.filter(r=>r.source===id||r.target===id)
   const follow=()=>{const relationshipId=chosen||records[0]?.id;if(relationshipId){close();n.follow(relationshipId)}}
@@ -73,13 +73,13 @@ function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
       <Handle type="target" position={Position.Left} className={styles.handle}/>
       <Handle type="source" position={Position.Right} className={styles.handle}/>
     </span>
+    <span className={styles.labelSlot} data-institution-label><span className={styles.movingLabel}>{n.label}</span></span>
     <motion.button ref={trigger} className={`${styles.nodeButton} nodrag nopan`} data-institution={id} disabled={!n.visible} tabIndex={!n.visible?-1:0}
       onFocus={e=>{if(e.currentTarget.matches(':focus-visible'))show()}}
       onBlur={e=>blur(e.relatedTarget)}
       onKeyDown={e=>{if(e.key==='Escape'){e.stopPropagation();close()}if(e.key==='Tab'&&!e.shiftKey&&open){e.preventDefault();panel.current?.querySelector('button')?.focus({preventScroll:true})}if(e.altKey&&e.key==='ArrowDown'){e.stopPropagation();e.preventDefault();show();requestAnimationFrame(()=>panel.current?.querySelector('button')?.focus({preventScroll:true}))}}}
       onClick={()=>{show();setReading(true)}}
       aria-expanded={open} aria-controls={open?uid:undefined} aria-haspopup="dialog" aria-label={`${c.read} ${n.name}`}>
-      <span className={styles.labelSlot} data-institution-label><span className={styles.movingLabel}>{n.label}</span></span>
     </motion.button>
     {open&&createPortal(<div ref={panel} id={uid} role="dialog" aria-label={`${n.label} evidence`} className={styles.hoverPanel} style={position}
       onPointerEnter={cancel} onPointerLeave={deferClose} onFocusCapture={cancel} onBlur={e=>blur(e.relatedTarget)} onKeyDown={e=>{
