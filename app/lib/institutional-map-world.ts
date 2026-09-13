@@ -62,3 +62,23 @@ export function worldProjection(size:{width:number;height:number}) {
  const compact=size.width>=600&&size.height>0&&size.height<480
  return {bounds:{...worldBounds,height:compact?410:worldBounds.height},yScale:compact?.46:1}
 }
+
+export type RevealRegistry = {
+ step:number; nodes:Set<string>; edges:Set<string>;
+ seenNodes:Set<string>; seenEdges:Set<string>;
+ newNodes:Set<string>; newEdges:Set<string>;
+}
+export function emptyRevealRegistry(step:number):RevealRegistry {
+ return {step,nodes:new Set(),edges:new Set(),seenNodes:new Set(),seenEdges:new Set(),newNodes:new Set(),newEdges:new Set()}
+}
+export function advanceReveal(previous:RevealRegistry,scene:ReturnType<typeof institutionalScene>,step:number):RevealRegistry {
+ const desiredNodes=scene.nodes.filter(n=>n.visible).map(n=>n.id)
+ const desiredEdges=scene.edges.filter(e=>e.visible).map(e=>e.id)
+ const nodes=new Set(step<previous.step?desiredNodes:[...Array.from(previous.nodes),...desiredNodes])
+ const edges=new Set(step<previous.step?desiredEdges:[...Array.from(previous.edges),...desiredEdges])
+ if(step===previous.step&&nodes.size===previous.nodes.size&&edges.size===previous.edges.size)return previous
+ return {step,nodes,edges,
+  newNodes:new Set([...Array.from(nodes)].filter(id=>!previous.seenNodes.has(id))),
+  newEdges:new Set([...Array.from(edges)].filter(id=>!previous.seenEdges.has(id))),
+  seenNodes:new Set([...Array.from(previous.seenNodes),...Array.from(nodes)]),seenEdges:new Set([...Array.from(previous.seenEdges),...Array.from(edges)])}
+}

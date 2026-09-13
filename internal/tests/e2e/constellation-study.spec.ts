@@ -60,6 +60,7 @@ for(const [name,width,height] of frames){
   await expect(opening.getByText('Drag to explore · Pinch to zoom',{exact:true})).toBeVisible()
   await expect(opening.getByRole('button',{name:'Zoom in',exact:true})).toHaveCount(0)
   await expect(opening.locator('details').last().locator('p')).toBeHidden()
+  const firstBase=await opening.locator('[data-base-edge="dod-anthropic-contested"]').elementHandle()
   const initialCamera=await opening.locator('.react-flow__viewport').getAttribute('style')
   const positions=await opening.locator('.react-flow__node').evaluateAll(nodes=>nodes.map(n=>({id:n.getAttribute('data-id'),transform:(n as HTMLElement).style.transform})))
   for(const state of ['public-decisions','interfaces','technical-knowledge','provenance','exploration']){
@@ -70,6 +71,8 @@ for(const [name,width,height] of frames){
     for(let i=0;i<8;i++){await page.mouse.wheel(0,delta/8);await page.waitForTimeout(90)}
     await marker.evaluate(el=>window.scrollTo(0,scrollY+el.getBoundingClientRect().top-innerHeight*(innerWidth<1000?.62:.4)+8))
     await expect(opening).toHaveAttribute('data-story-state',state)
+    expect(await firstBase!.evaluate(el=>el.isConnected)).toBe(true)
+    await expect(opening.locator('[data-first-reveal="dod-anthropic-contested"]')).toHaveCount(0)
     await expect(opening.locator('.react-flow__viewport')).toHaveAttribute('style',initialCamera!)
     expect(await opening.locator('.react-flow__node').evaluateAll(nodes=>nodes.map(n=>({id:n.getAttribute('data-id'),transform:(n as HTMLElement).style.transform})))).toEqual(positions)
    }else if(state==='exploration')await page.locator('#cepheus-map').scrollIntoViewIfNeeded()

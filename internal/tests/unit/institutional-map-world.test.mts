@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import {readFile} from 'node:fs/promises'
 import projection from '../../../public/data/institutional-map/constellation.json' with {type:'json'}
 import type {Bundle} from '../../../app/lib/institutional-map-types.ts'
-import {institutionalWorld,institutionalScene,worldBounds,settledFraction,routedInstitutionPath,worldProjection} from '../../../app/lib/institutional-map-world.ts'
+import {institutionalWorld,institutionalScene,worldBounds,settledFraction,routedInstitutionPath,worldProjection,emptyRevealRegistry,advanceReveal} from '../../../app/lib/institutional-map-world.ts'
 const data=projection as unknown as Bundle
 
 test('preview retains one fixed world through six stages and reverse scrolling',()=>{
@@ -71,4 +71,33 @@ test('following from either endpoint traces the identical cubic in reverse',()=>
   const reverse=numbers(routedInstitutionPath(sx,sy,tx,ty,2,true))
   assert.deepEqual(reverse,[...forward.slice(6,8),...forward.slice(4,6),...forward.slice(2,4),...forward.slice(0,2)])
  }
+})
+
+test('forward reveal accumulates; reverse and revisits preserve first-reveal history',()=>{
+ let registry=emptyRevealRegistry(0)
+ for(let step=0;step<6;step++){
+  const previous=registry
+  registry=advanceReveal(registry,institutionalScene(data,step),step)
+  for(const id of previous.edges)assert.ok(registry.edges.has(id))
+  for(const id of previous.nodes)assert.ok(registry.nodes.has(id))
+  for(const id of registry.newEdges)assert.ok(!previous.seenEdges.has(id))
+  for(const id of registry.newNodes)assert.ok(!previous.seenNodes.has(id))
+ }
+ assert.equal(registry.edges.size,data.relationships.length)
+ registry=advanceReveal(registry,institutionalScene(data,0),0)
+ assert.equal(registry.edges.size,1)
+ assert.equal(registry.seenEdges.size,data.relationships.length)
+ registry=advanceReveal(registry,institutionalScene(data,3),3)
+ assert.equal(registry.newEdges.size,0)
+ assert.equal(registry.newNodes.size,0)
+})
+test('Follow and emphasis changes cannot clear the accumulated world',()=>{
+ let registry=advanceReveal(emptyRevealRegistry(0),institutionalScene(data,0),0)
+ registry=advanceReveal(registry,institutionalScene(data,0,['uk-anthropic-evaluation'],'anthropic','uk-anthropic-evaluation'),0)
+ const ids=[...registry.edges]
+ registry=advanceReveal(registry,institutionalScene(data,1),1)
+ for(const id of ids)assert.ok(registry.edges.has(id))
+ assert.ok(registry.nodes.has('uk-aisi'))
+ const repeat=advanceReveal(registry,institutionalScene(data,1,[],null,null),1)
+ assert.equal(repeat,registry)
 })

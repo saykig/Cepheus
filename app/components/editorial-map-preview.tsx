@@ -12,7 +12,7 @@ import { ReactFlow, ReactFlowProvider, Handle, Position, useReactFlow, useUpdate
 import '@xyflow/react/dist/style.css'
 import bundle from '../../public/data/institutional-map/constellation.json'
 import { storyStates, resolveStoryStep } from '../lib/institutional-map-story'
-import { institutionalScene, worldBounds, routedInstitutionPath, settledFraction, timing, worldProjection } from '../lib/institutional-map-world'
+import { institutionalScene, worldBounds, routedInstitutionPath, settledFraction, timing, worldProjection, emptyRevealRegistry, advanceReveal } from '../lib/institutional-map-world'
 import { institutionViewport } from '../lib/institutional-map-motion'
 import type { Bundle } from '../lib/institutional-map-types'
 import type { Locale } from '../lib/i18n'
@@ -27,7 +27,7 @@ const labels={
   fr:{read:'À propos de',close:'Fermer',follow:'Explorer les liens',method:'Sources et méthodologie',how:'Comment lire',explore:'Explorer les institutions'},
   'zh-CN':{read:'了解',close:'关闭',follow:'探索连接',method:'证据与方法',how:'如何阅读',explore:'探索机构'},
 }
-type EditorialNode = Node<{ label: string; name: string; locale: Locale; active: boolean; markerSide: 'left' | 'right'; visible: boolean; arriving: boolean; follow: (relationshipId: string) => void }, 'editorial'>
+type EditorialNode = Node<{ label: string; name: string; locale: Locale; active: boolean; markerSide: 'left' | 'right'; visible: boolean; revealed: boolean; arriving: boolean; follow: (relationshipId: string) => void }, 'editorial'>
 function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
   const updateNodeInternals=useUpdateNodeInternals()
   const {zoom}=useViewport()
@@ -67,7 +67,7 @@ function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
   const records=data.relationships.filter(r=>r.source===id||r.target===id)
   const follow=()=>{const relationshipId=chosen||records[0]?.id;if(relationshipId){close();n.follow(relationshipId)}}
   const blur=(target:EventTarget|null)=>{if(target instanceof globalThis.Node&&(panel.current?.contains(target)||trigger.current?.contains(target)))return;deferClose()}
-  return <motion.div initial={{opacity:0,y:14}} animate={{opacity:n.visible?(n.active?1:.85):0,y:n.visible?0:14}} onUpdate={()=>updateNodeInternals(id)} transition={reduceMotion?{duration:0}:{opacity:{duration:n.visible?1.1:.9},y:{duration:timing.settle/1000,ease:(t:number)=>settledFraction(t*timing.settle)}}} aria-hidden={!n.visible} className={styles.institution} style={{'--graph-zoom':zoom} as CSSProperties} data-active={n.active} data-peek={open} data-marker-side={n.markerSide} onPointerEnter={e=>{if(e.pointerType==='mouse')show()}} onPointerLeave={e=>{if(e.pointerType==='mouse')deferClose()}}>
+  return <motion.div initial={{opacity:0,y:14}} animate={{opacity:n.visible?(n.active?1:.85):0,y:n.revealed?0:14}} onUpdate={()=>updateNodeInternals(id)} transition={reduceMotion?{duration:0}:{opacity:{duration:n.visible?1.1:.9},y:{duration:timing.settle/1000,ease:(t:number)=>settledFraction(t*timing.settle)}}} aria-hidden={!n.visible} className={styles.institution} style={{'--graph-zoom':zoom} as CSSProperties} data-active={n.active} data-peek={open} data-marker-side={n.markerSide} onPointerEnter={e=>{if(e.pointerType==='mouse')show()}} onPointerLeave={e=>{if(e.pointerType==='mouse')deferClose()}}>
     <span className={styles.port} data-circle-port>
       <motion.span className={styles.mark} animate={{backgroundColor:n.active?'var(--olive)':'var(--paper)'}} transition={reduceMotion?{duration:0}:{duration:.45,delay:n.arriving?1.5:0}}/>
       <Handle type="target" position={Position.Left} className={styles.handle}/>
@@ -112,19 +112,29 @@ function InstitutionNode({ id, data: n }: NodeProps<EditorialNode>) {
   </motion.div>
 }
 
-type InkData={visible:boolean;highlighted:boolean;incident:boolean;retained:boolean;lane:number;drawKey:string;label:string;reverse:boolean}
+type InkData={visible:boolean;revealed:boolean;highlighted:boolean;incident:boolean;retained:boolean;lane:number;followVersion:number;label:string;reverse:boolean}
 function InkEdge(props:EdgeProps<Edge<InkData>>) {
  const reduced=useReducedMotion()
  const e=props.data!
  const path=routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane)
  const visible=e.visible
+ const [drawn,setDrawn]=useState(false)
  const trace=e.reverse?routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane,true):path
  return <g aria-hidden="true" data-world-edge={props.id} data-source-institution={props.source} data-target-institution={props.target} data-revealed={visible}>
-  <motion.path d={path} fill="none" className={styles.worldInk} initial={{pathLength:0,opacity:0}}
-   animate={{pathLength:visible?1:0,opacity:visible?(e.incident||e.retained? .45:.18):0}}
-   transition={reduced?{duration:0}:{pathLength:{duration:visible?1.05:.7,delay:visible?.55:0,ease:'easeInOut'},opacity:{duration:.6}}}/>
-  {e.highlighted&&visible&&<motion.path key={e.drawKey} d={trace} fill="none" className={styles.worldTrace}
-   initial={{pathLength:0}} animate={{pathLength:1}} transition={reduced?{duration:0}:{duration:1.05,delay:.55,ease:'easeInOut'}} data-traced-interface={props.id}/>}
+  <motion.path data-base-edge={props.id} d={path} fill="none" className={styles.worldInk} initial={false}
+   animate={{pathLength:1,opacity:visible&&(drawn||reduced)?(e.incident||e.retained ? .45 : .18):0}}
+   transition={reduced?{duration:0}:{opacity:{duration:.6}}}/>
+  <motion.path d={path} fill="none" className={styles.worldTrace} initial={false}
+   animate={{pathLength:1,opacity:visible&&e.highlighted&&(drawn||reduced)?1:0}}
+   transition={reduced?{duration:0}:{opacity:{duration:.6}}}
+   data-traced-interface={visible&&e.highlighted?props.id:undefined}/>
+  <motion.path d={path} fill="none" className={styles.worldTrace} data-first-reveal={visible&&!drawn?props.id:undefined}
+   initial={false} animate={{pathLength:e.revealed?1:0,opacity:visible&&!drawn?1:0}}
+   transition={reduced?{duration:0}:{pathLength:{duration:1.05,delay:drawn?0:.55,ease:'easeInOut'},opacity:{duration:.6}}}
+   onAnimationComplete={()=>{if(e.revealed&&!drawn)setDrawn(true)}}/>
+  {e.followVersion>0&&visible&&<motion.path key={e.followVersion} d={trace} fill="none" className={styles.worldTrace}
+   initial={{pathLength:reduced?1:0,opacity:1}} animate={{pathLength:1,opacity:0}}
+   transition={reduced?{duration:0}:{pathLength:{duration:1.05,delay:.55,ease:'easeInOut'},opacity:{duration:.4,delay:1.6}}}/>}
  </g>
 }
 const nodeTypes={editorial:InstitutionNode}
@@ -145,6 +155,8 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
  const canvas=useRef<HTMLDivElement>(null)
  const {setViewport,viewportInitialized,zoomIn,zoomOut}=useReactFlow()
  const scene=useMemo(()=>institutionalScene(data,step,followed,focus,selected),[step,followed,focus,selected])
+ const [reveal,setReveal]=useState(()=>emptyRevealRegistry(initialStep))
+ useEffect(()=>{if(activated&&cameraReady)setReveal(previous=>advanceReveal(previous,scene,step))},[activated,cameraReady,scene,step])
  const [hover,setHover]=useState<string|null>(null)
  useEffect(()=>{
   if(!canvas.current)return
@@ -199,9 +211,9 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
   void fit()
  },[fit,viewportInitialized,size.width,size.height,projection.bounds.height])
  const nodes=useMemo<EditorialNode[]>(()=>scene.nodes.map(n=>({id:n.id,type:'editorial',width:138,height:44,position:{x:n.position.x,y:n.position.y*projection.yScale},
-  data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:n.visible&&activated&&cameraReady,arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:n.visible?'all':'none'},
- })),[scene.nodes,locale,activated,cameraReady,follow,projection])
- const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:e.visible&&activated&&cameraReady,incident:e.incident||!!hover&&(e.source===hover||e.target===hover),drawKey:`${step}-${traceVersion}`,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,activated,cameraReady,step,traceVersion,hover,focus])
+  data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:reveal.nodes.has(n.id),revealed:reveal.seenNodes.has(n.id),arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:reveal.nodes.has(n.id)?'all':'none'},
+ })),[scene.nodes,locale,reveal,follow,projection])
+ const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:reveal.edges.has(e.id),revealed:reveal.seenEdges.has(e.id),incident:e.incident||!!hover&&(e.source===hover||e.target===hover),followVersion:selected===e.id?traceVersion:0,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,reveal,selected,traceVersion,hover,focus])
  const prefix=locale==='en'?'':`/${locale}`
  return <EvidenceSession.Provider value={useMemo(()=>({owner,setOwner}),[owner])}>
  <section className={styles.study} data-constellation-study data-story={story} data-story-state={storyStates[step].id} aria-label={`Institutional constellation study — ${story ? 'essay companion' : storyStates[initialStep].title}`}>
