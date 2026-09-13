@@ -1,8 +1,8 @@
 diff --git a/dist/esm/index.js b/dist/esm/index.js
-index 422889fc98ea26cf4c4b45d6d7b84479550f4728..d7f8a7fc59cc9432a4a3a70d39c1a096e00f6c27 100644
+index 422889fc98ea26cf4c4b45d6d7b84479550f4728..3456b835fb62b8bf4026e1daf26fd4a344d9b3a3 100644
 --- a/dist/esm/index.js
 +++ b/dist/esm/index.js
-@@ -1280,10 +1280,15 @@ function useResizeHandler(domNode) {
+@@ -1280,13 +1280,16 @@ function useResizeHandler(domNode) {
          if (domNode.current) {
              updateDimensions();
              window.addEventListener('resize', updateDimensions);
@@ -15,11 +15,15 @@ index 422889fc98ea26cf4c4b45d6d7b84479550f4728..d7f8a7fc59cc9432a4a3a70d39c1a096
              resizeObserver.observe(domNode.current);
              return () => {
                  window.removeEventListener('resize', updateDimensions);
+-                if (resizeObserver && domNode.current) {
+-                    resizeObserver.unobserve(domNode.current);
+-                }
 +                cancelAnimationFrame(resizeFrame);
-                 if (resizeObserver && domNode.current) {
-                     resizeObserver.unobserve(domNode.current);
-                 }
-@@ -2150,8 +2155,9 @@ function useResizeObserver() {
++                resizeObserver.disconnect();
+             };
+         }
+     }, []);
+@@ -2150,8 +2153,9 @@ function useResizeObserver() {
          if (typeof ResizeObserver === 'undefined') {
              return null;
          }
@@ -31,7 +35,7 @@ index 422889fc98ea26cf4c4b45d6d7b84479550f4728..d7f8a7fc59cc9432a4a3a70d39c1a096
              entries.forEach((entry) => {
                  const id = entry.target.getAttribute('data-id');
                  updates.set(id, {
-@@ -2160,8 +2166,20 @@ function useResizeObserver() {
+@@ -2160,8 +2164,20 @@ function useResizeObserver() {
                      force: true,
                  });
              });
@@ -54,10 +58,10 @@ index 422889fc98ea26cf4c4b45d6d7b84479550f4728..d7f8a7fc59cc9432a4a3a70d39c1a096
      useEffect(() => {
          return () => {
 diff --git a/dist/esm/index.mjs b/dist/esm/index.mjs
-index 422889fc98ea26cf4c4b45d6d7b84479550f4728..d7f8a7fc59cc9432a4a3a70d39c1a096e00f6c27 100644
+index 422889fc98ea26cf4c4b45d6d7b84479550f4728..3456b835fb62b8bf4026e1daf26fd4a344d9b3a3 100644
 --- a/dist/esm/index.mjs
 +++ b/dist/esm/index.mjs
-@@ -1280,10 +1280,15 @@ function useResizeHandler(domNode) {
+@@ -1280,13 +1280,16 @@ function useResizeHandler(domNode) {
          if (domNode.current) {
              updateDimensions();
              window.addEventListener('resize', updateDimensions);
@@ -70,11 +74,15 @@ index 422889fc98ea26cf4c4b45d6d7b84479550f4728..d7f8a7fc59cc9432a4a3a70d39c1a096
              resizeObserver.observe(domNode.current);
              return () => {
                  window.removeEventListener('resize', updateDimensions);
+-                if (resizeObserver && domNode.current) {
+-                    resizeObserver.unobserve(domNode.current);
+-                }
 +                cancelAnimationFrame(resizeFrame);
-                 if (resizeObserver && domNode.current) {
-                     resizeObserver.unobserve(domNode.current);
-                 }
-@@ -2150,8 +2155,9 @@ function useResizeObserver() {
++                resizeObserver.disconnect();
+             };
+         }
+     }, []);
+@@ -2150,8 +2153,9 @@ function useResizeObserver() {
          if (typeof ResizeObserver === 'undefined') {
              return null;
          }
@@ -86,7 +94,7 @@ index 422889fc98ea26cf4c4b45d6d7b84479550f4728..d7f8a7fc59cc9432a4a3a70d39c1a096
              entries.forEach((entry) => {
                  const id = entry.target.getAttribute('data-id');
                  updates.set(id, {
-@@ -2160,8 +2166,20 @@ function useResizeObserver() {
+@@ -2160,8 +2164,20 @@ function useResizeObserver() {
                      force: true,
                  });
              });
