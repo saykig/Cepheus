@@ -140,3 +140,6 @@
 
 /* The visible label shares the port's coordinate system, outside native button layout. */
 .institution > .labelSlot { top:22px; pointer-events:none; font:400 max(18px,calc(14px / var(--graph-zoom,1)))/1 var(--font-display),Georgia,serif; }
+/* The transparent target includes readable labels even when zoomed out. */
+.nodeButton { left:0; width:max(138px,calc(44px / var(--graph-zoom,1)),calc(24px + max(110px,calc(70px / var(--graph-zoom,1))))); }
+.institution[data-marker-side=right] .nodeButton { left:min(0px,calc(118px - max(110px,calc(70px / var(--graph-zoom,1))))); width:max(138px,calc(44px / var(--graph-zoom,1)),calc(20px + max(110px,calc(70px / var(--graph-zoom,1))))); }
