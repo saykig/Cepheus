@@ -1439,7 +1439,7 @@ html[data-theme="dark"] .theme-toggle::after {
   counter-reset: essay-endnote;
 }
 
-.essay-body .essay-endnotes li {
+.essay-endnotes li {
   position: relative;
   color: var(--ink-muted);
   font-size: 0.82rem;
@@ -1448,7 +1448,7 @@ html[data-theme="dark"] .theme-toggle::after {
   counter-increment: essay-endnote;
 }
 
-.essay-body .essay-endnotes li::before {
+.essay-endnotes li::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -1457,7 +1457,7 @@ html[data-theme="dark"] .theme-toggle::after {
   font-variant-numeric: lining-nums;
 }
 
-.essay-body .essay-endnotes li + li {
+.essay-endnotes li + li {
   margin-top: 0.85rem;
 }
 
@@ -2726,7 +2726,7 @@ html {
     line-height: 1.42;
   }
 
-  .essay-body .essay-endnotes li {
+  .essay-endnotes li {
     font-size: 0.74rem;
     line-height: 1.48;
   }
