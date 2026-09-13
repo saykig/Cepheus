@@ -20,18 +20,6 @@ Beginning with the Anthropic–Pentagon dispute, the essay asks who holds techni
 
 [Read the essay](https://cepheus-pons.org/essays/what-we-owe-to-each-other)
 
-## Projects
-
-### Writ
-
-**A domain-specific language for global affairs.**
-
-Writ is an open-source pilot for turning political, legal, and institutional research into structured, traceable knowledge.
-The broader aim is to make the same body of policy knowledge legible in two directions: readable by researchers and policymakers, while also structured enough for engineers and software to inspect and build on. It preserves provenance, uncertainty, and disagreement rather than reducing political judgment to code.
-
-[Visit Writ](https://writewrit.vercel.app/) · [GitHub](https://github.com/saykig/Writ)
-
-
 ## Institutional research and development
 
 The essay now includes a bounded constellation with separately reviewed observations, qualitative attributes and analytical assessments. The current release is **1.0.0-rc.1**, pending author editorial sign-off.
