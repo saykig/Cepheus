@@ -1,0 +1,179 @@
+[
+  {
+    "id": "uk-sonnet-capacity",
+    "institutionId": "uk-aisi",
+    "rubricId": "evaluation-capacity",
+    "value": "substantial-access-constrained",
+    "context": "Claude 3.5 Sonnet 2024 pre-deployment exercise",
+    "jurisdiction": "United Kingdom",
+    "assessedOn": "2024-11-19",
+    "evidenceIds": [
+      "independent-tests",
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "reasoning": "Completed independent tests establish capacity; explicit limited testing access narrows conclusions. Independently run assessments counters inference of provider-directed findings.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "published"
+  },
+  {
+    "id": "us-sonnet-capacity",
+    "institutionId": "us-aisi",
+    "rubricId": "evaluation-capacity",
+    "value": "substantial-access-constrained",
+    "context": "Claude 3.5 Sonnet 2024 pre-deployment exercise",
+    "jurisdiction": "United States",
+    "assessedOn": "2024-11-19",
+    "evidenceIds": [
+      "independent-tests",
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "reasoning": "Completed independent assessment plus explicit access/time limitation satisfies anchor. Not a statement of current CAISI resources.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "published"
+  },
+  {
+    "id": "dod-claude-control",
+    "institutionId": "anthropic",
+    "rubricId": "technical-control",
+    "value": "shared-constrained",
+    "context": "Anthropic provision and replacement of Claude models for DoW, contrasted with deployed operational control; 2025–August 2026",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-08-27",
+    "evidenceIds": [
+      "court-model-provision",
+      "court-update-gate"
+    ],
+    "counterEvidenceIds": [
+      "contractual-control",
+      "court-static-deployment"
+    ],
+    "reasoning": "Anthropic provides model artifacts and responds to feedback; DoW and cloud providers independently gate operational deployment. Existing deployed models are outside Anthropic technical alteration or shutdown. Consequential functions are divided across institutions, satisfying shared/constrained control without attributing a real-time veto.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-research-checker",
+    "publicationStatus": "published"
+  },
+  {
+    "id": "dod-substitution",
+    "institutionId": "dod",
+    "rubricId": "substitution",
+    "value": "unresolved",
+    "context": "Replacing Claude Gov for specified defence workflows",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-08-27",
+    "evidenceIds": [
+      "court-use",
+      "march-removal"
+    ],
+    "counterEvidenceIds": [
+      "dod-modular-intent",
+      "anthropic-transition-offer"
+    ],
+    "reasoning": "Modular replacement is a departmental objective and the supplier offered transition assistance. Neither demonstrates an equivalent replacement for a named function or migration time/cost. Materially constrained substitution and ready substitutability both remain unresolved.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-research-checker",
+    "publicationStatus": "published"
+  },
+  {
+    "id": "dod-reliance",
+    "institutionId": "dod",
+    "rubricId": "operational-reliance",
+    "value": "meaningful",
+    "context": "Repeated Claude/Claude Gov assistance in defense and intelligence work, with supplier-reported planning, analysis and cyber functions; 2024–February 2026",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-08-27",
+    "evidenceIds": [
+      "court-use",
+      "anthropic-mission-use"
+    ],
+    "counterEvidenceIds": [
+      "anthropic-transition-offer",
+      "march-removal"
+    ],
+    "reasoning": "Court-confirmed defense use since 2024 and Claude Gov use since March 2025, combined with specific supplier-reported operational functions, supports recurrent assistance. Workflow penetration and essentiality are not independently established enough to distinguish substantial or mission-relevant anchors. Transition efforts do not establish independence.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-research-checker",
+    "publicationStatus": "published"
+  },
+  {
+    "id": "uk-public-remit",
+    "institutionId": "uk-aisi",
+    "rubricId": "public-authority",
+    "value": "limited",
+    "context": "February 2024 stated evaluation and advisory remit",
+    "jurisdiction": "United Kingdom",
+    "assessedOn": "2024-02-09",
+    "evidenceIds": [
+      "aisi-remit"
+    ],
+    "counterEvidenceIds": [],
+    "reasoning": "Self-described supplementary evaluation and policy-advice remit supports advisory anchor. It does not code the powers of DSIT or UK government as a whole.",
+    "limitations": [
+      "Historical institutional remit. Later capacity, legislative changes or government powers require separate evidence. Limited denotes advisory remit here, not limited binding authority."
+    ],
+    "coder": "codex-research-checker",
+    "publicationStatus": "published"
+  },
+  {
+    "id": "uk-information",
+    "institutionId": "uk-aisi",
+    "rubricId": "information-access",
+    "value": "unresolved",
+    "context": "Compulsion of access to non-public frontier checkpoints",
+    "jurisdiction": "United Kingdom",
+    "assessedOn": "2026-09-12",
+    "evidenceIds": [
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "reasoning": "A limited voluntary exercise cannot prove absence of all compulsory authority. No jurisdiction-wide classification from this evidence.",
+    "limitations": [
+      "Coding applies only to stated context and date, not a permanent institutional rank."
+    ],
+    "coder": "codex-primary",
+    "publicationStatus": "published"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "dod-march-substitution",
+    "institutionId": "dod",
+    "rubricId": "substitution",
+    "value": "unresolved",
+    "context": "Existing Claude-enabled operational assistance, March24 2026, immediate withdrawal horizon",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-03-24",
+    "evidenceIds": [
+      "cio-transition-continuity",
+      "memo-transition-licences",
+      "official-single-provider"
+    ],
+    "counterEvidenceIds": [
+      "cio-alternative-architecture",
+      "senate-alternatives-specific"
+    ],
+    "reasoning": "Managed transition constrains immediate withdrawal, but the ordinal rubric cannot distinguish costly alternatives from material unavailability without a task-level comparison. The analytical transitional construct makes a narrower categorical finding.",
+    "limitations": [
+      "No ordinal substitution intensity established; later alternatives do not retroactively eliminate a transition constraint."
+    ]
+  }
+]

@@ -1,0 +1,367 @@
+[
+  {
+    "id": "openai-mou",
+    "label": "Model-access memorandum",
+    "kind": "Memorandum of understanding",
+    "bindingness": "Not established from the announcement",
+    "sourceIds": [
+      "nist-mous-2024"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "anthropic-mou",
+    "label": "Model-access memorandum",
+    "kind": "Memorandum of understanding",
+    "bindingness": "Not established from the announcement",
+    "sourceIds": [
+      "nist-mous-2024"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "sonnet-evaluation",
+    "label": "Claude 3.5 Sonnet evaluation",
+    "kind": "Joint pre-deployment exercise",
+    "bindingness": "No regulatory power inferred",
+    "sourceIds": [
+      "joint-evaluation-2024"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "llnl-claude",
+    "label": "Claude for Enterprise deployment",
+    "kind": "Reported research deployment",
+    "bindingness": "Contract terms not established",
+    "sourceIds": [
+      "llnl-deployment-2025"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-google-caisi-2026",
+    "label": "Evaluation agreement",
+    "kind": "evaluation-agreement",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker"
+  },
+  {
+    "id": "i-microsoft-caisi-2026",
+    "label": "Evaluation agreement",
+    "kind": "evaluation-agreement",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker"
+  },
+  {
+    "id": "i-xai-caisi-2026",
+    "label": "Evaluation agreement",
+    "kind": "evaluation-agreement",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker"
+  },
+  {
+    "id": "i-microsoft-uk-2026",
+    "label": "Formal cooperation",
+    "kind": "cooperation",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "microsoft-evaluation"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-anthropic-cdao-award",
+    "label": "Procurement",
+    "kind": "procurement",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-openai-cdao-award",
+    "label": "Procurement",
+    "kind": "procurement",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-google-cdao-award",
+    "label": "Procurement",
+    "kind": "procurement",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-xai-cdao-award",
+    "label": "Procurement",
+    "kind": "procurement",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-anthropic-eu-code",
+    "label": "Code participation",
+    "kind": "code-participation",
+    "bindingness": "Voluntary code; underlying statutory obligations are separate",
+    "sourceIds": [
+      "eu-code"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-openai-eu-code",
+    "label": "Code participation",
+    "kind": "code-participation",
+    "bindingness": "Voluntary code; underlying statutory obligations are separate",
+    "sourceIds": [
+      "eu-code"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-google-eu-code",
+    "label": "Code participation",
+    "kind": "code-participation",
+    "bindingness": "Voluntary code; underlying statutory obligations are separate",
+    "sourceIds": [
+      "eu-code"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-microsoft-eu-code",
+    "label": "Code participation",
+    "kind": "code-participation",
+    "bindingness": "Voluntary code; underlying statutory obligations are separate",
+    "sourceIds": [
+      "eu-code"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-xai-eu-code",
+    "label": "Code participation",
+    "kind": "code-participation",
+    "bindingness": "Voluntary code; underlying statutory obligations are separate",
+    "sourceIds": [
+      "eu-code"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-uk-openai-cooperation",
+    "label": "Formal cooperation",
+    "kind": "cooperation",
+    "bindingness": "Explicitly voluntary and non-legally binding",
+    "sourceIds": [
+      "uk-openai-mou"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-uk-anthropic-cooperation",
+    "label": "Formal cooperation",
+    "kind": "cooperation",
+    "bindingness": "Explicitly voluntary and non-legally binding",
+    "sourceIds": [
+      "uk-anthropic-mou"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-uk-google-cooperation",
+    "label": "Formal cooperation",
+    "kind": "cooperation",
+    "bindingness": "Explicitly voluntary and non-legally binding",
+    "sourceIds": [
+      "uk-google-deepmind-mou"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-anthropic-gds-pilot",
+    "label": "Formal cooperation",
+    "kind": "cooperation",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "uk-anthropic-pilot"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-caisi-gsa-cooperation",
+    "label": "Formal cooperation",
+    "kind": "cooperation",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "caisi-gsa"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-caisi-openmined-research",
+    "label": "Formal cooperation",
+    "kind": "cooperation",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "caisi-openmined"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-openai-llnl-coding",
+    "label": "Tool availability",
+    "kind": "availability",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "llnl-sandbox"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-anthropic-llnl-coding",
+    "label": "Tool availability",
+    "kind": "availability",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "llnl-sandbox"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "i-dod-anthropic-contested",
+    "label": "Contested use",
+    "kind": "contested-use",
+    "bindingness": "Unknown; not inferred from announcement",
+    "sourceIds": [
+      "anthropic-february"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "fable-safeguard-evaluation",
+    "label": "Fable safeguard red-teaming",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable to historical evaluation event",
+    "sourceIds": [
+      "anthropic-fable-suspension"
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "microsoft-classified-instrument",
+    "label": "Microsoft classified deployment agreement",
+    "kind": "Announced deployment agreement",
+    "bindingness": "Executed terms not inspected",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "openai-classified-instrument",
+    "label": "Openai classified deployment agreement",
+    "kind": "Announced deployment agreement",
+    "bindingness": "Executed terms not inspected",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "google-classified-instrument",
+    "label": "Google classified deployment agreement",
+    "kind": "Announced deployment agreement",
+    "bindingness": "Executed terms not inspected",
+    "sourceIds": [
+      "dod-classified-agreements"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-openai-july-evaluation-event",
+    "label": "GPT-5.6 Sol July cyber-range evaluation",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable to historical event",
+    "sourceIds": [
+      "aisi-july-incident",
+      "openai-july-incident"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-anthropic-july-evaluation-event",
+    "label": "Mythos 5 July cyber-range evaluation",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable to historical event",
+    "sourceIds": [
+      "aisi-july-incident",
+      "openai-july-incident"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "caisi-fable-event",
+    "label": "Fable safeguard tests",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable",
+    "sourceIds": [
+      "fable-restoration"
+    ]
+  }
+]

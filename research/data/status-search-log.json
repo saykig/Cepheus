@@ -1,0 +1,416 @@
+[
+  {
+    "relationshipIds": [
+      "openai-us-access",
+      "anthropic-us-access",
+      "us-anthropic-evaluation",
+      "uk-anthropic-evaluation"
+    ],
+    "queries": [
+      {
+        "q": "\"openai\" \"us-aisi\" access agreement 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"anthropic\" \"us-aisi\" access agreement 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"US AISI\" \"anthropic\" evaluation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"UK AISI\" \"anthropic\" evaluation 2026 amendment termination expiry status before:2026-09-13"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://questions-statements.parliament.uk/written-statements/detail/2026-09-07/hcws314",
+      "https://downloads.regulations.gov/NIST-2024-0004-0014/attachment_1.pdf",
+      "https://harperz9.github.io/frontier-safety.html",
+      "https://rai.ac.uk/anthropics-aisi-refusal-heralds-the-end-of-the-road-for-mutual-collaboration-on-frontier-ai-assessment/",
+      "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "https://www.anthropic.com/transparency/voluntary-commitments",
+      "https://systemcards.org/docs/anthropic-claude-mythos-5-other-2",
+      "https://ai-tldr.dev/releases/uk-aisi-agent-cyber-incident-jul28/",
+      "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "https://www.aisi.gov.uk/category/safeguards",
+      "https://www.eweek.com/news/anthropic-mythos-5-1-uk-testing-emea/",
+      "https://openai.com/index/us-caisi-uk-aisi-ai-update/",
+      "https://metr.org/risk-report-feb-mar-2026.pdf",
+      "https://assets.anthropic.com/m/8eb43d8f1f8895f/original/Anthropic-Voluntary-Commitments-Web-Archive.pdf",
+      "https://www.nasdaq.com/docs/mythos-research",
+      "https://www.nist.gov/document/us-aisi-uk-aisi-joint-testing-report-upgrade-claude-35-sonnet-111924",
+      "https://www.znakschoola.ru/?_=%2Fpdf%2F2601.11699%23UE7DkG0PaBHZOakR54g1Wl8%3D",
+      "https://en.wikipedia.org/wiki/Artificial_intelligence_safety_institute"
+    ],
+    "id": "status-search-1"
+  },
+  {
+    "relationshipIds": [
+      "us-uk-evaluation",
+      "anthropic-llnl-deployment",
+      "google-caisi-2026",
+      "microsoft-caisi-2026"
+    ],
+    "queries": [
+      {
+        "q": "\"US AISI\" \"uk-aisi\" joint evaluation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"anthropic\" \"llnl\" deployment 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"google\" \"caisi\" evaluation agreement 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"microsoft\" \"caisi\" evaluation agreement 2026 amendment termination expiry status before:2026-09-13"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://blogs.microsoft.com/on-the-issues/2026/05/05/advancing-ai-evaluation-with-the-center-for-ai-standards-us-and-innovation-and-the-ai-security-institute-uk/",
+      "https://www.nist.gov/news-events/news/2024/12/pre-deployment-evaluation-openais-o1-model",
+      "https://content.govdelivery.com/accounts/USNIST/bulletins/415cadf",
+      "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/05/CSA_research_note_CAISI_frontier_AI_testing_agreements_20260505-csa-styled.pdf",
+      "https://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and?c=gugacast",
+      "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21385",
+      "https://policywindow.org/wiki/uk-us-aisi-mou",
+      "https://www.clarqo.com/2026/05/21/caisi-turns-frontier-ai-compliance-into-a-launch-workflow/",
+      "https://ayinedjimi-consultants.fr/news/caisi-google-deepmind-microsoft-xai-evaluation-mai-2026",
+      "https://techjacksolutions.com/ai-brief/caisi-reaches-all-five-frontier-labs-why-voluntary-agreement/",
+      "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/05/CSA_research_note_agentic_ai_governance_cisa_nist_caisi_20260507-csa-styled.pdf",
+      "https://letsdatascience.com/news/government-aivetting-announcement-page-is-missing-from-websi-9932122e",
+      "https://www.gov.uk/government/publications/uk-canada-science-of-ai-safety-partnership/uk-canada-science-of-ai-safety-partnership",
+      "https://www.resultsense.com/news/2026-05-06-aisi-microsoft-frontier-safety-partnership/",
+      "https://www.frontiermodelforum.org/uploads/2026/02/FMF-Technical-Report_-Managing-Advanced-Cyber-Risks-in-Frontier-AI-Frameworks.pdf",
+      "https://www.tresor.economie.gouv.fr/Articles/b21d4e2d-5f8c-44a3-9f8d-dac0bc49f01f/files/859e0a1d-6e4e-4b18-bfa7-064575e70888",
+      "https://arxiv.org/abs/2503.04741",
+      "https://www.nist.gov/document/aisi-pre-deployment-evaluation-openai-o1-december-2024",
+      "https://report.buildingsafeai.ca/wp-content/uploads/2026/01/caisi-2025-year-in-review.pdf",
+      "https://www.itpro.com/technology/artificial-intelligence/microsoft-joins-competitors-in-handing-over-ai-models-for-advanced-testing",
+      "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-microsoft-and-xai-agree-to-let-us-govenment-test-ai-models-before-public-release",
+      "https://arxiv.org/abs/2410.09219"
+    ],
+    "id": "status-search-2"
+  },
+  {
+    "relationshipIds": [
+      "xai-caisi-2026",
+      "microsoft-uk-2026",
+      "anthropic-cdao-award",
+      "openai-cdao-award"
+    ],
+    "queries": [
+      {
+        "q": "\"xai\" \"caisi\" evaluation agreement 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"microsoft\" \"uk-aisi\" cooperation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"cdao\" \"anthropic\" procurement 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"cdao\" \"openai\" procurement 2026 amendment termination expiry status before:2026-09-13"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://ebs.publicnow.com/view/7A5445963D08A6171401A63CC5B7F68CE06550F9",
+      "https://docs.house.gov/meetings/ZS/ZS00/20260416/119165/HHRG-119-ZS00-Wstate-MahmoodY-20260416.pdf",
+      "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/05/CSA_research_note_CAISI_frontier_AI_testing_agreements_20260505-csa-styled.pdf",
+      "https://www.clarqo.com/2026/05/21/caisi-turns-frontier-ai-compliance-into-a-launch-workflow/",
+      "https://ayinedjimi-consultants.fr/news/caisi-google-deepmind-microsoft-xai-evaluation-mai-2026",
+      "https://techjacksolutions.com/ai-brief/caisi-reaches-all-five-frontier-labs-why-voluntary-agreement/",
+      "https://www.heise.de/en/news/US-agency-to-review-AI-models-before-release-11284553.html",
+      "https://blogs.microsoft.com/on-the-issues/2026/05/05/advancing-ai-evaluation-with-the-center-for-ai-standards-us-and-innovation-and-the-ai-security-institute-uk/",
+      "https://letsdatascience.com/news/government-aivetting-announcement-page-is-missing-from-websi-9932122e",
+      "https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development",
+      "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/05/CSA_research_note_agentic_ai_governance_cisa_nist_caisi_20260507-csa-styled.pdf",
+      "https://www.hyperdine.com/news/2026-05-11-caisi-pre-deployment-testing-and-the-agent-operations-lesson",
+      "https://www.tresor.economie.gouv.fr/Articles/b21d4e2d-5f8c-44a3-9f8d-dac0bc49f01f/files/859e0a1d-6e4e-4b18-bfa7-064575e70888",
+      "https://neuralwired.com/2026/05/06/google-deepmind-us-government-ai-testing/",
+      "https://www.aisi.gov.uk/blog",
+      "https://news.novonavis.com/news/intel_130526_2716",
+      "https://s3.documentcloud.org/documents/27781298/anthropic-v-dow.pdf?t=1773069719050",
+      "https://www8.cao.go.jp/cstp/ai/aisi/2kai/renrakukaigi_manager/shiryo3_2.pdf",
+      "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-microsoft-and-xai-agree-to-let-us-govenment-test-ai-models-before-public-release",
+      "https://www.itpro.com/technology/artificial-intelligence/microsoft-joins-competitors-in-handing-over-ai-models-for-advanced-testing"
+    ],
+    "id": "status-search-3"
+  },
+  {
+    "relationshipIds": [
+      "google-cdao-award",
+      "xai-cdao-award",
+      "anthropic-eu-code",
+      "openai-eu-code"
+    ],
+    "queries": [
+      {
+        "q": "\"cdao\" \"google\" procurement 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"cdao\" \"xai\" procurement 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"anthropic\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"openai\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://ai-act-service-desk.ec.europa.eu/en/resources",
+      "https://www.reaganfoundation.org/cms/assets/1773175563-final-nsibreportcard-2026-web.pdf",
+      "https://www.linkedin.com/posts/dod-chief-digital-and-artificial-intelligence-office_cdao-announces-partnerships-with-frontier-activity-7350542178898649088-Awai",
+      "https://x.ai/news/us-gov-dept-of-war",
+      "https://bidscopeai.com/opportunities/12869469-25d5-429e-ba3b-568bfab34474",
+      "https://www.anthropic.com/news/eu-code-practice?_rsc=304t7",
+      "https://law-ai.org/focus-area/courts/",
+      "https://voterconnect.ie/proceedings/dail/2026-06-30/dbsect_41",
+      "https://lyceumintelligence.com/the-lyceum-ai-intelligence-brief-jul-14-2026/",
+      "https://axis-intelligence.com/wp-content/dashboard/military-ai-companies-dashboard.html",
+      "https://www.govevents.com/event/26172",
+      "https://digital-strategy.ec.europa.eu/en/policies/ai-pact",
+      "https://news.bloomberglaw.com/federal-contracting/pentagon-nixes-ai-solicitation-following-awards-to-xai-google",
+      "https://cdao-my.coriniumintelligence.com/hubfs/CDAO%20Malaysia%202025%20-%20Final%20Agenda%20%28for%20web%29%202.pdf?hsLang=en",
+      "https://substack-post-media.s3.us-east-1.amazonaws.com/post-files/194785081/6bf51ab5-2b25-40c6-bb2f-af7993f2bd08.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAUM3FPD6BYXGCFKAO%2F20260422%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260422T035237Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHsaCXVzLWVhc3QtMSJIMEYCIQCrOh5udd%2Bq%2BDyb50WmQk16k60QiCMED18r5O3bFTj3PgIhALQ%2BIkQVVrsrszSC0QoC826XJHnNpLvlabZLZ%2B2VijUsKvkDCEQQBBoMMzAyNDcxMTI2OTE1IgyCtA63cg2aKMlSxdYq1gPoDuB0yO0Vz7FBsXi4AguoaVzszwEExQr42pP7eXT0HoInkNQ9i7a2Jhp1hBSw87jJ4zbrHAB7SlfCRXIQlVjrgl2r6N97gJF2HjNvjGAJo8ZH7qFM2HsUhM%2BTpY%2BQMMCWxBbic%2BY%2Bz6SMvy2L61DZlQ5K%2B%2BR1H%2FFs2GxnH%2FLOix5OFm29RZi7M0Xa%2BbNQKTp6ylZguvK2TR2i8LrJ36aU77w9uBl6BtUd%2FWOH%2F35QNo3eLyB0H4JIy7I6JbJ2BO9i2FzjUEjOWZVS%2F1gsbvjeKs9S6yvBFL0LXvApqGbfWahaRMptPFYUWCzmUB6NjNh7q7Z11vlRRpCPmaAYsC2NN9hOWTnM0VfqTFa%2FSB0VIXkGVR1ACcYDfTpO%2FjXDSe0V49PHVA7KnH0%2Bn0RDL2hS8m716rfILqMwQsTPDfWA3%2BnOCHMlXtcZvdBq%2B0RlPxNq%2BnMoT2qIoHabsG%2FnSb1g8vkxhYpWxS7kkWp8lExxmcGbH%2FPR7bDYGit2jmNHlaVbZ8Ei7mgOljB3vsdbYWjTFX1nDNKKL0iDPvRQmHGfW4ky6V4hxQOlHGN7kwdhrJIi01%2FbvuQ7F6kKhw3JUrzBRPKL3gCjSC6F9Y2WCYiZAwgzSECxVzDs8qDPBjqkARGYsx4hgI6ipeQEh8bEjRyIWdeYFrsGWTCCgsatXlHT9%2BrWM%2BcXOwtZQBfYGdzf%2FQ7%2F87Zoanz3s5aiUFKt1XSWUQ%2Bkosxqpgrd0aDVNkxWhqpHiCa2duhwgGXOgLlTDTUbgIEZ0bJJUTE0RB1k0zIRMDabsh9mtNs7%2FmytFaCTKDTwW%2BS1O2bG40tNUa9Zg6Eatt%2F8bCwCZC2h6beCtN%2B2D5oN&X-Amz-Signature=88f591962e4903495bca1a83f708b38402b1c6dccd2bdab4eef7d0ea9167eaaa&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B+filename%3D%22Verdaio_Ai_Act_Assessment_2026_04_19_Styled_After.pdf%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "https://en.wikipedia.org/wiki/General-Purpose_AI_Code_of_Practice",
+      "https://law-ai.org/wp-content/uploads/2026/05/LawAI-Annual-Report-2025-2.pdf",
+      "https://souldriver.com.au/report/aueu-ai-compliance-status/pdf",
+      "https://comptroller.war.gov/Portals/45/Documents/defbudget/FY2025/budget_justification/pdfs/03_RDT_and_E/RDTE_OSD_PB_2025.pdf",
+      "https://www.reddit.com/r/ChatGPTcomplaints/comments/1ve801m/my_letter_to_the_eu_commission_regarding_the_ai/"
+    ],
+    "id": "status-search-4"
+  },
+  {
+    "relationshipIds": [
+      "google-eu-code",
+      "microsoft-eu-code",
+      "xai-eu-code",
+      "uk-openai-cooperation"
+    ],
+    "queries": [
+      {
+        "q": "\"google\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"microsoft\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"xai\" \"eu-ai-office\" code participation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"dsit\" \"openai\" cooperation 2026 amendment termination expiry status before:2026-09-13"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.parallelparliament.co.uk/question/HL1109/openai",
+      "https://github.com/google/cybernetic-agent-governance-engine/blob/main/docs/compliance/eu_ecb/EU_AI_OFFICE_REGISTRATION.md",
+      "https://ai-act-service-desk.ec.europa.eu/en/resources",
+      "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-openai-on-ai-opportunities/memorandum-of-understanding-between-uk-and-openai-on-ai-opportunities",
+      "https://committees.parliament.uk/oralevidence/17349/pdf/",
+      "https://policywindow.org/wiki/gpai-code-of-practice?asOf=2026-06-22",
+      "https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development",
+      "https://euaiactchecklist.com/eu-ai-act-digital-omnibus-2026-1744.html",
+      "https://qna.files.parliament.uk/qnadailyreports/Written-Questions-Answers-Statements-Daily-Report-Lords-2026-04-29.pdf",
+      "https://ppc.land/ai-office-gains-5-daily-penalty-power-over-google-and-meta-ai-systems/",
+      "https://committees.parliament.uk/oralevidence/17349/html/",
+      "https://blog.google/company-news/inside-google/around-the-globe/google-europe/eu-ai-code-practice/",
+      "https://www.computing.co.uk/news/2026/government/uk-yet-to-trial-openai-months-after-landmark-deal",
+      "https://digital-strategy.ec.europa.eu/en/policies/ai-pact",
+      "https://crfm.stanford.edu/fmti/December-2025/paper.pdf",
+      "https://publicpolicy.google/resources/eu_ai_opportunity_agenda_en.pdf",
+      "https://souldriver.com.au/report/aueu-ai-compliance-status/pdf",
+      "https://en.wikipedia.org/wiki/General-Purpose_AI_Code_of_Practice",
+      "https://146a55aca6f00848c565-a7635525d40ac1c70300198708936b4e.ssl.cf1.rackcdn.com/images/3bb64038b1224d208fce8d65ff709c78d75b9c1f.pdf"
+    ],
+    "id": "status-search-5"
+  },
+  {
+    "relationshipIds": [
+      "uk-anthropic-cooperation",
+      "uk-google-cooperation",
+      "anthropic-gds-pilot",
+      "caisi-gsa-cooperation"
+    ],
+    "queries": [
+      {
+        "q": "\"dsit\" \"anthropic\" cooperation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"dsit\" \"google\" cooperation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"anthropic\" \"gds\" cooperation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"caisi\" \"gsa\" cooperation 2026 amendment termination expiry status before:2026-09-13"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.nist.gov/news-events/news/2026/03/caisi-signs-mou-gsa-boost-ai-evaluation-science-federal-procurement-through",
+      "https://www.anthropic.com/news/gov-UK-partnership",
+      "https://www.nist.gov/system/files/documents/2026/03/27/03_AI%20Update-March.pdf",
+      "https://www.gov.uk/government/publications/dsit-business-appointment-rules-advice-2025/dsit-business-appointment-rules-advice-2025",
+      "https://www.contractsfinder.service.gov.uk/Notice/Attachment/a500f75b-3353-45dc-89b6-d84b7b337672",
+      "https://contracked.io/buyers/dsit",
+      "https://assets.publishing.service.gov.uk/media/68e6641049e17d00a56fff2c/Advice_Letter_-_Rishi_Sunak__Senior_Advisor__Anthropic_PBC.pdf",
+      "https://www.itpro.com/business/policy-and-legislation/uk-tech-trade-associations-hit-out-amidst-reports-dsit-could-be-scrapped",
+      "https://www.gov.uk/csv-preview/6627bd94838212a903a7e685/dsit_commercial-pipeline-april-2024.csv",
+      "https://www.gov.uk/algorithmic-transparency-records/dsit-succession-select",
+      "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/04/CSA_research_note_nist-caisi-ai-agent-security-agenda-2026_20260414-csa-styled.pdf",
+      "https://ukspending.com/entities/ics-on-behalf-of-dsit-and-desnz/contracts",
+      "https://www.fbodaily.com/archive/2026/03-March/12-Mar-2026/FBO-07740856.htm",
+      "https://www.linkedin.com/posts/dwayneanthony_%F0%9D%97%AA%F0%9D%97%B5%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B2-%F0%9D%97%9B%F0%9D%97%BC%F0%9D%98%82%F0%9D%98%80%F0%9D%97%B2-%F0%9D%97%94%F0%9D%97%9C-%F0%9D%97%9F%F0%9D%97%B2%F0%9D%97%B4%F0%9D%97%B6%F0%9D%98%80%F0%9D%97%B9%F0%9D%97%AE-activity-7449421734660837376-G_Hl",
+      "https://www.dsit.co.in/google-cloud-computing-company-vadodara.html",
+      "https://www.baroncapitalgroup.com/_next/data/M0Y_4XRZNC-IszM2hKqRQ/sites/default/files/2026-05/strategy-letter-baron-global-opportunity-strategy-3.31.26.pdf.json",
+      "https://aixiv.science/pdf/aixiv.260519.000004",
+      "https://aixiv.science/",
+      "https://www.meritalk.com/news/civilian-agencies/commerce/"
+    ],
+    "id": "status-search-6"
+  },
+  {
+    "relationshipIds": [
+      "caisi-openmined-research",
+      "openai-llnl-coding",
+      "anthropic-llnl-coding",
+      "dod-anthropic-contested"
+    ],
+    "queries": [
+      {
+        "q": "\"caisi\" \"openmined\" cooperation 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"openai\" \"llnl\" availability 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"anthropic\" \"llnl\" availability 2026 amendment termination expiry status before:2026-09-13"
+      },
+      {
+        "q": "\"dod\" \"anthropic\" contested use 2026 amendment termination expiry status before:2026-09-13"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.everycrsreport.com/files/2026-07-31_IF13217_f173f382a81a70a361e3fcb013ab08058bb4106d.html",
+      "https://www.everycrsreport.com/reports/IN12669.html",
+      "https://businesslawtoday.org/2026/04/dod-conflicted-strategies-acquiring-ip-rights-ai-systems/",
+      "https://cornerstoneofhope.mashreqdevelopments.com/?_=%2Fnews-events%2Fnews%2F2026%2F03%2Fannouncement-caisi-signs-crada-openmined-enable-secure-ai-evaluations%23aU4iOhb7bFvice0yyGyyRy9dOTw%3D",
+      "https://caselaw.findlaw.com/court/us-dis-crt-n-d-cal/362881.html",
+      "https://techcrunch.com/2026/03/18/dod-says-anthropics-red-lines-make-it-an-unacceptable-risk-to-national-security/",
+      "https://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and?c=gugacast",
+      "https://www.reddit.com/r/ClaudeAI/comments/1v932su/the_company_i_work_for_received_a_us_government/",
+      "https://www.reddit.com/r/CMMC/comments/1uqv4c3/removal_of_anthropic_pbc_products_in_dow_systems/",
+      "https://hpc.llnl.gov/sites/default/files/2025-10/Consolati_User-Meeting.pdf",
+      "https://www.polsinelli.com/publications/executive-branch-targets-anthropic-supply-chain-risk",
+      "https://www.astrid-online.it/static/upload/case/case-no.-26-cv-01996-rfl.pdf",
+      "https://hpc.llnl.gov/services/cloud-services/ai-ml-services/llamame-llm-api-service",
+      "https://www.reddit.com/r/CMMC/comments/1uxomlh/claude_for_government/",
+      "https://anthropic-v-dow.vercel.app/",
+      "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/03/CSA_research_note_dod_ai_guardrail_mandates_vendor_governance_20260309-csa-styled.pdf",
+      "https://www.jenner.com/a/web/foCPatj77b5H9HHqt19moJ/govtcont68_13.pdf",
+      "https://www.congress.gov/crs_external_products/IF/PDF/IF13151/IF13151.1.pdf",
+      "https://www.executivegov.com/articles/nists-caisi-openmined-ai-evaluation-privacy",
+      "https://www.lawfaremedia.org/article/anthropic-v.-u.s.-department-of-war--a-hearing-diary",
+      "https://www.reddit.com/r/Anthropic/comments/1ri7y4f/please_stop_posting_the_wsj_news_article_about/",
+      "https://en.wikipedia.org/wiki/Anthropic",
+      "https://www.theatlantic.com/national-security/2026/06/claude-anthropic-ai-warfare-orders/687581/?utm_source=apple_news",
+      "https://www.reddit.com/r/moderatepolitics/comments/1rq067l/complaint_for_declaratory_and_injunctive_relief/",
+      "https://www.reddit.com/r/claudexplorers/comments/1rfp69m/megathread_anthropicpolitics_us_gov_and_policy/",
+      "https://www.reddit.com/r/Anthropic/comments/1rlzcg1/im_so_confused_i_thought_anthropic_isnt_working/",
+      "https://apnews.com/article/3d86c9296fe953ec0591fcde6a613aba",
+      "https://www.theatlantic.com/technology/2026/02/pentagon-anthropic-contract/686188/?utm_source=apple_news",
+      "https://en.wikipedia.org/wiki/Claude_%28language_model%29",
+      "https://www.reddit.com/r/ArtificialInteligence/comments/1u4grhj/removed/",
+      "https://fcnpwebsite.s3.amazonaws.com/wp-content%2Fuploads%2F2026%2F03%2F18215725%2F3-19-2026.pdf",
+      "https://www.reddit.com/r/hardfork/comments/1rhmimq/unanticipated_downstream_effects/",
+      "https://www.reddit.com/r/OutOfTheLoop/comments/1rgoq2r/removed/",
+      "https://www.reddit.com/r/claude/comments/1rfq8i3/anthropic_officially_says_no_to_the_dod/",
+      "https://www.reddit.com/r/GovernmentContracting/comments/1v5gonn/word_on_the_grapevine_internal_so_far_ban_on/",
+      "https://en.wikipedia.org/wiki/Pete_Hegseth"
+    ],
+    "id": "status-search-7"
+  },
+  {
+    "id": "status-search-classified",
+    "relationshipIds": [
+      "microsoft-dod-classified",
+      "openai-dod-classified",
+      "google-dod-classified"
+    ],
+    "queries": [
+      {
+        "q": "site.microsoft.com \"classified\" \"May\" \"2026\" \"Department\" agreement"
+      },
+      {
+        "q": "site.openai.com \"classified\" \"agreement\" \"2026\""
+      },
+      {
+        "q": "site.cloud.google.com \"classified\" \"2026\" \"War\""
+      },
+      {
+        "q": "site.war.gov \"Classified Networks AI Agreements\" September termination amended"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.war.gov/News/Releases/Release/Article/4475177/classified-networks-ai-agreements/",
+      "https://openai.com/index/our-agreement-with-the-department-of-war/"
+    ],
+    "disposition": "Official May page inspected; February OpenAI agreement is a distinct event, not assumed identical instrument or completed implementation."
+  },
+  {
+    "id": "status-search-uk-july",
+    "relationshipIds": [
+      "uk-anthropic-fable-evaluation",
+      "uk-openai-july-evaluation",
+      "uk-anthropic-july-evaluation"
+    ],
+    "queries": [
+      {
+        "q": "UK AISI Anthropic Fable evaluation 2026 suspension status before:2026-09-13"
+      },
+      {
+        "q": "site.aisi.gov.uk \"OpenAI\" \"2026\" evaluation"
+      },
+      {
+        "q": "site.aisi.gov.uk \"Gemini\" evaluation 2026"
+      },
+      {
+        "q": "site.aisi.gov.uk \"Grok\" evaluation 2026"
+      },
+      {
+        "q": "site.aisi.gov.uk \"Microsoft\" evaluation 2026"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.aisi.gov.uk/blog",
+      "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/"
+    ],
+    "disposition": "Named actual July tests admitted; code client support alone is not completed evaluation; additional OpenAI GPT5.5 evaluation discovered and inspected but redundant to covered actual-evaluation mechanism for this release."
+  },
+  {
+    "id": "status-fable-restoration",
+    "relationshipIds": [
+      "uk-anthropic-fable-evaluation",
+      "caisi-anthropic-fable-evaluation"
+    ],
+    "queries": [
+      {
+        "q": "site.anthropic.com \"Fable\" \"July 1\" \"2026\" restored"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.anthropic.com/news/redeploying-fable-5"
+    ],
+    "disposition": "Inspected dated restoration and named CAISI testing; no automatic continuity."
+  }
+]

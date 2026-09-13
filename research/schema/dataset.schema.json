@@ -1,0 +1,686 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cepheus institutional research contract",
+  "type": "object",
+  "required": [
+    "sources",
+    "evidence",
+    "institutions",
+    "instruments",
+    "relationships",
+    "relation-types",
+    "status-checks",
+    "succession",
+    "reviews",
+    "institution-attributes",
+    "attribute-rubrics",
+    "analytical-relations",
+    "analytical-rubrics",
+    "source-versions",
+    "coverage",
+    "release",
+    "taxonomy"
+  ],
+  "properties": {
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "publisher",
+          "url",
+          "version",
+          "primary",
+          "accessedOn"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "primary": {
+            "const": true
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publishedOn": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "revisedOn": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "accessedOn": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "sourceId",
+          "sourceVersion",
+          "claim",
+          "locator",
+          "limitation",
+          "supportMode",
+          "publicationStatus",
+          "coder"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "limitation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supportMode": {
+            "const": "direct"
+          },
+          "publicationStatus": {
+            "enum": [
+              "candidate",
+              "provisional",
+              "reviewed",
+              "published",
+              "rejected",
+              "withdrawn"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "institutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "name",
+          "group",
+          "kind",
+          "jurisdiction",
+          "sourceIds",
+          "publicationStatus",
+          "coder"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "group": {
+            "enum": [
+              "public",
+              "developers",
+              "evaluation"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "publicationStatus": {
+            "enum": [
+              "candidate",
+              "provisional",
+              "reviewed",
+              "published",
+              "rejected",
+              "withdrawn"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "kind",
+          "bindingness",
+          "sourceIds",
+          "publicationStatus",
+          "coder"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "publicationStatus": {
+            "enum": [
+              "candidate",
+              "provisional",
+              "reviewed",
+              "published",
+              "rejected",
+              "withdrawn"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "target",
+          "type",
+          "directed",
+          "instrumentId",
+          "evidenceIds",
+          "counterEvidenceIds",
+          "datePrecision",
+          "currentStatus",
+          "statusCheckId",
+          "limitations",
+          "publicationStatus",
+          "coder",
+          "basis",
+          "conflictDisposition"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "directed": {
+            "type": "boolean"
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "counterEvidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "publicationStatus": {
+            "enum": [
+              "candidate",
+              "provisional",
+              "reviewed",
+              "published",
+              "rejected",
+              "withdrawn"
+            ]
+          },
+          "basis": {
+            "const": "direct"
+          },
+          "currentStatus": {
+            "enum": [
+              "active/current",
+              "ended/expired",
+              "superseded",
+              "terminated",
+              "historical event only",
+              "unresolved/unknown"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "relation-types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "direction",
+          "definition"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "direction": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "status-checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "relationshipId",
+          "asOf",
+          "checkedOn",
+          "result",
+          "sourceIds",
+          "queries",
+          "checks",
+          "basis"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "queries": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "succession": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "predecessorId",
+          "successorId",
+          "kind",
+          "sourceIds",
+          "transferRelationshipIds",
+          "limitations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "recordKey",
+          "reviewer",
+          "reviewerKind",
+          "decision",
+          "researchHash",
+          "reviewedOn",
+          "checks"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reviewerKind": {
+            "enum": [
+              "human",
+              "agent"
+            ]
+          },
+          "decision": {
+            "enum": [
+              "approved",
+              "changes-required",
+              "rejected"
+            ]
+          },
+          "researchHash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "institution-attributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "institutionId",
+          "rubricId",
+          "value",
+          "context",
+          "assessedOn",
+          "evidenceIds",
+          "counterEvidenceIds",
+          "reasoning",
+          "limitations",
+          "coder",
+          "publicationStatus"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publicationStatus": {
+            "enum": [
+              "candidate",
+              "provisional",
+              "reviewed",
+              "published",
+              "rejected",
+              "withdrawn"
+            ]
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "reasoning": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "attribute-rubrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "definition",
+          "unit",
+          "anchors",
+          "uncertaintyRule"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "anchors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "definition"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "analytical-relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "target",
+          "type",
+          "relationshipIds",
+          "attributeIds",
+          "evidenceIds",
+          "counterEvidenceIds",
+          "conditions",
+          "derivation",
+          "assessment",
+          "necessityMet",
+          "sufficiencyMet",
+          "limitations",
+          "publicationStatus",
+          "coder"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "derivation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publicationStatus": {
+            "enum": [
+              "candidate",
+              "provisional",
+              "reviewed",
+              "published",
+              "rejected",
+              "withdrawn"
+            ]
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "met",
+                "evidenceIds",
+                "reason"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "met": {
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "analytical-rubrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "definition",
+          "requiredConditions",
+          "rule",
+          "requiredAttributeRubrics"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requiredConditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "source-versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "sourceId",
+          "retrievedOn",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "retrieved",
+              "blocked"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "cohort",
+        "families",
+        "cells",
+        "expansions",
+        "exclusions"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "release": {
+      "type": "object",
+      "required": [
+        "version",
+        "evidenceCutoff",
+        "periodStart",
+        "status",
+        "editorialSignoff"
+      ],
+      "properties": {
+        "evidenceCutoff": {
+          "const": "2026-09-12"
+        }
+      },
+      "additionalProperties": true
+    },
+    "taxonomy": {
+      "type": "object",
+      "required": [
+        "domains",
+        "contexts",
+        "groups",
+        "spatialMeaning"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

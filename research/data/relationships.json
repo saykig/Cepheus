@@ -1,0 +1,1383 @@
+[
+  {
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "caisi-renegotiation"
+    ],
+    "id": "openai-us-access",
+    "source": "openai",
+    "target": "us-aisi",
+    "directed": true,
+    "instrumentId": "openai-mou",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "openai-access"
+    ],
+    "announcedOn": "2024-08-29",
+    "observedBy": "2024-08-29",
+    "eventStatus": "Announced",
+    "rationale": "Provider → recipient; no claim of compulsory access.",
+    "type": "access-agreement",
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "limitations": [
+      "Provider → recipient; no claim of compulsory access.",
+      "Continuity through cutoff unresolved."
+    ],
+    "statusCheckId": "status-openai-us-access",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "Later renegotiation announcement is not mapped to a particular 2024 instrument; predecessor continuity unresolved."
+  },
+  {
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "caisi-renegotiation"
+    ],
+    "id": "anthropic-us-access",
+    "source": "anthropic",
+    "target": "us-aisi",
+    "directed": true,
+    "instrumentId": "anthropic-mou",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "anthropic-access"
+    ],
+    "announcedOn": "2024-08-29",
+    "observedBy": "2024-08-29",
+    "eventStatus": "Announced",
+    "rationale": "Provider → recipient; model access is distinct from evaluation.",
+    "type": "access-agreement",
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "limitations": [
+      "Provider → recipient; model access is distinct from evaluation.",
+      "Continuity through cutoff unresolved."
+    ],
+    "statusCheckId": "status-anthropic-us-access",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "Later renegotiation announcement is not mapped to a particular 2024 instrument; predecessor continuity unresolved."
+  },
+  {
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "release-date-conflict"
+    ],
+    "id": "us-anthropic-evaluation",
+    "source": "us-aisi",
+    "target": "anthropic",
+    "directed": true,
+    "instrumentId": "sonnet-evaluation",
+    "domains": [
+      "biosecurity",
+      "cybersecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "joint-evaluation",
+      "evaluation-domains",
+      "independent-tests"
+    ],
+    "announcedOn": null,
+    "observedBy": "2024-11-19",
+    "eventStatus": "Conducted",
+    "rationale": "Evaluator → provider; domains follow the reported exercise.",
+    "type": "evaluation",
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "limitations": [
+      "Evaluator → provider; domains follow the reported exercise.",
+      "Continuity through cutoff unresolved."
+    ],
+    "statusCheckId": "status-us-anthropic-evaluation",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "Model-release dates conflict within the full report; report publication supplies conservative upper bound. No exact testing date asserted."
+  },
+  {
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "release-date-conflict"
+    ],
+    "id": "uk-anthropic-evaluation",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "directed": true,
+    "instrumentId": "sonnet-evaluation",
+    "domains": [
+      "biosecurity",
+      "cybersecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "joint-evaluation",
+      "evaluation-domains",
+      "independent-tests"
+    ],
+    "announcedOn": null,
+    "observedBy": "2024-11-19",
+    "eventStatus": "Conducted",
+    "rationale": "Evaluator → provider; unpublished findings remain unavailable.",
+    "type": "evaluation",
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "limitations": [
+      "Evaluator → provider; unpublished findings remain unavailable.",
+      "Continuity through cutoff unresolved."
+    ],
+    "statusCheckId": "status-uk-anthropic-evaluation",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "Model-release dates conflict within the full report; report publication supplies conservative upper bound. No exact testing date asserted."
+  },
+  {
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "release-date-conflict"
+    ],
+    "id": "us-uk-evaluation",
+    "source": "us-aisi",
+    "target": "uk-aisi",
+    "directed": false,
+    "instrumentId": "sonnet-evaluation",
+    "domains": [
+      "biosecurity",
+      "cybersecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "joint-evaluation",
+      "evaluation-domains",
+      "independent-tests"
+    ],
+    "announcedOn": null,
+    "observedBy": "2024-11-19",
+    "eventStatus": "Conducted",
+    "rationale": "Undirected: a shared exercise, not a hierarchy.",
+    "type": "joint-evaluation",
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "limitations": [
+      "Undirected: a shared exercise, not a hierarchy.",
+      "Continuity through cutoff unresolved."
+    ],
+    "statusCheckId": "status-us-uk-evaluation",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "Model-release dates conflict within the full report; report publication supplies conservative upper bound. No exact testing date asserted."
+  },
+  {
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "llnl-sandbox-models"
+    ],
+    "id": "anthropic-llnl-deployment",
+    "source": "anthropic",
+    "target": "llnl",
+    "directed": true,
+    "instrumentId": "llnl-claude",
+    "domains": [
+      "biosecurity",
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Research",
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "llnl-deployment",
+      "llnl-rollout"
+    ],
+    "announcedOn": "2025-07-09",
+    "observedBy": "2025-07-09",
+    "eventStatus": "Reported deployment",
+    "rationale": "Supplier → research user. Defence context follows the reported national-security applications.",
+    "type": "deployment",
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "limitations": [
+      "Supplier → research user. Defence context follows the reported national-security applications.",
+      "Continuity through cutoff unresolved."
+    ],
+    "statusCheckId": "status-anthropic-llnl-deployment",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "Coding-agent availability in July 2026 is a different product/interface and cannot verify the Enterprise deployment agreement."
+  },
+  {
+    "id": "google-caisi-2026",
+    "source": "google",
+    "target": "caisi",
+    "type": "evaluation-agreement",
+    "directed": false,
+    "instrumentId": "i-google-caisi-2026",
+    "domains": [],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-google-caisi-2026"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-05-05",
+    "observedBy": "2026-05-05",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "Undirected agreement for evaluation and research; no particular access entitlement or completed test inferred.",
+    "limitations": [
+      "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-google-caisi-2026",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "microsoft-caisi-2026",
+    "source": "microsoft",
+    "target": "caisi",
+    "type": "evaluation-agreement",
+    "directed": false,
+    "instrumentId": "i-microsoft-caisi-2026",
+    "domains": [],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-microsoft-caisi-2026"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-05-05",
+    "observedBy": "2026-05-05",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "Undirected agreement for evaluation and research; no particular access entitlement or completed test inferred.",
+    "limitations": [
+      "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-microsoft-caisi-2026",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "xai-caisi-2026",
+    "source": "xai",
+    "target": "caisi",
+    "type": "evaluation-agreement",
+    "directed": false,
+    "instrumentId": "i-xai-caisi-2026",
+    "domains": [],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-xai-caisi-2026"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-05-05",
+    "observedBy": "2026-05-05",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "Undirected agreement for evaluation and research; no particular access entitlement or completed test inferred.",
+    "limitations": [
+      "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-xai-caisi-2026",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "microsoft-uk-2026",
+    "source": "microsoft",
+    "target": "uk-aisi",
+    "type": "cooperation",
+    "directed": false,
+    "instrumentId": "i-microsoft-uk-2026",
+    "domains": [],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "e-microsoft-uk-2026"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-05-05",
+    "observedBy": "2026-05-05",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "undirected",
+    "limitations": [
+      "Announcement does not prove implementation, effectiveness or status at cutoff."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-microsoft-uk-2026",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "anthropic-cdao-award",
+    "source": "cdao",
+    "target": "anthropic",
+    "type": "procurement",
+    "directed": true,
+    "instrumentId": "i-anthropic-cdao-award",
+    "domains": [],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-anthropic-cdao-award"
+    ],
+    "counterEvidenceIds": [
+      "march-removal",
+      "judgment-august"
+    ],
+    "announcedOn": "2025-07-14",
+    "observedBy": "2025-07-14",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "purchaser → named awardee",
+    "limitations": [
+      "Award announcement names organization; signed instrument, precise subsidiary, spend and continuing performance unestablished."
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-anthropic-cdao-award",
+    "conflictDisposition": "Court accounts establish cancellation actions and later legal reversal on specified claims; precise award reinstatement and current performance unknown."
+  },
+  {
+    "id": "openai-cdao-award",
+    "source": "cdao",
+    "target": "openai",
+    "type": "procurement",
+    "directed": true,
+    "instrumentId": "i-openai-cdao-award",
+    "domains": [],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-openai-cdao-award"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2025-07-14",
+    "observedBy": "2025-07-14",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "purchaser → named awardee",
+    "limitations": [
+      "Award announcement names organization; signed instrument, precise subsidiary, spend and continuing performance unestablished."
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-openai-cdao-award",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "google-cdao-award",
+    "source": "cdao",
+    "target": "google",
+    "type": "procurement",
+    "directed": true,
+    "instrumentId": "i-google-cdao-award",
+    "domains": [],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-google-cdao-award"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2025-07-14",
+    "observedBy": "2025-07-14",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "purchaser → named awardee",
+    "limitations": [
+      "Award announcement names organization; signed instrument, precise subsidiary, spend and continuing performance unestablished."
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-google-cdao-award",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "xai-cdao-award",
+    "source": "cdao",
+    "target": "xai",
+    "type": "procurement",
+    "directed": true,
+    "instrumentId": "i-xai-cdao-award",
+    "domains": [],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-xai-cdao-award"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2025-07-14",
+    "observedBy": "2025-07-14",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "purchaser → named awardee",
+    "limitations": [
+      "Award announcement names organization; signed instrument, precise subsidiary, spend and continuing performance unestablished."
+    ],
+    "publicationStatus": "provisional",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-xai-cdao-award",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "anthropic-eu-code",
+    "source": "anthropic",
+    "target": "eu-ai-office",
+    "type": "code-participation",
+    "directed": true,
+    "instrumentId": "i-anthropic-eu-code",
+    "domains": [],
+    "contexts": [
+      "Regulatory compliance"
+    ],
+    "jurisdictions": [
+      "United States",
+      "European Union"
+    ],
+    "evidenceIds": [
+      "e-anthropic-eu-code"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": null,
+    "observedBy": "2026-07-31",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Listed in dated register",
+    "rationale": "signatory → administrator",
+    "limitations": [
+      "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "register-version",
+    "basis": "direct",
+    "statusCheckId": "status-anthropic-eu-code",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "openai-eu-code",
+    "source": "openai",
+    "target": "eu-ai-office",
+    "type": "code-participation",
+    "directed": true,
+    "instrumentId": "i-openai-eu-code",
+    "domains": [],
+    "contexts": [
+      "Regulatory compliance"
+    ],
+    "jurisdictions": [
+      "United States",
+      "European Union"
+    ],
+    "evidenceIds": [
+      "e-openai-eu-code"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": null,
+    "observedBy": "2026-07-31",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Listed in dated register",
+    "rationale": "signatory → administrator",
+    "limitations": [
+      "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "register-version",
+    "basis": "direct",
+    "statusCheckId": "status-openai-eu-code",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "google-eu-code",
+    "source": "google",
+    "target": "eu-ai-office",
+    "type": "code-participation",
+    "directed": true,
+    "instrumentId": "i-google-eu-code",
+    "domains": [],
+    "contexts": [
+      "Regulatory compliance"
+    ],
+    "jurisdictions": [
+      "United States",
+      "European Union"
+    ],
+    "evidenceIds": [
+      "e-google-eu-code"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": null,
+    "observedBy": "2026-07-31",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Listed in dated register",
+    "rationale": "signatory → administrator",
+    "limitations": [
+      "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "register-version",
+    "basis": "direct",
+    "statusCheckId": "status-google-eu-code",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "microsoft-eu-code",
+    "source": "microsoft",
+    "target": "eu-ai-office",
+    "type": "code-participation",
+    "directed": true,
+    "instrumentId": "i-microsoft-eu-code",
+    "domains": [],
+    "contexts": [
+      "Regulatory compliance"
+    ],
+    "jurisdictions": [
+      "United States",
+      "European Union"
+    ],
+    "evidenceIds": [
+      "e-microsoft-eu-code"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": null,
+    "observedBy": "2026-07-31",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Listed in dated register",
+    "rationale": "signatory → administrator",
+    "limitations": [
+      "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "register-version",
+    "basis": "direct",
+    "statusCheckId": "status-microsoft-eu-code",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "xai-eu-code",
+    "source": "xai",
+    "target": "eu-ai-office",
+    "type": "code-participation",
+    "directed": true,
+    "instrumentId": "i-xai-eu-code",
+    "domains": [],
+    "contexts": [
+      "Regulatory compliance"
+    ],
+    "jurisdictions": [
+      "United States",
+      "European Union"
+    ],
+    "evidenceIds": [
+      "e-xai-eu-code"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": null,
+    "observedBy": "2026-07-31",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Listed in dated register",
+    "rationale": "signatory → administrator",
+    "limitations": [
+      "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "register-version",
+    "basis": "direct",
+    "statusCheckId": "status-xai-eu-code",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "uk-openai-cooperation",
+    "source": "dsit",
+    "target": "openai",
+    "type": "cooperation",
+    "directed": false,
+    "instrumentId": "i-uk-openai-cooperation",
+    "domains": [],
+    "contexts": [
+      "Public services"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "e-uk-openai-cooperation",
+      "uk-openai-current"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2025-07-21",
+    "observedBy": "2025-07-21",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "undirected",
+    "limitations": [
+      "Voluntary memorandum; does not establish delivery of every contemplated activity."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-uk-openai-cooperation",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "uk-anthropic-cooperation",
+    "source": "dsit",
+    "target": "anthropic",
+    "type": "cooperation",
+    "directed": false,
+    "instrumentId": "i-uk-anthropic-cooperation",
+    "domains": [],
+    "contexts": [
+      "Public services"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "e-uk-anthropic-cooperation",
+      "uk-anthropic-followup"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2025-02-14",
+    "observedBy": "2025-02-13",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Signed 13 February; published 14 February 2025",
+    "rationale": "undirected",
+    "limitations": [
+      "Voluntary memorandum; does not establish delivery of every contemplated activity."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-uk-anthropic-cooperation",
+    "conflictDisposition": "Government signature block dates signature 13 February; publication is 14 February. These are distinct events."
+  },
+  {
+    "id": "uk-google-cooperation",
+    "source": "dsit",
+    "target": "google",
+    "type": "cooperation",
+    "directed": false,
+    "instrumentId": "i-uk-google-cooperation",
+    "domains": [],
+    "contexts": [
+      "Public services"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "e-uk-google-cooperation",
+      "uk-google-current"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2025-12-11",
+    "observedBy": "2025-12-11",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "undirected",
+    "limitations": [
+      "Voluntary memorandum; does not establish delivery of every contemplated activity.",
+      "Publication date shown; exact last-signature date omitted in HTML. Do not calculate expiry from publication."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "publication-only",
+    "basis": "direct",
+    "statusCheckId": "status-uk-google-cooperation",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "anthropic-gds-pilot",
+    "source": "anthropic",
+    "target": "gds",
+    "type": "cooperation",
+    "directed": false,
+    "instrumentId": "i-anthropic-gds-pilot",
+    "domains": [],
+    "contexts": [
+      "Public services"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "e-anthropic-gds-pilot"
+    ],
+    "counterEvidenceIds": [
+      "gds-maintenance-intent"
+    ],
+    "announcedOn": "2026-01-27",
+    "observedBy": "2026-01-27",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "undirected",
+    "limitations": [
+      "Pilot development does not establish general public deployment or achieved independent maintenance."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-anthropic-gds-pilot",
+    "conflictDisposition": "Independent maintenance is an intended project outcome; it limits any claim of permanent supplier dependence."
+  },
+  {
+    "id": "caisi-gsa-cooperation",
+    "source": "caisi",
+    "target": "gsa",
+    "type": "cooperation",
+    "directed": false,
+    "instrumentId": "i-caisi-gsa-cooperation",
+    "domains": [],
+    "contexts": [
+      "Public services"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-caisi-gsa-cooperation"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-03-18",
+    "observedBy": "2026-03-18",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "undirected",
+    "limitations": [
+      "Announcement does not prove implementation, effectiveness or status at cutoff."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-caisi-gsa-cooperation",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "caisi-openmined-research",
+    "source": "caisi",
+    "target": "openmined",
+    "type": "cooperation",
+    "directed": false,
+    "instrumentId": "i-caisi-openmined-research",
+    "domains": [],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-caisi-openmined-research"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-03-27",
+    "observedBy": "2026-03-27",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "undirected",
+    "limitations": [
+      "Announcement does not prove implementation, effectiveness or status at cutoff."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-caisi-openmined-research",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "openai-llnl-coding",
+    "source": "openai",
+    "target": "llnl",
+    "type": "availability",
+    "directed": true,
+    "instrumentId": "i-openai-llnl-coding",
+    "domains": [],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-openai-llnl-coding"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-07-09",
+    "observedBy": "2026-07-09",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "provider → host",
+    "limitations": [
+      "Availability is not a direct contract, utilization measure or continuity of another product.",
+      "Documents coding-agent client availability. Default model-service endpoints are LivAI or LLamaMe; provider-operated model service, procurement and actual usage volumes are not established."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-openai-llnl-coding",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "anthropic-llnl-coding",
+    "source": "anthropic",
+    "target": "llnl",
+    "type": "availability",
+    "directed": true,
+    "instrumentId": "i-anthropic-llnl-coding",
+    "domains": [],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-anthropic-llnl-coding"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": "2026-07-09",
+    "observedBy": "2026-07-09",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "unresolved/unknown",
+    "eventStatus": "Announced",
+    "rationale": "provider → host",
+    "limitations": [
+      "Availability is not a direct contract, utilization measure or continuity of another product.",
+      "Documents coding-agent client availability. Default model-service endpoints are LivAI or LLamaMe; provider-operated model service, procurement and actual usage volumes are not established."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-anthropic-llnl-coding",
+    "conflictDisposition": "No material conflict recorded; no absence of conflict inferred."
+  },
+  {
+    "id": "dod-anthropic-contested",
+    "source": "dod",
+    "target": "anthropic",
+    "type": "contested-use",
+    "directed": true,
+    "instrumentId": "i-dod-anthropic-contested",
+    "domains": [],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "evidenceIds": [
+      "e-dod-anthropic-contested",
+      "court-use",
+      "march-removal",
+      "judgment-august",
+      "cio-active-operations",
+      "memo-transition-licences"
+    ],
+    "counterEvidenceIds": [
+      "contractual-control",
+      "cio-alternative-architecture",
+      "senate-frozen-deployment",
+      "senate-alternatives-specific"
+    ],
+    "announcedOn": "2026-02-26",
+    "observedBy": "2026-02-26",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatusCheckedOn": "2026-09-12",
+    "currentStatus": "historical event only",
+    "eventStatus": "Disputed use; later court judgment",
+    "rationale": "public user → provider",
+    "limitations": [
+      "Contractual dispute does not by itself establish technical veto power or operational dependence."
+    ],
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "datePrecision": "day",
+    "basis": "direct",
+    "statusCheckId": "status-dod-anthropic-contested",
+    "conflictDisposition": "August district judgment changes legal status; contractual restrictions were not technologically enforceable. Separate relief and appellate status remain unresolved at cutoff."
+  },
+  {
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "counterEvidenceIds": [
+      "fable-access-suspension",
+      "aisi-september-restrictions",
+      "fable-access-restored"
+    ],
+    "id": "uk-anthropic-fable-evaluation",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "directed": true,
+    "instrumentId": "fable-safeguard-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States",
+      "United Kingdom"
+    ],
+    "evidenceIds": [
+      "uk-fable-redteaming"
+    ],
+    "announcedOn": "2026-06-12",
+    "observedBy": "2026-06-12",
+    "eventStatus": "Conducted",
+    "rationale": "Named evaluator to model provider; supplier-reported prelaunch safeguard testing.",
+    "type": "evaluation",
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "limitations": [
+      "Supplier account; no evaluator-specific report or exact dates inspected.",
+      "Separate suspension and incident restrictions do not undo the historical event or establish continuing access."
+    ],
+    "statusCheckId": "status-uk-anthropic-fable-evaluation",
+    "datePrecision": "upper-bound",
+    "basis": "direct",
+    "conflictDisposition": "June suspension and July restoration are separate events; no continuing access inferred. September restrictions concern an identified incident, not every agreement."
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "microsoft-dod-classified",
+    "source": "microsoft",
+    "target": "dod",
+    "directed": false,
+    "type": "deployment-agreement",
+    "instrumentId": "microsoft-classified-instrument",
+    "evidenceIds": [
+      "microsoft-classified-agreement"
+    ],
+    "counterEvidenceIds": [],
+    "basis": "direct",
+    "announcedOn": "2026-05-01",
+    "observedBy": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "publication-day; names observed at cutoff",
+    "eventStatus": "Announced",
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-microsoft-dod-classified",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "rationale": "Announcement explicitly connects each named company with Department; not provider-to-provider collaboration.",
+    "limitations": [
+      "Exact legal signatory and deployment completion unresolved.",
+      "Current page version is the dated observation; no silent continuity or update-date inference."
+    ],
+    "conflictDisposition": "Contemporary seven-company reporting versus current eight-company page concerns source version. No inference of amendment date; this named party appears in both lists.",
+    "endpointIdentity": {
+      "sourceName": "Microsoft",
+      "legalSignatory": null,
+      "unit": "named organization in official announcement"
+    }
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "openai-dod-classified",
+    "source": "openai",
+    "target": "dod",
+    "directed": false,
+    "type": "deployment-agreement",
+    "instrumentId": "openai-classified-instrument",
+    "evidenceIds": [
+      "openai-classified-agreement"
+    ],
+    "counterEvidenceIds": [],
+    "basis": "direct",
+    "announcedOn": "2026-05-01",
+    "observedBy": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "publication-day; names observed at cutoff",
+    "eventStatus": "Announced",
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-openai-dod-classified",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "rationale": "Announcement explicitly connects each named company with Department; not provider-to-provider collaboration.",
+    "limitations": [
+      "Exact legal signatory and deployment completion unresolved.",
+      "Current page version is the dated observation; no silent continuity or update-date inference."
+    ],
+    "conflictDisposition": "Contemporary seven-company reporting versus current eight-company page concerns source version. No inference of amendment date; this named party appears in both lists.",
+    "endpointIdentity": {
+      "sourceName": "OpenAI",
+      "legalSignatory": null,
+      "unit": "named organization in official announcement"
+    }
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "google-dod-classified",
+    "source": "google",
+    "target": "dod",
+    "directed": false,
+    "type": "deployment-agreement",
+    "instrumentId": "google-classified-instrument",
+    "evidenceIds": [
+      "google-classified-agreement"
+    ],
+    "counterEvidenceIds": [],
+    "basis": "direct",
+    "announcedOn": "2026-05-01",
+    "observedBy": "2026-09-12",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "publication-day; names observed at cutoff",
+    "eventStatus": "Announced",
+    "currentStatus": "unresolved/unknown",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-google-dod-classified",
+    "domains": [
+      "cross-domain-ai"
+    ],
+    "contexts": [
+      "Defence"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "rationale": "Announcement explicitly connects each named company with Department; not provider-to-provider collaboration.",
+    "limitations": [
+      "Exact legal signatory and deployment completion unresolved.",
+      "Current page version is the dated observation; no silent continuity or update-date inference."
+    ],
+    "conflictDisposition": "Contemporary seven-company reporting versus current eight-company page concerns source version. No inference of amendment date; this named party appears in both lists.",
+    "endpointIdentity": {
+      "sourceName": "Google",
+      "legalSignatory": null,
+      "unit": "named organization in official announcement"
+    }
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-openai-july-evaluation",
+    "source": "uk-aisi",
+    "target": "openai",
+    "type": "evaluation",
+    "directed": true,
+    "instrumentId": "uk-openai-july-evaluation-event",
+    "evidenceIds": [
+      "uk-openai-july-tested"
+    ],
+    "counterEvidenceIds": [
+      "july-evaluation-halted"
+    ],
+    "announcedOn": null,
+    "observedBy": "2026-07-28",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "event observed by day; full evaluation period unknown",
+    "eventStatus": "Conducted",
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-uk-openai-july-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United Kingdom"
+    ],
+    "basis": "direct",
+    "rationale": "Evaluator → developer of model actually tested. No inference of joint model development.",
+    "limitations": [
+      "Model-specific historical exercise; current access and agreement terms unresolved."
+    ],
+    "conflictDisposition": "The incident halted related activity; this qualifies evaluation continuity, not the occurrence of the tests."
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-anthropic-july-evaluation",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "type": "evaluation",
+    "directed": true,
+    "instrumentId": "uk-anthropic-july-evaluation-event",
+    "evidenceIds": [
+      "uk-anthropic-july-tested"
+    ],
+    "counterEvidenceIds": [
+      "july-evaluation-halted"
+    ],
+    "announcedOn": null,
+    "observedBy": "2026-07-28",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "event observed by day; full evaluation period unknown",
+    "eventStatus": "Conducted",
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-uk-anthropic-july-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United Kingdom"
+    ],
+    "basis": "direct",
+    "rationale": "Evaluator → developer of model actually tested. No inference of joint model development.",
+    "limitations": [
+      "Model-specific historical exercise; current access and agreement terms unresolved."
+    ],
+    "conflictDisposition": "The incident halted related activity; this qualifies evaluation continuity, not the occurrence of the tests."
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "caisi-anthropic-fable-evaluation",
+    "source": "caisi",
+    "target": "anthropic",
+    "type": "evaluation",
+    "directed": true,
+    "instrumentId": "caisi-fable-event",
+    "evidenceIds": [
+      "caisi-fable-tested"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": null,
+    "observedBy": "2026-06-30",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "upper-bound",
+    "eventStatus": "Reported completed testing",
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-caisi-anthropic-fable-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "basis": "direct",
+    "rationale": "CAISI is explicitly named as evaluator; no inherited US AISI agreement assumed.",
+    "limitations": [
+      "No exact test period or independent evaluator report inspected."
+    ],
+    "conflictDisposition": "No counterclaim to test occurrence recorded; this does not certify safeguards effective."
+  }
+]

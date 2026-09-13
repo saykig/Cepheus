@@ -1,0 +1,68 @@
+[
+  {
+    "id": "access-agreement",
+    "label": "Model access",
+    "direction": "provider → recipient",
+    "definition": "Announced agreement permitting model access; not proof access occurred."
+  },
+  {
+    "id": "evaluation",
+    "label": "Evaluation",
+    "direction": "evaluator → provider",
+    "definition": "Named evaluator performed a model-specific exercise."
+  },
+  {
+    "id": "joint-evaluation",
+    "label": "Joint evaluation",
+    "direction": "undirected",
+    "definition": "Named evaluators conducted a shared exercise; not programme co-membership."
+  },
+  {
+    "id": "deployment",
+    "label": "Deployment",
+    "direction": "provider → user",
+    "definition": "An identified institution reports deploying or using the named provider system, possibly through intermediaries."
+  },
+  {
+    "id": "procurement",
+    "label": "Procurement",
+    "direction": "purchaser → named awardee",
+    "definition": "Officially announced award. Ceiling is not expenditure; exact legal awardee remains unresolved when announcement only names brand."
+  },
+  {
+    "id": "cooperation",
+    "label": "Formal cooperation",
+    "direction": "undirected",
+    "definition": "Named parties enter a defined memorandum or research agreement; implementation separately documented."
+  },
+  {
+    "id": "code-participation",
+    "label": "Code participation",
+    "direction": "signatory → administrator",
+    "definition": "Administrator confirms signature for specified voluntary code chapters; not regulatory compliance."
+  },
+  {
+    "id": "availability",
+    "label": "Tool availability",
+    "direction": "provider → host",
+    "definition": "Institution documents named tool available for execution; not observed utilization or direct contract."
+  },
+  {
+    "id": "contested-use",
+    "label": "Contested use",
+    "direction": "public user → provider",
+    "definition": "Dated dispute over conditions for use of a named provider system; no dependency inferred."
+  },
+  {
+    "id": "evaluation-agreement",
+    "label": "Evaluation agreement",
+    "direction": "undirected",
+    "definition": "Named parties announce an agreement for evaluation or testing research. Does not establish particular access rights, actual model access, or completed evaluation."
+  },
+  {
+    "id": "deployment-agreement",
+    "label": "Deployment agreement",
+    "direction": "undirected",
+    "definition": "Named parties announce an agreement to deploy a provider capability in an identified environment. This records the agreement, not completed integration, equivalence to another system, procurement value, or operational dependence."
+  }
+]

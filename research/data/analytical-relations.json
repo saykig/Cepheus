@@ -1,0 +1,322 @@
+[
+  {
+    "id": "uk-sonnet-access-constraint",
+    "type": "evaluation-access-constraint",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "relationshipIds": [
+      "uk-anthropic-evaluation"
+    ],
+    "attributeIds": [
+      "uk-sonnet-capacity"
+    ],
+    "evidenceIds": [
+      "independent-tests",
+      "access-limits"
+    ],
+    "counterEvidenceIds": [
+      "independent-tests"
+    ],
+    "conditions": [
+      {
+        "id": "completed-independent-test",
+        "met": true,
+        "evidenceIds": [
+          "independent-tests",
+          "access-limits"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "explicit-access-limitation",
+        "met": true,
+        "evidenceIds": [
+          "independent-tests",
+          "access-limits"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "bounded-inference",
+        "met": true,
+        "evidenceIds": [
+          "independent-tests",
+          "access-limits"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      }
+    ],
+    "derivation": "The 2024 evaluation was substantive but constrained by its access and testing window.",
+    "assessment": "The 2024 evaluation was substantive but constrained by its access and testing window.",
+    "limitations": [
+      "Historical exercise only; not current provider dependence, regulatory authority, or compromised findings.",
+      "Report does not establish who caused the time limit."
+    ],
+    "necessityMet": true,
+    "sufficiencyMet": true,
+    "assessedOn": "2026-09-12",
+    "coder": "codex-primary",
+    "publicationStatus": "published",
+    "outcome": "established",
+    "shortLabel": "Evaluation constrained by access"
+  },
+  {
+    "id": "dod-anthropic-contested-assessment",
+    "type": "contested-contractual-interface",
+    "source": "dod",
+    "target": "anthropic",
+    "relationshipIds": [
+      "dod-anthropic-contested"
+    ],
+    "attributeIds": [
+      "dod-claude-control"
+    ],
+    "evidenceIds": [
+      "court-use",
+      "feb-dispute",
+      "march-removal",
+      "judgment-august",
+      "dod-lawful-use"
+    ],
+    "counterEvidenceIds": [
+      "contractual-control"
+    ],
+    "conditions": [
+      {
+        "id": "documented-use",
+        "met": true,
+        "evidenceIds": [
+          "court-use"
+        ],
+        "reason": "Court confirms defense use across the historical period."
+      },
+      {
+        "id": "conflicting-conditions",
+        "met": true,
+        "evidenceIds": [
+          "dod-lawful-use",
+          "feb-dispute"
+        ],
+        "reason": "Departmental policy requires any-lawful-use terms; supplier refuses removal of two restrictions."
+      },
+      {
+        "id": "institutional-action",
+        "met": true,
+        "evidenceIds": [
+          "march-removal",
+          "judgment-august"
+        ],
+        "reason": "Government removal/designation and later judicial findings make this an institutional dispute with consequences."
+      },
+      {
+        "id": "technical-control-distinguished",
+        "met": true,
+        "evidenceIds": [
+          "contractual-control",
+          "court-static-deployment",
+          "court-update-gate"
+        ],
+        "reason": "Contractual conditions differ from technological enforcement; deployment approval and model provision are divided."
+      }
+    ],
+    "derivation": "The February–August 2026 episode is a contested contractual interface with consequential government and judicial action.",
+    "assessment": "The February–August 2026 episode is a contested contractual interface with consequential government and judicial action.",
+    "limitations": [
+      "This analysis distinguishes contractual conditions from technical enforcement.",
+      "August judgment does not establish resumed service or the final outcome of every proceeding."
+    ],
+    "necessityMet": true,
+    "sufficiencyMet": true,
+    "assessedOn": "2026-09-12",
+    "coder": "codex-research-checker",
+    "publicationStatus": "published",
+    "outcome": "established",
+    "shortLabel": "Contested contractual interface"
+  },
+  {
+    "id": "dod-anthropic-dependence-unresolved",
+    "type": "operational-dependence",
+    "source": "dod",
+    "target": "anthropic",
+    "relationshipIds": [
+      "dod-anthropic-contested"
+    ],
+    "attributeIds": [
+      "dod-claude-control",
+      "dod-substitution",
+      "dod-reliance"
+    ],
+    "evidenceIds": [
+      "court-use",
+      "anthropic-mission-use",
+      "court-model-provision",
+      "court-update-gate",
+      "dod-update-cadence"
+    ],
+    "counterEvidenceIds": [
+      "court-static-deployment",
+      "dod-modular-intent",
+      "anthropic-transition-offer",
+      "march-removal",
+      "cio-alternative-architecture",
+      "senate-alternatives-specific",
+      "senate-migration-cost-unknown"
+    ],
+    "conditions": [
+      {
+        "id": "identified-operational-use",
+        "met": true,
+        "evidenceIds": [
+          "court-use"
+        ],
+        "reason": "See linked evidence and rubric-bound reasoning."
+      },
+      {
+        "id": "consequential-provider-control",
+        "met": false,
+        "evidenceIds": [
+          "court-model-provision",
+          "court-update-gate",
+          "dod-update-cadence"
+        ],
+        "reason": "Model provision and divided deployment controls are documented, but the particular function’s need for continuing Anthropic provision rather than existing static models is unresolved. No remote-veto requirement is imposed."
+      },
+      {
+        "id": "constrained-substitution",
+        "met": false,
+        "evidenceIds": [
+          "dod-modular-intent",
+          "anthropic-transition-offer"
+        ],
+        "reason": "Replacement objectives and transition offer are not an alternatives assessment. Required migration time/cost and functional equivalence remain unestablished."
+      },
+      {
+        "id": "identified-function",
+        "met": true,
+        "evidenceIds": [
+          "anthropic-mission-use",
+          "court-use"
+        ],
+        "reason": "Specific defense/intelligence functions are reported by the provider, with defense use corroborated by the court; magnitude is not established."
+      }
+    ],
+    "derivation": "Operational dependence remains unresolved: recurrent use, identified functions and divided lifecycle control are documented, but function-specific continuing provision and constrained substitution are not established.",
+    "assessment": "Operational dependence remains unresolved: recurrent use, identified functions and divided lifecycle control are documented, but function-specific continuing provision and constrained substitution are not established.",
+    "limitations": [
+      "Not a finding of independence. Preserve candidate for additional operational and substitution evidence.",
+      "A separately reviewed March transitional finding does not establish persistent September dependence. Function-specific investigations are logged, with blocked contract/declaration retrievals."
+    ],
+    "necessityMet": false,
+    "sufficiencyMet": false,
+    "assessedOn": "2026-09-12",
+    "coder": "codex-research-checker",
+    "publicationStatus": "published",
+    "outcome": "unresolved",
+    "shortLabel": "September dependence unresolved"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "dod-anthropic-transitional-dependence-march2026",
+    "type": "transitional-operational-dependence",
+    "source": "dod",
+    "target": "anthropic",
+    "relationshipIds": [
+      "dod-anthropic-contested"
+    ],
+    "attributeIds": [
+      "dod-claude-control",
+      "dod-march-substitution",
+      "dod-reliance"
+    ],
+    "evidenceIds": [
+      "cio-active-operations",
+      "cio-transition-continuity",
+      "memo-transition-licences",
+      "official-single-provider",
+      "court-model-provision",
+      "anthropic-march-functions"
+    ],
+    "counterEvidenceIds": [
+      "cio-alternative-architecture",
+      "senate-frozen-deployment",
+      "senate-alternatives-specific",
+      "court-static-deployment",
+      "senate-migration-cost-unknown"
+    ],
+    "conditions": [
+      {
+        "id": "identified-operational-use",
+        "met": true,
+        "evidenceIds": [
+          "cio-active-operations",
+          "anthropic-march-functions",
+          "court-use"
+        ],
+        "reason": "Government confirms active operations; supplier narrows functional context to intelligence/planning assistance, with court corroboration of defence deployment. Not a claim that Claude independently selects targets."
+      },
+      {
+        "id": "provider-specific-capability",
+        "met": true,
+        "evidenceIds": [
+          "court-model-provision",
+          "memo-transition-licences",
+          "court-static-deployment"
+        ],
+        "reason": "Named Anthropic models remain the deployed capability; development/provision/licensing differs from customer control of static copies. Ongoing remote provider control is not required for product dependence."
+      },
+      {
+        "id": "non-immediate-substitution",
+        "met": true,
+        "evidenceIds": [
+          "cio-transition-continuity",
+          "memo-transition-licences",
+          "official-single-provider"
+        ],
+        "reason": "Active use persisted after the removal decision; responsible CIO links transition time and exceptions to operational continuity; phased licenses/support and government single-provider characterization corroborate constraint. No exact minimum duration or dollar cost inferred."
+      },
+      {
+        "id": "temporal-and-functional-boundary",
+        "met": true,
+        "evidenceIds": [
+          "cio-active-operations",
+          "senate-alternatives-specific",
+          "dod-vendor-lock-policy"
+        ],
+        "reason": "Assessment dated March24 for ongoing classified operational assistance; later alternatives prevent extending the finding automatically to September."
+      },
+      {
+        "id": "counterevidence-disposition",
+        "met": true,
+        "evidenceIds": [
+          "cio-alternative-architecture",
+          "senate-frozen-deployment",
+          "court-static-deployment",
+          "senate-alternatives-specific"
+        ],
+        "reason": "Interoperability, prospective low disruption and alternative agreements rebut permanent irreplaceability, not transitional constraint. Frozen deployed models limit provider veto; they do not make model-specific workflows instantly replaceable."
+      }
+    ],
+    "derivation": "Transitional dependence in existing Claude-enabled classified operational assistance: substitution required a managed transition while operations continued. No permanent irreplaceability, precise cost or provider remote veto established.",
+    "assessment": "Transitional dependence in existing Claude-enabled classified operational assistance: substitution required a managed transition while operations continued. No permanent irreplaceability, precise cost or provider remote veto established.",
+    "limitations": [
+      "The government confirms operational use without a public workflow-by-workflow inventory. Intelligence/planning description comes from the supplier.",
+      "No observed instantaneous removal counterfactual. The inference relies on responsible agency explanation that managed transition protects ongoing operations.",
+      "Assessment has no ordinal intensity; substantial or mission-structural dependence is not established.",
+      "March24 statement does not show whether an exemption was ever granted or migration completed.",
+      "Task-specific measured replacement cost",
+      "Minimum switching duration",
+      "No viable substitute under every feasible operational adjustment",
+      "Continuing need for Anthropic engineers or new model versions",
+      "September12 persistence of March constraint",
+      "Dependence for lethal targeting specifically"
+    ],
+    "necessityMet": true,
+    "sufficiencyMet": true,
+    "outcome": "established",
+    "assessedOn": "2026-03-24",
+    "currentStatus": "historical assessment; continuation to September unresolved",
+    "conflictDisposition": "Alternatives may exist yet need validated integration. March optimism is recorded as conflicting expectation, while later agreements and frozen copies limit scope. Unnamed contractor costs are not used to satisfy the condition for named military functions.",
+    "shortLabel": "Transitional dependence · March 2026"
+  }
+]

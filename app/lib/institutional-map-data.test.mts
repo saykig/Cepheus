@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { describe, it } from 'node:test'
-import institutions from '../../public/data/institutional-map/institutions.json' with { type: 'json' }
-import relationships from '../../public/data/institutional-map/relationships.json' with { type: 'json' }
-import evidence from '../../public/data/institutional-map/evidence.json' with { type: 'json' }
-import sources from '../../public/data/institutional-map/sources.json' with { type: 'json' }
-import instruments from '../../public/data/institutional-map/instruments.json' with { type: 'json' }
-import layout from '../../public/data/institutional-map/layout.json' with { type: 'json' }
+import institutions from '../../research/releases/v0.1/institutions.json' with { type: 'json' }
+import relationships from '../../research/releases/v0.1/relationships.json' with { type: 'json' }
+import evidence from '../../research/releases/v0.1/evidence.json' with { type: 'json' }
+import sources from '../../research/releases/v0.1/sources.json' with { type: 'json' }
+import instruments from '../../research/releases/v0.1/instruments.json' with { type: 'json' }
+import layout from '../../research/releases/v0.1/layout.json' with { type: 'json' }
 
 const ids = (items: {id: string}[]) => new Set(items.map((item) => item.id))
 const institutionIds = ids(institutions), sourceIds = ids(sources), evidenceIds = ids(evidence), instrumentIds = ids(instruments)

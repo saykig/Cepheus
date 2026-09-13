@@ -1,0 +1,778 @@
+{
+  "institutions": [
+    {
+      "id": "us-aisi",
+      "label": "US AISI",
+      "name": "U.S. AI Safety Institute at NIST",
+      "kind": "Public research unit",
+      "group": "evaluation"
+    },
+    {
+      "id": "uk-aisi",
+      "label": "UK AISI",
+      "name": "UK AI Security Institute",
+      "kind": "Public research unit",
+      "group": "evaluation"
+    },
+    {
+      "id": "openai",
+      "label": "OpenAI",
+      "name": "OpenAI",
+      "kind": "Model developer",
+      "group": "developers"
+    },
+    {
+      "id": "anthropic",
+      "label": "Anthropic",
+      "name": "Anthropic",
+      "kind": "Model developer",
+      "group": "developers"
+    },
+    {
+      "id": "llnl",
+      "label": "LLNL",
+      "name": "Lawrence Livermore National Laboratory",
+      "kind": "Research laboratory",
+      "group": "evaluation"
+    },
+    {
+      "id": "caisi",
+      "label": "CAISI",
+      "name": "Center for AI Standards and Innovation at NIST",
+      "kind": "Public research unit",
+      "group": "evaluation"
+    },
+    {
+      "id": "google",
+      "label": "Google",
+      "name": "Google",
+      "kind": "Model developer",
+      "group": "developers"
+    },
+    {
+      "id": "microsoft",
+      "label": "Microsoft",
+      "name": "Microsoft",
+      "kind": "Model developer / infrastructure provider",
+      "group": "developers"
+    },
+    {
+      "id": "xai",
+      "label": "xAI",
+      "name": "xAI",
+      "kind": "Model developer",
+      "group": "developers"
+    },
+    {
+      "id": "dod",
+      "label": "DoD",
+      "name": "US Department of Defense",
+      "kind": "Defence department",
+      "group": "public"
+    },
+    {
+      "id": "dsit",
+      "label": "DSIT",
+      "name": "Department for Science, Innovation and Technology",
+      "kind": "Government department",
+      "group": "public"
+    },
+    {
+      "id": "eu-ai-office",
+      "label": "AI Office",
+      "name": "European AI Office, European Commission",
+      "kind": "Code administrator / governance unit",
+      "group": "public"
+    },
+    {
+      "id": "gsa",
+      "label": "GSA",
+      "name": "General Services Administration",
+      "kind": "Procurement and shared services agency",
+      "group": "public"
+    },
+    {
+      "id": "openmined",
+      "label": "OpenMined",
+      "name": "OpenMined",
+      "kind": "Nonprofit evaluation infrastructure organization",
+      "group": "evaluation"
+    },
+    {
+      "id": "gds",
+      "label": "GDS",
+      "name": "Government Digital Service",
+      "kind": "Public digital delivery unit",
+      "group": "public"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "openai-us-access",
+      "source": "openai",
+      "target": "us-aisi",
+      "type": "access-agreement",
+      "announcedOn": "2024-08-29",
+      "observedBy": "2024-08-29",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "anthropic-us-access",
+      "source": "anthropic",
+      "target": "us-aisi",
+      "type": "access-agreement",
+      "announcedOn": "2024-08-29",
+      "observedBy": "2024-08-29",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "us-anthropic-evaluation",
+      "source": "us-aisi",
+      "target": "anthropic",
+      "type": "evaluation",
+      "announcedOn": null,
+      "observedBy": "2024-11-19",
+      "eventStatus": "Conducted",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "uk-anthropic-evaluation",
+      "source": "uk-aisi",
+      "target": "anthropic",
+      "type": "evaluation",
+      "announcedOn": null,
+      "observedBy": "2024-11-19",
+      "eventStatus": "Conducted",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "us-uk-evaluation",
+      "source": "us-aisi",
+      "target": "uk-aisi",
+      "type": "joint-evaluation",
+      "announcedOn": null,
+      "observedBy": "2024-11-19",
+      "eventStatus": "Conducted",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "anthropic-llnl-deployment",
+      "source": "anthropic",
+      "target": "llnl",
+      "type": "deployment",
+      "announcedOn": "2025-07-09",
+      "observedBy": "2025-07-09",
+      "eventStatus": "Reported deployment",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "google-caisi-2026",
+      "source": "google",
+      "target": "caisi",
+      "type": "evaluation-agreement",
+      "announcedOn": "2026-05-05",
+      "observedBy": "2026-05-05",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "microsoft-caisi-2026",
+      "source": "microsoft",
+      "target": "caisi",
+      "type": "evaluation-agreement",
+      "announcedOn": "2026-05-05",
+      "observedBy": "2026-05-05",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "xai-caisi-2026",
+      "source": "xai",
+      "target": "caisi",
+      "type": "evaluation-agreement",
+      "announcedOn": "2026-05-05",
+      "observedBy": "2026-05-05",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "microsoft-uk-2026",
+      "source": "microsoft",
+      "target": "uk-aisi",
+      "type": "cooperation",
+      "announcedOn": "2026-05-05",
+      "observedBy": "2026-05-05",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "anthropic-eu-code",
+      "source": "anthropic",
+      "target": "eu-ai-office",
+      "type": "code-participation",
+      "announcedOn": null,
+      "observedBy": "2026-07-31",
+      "eventStatus": "Listed in dated register",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "openai-eu-code",
+      "source": "openai",
+      "target": "eu-ai-office",
+      "type": "code-participation",
+      "announcedOn": null,
+      "observedBy": "2026-07-31",
+      "eventStatus": "Listed in dated register",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "google-eu-code",
+      "source": "google",
+      "target": "eu-ai-office",
+      "type": "code-participation",
+      "announcedOn": null,
+      "observedBy": "2026-07-31",
+      "eventStatus": "Listed in dated register",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "microsoft-eu-code",
+      "source": "microsoft",
+      "target": "eu-ai-office",
+      "type": "code-participation",
+      "announcedOn": null,
+      "observedBy": "2026-07-31",
+      "eventStatus": "Listed in dated register",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "xai-eu-code",
+      "source": "xai",
+      "target": "eu-ai-office",
+      "type": "code-participation",
+      "announcedOn": null,
+      "observedBy": "2026-07-31",
+      "eventStatus": "Listed in dated register",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "uk-openai-cooperation",
+      "source": "dsit",
+      "target": "openai",
+      "type": "cooperation",
+      "announcedOn": "2025-07-21",
+      "observedBy": "2025-07-21",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "uk-anthropic-cooperation",
+      "source": "dsit",
+      "target": "anthropic",
+      "type": "cooperation",
+      "announcedOn": "2025-02-14",
+      "observedBy": "2025-02-13",
+      "eventStatus": "Signed 13 February; published 14 February 2025",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "uk-google-cooperation",
+      "source": "dsit",
+      "target": "google",
+      "type": "cooperation",
+      "announcedOn": "2025-12-11",
+      "observedBy": "2025-12-11",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "anthropic-gds-pilot",
+      "source": "anthropic",
+      "target": "gds",
+      "type": "cooperation",
+      "announcedOn": "2026-01-27",
+      "observedBy": "2026-01-27",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "caisi-gsa-cooperation",
+      "source": "caisi",
+      "target": "gsa",
+      "type": "cooperation",
+      "announcedOn": "2026-03-18",
+      "observedBy": "2026-03-18",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "caisi-openmined-research",
+      "source": "caisi",
+      "target": "openmined",
+      "type": "cooperation",
+      "announcedOn": "2026-03-27",
+      "observedBy": "2026-03-27",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "openai-llnl-coding",
+      "source": "openai",
+      "target": "llnl",
+      "type": "availability",
+      "announcedOn": "2026-07-09",
+      "observedBy": "2026-07-09",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "anthropic-llnl-coding",
+      "source": "anthropic",
+      "target": "llnl",
+      "type": "availability",
+      "announcedOn": "2026-07-09",
+      "observedBy": "2026-07-09",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "dod-anthropic-contested",
+      "source": "dod",
+      "target": "anthropic",
+      "type": "contested-use",
+      "announcedOn": "2026-02-26",
+      "observedBy": "2026-02-26",
+      "eventStatus": "Disputed use; later court judgment",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "uk-anthropic-fable-evaluation",
+      "source": "uk-aisi",
+      "target": "anthropic",
+      "type": "evaluation",
+      "announcedOn": "2026-06-12",
+      "observedBy": "2026-06-12",
+      "eventStatus": "Conducted",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "microsoft-dod-classified",
+      "source": "microsoft",
+      "target": "dod",
+      "type": "deployment-agreement",
+      "announcedOn": "2026-05-01",
+      "observedBy": "2026-09-12",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "openai-dod-classified",
+      "source": "openai",
+      "target": "dod",
+      "type": "deployment-agreement",
+      "announcedOn": "2026-05-01",
+      "observedBy": "2026-09-12",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "google-dod-classified",
+      "source": "google",
+      "target": "dod",
+      "type": "deployment-agreement",
+      "announcedOn": "2026-05-01",
+      "observedBy": "2026-09-12",
+      "eventStatus": "Announced",
+      "currentStatus": "unresolved/unknown",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "uk-openai-july-evaluation",
+      "source": "uk-aisi",
+      "target": "openai",
+      "type": "evaluation",
+      "announcedOn": null,
+      "observedBy": "2026-07-28",
+      "eventStatus": "Conducted",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "uk-anthropic-july-evaluation",
+      "source": "uk-aisi",
+      "target": "anthropic",
+      "type": "evaluation",
+      "announcedOn": null,
+      "observedBy": "2026-07-28",
+      "eventStatus": "Conducted",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    },
+    {
+      "id": "caisi-anthropic-fable-evaluation",
+      "source": "caisi",
+      "target": "anthropic",
+      "type": "evaluation",
+      "announcedOn": null,
+      "observedBy": "2026-06-30",
+      "eventStatus": "Reported completed testing",
+      "currentStatus": "historical event only",
+      "currentStatusCheckedOn": "2026-09-12"
+    }
+  ],
+  "relation-types": [
+    {
+      "id": "access-agreement",
+      "label": "Model access"
+    },
+    {
+      "id": "evaluation",
+      "label": "Evaluation"
+    },
+    {
+      "id": "joint-evaluation",
+      "label": "Joint evaluation"
+    },
+    {
+      "id": "deployment",
+      "label": "Deployment"
+    },
+    {
+      "id": "procurement",
+      "label": "Procurement"
+    },
+    {
+      "id": "cooperation",
+      "label": "Formal cooperation"
+    },
+    {
+      "id": "code-participation",
+      "label": "Code participation"
+    },
+    {
+      "id": "availability",
+      "label": "Tool availability"
+    },
+    {
+      "id": "contested-use",
+      "label": "Contested use"
+    },
+    {
+      "id": "evaluation-agreement",
+      "label": "Evaluation agreement"
+    },
+    {
+      "id": "deployment-agreement",
+      "label": "Deployment agreement"
+    }
+  ],
+  "analytical-relations": [
+    {
+      "id": "uk-sonnet-access-constraint",
+      "type": "evaluation-access-constraint",
+      "relationshipIds": [
+        "uk-anthropic-evaluation"
+      ],
+      "shortLabel": "Evaluation constrained by access"
+    },
+    {
+      "id": "dod-anthropic-contested-assessment",
+      "type": "contested-contractual-interface",
+      "relationshipIds": [
+        "dod-anthropic-contested"
+      ],
+      "shortLabel": "Contested contractual interface"
+    },
+    {
+      "id": "dod-anthropic-dependence-unresolved",
+      "type": "operational-dependence",
+      "relationshipIds": [
+        "dod-anthropic-contested"
+      ],
+      "shortLabel": "September dependence unresolved"
+    },
+    {
+      "id": "dod-anthropic-transitional-dependence-march2026",
+      "type": "transitional-operational-dependence",
+      "relationshipIds": [
+        "dod-anthropic-contested"
+      ],
+      "shortLabel": "Transitional dependence · March 2026"
+    }
+  ],
+  "release": {
+    "version": "1.0.0-rc.1",
+    "evidenceCutoff": "2026-09-12",
+    "periodStart": "2024-01-01",
+    "status": "editorial-signoff-pending",
+    "editorialSignoff": null,
+    "productionRule": "Only separately reviewed and published records. Release-candidate status remains visible until owner signs final manifest.",
+    "methodologyCommit": "0c353e7",
+    "limitations": [
+      "Not globally comprehensive.",
+      "Coverage search floor is systematic; unsupported cells do not establish absence.",
+      "Private contract terms and some current status remain unknown.",
+      "Agent substantive review is not external expert review."
+    ],
+    "researchHash": "1e7930e6d70cddee066b09a959f5046c89228cfdbf91ecb37db5b43d6212271a",
+    "publicationRecordKeys": [
+      "evidence/openai-access",
+      "evidence/anthropic-access",
+      "evidence/joint-evaluation",
+      "evidence/evaluation-domains",
+      "evidence/llnl-deployment",
+      "evidence/access-limits",
+      "evidence/independent-tests",
+      "evidence/release-date-conflict",
+      "evidence/caisi-renegotiation",
+      "evidence/uk-openai-current",
+      "evidence/uk-google-current",
+      "evidence/uk-anthropic-followup",
+      "evidence/gds-maintenance-intent",
+      "evidence/court-use",
+      "evidence/contractual-control",
+      "evidence/judgment-august",
+      "evidence/march-removal",
+      "evidence/feb-dispute",
+      "evidence/llnl-rollout",
+      "evidence/llnl-sandbox-models",
+      "evidence/aisi-remit",
+      "evidence/aisi-resources",
+      "evidence/caisi-later-work",
+      "evidence/e-google-caisi-2026",
+      "evidence/e-microsoft-caisi-2026",
+      "evidence/e-xai-caisi-2026",
+      "evidence/e-microsoft-uk-2026",
+      "evidence/e-anthropic-eu-code",
+      "evidence/e-openai-eu-code",
+      "evidence/e-google-eu-code",
+      "evidence/e-microsoft-eu-code",
+      "evidence/e-xai-eu-code",
+      "evidence/e-uk-openai-cooperation",
+      "evidence/e-uk-anthropic-cooperation",
+      "evidence/e-uk-google-cooperation",
+      "evidence/e-anthropic-gds-pilot",
+      "evidence/e-caisi-gsa-cooperation",
+      "evidence/e-caisi-openmined-research",
+      "evidence/e-openai-llnl-coding",
+      "evidence/e-anthropic-llnl-coding",
+      "evidence/e-dod-anthropic-contested",
+      "evidence/dod-lawful-use",
+      "evidence/dod-update-cadence",
+      "evidence/dod-modular-intent",
+      "evidence/court-static-deployment",
+      "evidence/court-update-gate",
+      "evidence/court-model-provision",
+      "evidence/anthropic-mission-use",
+      "evidence/anthropic-transition-offer",
+      "evidence/uk-fable-redteaming",
+      "evidence/fable-access-suspension",
+      "evidence/aisi-september-restrictions",
+      "evidence/microsoft-classified-agreement",
+      "evidence/openai-classified-agreement",
+      "evidence/google-classified-agreement",
+      "evidence/dod-vendor-lock-policy",
+      "evidence/cio-active-operations",
+      "evidence/cio-transition-continuity",
+      "evidence/cio-alternative-architecture",
+      "evidence/memo-transition-licences",
+      "evidence/memo-exception-condition",
+      "evidence/official-single-provider",
+      "evidence/senate-migration-cost-unknown",
+      "evidence/senate-frozen-deployment",
+      "evidence/senate-alternatives-specific",
+      "evidence/amicus-switching-burdens",
+      "evidence/anthropic-march-functions",
+      "evidence/anthropic-march-support",
+      "evidence/uk-openai-july-tested",
+      "evidence/uk-anthropic-july-tested",
+      "evidence/july-evaluation-halted",
+      "evidence/fable-access-restored",
+      "evidence/caisi-fable-tested",
+      "institutions/us-aisi",
+      "institutions/uk-aisi",
+      "institutions/openai",
+      "institutions/anthropic",
+      "institutions/llnl",
+      "institutions/caisi",
+      "institutions/google",
+      "institutions/microsoft",
+      "institutions/xai",
+      "institutions/dod",
+      "institutions/dsit",
+      "institutions/eu-ai-office",
+      "institutions/gsa",
+      "institutions/openmined",
+      "institutions/gds",
+      "instruments/openai-mou",
+      "instruments/anthropic-mou",
+      "instruments/sonnet-evaluation",
+      "instruments/llnl-claude",
+      "instruments/i-google-caisi-2026",
+      "instruments/i-microsoft-caisi-2026",
+      "instruments/i-xai-caisi-2026",
+      "instruments/i-microsoft-uk-2026",
+      "instruments/i-anthropic-eu-code",
+      "instruments/i-openai-eu-code",
+      "instruments/i-google-eu-code",
+      "instruments/i-microsoft-eu-code",
+      "instruments/i-xai-eu-code",
+      "instruments/i-uk-openai-cooperation",
+      "instruments/i-uk-anthropic-cooperation",
+      "instruments/i-uk-google-cooperation",
+      "instruments/i-anthropic-gds-pilot",
+      "instruments/i-caisi-gsa-cooperation",
+      "instruments/i-caisi-openmined-research",
+      "instruments/i-openai-llnl-coding",
+      "instruments/i-anthropic-llnl-coding",
+      "instruments/i-dod-anthropic-contested",
+      "instruments/fable-safeguard-evaluation",
+      "instruments/microsoft-classified-instrument",
+      "instruments/openai-classified-instrument",
+      "instruments/google-classified-instrument",
+      "instruments/uk-openai-july-evaluation-event",
+      "instruments/uk-anthropic-july-evaluation-event",
+      "instruments/caisi-fable-event",
+      "relationships/openai-us-access",
+      "relationships/anthropic-us-access",
+      "relationships/us-anthropic-evaluation",
+      "relationships/uk-anthropic-evaluation",
+      "relationships/us-uk-evaluation",
+      "relationships/anthropic-llnl-deployment",
+      "relationships/google-caisi-2026",
+      "relationships/microsoft-caisi-2026",
+      "relationships/xai-caisi-2026",
+      "relationships/microsoft-uk-2026",
+      "relationships/anthropic-eu-code",
+      "relationships/openai-eu-code",
+      "relationships/google-eu-code",
+      "relationships/microsoft-eu-code",
+      "relationships/xai-eu-code",
+      "relationships/uk-openai-cooperation",
+      "relationships/uk-anthropic-cooperation",
+      "relationships/uk-google-cooperation",
+      "relationships/anthropic-gds-pilot",
+      "relationships/caisi-gsa-cooperation",
+      "relationships/caisi-openmined-research",
+      "relationships/openai-llnl-coding",
+      "relationships/anthropic-llnl-coding",
+      "relationships/dod-anthropic-contested",
+      "relationships/uk-anthropic-fable-evaluation",
+      "relationships/microsoft-dod-classified",
+      "relationships/openai-dod-classified",
+      "relationships/google-dod-classified",
+      "relationships/uk-openai-july-evaluation",
+      "relationships/uk-anthropic-july-evaluation",
+      "relationships/caisi-anthropic-fable-evaluation",
+      "institution-attributes/uk-sonnet-capacity",
+      "institution-attributes/us-sonnet-capacity",
+      "institution-attributes/dod-claude-control",
+      "institution-attributes/dod-substitution",
+      "institution-attributes/dod-reliance",
+      "institution-attributes/uk-public-remit",
+      "institution-attributes/uk-information",
+      "institution-attributes/dod-march-substitution",
+      "analytical-relations/uk-sonnet-access-constraint",
+      "analytical-relations/dod-anthropic-contested-assessment",
+      "analytical-relations/dod-anthropic-dependence-unresolved",
+      "analytical-relations/dod-anthropic-transitional-dependence-march2026"
+    ]
+  },
+  "layout": {
+    "width": 600,
+    "height": 600,
+    "radius": 12,
+    "basis": "categorical-only",
+    "nodes": {
+      "anthropic": {
+        "x": 494.8,
+        "y": 303.29
+      },
+      "caisi": {
+        "x": 79.43,
+        "y": 413.38
+      },
+      "dod": {
+        "x": 214,
+        "y": 88.39
+      },
+      "dsit": {
+        "x": 150.2,
+        "y": 273.71
+      },
+      "eu-ai-office": {
+        "x": 85.9,
+        "y": 199.76
+      },
+      "gds": {
+        "x": 182.1,
+        "y": 181.05
+      },
+      "google": {
+        "x": 414.07,
+        "y": 358.84
+      },
+      "gsa": {
+        "x": 117.8,
+        "y": 107.09
+      },
+      "llnl": {
+        "x": 231.64,
+        "y": 488.52
+      },
+      "microsoft": {
+        "x": 406.32,
+        "y": 261.15
+      },
+      "openai": {
+        "x": 487.06,
+        "y": 205.59
+      },
+      "openmined": {
+        "x": 133.85,
+        "y": 494.89
+      },
+      "uk-aisi": {
+        "x": 177.23,
+        "y": 407.01
+      },
+      "us-aisi": {
+        "x": 275.02,
+        "y": 400.64
+      },
+      "xai": {
+        "x": 325.59,
+        "y": 316.7
+      }
+    }
+  }
+}

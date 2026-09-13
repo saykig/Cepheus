@@ -1,4 +1,5 @@
 import '../global.css'
+import '../responsive-chrome.css'
 import type { Metadata } from 'next'
 import { IM_Fell_English, Libre_Baskerville } from 'next/font/google'
 import { notFound } from 'next/navigation'

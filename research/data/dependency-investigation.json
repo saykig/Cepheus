@@ -1,0 +1,533 @@
+{
+  "id": "dod-anthropic-function-substitution-investigation",
+  "investigator": "codex-research-checker",
+  "reviewerType": "agent",
+  "evidenceCutoff": "2026-09-12",
+  "investigatedOn": "2026-09-12",
+  "publicationStatus": "candidate",
+  "scope": "DoD classified operational assistance and Anthropic model substitution; no automatic inference to all DoD functions, all national-security agencies, or global frontier-AI dependence",
+  "searches": [
+    {
+      "query": "Anthropic DoD \"substitute\" \"2026\" declaration",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "Anthropic Pentagon \"switching\" \"2026\" \"declaration\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "Emil Michael March 2026 American Dynamism Summit \"single\" \"vendor\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "Anthropic \"declaration\" \"replacing\" \"2026\" Pentagon",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "Anthropic \"declaration\" \"Maven\" \"2026\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Michael\" \"declaration\" \"2164558\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Ramasamy\" \"declaration\" \"2026\" pdf",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Maven\" \"replacement\" site:war.gov",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"no viable alternative\" \"memo\" 2026",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "Alex Karp March 12 2026 Claude replace months CNBC capability gap",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "site.palantir.com \"Anthropic\" \"2026\" \"Maven\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Removal of Anthropic\" \"pdf\" \"2026\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "site:war.gov Michael Anthropic six months",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "site:armed-services.senate.gov Anthropic 2026",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "site:courtlistener.com \"Anthropic\" \"replacement\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Palantir\" \"Anthropic\" \"AIPCon\" \"March 12\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Slotkin\" \"cost\" \"2026\" \"record\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Manning\" \"cost\" May 2026",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Davies\" \"March 24\" \"transcript\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Michael\" \"March 19\" \"confident\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"115\" \"Ramasamy\" pdf",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Emil Michael\" \"declaration\" pdf March",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Davies\" site:armed-services.senate.gov/imo/media/doc/",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"166-4\" pdf",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"Ramasamy\" \"clearinghouse\"",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Removal of Anthropic\" \"April 2\" filetype:pdf",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    },
+    {
+      "query": "\"Anthropic\" \"September\" \"transition\" site:war.gov",
+      "executed": true,
+      "method": "web search",
+      "date": "2026-09-12"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dep-davies-march24",
+      "url": "https://www.armed-services.senate.gov/imo/media/doc/cybersecurity_transcript_03-24-20261.pdf",
+      "title": "Senate Armed Services Cybersecurity Subcommittee transcript",
+      "date": "2026-03-24",
+      "kind": "primary-official-transcript",
+      "retrieval": "full PDF inspected",
+      "locators": [
+        "printed pp27\u201329; Davies answers Reed and Rounds"
+      ],
+      "findings": [
+        "Davies confirms active Claude use in response to an Iran-operations question.",
+        "She explicitly connects the transition period and exception process to protecting operational success.",
+        "She states architecture accommodates multiple AI types and calls the removal period adequate.",
+        "She cannot supply a detailed replacement cost assessment during the hearing."
+      ],
+      "limitations": [
+        "No task-level cost, migration completion or alternative performance comparison disclosed.",
+        "Questions from senators are not treated as independently established facts."
+      ]
+    },
+    {
+      "id": "dep-davies-march6",
+      "url": "https://assets1.cbsnewsstatic.com/hub/cms/prod_cms_alt/file/2026/03/10/a2b6035a-bf88-48e1-bf79-818d70572fe3/dod_cio_signed_memo_-_to_-_components_-_removal_of_anthropic_-_pbc_products_in_dow_systems_-_cio000183-26.pdf",
+      "title": "Removal of Anthropic, PBC Products in DoW Systems, CIO000183-26",
+      "date": "2026-03-06",
+      "kind": "primary-government-memorandum-media-hosted",
+      "retrieval": "two-page PDF inspected; discovered via CBS article attachment",
+      "locators": [
+        "p2, paragraph beginning DoW Components will remove",
+        "p2, final paragraph"
+      ],
+      "findings": [
+        "Migration continuity permits temporary licenses and support tokens tied to approved transition plans.",
+        "Exceptional extensions require mission-critical national-security activity without a viable alternative and a risk-mitigation plan."
+      ],
+      "limitations": [
+        "A permitted exception is not evidence any specific exception was granted.",
+        "180 days is a policy deadline, not measured minimum switching time.",
+        "Critical-system priority list does not establish Claude was deployed in every listed system."
+      ]
+    },
+    {
+      "id": "dep-michael-march3",
+      "url": "https://www.a16z.news/p/emil-michaels-holy-cow-moment-with",
+      "title": "Emil Michael remarks at American Dynamism Summit",
+      "date": "2026-03-04",
+      "eventDate": "2026-03-03",
+      "kind": "primary-speaker-transcript-event-organizer",
+      "retrieval": "body inspected",
+      "locators": [
+        "On the events of the past few weeks, opening three paragraphs",
+        "On ensuring we have multiple vendors serving government"
+      ],
+      "findings": [
+        "Michael describes one-model use by CENTCOM, INDOPACOM and SOUTHCOM and characterizes the arrangement as vendor lock.",
+        "He seeks additional providers and disputes contractual restrictions on operational planning."
+      ],
+      "limitations": [
+        "Government official characterization, not audited comparative test.",
+        "Hypothetical remote shutdown concern is qualified by later court findings and deployment controls.",
+        "Transcript excerpt context identifies Anthropic dispute; no exact model version or workflow inventory."
+      ]
+    },
+    {
+      "id": "dep-senate-may19",
+      "url": "https://www.armed-services.senate.gov/imo/media/doc/05-19-2026_sub-transcript.pdf",
+      "title": "Senate Armed Services science and technology priorities hearing",
+      "date": "2026-05-19",
+      "kind": "primary-official-transcript",
+      "retrieval": "PDF inspected; relevant exchanges pp59\u201360,63\u201368",
+      "locators": [
+        "pp59\u201360, Manning/Tremper/Wolfson answers",
+        "pp63\u201365, Michael answer to Kelly",
+        "pp66\u201368, Michael answer to Kelly"
+      ],
+      "findings": [
+        "Army acknowledges some Anthropic use; service representatives cannot provide migration cost figures and describe assessment work.",
+        "Michael says updates were frozen and cloud access constrained; operations could continue without model changes.",
+        "Michael says there was only one provider before newer agreements and that providers have application-specific strengths."
+      ],
+      "limitations": [
+        "Some answers concern prospective uses.",
+        "Service answers differ: Navy does not confirm classified use in this public exchange.",
+        "No published cost schedule or task-specific replacement validation in the transcript."
+      ]
+    },
+    {
+      "id": "dep-dow-may1",
+      "url": "https://www.war.gov/News/Releases/Release/Article/4475177/classified-networks-ai-agreements/",
+      "title": "Classified Networks AI Agreements",
+      "date": "2026-05-01",
+      "kind": "primary-government-announcement",
+      "retrieval": "body inspected; current page lists eight companies",
+      "locators": [
+        "opening paragraph; IL6/IL7 paragraph; vendor-lock paragraph"
+      ],
+      "findings": [
+        "DoW announces eight agreements for classified-network deployment and intends architecture avoiding vendor lock."
+      ],
+      "limitations": [
+        "Agreement is not verified deployment, task parity or completed replacement.",
+        "Current page version does not expose amendment date; preserve source fingerprint."
+      ]
+    },
+    {
+      "id": "dep-anthropic-march5",
+      "url": "https://www.anthropic.com/news/where-stand-department-war",
+      "title": "Where things stand with the Department of War",
+      "date": "2026-03-05",
+      "kind": "primary-company-position",
+      "retrieval": "body inspected",
+      "locators": [
+        "paragraph beginning Our most important priority",
+        "paragraph beginning As we wrote on Thursday"
+      ],
+      "findings": [
+        "Anthropic offers nominal-cost models and continuing engineering support during permitted transition.",
+        "The supplier identifies intelligence analysis, modeling/simulation, operational planning and cyber operations as supported functions."
+      ],
+      "limitations": [
+        "Offer is not proof of delivered support or its indispensable necessity.",
+        "Function list is supplier testimony; government confirms operational use without publicly mapping every workflow."
+      ]
+    },
+    {
+      "id": "dep-trade-amicus-april22",
+      "url": "https://www.technet.org/wp-content/uploads/2026/04/2026-04-22-Trade-Associations-Amicus-Brief.pdf",
+      "title": "Trade association amicus, DC Circuit 26-1049 document2169972",
+      "date": "2026-04-22",
+      "kind": "primary-association-litigation-submission",
+      "retrieval": "PDF inspected",
+      "locators": [
+        "printed p27/PDFp36, technology-stack functions",
+        "printed p31/PDFp40, substitution costs"
+      ],
+      "findings": [
+        "Associations report actual reengineering costs, unsuitable alternatives for some member workflows, and some six-month retraining requirements for security parity.",
+        "Described functions include coding, security/compliance testing and vulnerability remediation."
+      ],
+      "limitations": [
+        "Advocacy submission; members and affected workflows unnamed.",
+        "Do not assign these costs or necessity to a named agency, Palantir, or military targeting function.",
+        "No disclosed sampling method or independently verified cost schedule."
+      ]
+    },
+    {
+      "id": "dep-fnn-march19",
+      "url": "https://federalnewsnetwork.com/defense-news/2026/03/dod-confident-it-can-replace-anthropics-claude-within-six-months-but-some-warn-transition-wont-be-easy/",
+      "title": "DoD confident it can replace Claude within six months",
+      "date": "2026-03-19",
+      "kind": "secondary-with-attributed-government-statements",
+      "retrieval": "direct fetch403; search engine returned complete indexed article; distinguish retrieval mechanisms",
+      "locators": [
+        "Michael remarks at March17 McAleese conference, opening paragraphs"
+      ],
+      "findings": [
+        "Michael expects limited disruption, reports OpenAI and Gemini deployment and acknowledges application-specific model strengths."
+      ],
+      "limitations": [
+        "Prospective expectation, not completion certificate or performance audit.",
+        "Retain as counterevidence; seek original conference recording if upgrading to primary."
+      ]
+    },
+    {
+      "id": "dep-airforce-july10",
+      "url": "https://breakingdefense.com/2026/07/air-force-pushing-contractors-to-purge-anthropic-by-sept-1-memo/",
+      "title": "Air Force pushing contractors to purge Anthropic by Sept1",
+      "date": "2026-07-10",
+      "kind": "secondary-discovery",
+      "retrieval": "article inspected; original July9/April2 memos not linked; compliance form loaded empty",
+      "locators": [
+        "opening memo chronology and official-form hyperlink"
+      ],
+      "findings": [
+        "Reports later removal deadlines and separate implementation memos."
+      ],
+      "limitations": [
+        "Do not treat deadline as completion or proof of switching cost.",
+        "Original revised memo not obtained."
+      ]
+    },
+    {
+      "id": "dep-court-august",
+      "url": "https://cases.justia.com/federal/district-courts/california/candce/3:2026cv01996/465515/250/0.pdf",
+      "title": "NDCal document250 summary-judgment order",
+      "date": "2026-08-27",
+      "kind": "primary-judicial-document-mirror",
+      "retrieval": "independently inspected in prior checker pass",
+      "locators": [
+        "pp5\u20137 use and contracts",
+        "p17 sectionII.F lifecycle controls",
+        "pp58\u201359 disposition"
+      ],
+      "findings": [
+        "Model provision, deployed copy control and replacement approval are distinct functions."
+      ],
+      "limitations": [
+        "Court findings about technical controls do not establish substitute capability or switching cost.",
+        "Underlying declaration166-4 sought but not separately obtained in this pass."
+      ]
+    }
+  ],
+  "retrievalFailures": [
+    {
+      "url": "https://www.cnbc.com/2026/03/12/karp-palantir-anthropic-claude-pentagon-blacklist.html",
+      "result": "restricted URL retrieval failure; no original interview inspected"
+    },
+    {
+      "url": "https://forms.osi.apps.mil/pages/responsepage.aspx?id=jbExg4ct70ijX6yIGOv5tDu7zIJiMqZOv9Lbxem5815UN0gwWDYwTEE5NFZURjRBV1pIVVA0UTZOUi4u",
+      "result": "empty document; cannot verify form fields or deadline"
+    },
+    {
+      "url": "https://investors.palantir.com/news-details/2024/Anthropic-and-Palantir-Partner-to-Bring-Claude-AI-Models-to-AWS-for-U.S.-Government-Intelligence-and-Defense-Operations/",
+      "result": "navigation shell only, not substantive article"
+    },
+    {
+      "url": "https://ismg-cdn.nyc3.cdn.digitaloceanspaces.com/asset_files/external/govuscourtscadc42923012088492170.pdf",
+      "result": "seven-page reconsideration cover letter inspected; referenced attachment7 not included, cannot substitute for declaration itself"
+    }
+  ],
+  "excludedDiscoveries": [
+    {
+      "description": "Generic unnamed members in association amicus",
+      "reason": "Useful counterevidence context, not admissible endpoints or assignable DoD task costs"
+    },
+    {
+      "description": "GovTribe FA560626Q00090001 solicitation amendment p11",
+      "url": "https://govtribe.com/file/government-file/fa560626q0009-solicitation-amendment-fa560626q00090001-dot-pdf",
+      "reason": "Search result locates government document referencing April2 memo; original downloadable primary not inspected; no canonical claim yet"
+    },
+    {
+      "description": "Blogs claiming Karp demonstrated no viable alternative",
+      "reason": "Conflate continued use with impossibility and repeat secondary claims; original interview not inspected"
+    }
+  ],
+  "candidateAnalysis": {
+    "id": "dod-anthropic-transitional-dependence-march2026",
+    "source": "dod",
+    "target": "anthropic",
+    "suggestedType": "transitional-operational-dependence",
+    "assessedOn": "2026-03-24",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "currentStatus": "historical assessment; continuation to September unresolved",
+    "assessment": "Transitional dependence in existing Claude-enabled classified operational assistance: substitution required a managed transition while operations continued. No permanent irreplaceability, precise cost or provider remote veto established.",
+    "construct": "Reliance on a provider-specific capability in an existing operational function where immediate withdrawal is constrained by maintaining that function during replacement. This permits alternatives and divided technical control.",
+    "rubricChangeRationale": "Separate transition-constrained product dependence from dependence on an ongoing service or remote provider control. This distinction applies symmetrically to any supplier, including offline deployed systems; it is not a relaxation of evidence requirements or a claim that all purchases create dependence.",
+    "necessaryConditions": [
+      {
+        "id": "identified-operational-use",
+        "required": true,
+        "result": "supported",
+        "sourceIds": [
+          "dep-davies-march24",
+          "dep-anthropic-march5",
+          "dep-court-august"
+        ],
+        "reason": "Government confirms active operations; supplier narrows functional context to intelligence/planning assistance, with court corroboration of defence deployment. Not a claim that Claude independently selects targets."
+      },
+      {
+        "id": "provider-specific-capability",
+        "required": true,
+        "result": "supported",
+        "sourceIds": [
+          "dep-court-august",
+          "dep-davies-march6"
+        ],
+        "reason": "Named Anthropic models remain the deployed capability; development/provision/licensing differs from customer control of static copies. Ongoing remote provider control is not required for product dependence."
+      },
+      {
+        "id": "non-immediate-substitution",
+        "required": true,
+        "result": "supported-as-qualitative-inference",
+        "sourceIds": [
+          "dep-davies-march24",
+          "dep-davies-march6",
+          "dep-michael-march3"
+        ],
+        "reason": "Active use persisted after the removal decision; responsible CIO links transition time and exceptions to operational continuity; phased licenses/support and government single-provider characterization corroborate constraint. No exact minimum duration or dollar cost inferred."
+      },
+      {
+        "id": "temporal-and-functional-boundary",
+        "required": true,
+        "result": "supported",
+        "sourceIds": [
+          "dep-davies-march24",
+          "dep-dow-may1",
+          "dep-senate-may19"
+        ],
+        "reason": "Assessment dated March24 for ongoing classified operational assistance; later alternatives prevent extending the finding automatically to September."
+      },
+      {
+        "id": "counterevidence-disposition",
+        "required": true,
+        "result": "supported",
+        "sourceIds": [
+          "dep-davies-march24",
+          "dep-fnn-march19",
+          "dep-dow-may1",
+          "dep-senate-may19",
+          "dep-court-august"
+        ],
+        "reason": "Interoperability, prospective low disruption and alternative agreements rebut permanent irreplaceability, not transitional constraint. Frozen deployed models limit provider veto; they do not make model-specific workflows instantly replaceable."
+      }
+    ],
+    "sufficientRule": "All five conditions supported, with government operational-continuity evidence and a distinct instrument or deployment record. Announced procurement, continued use alone, or a phase-out deadline alone is insufficient.",
+    "necessityResult": "supported for dated transitional construct; permanent/structural dependence not assessed as established",
+    "sufficiencyResult": "candidate supported qualitative inference; root substantive review required before canonical coding or publication",
+    "notEstablished": [
+      "Task-specific measured replacement cost",
+      "Minimum switching duration",
+      "No viable substitute under every feasible operational adjustment",
+      "Continuing need for Anthropic engineers or new model versions",
+      "September12 persistence of March constraint",
+      "Dependence for lethal targeting specifically"
+    ],
+    "counterEvidenceTreatment": "Alternatives may exist yet need validated integration. March optimism is recorded as conflicting expectation, while later agreements and frozen copies limit scope. Unnamed contractor costs are not used to satisfy the condition for named military functions.",
+    "limitations": [
+      "The government confirms operational use without a public workflow-by-workflow inventory. Intelligence/planning description comes from the supplier.",
+      "No observed instantaneous removal counterfactual. The inference relies on responsible agency explanation that managed transition protects ongoing operations.",
+      "Assessment has no ordinal intensity; substantial or mission-structural dependence is not established.",
+      "March24 statement does not show whether an exemption was ever granted or migration completed."
+    ],
+    "approval": null
+  },
+  "fallbackFindings": [
+    {
+      "id": "divided-lifecycle-control",
+      "assessment": "Supported: supplier model provision and customer/cloud operational approval are consequential distinct controls.",
+      "sourceIds": [
+        "dep-court-august",
+        "dep-senate-may19"
+      ]
+    },
+    {
+      "id": "recurrent-operational-reliance",
+      "assessment": "Supported historical reliance, now independently corroborated by CIO operational testimony; exact essentiality and task-level intensity remain unmeasured.",
+      "sourceIds": [
+        "dep-davies-march24",
+        "dep-court-august",
+        "dep-anthropic-march5"
+      ]
+    }
+  ],
+  "furtherEvidenceNeeded": [
+    {
+      "item": "Answers for the record to March24 and May19 replacement-cost questions",
+      "status": "Searched; public transcript contains placeholder/pending answers, no cost schedule found"
+    },
+    {
+      "item": "Original April2 and July9 removal memos and exemption decisions",
+      "status": "Discovery located; original March6 obtained, subsequent originals not obtained"
+    },
+    {
+      "item": "Function-level classified substitute evaluations and deployment completion",
+      "status": "No public primary comparison inspected; May agreements do not establish completion"
+    }
+  ]
+}

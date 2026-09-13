@@ -1,0 +1,231 @@
+[
+  {
+    "id": "us-aisi",
+    "label": "US AISI",
+    "name": "U.S. AI Safety Institute at NIST",
+    "kind": "Public research unit",
+    "jurisdiction": "United States",
+    "note": "Name used in the 2024 records. Later institutional changes do not establish continuity of these agreements.",
+    "sourceIds": [
+      "nist-mous-2024",
+      "joint-evaluation-2024"
+    ],
+    "group": "evaluation",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "uk-aisi",
+    "label": "UK AISI",
+    "name": "UK AI Security Institute",
+    "kind": "Public research unit",
+    "jurisdiction": "United Kingdom",
+    "note": "Named AI Safety Institute in 2024 sources; renamed 14 February 2025. Dated relationships retain their own provenance.",
+    "sourceIds": [
+      "joint-evaluation-2024",
+      "uk-aisi-renaming"
+    ],
+    "group": "evaluation",
+    "publicationStatus": "published",
+    "coder": "codex-research-checker"
+  },
+  {
+    "id": "openai",
+    "label": "OpenAI",
+    "name": "OpenAI",
+    "kind": "Model developer",
+    "jurisdiction": "United States",
+    "note": "A named party in the model-access announcement.",
+    "sourceIds": [
+      "nist-mous-2024"
+    ],
+    "group": "developers",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "anthropic",
+    "label": "Anthropic",
+    "name": "Anthropic",
+    "kind": "Model developer",
+    "jurisdiction": "United States",
+    "note": "Provider of Claude in these records.",
+    "sourceIds": [
+      "nist-mous-2024",
+      "joint-evaluation-2024",
+      "llnl-deployment-2025"
+    ],
+    "group": "developers",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "llnl",
+    "label": "LLNL",
+    "name": "Lawrence Livermore National Laboratory",
+    "kind": "Research laboratory",
+    "jurisdiction": "United States",
+    "note": "The named laboratory, rather than an aggregate of universities or research institutions.",
+    "sourceIds": [
+      "llnl-deployment-2025"
+    ],
+    "group": "evaluation",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "caisi",
+    "label": "CAISI",
+    "name": "Center for AI Standards and Innovation at NIST",
+    "kind": "Public research unit",
+    "jurisdiction": "United States",
+    "group": "evaluation",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "note": "Re-established from US AISI; historical agreements are not inherited automatically.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "google",
+    "label": "Google",
+    "name": "Google",
+    "kind": "Model developer",
+    "jurisdiction": "United States",
+    "group": "developers",
+    "sourceIds": [
+      "uk-google-deepmind-mou"
+    ],
+    "note": "Named Google organization. UK MoU identifies Google LLC; CAISI announcement names its Google DeepMind unit. Legal contracting identity is not inferred from organizational brand.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "microsoft",
+    "label": "Microsoft",
+    "name": "Microsoft",
+    "kind": "Model developer / infrastructure provider",
+    "jurisdiction": "United States",
+    "group": "developers",
+    "sourceIds": [
+      "microsoft-evaluation"
+    ],
+    "note": "Named institutional counterparty; specific subsidiaries require separate evidence.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "xai",
+    "label": "xAI",
+    "name": "xAI",
+    "kind": "Model developer",
+    "jurisdiction": "United States",
+    "group": "developers",
+    "sourceIds": [
+      "caisi-2026"
+    ],
+    "note": "Historical named party; changes of corporate ownership do not transfer agreements without evidence.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "dod",
+    "label": "DoD",
+    "name": "US Department of Defense",
+    "kind": "Defence department",
+    "jurisdiction": "United States",
+    "group": "public",
+    "sourceIds": [
+      "court-august"
+    ],
+    "note": "Also styled Department of War in 2026 source documents. Same department, not inferred institutional succession.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "cdao",
+    "label": "CDAO",
+    "name": "Chief Digital and Artificial Intelligence Office",
+    "kind": "Acquisition office within DoD",
+    "jurisdiction": "United States",
+    "group": "public",
+    "sourceIds": [
+      "cdao-awards"
+    ],
+    "note": "Keep issuing office distinct from department-wide operational use.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "dsit",
+    "label": "DSIT",
+    "name": "Department for Science, Innovation and Technology",
+    "kind": "Government department",
+    "jurisdiction": "United Kingdom",
+    "group": "public",
+    "sourceIds": [
+      "uk-openai-mou"
+    ],
+    "note": "Secretary of State acts on behalf of the Crown in the memoranda.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "eu-ai-office",
+    "label": "AI Office",
+    "name": "European AI Office, European Commission",
+    "kind": "Code administrator / governance unit",
+    "jurisdiction": "European Union",
+    "group": "public",
+    "sourceIds": [
+      "eu-code"
+    ],
+    "note": "Code participation describes an administrative interface, not a compliance determination.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "gsa",
+    "label": "GSA",
+    "name": "General Services Administration",
+    "kind": "Procurement and shared services agency",
+    "jurisdiction": "United States",
+    "group": "public",
+    "sourceIds": [
+      "caisi-gsa"
+    ],
+    "note": "Admitted by named CAISI cooperation instrument connecting evaluation to procurement.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "openmined",
+    "label": "OpenMined",
+    "name": "OpenMined",
+    "kind": "Nonprofit evaluation infrastructure organization",
+    "jurisdiction": "United States",
+    "group": "evaluation",
+    "sourceIds": [
+      "caisi-openmined"
+    ],
+    "note": "Admitted through a named evaluation-infrastructure research agreement, not consortium membership.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  },
+  {
+    "id": "gds",
+    "label": "GDS",
+    "name": "Government Digital Service",
+    "kind": "Public digital delivery unit",
+    "jurisdiction": "United Kingdom",
+    "group": "public",
+    "sourceIds": [
+      "uk-anthropic-pilot",
+      "uk-pilot-government"
+    ],
+    "note": "Admitted through named assistant-development work with Anthropic.",
+    "publicationStatus": "published",
+    "coder": "codex-primary"
+  }
+]

@@ -1,0 +1,1094 @@
+[
+  {
+    "family": "us-evaluation",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "Anthropic NIST CAISI AISI agreement evaluation 2026",
+        "domains": [
+          "nist.gov"
+        ]
+      },
+      {
+        "q": "OpenAI NIST CAISI AISI agreement evaluation 2026",
+        "domains": [
+          "nist.gov"
+        ]
+      },
+      {
+        "q": "Google DeepMind NIST CAISI AISI agreement evaluation 2026",
+        "domains": [
+          "nist.gov"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro",
+      "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+      "https://www.nist.gov/news-events/news/2026/07/caisi-assessment-zais-glm-52",
+      "https://www.nist.gov/news-events/news/2026/03/announcement-caisi-signs-crada-openmined-enable-secure-ai-evaluations",
+      "https://www.nist.gov/news-events/news/2024/08/us-ai-safety-institute-signs-agreements-regarding-ai-safety-research",
+      "https://www.nist.gov/system/files/documents/2026/03/27/03_AI%20Update-March.pdf",
+      "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
+      "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
+      "https://www.nist.gov/news-events/news/2026/03/caisi-signs-mou-gsa-boost-ai-evaluation-science-federal-procurement-through",
+      "https://www.nist.gov/caisi",
+      "https://www.nist.gov/system/files/documents/2025/09/30/CAISI_Evaluation_of_DeepSeek_AI_Models.pdf",
+      "https://www.nist.gov/news-events/news/2024/11/pre-deployment-evaluation-anthropics-upgraded-claude-35-sonnet",
+      "https://www.nist.gov/caisi/cheating-ai-agent-evaluations",
+      "https://www.nist.gov/blogs/caisi-research-blog/analyzing-transcripts-ai-agent-evaluations",
+      "https://www.nist.gov/document/us-aisi-uk-aisi-joint-testing-report-upgrade-claude-35-sonnet-111924",
+      "https://www.nccoe.nist.gov/sites/default/files/2026-01/Cyber%20AI%20Profile%20Workshop%20Slides%20-%20January%202026_1.pdf"
+    ],
+    "id": "search-1"
+  },
+  {
+    "family": "us-evaluation",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "Microsoft NIST CAISI AISI agreement evaluation 2026",
+        "domains": [
+          "nist.gov"
+        ]
+      },
+      {
+        "q": "xAI NIST CAISI AISI agreement evaluation 2026",
+        "domains": [
+          "nist.gov"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro",
+      "https://www.nist.gov/news-events/news/2026/03/announcement-caisi-signs-crada-openmined-enable-secure-ai-evaluations",
+      "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
+      "https://www.nist.gov/news-events/news/2026/03/caisi-signs-mou-gsa-boost-ai-evaluation-science-federal-procurement-through",
+      "https://www.nist.gov/caisi",
+      "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
+      "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+      "https://www.nist.gov/system/files/documents/2026/03/27/03_AI%20Update-March.pdf",
+      "https://www.nist.gov/blogs/caisi-research-blog/analyzing-transcripts-ai-agent-evaluations",
+      "https://www.nist.gov/caisi/cheating-ai-agent-evaluations",
+      "https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition",
+      "https://www.nist.gov/news-events/news/2025/12/caisi-evaluation-kimi-k2-thinking",
+      "https://www.nist.gov/news-events/news-updates/topic/2800826",
+      "https://www.nccoe.nist.gov/sites/default/files/2026-01/Cyber%20AI%20Profile%20Workshop%20Slides%20-%20January%202026_1.pdf",
+      "https://www.nist.gov/system/files/documents/2025/09/30/CAISI_Evaluation_of_DeepSeek_AI_Models.pdf"
+    ],
+    "id": "search-2"
+  },
+  {
+    "family": "uk-evaluation",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "Anthropic UK AI Security Institute evaluation access 2026",
+        "domains": [
+          "aisi.gov.uk"
+        ]
+      },
+      {
+        "q": "OpenAI UK AI Security Institute evaluation access 2026",
+        "domains": [
+          "aisi.gov.uk"
+        ]
+      },
+      {
+        "q": "Google DeepMind UK AI Security Institute evaluation access 2026",
+        "domains": [
+          "aisi.gov.uk"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.aisi.gov.uk/blog/pre-deployment-evaluation-of-openais-o1-model",
+      "https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities",
+      "https://www.aisi.gov.uk/blog",
+      "https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities",
+      "https://www.aisi.gov.uk/research/stack-adversarial-attacks-on-llm-safeguard-pipelines",
+      "https://www.aisi.gov.uk/blog/deepening-our-partnership-with-google-deepmind",
+      "https://www.aisi.gov.uk/careers",
+      "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+      "https://www.aisi.gov.uk/",
+      "https://www.aisi.gov.uk/blog/pre-deployment-evaluation-of-anthropics-upgraded-claude-3-5-sonnet",
+      "https://www.aisi.gov.uk/about",
+      "https://www.aisi.gov.uk/research/uk-aisi-alignment-evaluation-case-study"
+    ],
+    "id": "search-3"
+  },
+  {
+    "family": "uk-evaluation",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "Microsoft UK AI Security Institute evaluation access 2026",
+        "domains": [
+          "aisi.gov.uk"
+        ]
+      },
+      {
+        "q": "xAI UK AI Security Institute evaluation access 2026",
+        "domains": [
+          "aisi.gov.uk"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+      "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+      "https://www.aisi.gov.uk/blog/pre-deployment-evaluation-of-openais-o1-model",
+      "https://www.aisi.gov.uk/careers",
+      "https://www.aisi.gov.uk/blog/our-approach-to-evaluations",
+      "https://www.aisi.gov.uk/about",
+      "https://www.aisi.gov.uk/research/loss-of-oversight-how-ai-systems-may-become-harder-to-audit-monitor-and-investigate",
+      "https://www.aisi.gov.uk/blog/advanced-ai-evaluations-may-update",
+      "https://www.aisi.gov.uk/blog/evals-bounty",
+      "https://www.aisi.gov.uk/frontier-ai-trends-report",
+      "https://www.aisi.gov.uk/",
+      "https://www.aisi.gov.uk/blog/principles-for-safeguard-evaluation"
+    ],
+    "id": "search-4"
+  },
+  {
+    "family": "uk-cooperation",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "Anthropic UK DSIT memorandum strategic cooperation 2026",
+        "domains": [
+          "gov.uk"
+        ]
+      },
+      {
+        "q": "OpenAI UK DSIT memorandum strategic cooperation 2026",
+        "domains": [
+          "gov.uk"
+        ]
+      },
+      {
+        "q": "Google DeepMind UK DSIT memorandum strategic cooperation 2026",
+        "domains": [
+          "gov.uk"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.gov.uk/government/publications/dsit-main-estimate-memorandum-2026-to-2027/dsit-main-estimate-memorandum-2026-to-2027",
+      "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-google-deepmind-on-ai-opportunities-and-security/memorandum-of-understanding-between-the-uk-and-google-deepmind-on-ai-opportunities-and-security",
+      "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-google-deepmind-on-ai-opportunities-and-security",
+      "https://www.gov.uk/government/news/ai-to-accelerate-national-renewal-and-growth-as-google-deepmind-backs-uk-tech-and-science-sectors",
+      "https://www.gov.uk/government/publications/introducing-the-ai-economics-institute/introducing-the-ai-economics-institute",
+      "https://www.gov.uk/csv-preview/6a4d4d9a92f65594cb02998f/DSIT_Senior_Official_meetings_January_to_March_2026.csv",
+      "https://www.gov.uk/csv-preview/6a3e3cbe30b491f55b3c4aa1/Jan-Mar_2026_Ministers_Meetings_Transparency_Template__DSIT___002_.csv",
+      "https://www.gov.uk/government/news/top-british-ai-expertise-to-help-spark-renewal-of-public-services-and-bolster-national-security",
+      "https://www.gov.uk/government/publications/uk-germany-joint-statement-on-advanced-ai-safety-and-security",
+      "https://www.gov.uk/government/publications/dsit-business-appointment-rules-advice-2025/dsit-business-appointment-rules-advice-2025",
+      "https://www.gov.uk/government/news/openai-to-expand-uk-office-and-work-with-government-departments-to-turbocharge-the-uks-ai-infrastructure-and-transform-public-services",
+      "https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development",
+      "https://assets.publishing.service.gov.uk/media/6a2008d6d40a060bb9809cdc/Treasury_Minutes_Progress_Report_Accessible.pdf",
+      "https://assets.publishing.service.gov.uk/media/68bea3fc223d92d088f01d69/Defence_Industrial_Strategy_2025_-_Making_Defence_an_Engine_for_Growth.pdf",
+      "https://assets.publishing.service.gov.uk/media/67bf1804b0bb6528ee866b01/Google.pdf",
+      "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/702810/180425_BEIS_AI_Sector_Deal__4_.pdf",
+      "https://assets.publishing.service.gov.uk/media/684ad3ba31f1fc7d0801ab84/Annex_F_-_Briefing_of_the_meeting_with_Microsoft.pdf",
+      "https://assets.publishing.service.gov.uk/media/65c1e41663a23d000dc8224f/a-pro-innovation-approach-to-ai-regulation-amended-governement-response-print-ready.pdf"
+    ],
+    "id": "search-5"
+  },
+  {
+    "family": "uk-cooperation",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "Microsoft UK DSIT memorandum strategic cooperation 2026",
+        "domains": [
+          "gov.uk"
+        ]
+      },
+      {
+        "q": "xAI UK DSIT memorandum strategic cooperation 2026",
+        "domains": [
+          "gov.uk"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.gov.uk/cma-cases/microsofts-business-software-ecosystem",
+      "https://www.gov.uk/government/publications/digital-and-technologies-sector-plan-year-one-update",
+      "https://www.gov.uk/csv-preview/6a0cb7c5f7c2e79c33db9263/DSIT_Ministerial_Q4_2025_returns.csv",
+      "https://www.gov.uk/government/news/uk-and-australia-pact-on-fast-moving-ai-security-risks",
+      "https://www.gov.uk/government/news/cma-announces-package-of-actions-on-business-software-and-cloud-services",
+      "https://www.gov.uk/government/publications/dsit-main-estimate-memorandum-2026-to-2027/dsit-main-estimate-memorandum-2026-to-2027",
+      "https://www.gov.uk/csv-preview/6a3e3cbe30b491f55b3c4aa1/Jan-Mar_2026_Ministers_Meetings_Transparency_Template__DSIT___002_.csv",
+      "https://www.gov.uk/government/collections/dsit-main-estimates",
+      "https://assets.publishing.service.gov.uk/media/68bea3fc223d92d088f01d69/Defence_Industrial_Strategy_2025_-_Making_Defence_an_Engine_for_Growth.pdf",
+      "https://www.gov.uk/government/publications/how-will-regulators-enable-safe-ai-powered-innovation-joint-letter-from-dsit-secretary-of-state-and-dbt-secretary-of-state",
+      "https://www.gov.uk/government/news/uk-financial-system-strengthened-with-new-safeguards-for-major-technology-providers",
+      "https://www.gca.gov.uk/news/crown-commercial-service-signs-memorandum-understanding-microsoft-uk-spa24",
+      "https://www.gov.uk/government/publications/uk-sweden-memorandum-of-understanding-for-cooperation-in-research-and-innovation/uk-sweden-memorandum-of-understanding-for-cooperation-in-research-and-innovation",
+      "https://assets.publishing.service.gov.uk/media/686e6c6afe1a249e937cbeb4/DSIT_ARA_2024-25_print_ready.pdf",
+      "https://assets.publishing.service.gov.uk/media/684ad3ba31f1fc7d0801ab84/Annex_F_-_Briefing_of_the_meeting_with_Microsoft.pdf",
+      "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/717697/Joint_Statement_-_19_June_2018.pdf",
+      "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1145586/11857435_NS_IR_Refresh_2023_Supply_AllPages_Revision_7_WEB_PDF.pdf",
+      "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/674881/Security_and_Defence.pdf"
+    ],
+    "id": "search-6"
+  },
+  {
+    "family": "us-defence",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "Anthropic DoD CDAO contract procurement deployment termination 2026",
+        "domains": [
+          "ai.mil"
+        ]
+      },
+      {
+        "q": "OpenAI DoD CDAO contract procurement deployment termination 2026",
+        "domains": [
+          "ai.mil"
+        ]
+      },
+      {
+        "q": "Google DeepMind DoD CDAO contract procurement deployment termination 2026",
+        "domains": [
+          "ai.mil"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.ai.mil/News/",
+      "https://www.ai.mil/News/PR-View/Article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/ai-mil-news-07-09-24-news-Open-DAGIR-Acquisition-Update-for-Advana-html-2024-10-26-12_29_17.pdf?ver=ADJgo8Ig6qpTfsimLFS0-w%3D%3D",
+      "https://www.ai.mil/Contact/",
+      "https://www.ai.mil/Leadership/",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/DoD%20Compliance%20Plan%20for%20Office%20of%20Management%20and%20Budget%20Memorandum%20M-24-10.pdf",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12-DIU-Speed-to-Scale.pdf",
+      "https://www.ai.mil/News/PR-View/Article/4026085/cdao-highlights-progress-in-scaling-data-and-ai-capabilities-at-six-month-mark/",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12-TF%20Lima-ExecSum-TAB-A.pdf?ver=cEnvUdR8cdzXFmv7KW2n-w%3D%3D",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/press_release_220601-foc_cdao.pdf?ver=BQWUI9wnkGrzkPPFTCD_kw%3D%3D",
+      "https://www.ai.mil/Dev/",
+      "https://www.ai.mil/Careers/Industry-Days/",
+      "https://www.ai.mil/Leadership/Bio-Page/Article/3940370/cameron-stanley/",
+      "https://www.ai.mil/Industry/Industry-Days/",
+      "https://www.ai.mil/Latest/Blog/Article-Display/Article/3940311/continuous-bounty-practicing-what-we-preach/",
+      "https://www.ai.mil/Industry/Tradewinds/",
+      "https://www.ai.mil/Latest/Blog/Article-Display/Article/4014886/cdao-and-diu-host-joint-industry-day-focused-on-speed-to-scale-partnership/"
+    ],
+    "id": "search-7"
+  },
+  {
+    "family": "us-defence",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "Microsoft DoD CDAO contract procurement deployment termination 2026",
+        "domains": [
+          "ai.mil"
+        ]
+      },
+      {
+        "q": "xAI DoD CDAO contract procurement deployment termination 2026",
+        "domains": [
+          "ai.mil"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.ai.mil/News/PR-View/Article/4242822/cdao-announces-partnerships-with-frontier-ai-companies-to-address-national-secu/",
+      "https://www.ai.mil/News/",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/DoD%20Compliance%20Plan%20for%20Office%20of%20Management%20and%20Budget%20Memorandum%20M-24-10.pdf",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/ai-mil-news-07-09-24-news-Open-DAGIR-Acquisition-Update-for-Advana-html-2024-10-26-12_29_17.pdf?ver=ADJgo8Ig6qpTfsimLFS0-w%3D%3D",
+      "https://www.ai.mil/Dev/",
+      "https://www.ai.mil/Leadership/",
+      "https://www.ai.mil/Contact/",
+      "https://www.ai.mil/News/PR-View/Article/4026085/cdao-highlights-progress-in-scaling-data-and-ai-capabilities-at-six-month-mark/",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12-CDAO-Artificial-Intelligence-Rapid-Capabilities-Cell.pdf",
+      "https://www.ai.mil/",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/2025-01-Open-DAGIR-Overview.pdf?ver=UwgZcW-VUj0wqeHuXbPosQ%3D%3D",
+      "https://www.ai.mil/Careers/Industry-Days/",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12-TF%20Lima-ExecSum-TAB-A.pdf?ver=cEnvUdR8cdzXFmv7KW2n-w%3D%3D",
+      "https://www.ai.mil/Portals/137/Documents/Resources%20Page/press_release_220601-foc_cdao.pdf?ver=BQWUI9wnkGrzkPPFTCD_kw%3D%3D",
+      "https://www.ai.mil/Industry/Tradewinds/",
+      "https://www.ai.mil/Leadership/Bio-Page/Article/3940370/cameron-stanley/",
+      "https://www.ai.mil/Latest/Blog/Article-Display/Article/4014886/cdao-and-diu-host-joint-industry-day-focused-on-speed-to-scale-partnership/",
+      "https://www.ai.mil/Latest/Blog/Article-Display/Article/3940311/continuous-bounty-practicing-what-we-preach/"
+    ],
+    "id": "search-8"
+  },
+  {
+    "family": "eu-compliance",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "Anthropic European Commission AI Office code general purpose signatory 2026",
+        "domains": [
+          "digital-strategy.ec.europa.eu"
+        ]
+      },
+      {
+        "q": "OpenAI European Commission AI Office code general purpose signatory 2026",
+        "domains": [
+          "digital-strategy.ec.europa.eu"
+        ]
+      },
+      {
+        "q": "Google DeepMind European Commission AI Office code general purpose signatory 2026",
+        "domains": [
+          "digital-strategy.ec.europa.eu"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://digital-strategy.ec.europa.eu/en/faqs/signing-general-purpose-ai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+      "https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/faqs/signing-code-practice-transparency-ai-generated-content",
+      "https://digital-strategy.ec.europa.eu/en/library/how-sign-code-practice-transparency-ai-generated-content",
+      "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers",
+      "https://digital-strategy.ec.europa.eu/en/faqs/questions-and-answers-code-practice-general-purpose-ai",
+      "https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content",
+      "https://digital-strategy.ec.europa.eu/en/library/ai-office-invites-providers-sign-gpai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/news/first-meeting-signatory-taskforce-general-purpose-ai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/faqs/guidelines-obligations-general-purpose-ai-providers",
+      "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "https://digital-strategy.ec.europa.eu/en/node/13982/printable/pdf",
+      "https://digital-strategy.ec.europa.eu/en",
+      "https://digital-strategy.ec.europa.eu/en/node/13990/printable/pdf",
+      "https://digital-strategy.ec.europa.eu/en/node/13028/printable/pdf",
+      "https://disinfocode.eu/eu-elections-2024/"
+    ],
+    "id": "search-9"
+  },
+  {
+    "family": "eu-compliance",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "Microsoft European Commission AI Office code general purpose signatory 2026",
+        "domains": [
+          "digital-strategy.ec.europa.eu"
+        ]
+      },
+      {
+        "q": "xAI European Commission AI Office code general purpose signatory 2026",
+        "domains": [
+          "digital-strategy.ec.europa.eu"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://digital-strategy.ec.europa.eu/en/faqs/signing-general-purpose-ai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+      "https://digital-strategy.ec.europa.eu/en/faqs/signing-code-practice-transparency-ai-generated-content",
+      "https://digital-strategy.ec.europa.eu/en/policies/signatory-taskforce-gpai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/library/how-sign-code-practice-transparency-ai-generated-content",
+      "https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content",
+      "https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers",
+      "https://digital-strategy.ec.europa.eu/en/library/ai-office-invites-providers-sign-gpai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/faqs/questions-and-answers-code-practice-general-purpose-ai",
+      "https://digital-strategy.ec.europa.eu/en/news/first-meeting-signatory-taskforce-general-purpose-ai-code-practice",
+      "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "https://digital-strategy.ec.europa.eu/en/node/13982/printable/pdf",
+      "https://digital-strategy.ec.europa.eu/en",
+      "https://digital-strategy.ec.europa.eu/en/node/13990/printable/pdf",
+      "https://digital-strategy.ec.europa.eu/en/node/13028/printable/pdf",
+      "https://disinfocode.eu/eu-elections-2024/"
+    ],
+    "id": "search-10"
+  },
+  {
+    "family": "llnl",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "Anthropic LLNL model deployment use 2026",
+        "domains": [
+          "llnl.gov"
+        ]
+      },
+      {
+        "q": "OpenAI LLNL model deployment use 2026",
+        "domains": [
+          "llnl.gov"
+        ]
+      },
+      {
+        "q": "Google DeepMind LLNL model deployment use 2026",
+        "domains": [
+          "llnl.gov"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://hpc.llnl.gov/sites/default/files/2026-03/LC-AI.pdf",
+      "https://www.llnl.gov/news/lab-report/lab-report-april-24-2026",
+      "https://hpc.llnl.gov/technical-bulletins/bulletin-608",
+      "https://data-science.llnl.gov/llnl-introduces-anthropic-ai-tool-claude-facility-wide-operations",
+      "https://hpc.llnl.gov/sites/default/files/2025-10/Consolati_User-Meeting.pdf",
+      "https://computing.llnl.gov/about/newsroom/ascr-hpc-llm",
+      "https://www.llnl.gov/article/52701/llnl-employees-dive-ais-transformative-potential-aiedge-innovation-day",
+      "https://st.llnl.gov/sites/default/files/inline-files/2026_Invest_Strat_01_05_26.pdf",
+      "https://hpc.llnl.gov/about-livermore-computing/ai-ml-lc/using-llms-livermore-computing",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/all/machine/3743990013529076",
+      "https://www.llnl.gov/article/54711/llnl-selected-lead-10-projects-under-does-genesis-mission",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/0d659855-5fe3-49dd-a1c7-e75f07f64bb9/all/3743990013529076",
+      "https://hpc.llnl.gov/about-livermore-computing/ai-ml-lc/lc-llm-model-download-decision-guide",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/engineering/nif/3743990014281336",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/all/phd/3743990012499846"
+    ],
+    "id": "search-11"
+  },
+  {
+    "family": "llnl",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "Microsoft LLNL model deployment use 2026",
+        "domains": [
+          "llnl.gov"
+        ]
+      },
+      {
+        "q": "xAI LLNL model deployment use 2026",
+        "domains": [
+          "llnl.gov"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.llnl.gov/news/lab-report/lab-report-april-24-2026",
+      "https://software.llnl.gov/AMS/",
+      "https://www.llnl.gov/article/54711/llnl-selected-lead-10-projects-under-does-genesis-mission",
+      "https://st.llnl.gov/sites/default/files/inline-files/2026_Invest_Strat_01_05_26.pdf",
+      "https://hpc.llnl.gov/sites/default/files/2025-10/Consolati_User-Meeting.pdf",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/all/machine/3743990013529076",
+      "https://www.llnl.gov/sites/www/files/2025-05/2025-investment-strategy.pdf",
+      "https://www.llnl.gov/sites/www/files/2024-04/AI_LLNL_ReadAhead_v01_30_24rev1.pdf",
+      "https://st.llnl.gov/sites/default/files/inline-files/2026_Invest_Strat_01_05_26_rev1.pdf",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/0d659855-5fe3-49dd-a1c7-e75f07f64bb9/all/3743990013529076",
+      "https://www.llnl.gov/article/54416/llnl-showcases-ai-enabled-science-national-security-energy-innovation-ai-expo",
+      "https://www.llnl.gov/article/54751/llnl-students-mentors-put-agentic-ai-tools-work-cross-laboratory-clinic",
+      "https://hpc.llnl.gov/technical-bulletins/bulletin-604",
+      "https://hpc.llnl.gov/about-livermore-computing/ai-ml-lc/lc-llm-model-download-decision-guide",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/all/global/3743990014651061",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/computing/all/3743990013651526",
+      "https://www.llnl.gov/join-our-team/careers/find-your-job/all/Artificial%20Intelligence/3743990013651526"
+    ],
+    "id": "search-12"
+  },
+  {
+    "family": "us-evaluation",
+    "party": "developer",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "NIST CAISI AISI agreement evaluation 2026 agreement Anthropic",
+        "domains": [
+          "anthropic.com"
+        ]
+      },
+      {
+        "q": "NIST CAISI AISI agreement evaluation 2026 agreement OpenAI",
+        "domains": [
+          "openai.com"
+        ]
+      },
+      {
+        "q": "NIST CAISI AISI agreement evaluation 2026 agreement Google DeepMind",
+        "domains": [
+          "deepmind.google"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+      "https://openai.com/index/us-caisi-uk-aisi-ai-update/",
+      "https://www.anthropic.com/news/strengthening-our-safeguards-through-collaboration-with-us-caisi-and-uk-aisi",
+      "https://openai.com/index/our-agreement-with-the-department-of-war/",
+      "https://www-cdn.anthropic.com/43ec7e770925deabc3f0bc1dbf0133769fd03812.pdf",
+      "https://www.anthropic.com/research/donating-open-source-petri",
+      "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute/",
+      "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "https://www.anthropic.com/policy",
+      "https://openai.com/index/helping-build-shared-standards-for-advanced-ai/",
+      "https://alignment.anthropic.com/2026/taste/",
+      "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "https://cdn.openai.com/pdf/oai_ca-safety-letter_8-11-25.pdf",
+      "https://cdn.openai.com/pdf/21b88bb5-10a3-4566-919d-f9a6b9c3e632/openai-ostp-rfi-oct-27-2025.pdf",
+      "https://cdn.openai.com/global-affairs/keeping-users-safe-in-the-age-of-ai-oct25.pdf",
+      "https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf",
+      "https://assets.anthropic.com/m/8eb43d8f1f8895f/original/Anthropic-Voluntary-Commitments-Web-Archive.pdf"
+    ],
+    "id": "search-13"
+  },
+  {
+    "family": "us-evaluation",
+    "party": "developer",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "NIST CAISI AISI agreement evaluation 2026 agreement Microsoft",
+        "domains": [
+          "microsoft.com"
+        ]
+      },
+      {
+        "q": "NIST CAISI AISI agreement evaluation 2026 agreement xAI",
+        "domains": [
+          "x.ai"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://blogs.microsoft.com/on-the-issues/2026/05/05/advancing-ai-evaluation-with-the-center-for-ai-standards-us-and-innovation-and-the-ai-security-institute-uk/",
+      "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/08/Learning-from-other-Domains-to-Advance-AI-Evaluation-and-Testing_-v3-1.pdf",
+      "https://learn.microsoft.com/en-us/compliance/regulatory/offering-CJIS",
+      "https://www.microsoft.com/en/trust-center/security/secure-future-initiative/sfi-progress-report-july-2026",
+      "https://download.microsoft.com/download/245eac29-1d93-4ac1-8a74-8540070d24c4/Windows%2011%20and%20Windows%20Server%202025%20GPOS%20Public%20Assurance%20Activity%20Report.pdf",
+      "https://download.microsoft.com/download/c/5/9/c59832ff-414b-4f15-8273-d0c349a0b154/Microsoft%20Windows%2C%20Windows%20Server%2C%20Azure%20Stack%20Security%20Target%20%2821H2%20et%20al%29.pdf",
+      "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
+      "https://docs.x.ai/console/faq/security",
+      "https://www.microsoft.com/en-us/trust-center/security/secure-future-initiative/sfi-progress-report-november-2025",
+      "https://www.microsoft.com/en-us/microsoft-cloud/blog/us-government/2024/09/23/understanding-compliance-between-commercial-government-dod-secret-offerings-may-2026-update/",
+      "https://learn.microsoft.com/en-us/compliance/assurance/assurance-supplier-management",
+      "https://learn.microsoft.com/en-us/security/zero-trust/sfi/secure-future-initiative-overview",
+      "https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-nist-csf",
+      "https://learn.microsoft.com/en-us/azure/governance/policy/samples/nist-sp-800-53-r5",
+      "https://learn.microsoft.com/en-us/azure/azure-local/assurance/azure-stack-security-standards?view=azloc-2603",
+      "https://www.microsoft.com/ro-ro/trust-center/security/secure-future-initiative/sfi-progress-report-july-2026"
+    ],
+    "id": "search-14"
+  },
+  {
+    "family": "uk-evaluation",
+    "party": "developer",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "UK AI Security Institute evaluation access 2026 agreement Anthropic",
+        "domains": [
+          "anthropic.com"
+        ]
+      },
+      {
+        "q": "UK AI Security Institute evaluation access 2026 agreement OpenAI",
+        "domains": [
+          "openai.com"
+        ]
+      },
+      {
+        "q": "UK AI Security Institute evaluation access 2026 agreement Google DeepMind",
+        "domains": [
+          "deepmind.google"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "https://www.anthropic.com/news/strengthening-our-safeguards-through-collaboration-with-us-caisi-and-uk-aisi",
+      "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "https://openai.com/index/us-caisi-uk-aisi-ai-update/",
+      "https://www.anthropic.com/news/gov-UK-partnership",
+      "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+      "https://www.anthropic.com/policy",
+      "https://www.anthropic.com/transparency/voluntary-commitments",
+      "https://cdn.openai.com/pdf/openai-eu-economic-blueprint-jan-2026.pdf",
+      "https://help.openai.com/en/articles/20001258-trusted-access-for-cyber",
+      "https://www.anthropic.com/news/fable-mythos-access",
+      "https://cdn.openai.com/global-affairs/paris-summit-update-on-voluntary-commitments-20250207.pdf",
+      "https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf",
+      "https://www-cdn.anthropic.com/files/4zrzovbb/website/0a58d567024a8b448ff15158ebc3625328dfcc1f.pdf",
+      "https://deepmind.google/gemini/gemini_1_report.pdf"
+    ],
+    "id": "search-15"
+  },
+  {
+    "family": "uk-evaluation",
+    "party": "developer",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "UK AI Security Institute evaluation access 2026 agreement Microsoft",
+        "domains": [
+          "microsoft.com"
+        ]
+      },
+      {
+        "q": "UK AI Security Institute evaluation access 2026 agreement xAI",
+        "domains": [
+          "x.ai"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://blogs.microsoft.com/on-the-issues/2026/05/05/advancing-ai-evaluation-with-the-center-for-ai-standards-us-and-innovation-and-the-ai-security-institute-uk/",
+      "https://www.microsoft.com/en-gb/security/business/identity-access/microsoft-entra-internet-access",
+      "https://learn.microsoft.com/en-us/legal/ai-code-of-conduct",
+      "https://trust.x.ai/",
+      "https://www.microsoft.com/en/trust-center/security/secure-future-initiative/sfi-progress-report-july-2026",
+      "https://www.microsoft.com/en-us/security/blog/2026/07/10/securing-our-future-july-2026-progress-report-on-microsofts-secure-future-initiative/",
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-ai-provider-user-sec-group-access",
+      "https://blogs.microsoft.com/blog/2026/02/27/microsoft-and-openai-joint-statement-on-continuing-partnership/",
+      "https://www.microsoft.com/en-us/corporate-responsibility/topics/responsible-ai/reports/transparency-report/",
+      "https://www.microsoft.com/en-us/security/blog/2026/03/19/new-tools-and-guidance-announcing-zero-trust-for-ai/",
+      "https://www.microsoft.com/en-us/microsoft-cloud/blog/financial-services/2026/07/15/microsoft-designated-a-critical-third-party-to-the-uk-financial-sector/",
+      "https://blogs.microsoft.com/on-the-issues/2026/05/01/from-capability-to-responsibility-securing-our-global-digital-ecosystem-with-next-generation-ai/",
+      "https://ukstories.microsoft.com/wp-content/uploads/2024/07/UK-Impact-Report-FINAL.pdf",
+      "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
+      "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/08/Learning-from-other-Domains-to-Advance-AI-Evaluation-and-Testing_-v3-1.pdf",
+      "https://info.microsoft.com/rs/157-GQE-382/images/EN-WBNR-Other-PDFSREVM51331.pdf?version=0"
+    ],
+    "id": "search-16"
+  },
+  {
+    "family": "uk-cooperation",
+    "party": "developer",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "UK DSIT memorandum strategic cooperation 2026 agreement Anthropic",
+        "domains": [
+          "anthropic.com"
+        ]
+      },
+      {
+        "q": "UK DSIT memorandum strategic cooperation 2026 agreement OpenAI",
+        "domains": [
+          "openai.com"
+        ]
+      },
+      {
+        "q": "UK DSIT memorandum strategic cooperation 2026 agreement Google DeepMind",
+        "domains": [
+          "deepmind.google"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.anthropic.com/news/gov-UK-partnership?e45d281a_page=2",
+      "https://deepmind.google/blog/strengthening-our-partnership-with-the-uk-government-to-support-prosperity-and-security-in-the-ai-era/",
+      "https://deepmind.google/national-partnerships-for-ai/",
+      "https://openai.com/global-affairs/openai-and-uk-government-partnership/",
+      "https://openai.com/index/our-agreement-with-the-department-of-war/",
+      "https://www.anthropic.com/news/anthropic-kpmg",
+      "https://deepmind.google/blog/securing-the-future-of-ai-agents/",
+      "https://www.anthropic.com/news/dxc-anthropic-alliance",
+      "https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/",
+      "https://openai.com/index/joint-statement-from-openai-and-microsoft/",
+      "https://openai.com/index/continuing-microsoft-partnership/",
+      "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "https://cdn.openai.com/global-affairs/f9361fe7-e452-4c78-94dc-e6946c73c858/openai-south-korea-economic-blueprint-october-2025.pdf",
+      "https://cdn.openai.com/pdf/openai-uk-tax-strategy.pdf",
+      "https://cdn.openai.com/global-affairs/paris-summit-update-on-voluntary-commitments-20250207.pdf",
+      "https://cdn.openai.com/global-affairs/openai-us-infrastructure-blueprint-sep-2025.pdf",
+      "https://cdn.openai.com/pdf/openai-eu-economic-blueprint-jan-2026.pdf",
+      "https://cdn.openai.com/global-affairs/b89a7434-7cb9-47a7-b4a7-b50b1a1a0afc/openai-uk-ai-and-copyright-consultation.pdf"
+    ],
+    "id": "search-17"
+  },
+  {
+    "family": "uk-cooperation",
+    "party": "developer",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "UK DSIT memorandum strategic cooperation 2026 agreement Microsoft",
+        "domains": [
+          "microsoft.com"
+        ]
+      },
+      {
+        "q": "UK DSIT memorandum strategic cooperation 2026 agreement xAI",
+        "domains": [
+          "x.ai"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA?lang=1",
+      "https://ukstories.microsoft.com/features/zigup-plc-announces-strategic-collaboration-with-microsoft-to-accelerate-its-ai-powered-smarter-mobility/",
+      "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/",
+      "https://news.microsoft.com/source/asia/2026/06/09/microsoft-au-government-resiliency-mou/",
+      "https://ukstories.microsoft.com/features/haleon-to-accelerate-ai-powered-transformation-with-new-five-year-microsoft-collaboration/",
+      "https://www.microsoft.com/licensing/docs/view/Addendums-Agreements-and-Amendments",
+      "https://www.microsoft.com/en-us/microsoft-cloud/blog/financial-services/2026/07/15/microsoft-designated-a-critical-third-party-to-the-uk-financial-sector/",
+      "https://x.ai/legal/data-processing-addendum",
+      "https://blogs.microsoft.com/on-the-issues/2026/04/29/one-year-on-progress-on-our-european-digital-commitments/",
+      "https://blogs.microsoft.com/on-the-issues/2026/03/31/working-constructively-with-the-uk-cma-to-support-customer-choice-and-cloud-competition/",
+      "https://news.microsoft.com/source/2026/07/23/databricks-and-microsoft-expand-partnership-to-help-enterprises-bring-business-context-to-enterprise-ai/",
+      "https://news.microsoft.com/source/emea/features/microsoft-and-humain-announce-long-term-strategic-collaboration-to-enable-ai-transformation-in-saudi-arabia-and-beyond/",
+      "https://download.microsoft.com/download/7/7/a/77a94bb8-d05f-4d13-8d68-ce2660221081/MOUv10_CZ_EN.pdf",
+      "https://download.microsoft.com/documents/uk/government/Generating_Value_with_ICT_in_Public_Sector.pdf",
+      "https://download.microsoft.com/download/F/0/6/F06C54F0-D0B9-418F-825E-3C1340F780B7/Digital_Transformation_in_the_Cloud_eBook_EN_US.pdf",
+      "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/wmcfx/documents/presentations/EU_DoC_2026_062122.pdf"
+    ],
+    "id": "search-18"
+  },
+  {
+    "family": "us-defence",
+    "party": "developer",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "DoD CDAO contract procurement deployment termination 2026 agreement Anthropic",
+        "domains": [
+          "anthropic.com"
+        ]
+      },
+      {
+        "q": "DoD CDAO contract procurement deployment termination 2026 agreement OpenAI",
+        "domains": [
+          "openai.com"
+        ]
+      },
+      {
+        "q": "DoD CDAO contract procurement deployment termination 2026 agreement Google DeepMind",
+        "domains": [
+          "deepmind.google"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://openai.com/index/our-agreement-with-the-department-of-war/",
+      "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
+      "https://www.anthropic.com/news/dxc-anthropic-alliance",
+      "https://openai.com/index/openai-launches-the-deployment-company/",
+      "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "https://openai.com/index/bringing-chatgpt-to-genaimil/",
+      "https://www.anthropic.com/news/higher-limits-spacex",
+      "https://openai.com/id-ID/index/our-agreement-with-the-department-of-war/",
+      "https://openai.com/zh-Hans-CN/index/our-agreement-with-the-department-of-war/",
+      "https://openai.com/ko-KR/index/our-agreement-with-the-department-of-war/",
+      "https://openai.com/nl-NL/index/our-agreement-with-the-department-of-war/",
+      "https://cdn.openai.com/osa/openai-services-agreement.pdf",
+      "https://www-cdn.anthropic.com/17a66ce2e943b82db8a021b974f0170baf6dce60.pdf",
+      "https://www-cdn.anthropic.com/74ee25a84fd2f6c97450872b9fe0b4f760d7e478.pdf",
+      "https://www-cdn.anthropic.com/471bd07290603ee509a5ea0d5ccf131ea5897232/anthropic-vertex-commercial-terms-march-2024.pdf",
+      "https://cdn.openai.com/global-affairs/ostp-rfi/ec680b75-d539-4653-b297-8bcf6e5f7686/openai-response-ostp-nsf-rfi-notice-request-for-information-on-the-development-of-an-artificial-intelligence-ai-action-plan.pdf?_bhlid=5d352af87751abbfdff8ac2a682ce1f77e1b3c99"
+    ],
+    "id": "search-19"
+  },
+  {
+    "family": "us-defence",
+    "party": "developer",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "DoD CDAO contract procurement deployment termination 2026 agreement Microsoft",
+        "domains": [
+          "microsoft.com"
+        ]
+      },
+      {
+        "q": "DoD CDAO contract procurement deployment termination 2026 agreement xAI",
+        "domains": [
+          "x.ai"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://x.ai/news/us-gov-dept-of-war",
+      "https://fpc.microsoft.com/_entity/annotation/d3c8e23a-f5dc-f011-8543-7c1e52817b02",
+      "https://x.ai/legal/data-processing-addendum",
+      "https://x.ai/legal/terms-of-service-enterprise",
+      "https://learn.microsoft.com/en-us/compliance/us-government/gov-jwcc",
+      "https://x.ai/news/grok-bot-procurement",
+      "https://www.microsoft.com/en-us/federal/jedi",
+      "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates-faq",
+      "https://learn.microsoft.com/en-us/compliance/us-government/gov-contract-vehicles",
+      "https://blogs.microsoft.com/blog/2021/07/06/microsofts-commitment-to-the-dod-remains-steadfast/",
+      "https://techcommunity.microsoft.com/t5/s/gxcuf89792/attachments/gxcuf89792/PublicSectorBlog/926.1/1/Driving%20Gov%20Efficiencies.pdf",
+      "https://x.ai/legal/terms-of-service",
+      "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/",
+      "https://x.ai/company",
+      "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/mcaps-MSFT-GSA-Commercial-Supplier-Agreement-Terms.pdf",
+      "https://local.microsoft.com/wp-content/uploads/2026/02/FY26-Community-Benefits-in-Renewable-Energy-White-Paper_Final_Feb2026.pdf",
+      "https://download.microsoft.com/download/D/A/4/DA48799A-5BE1-489F-A8C0-673C362784AE/FINAL-PROCUREMENT-GUIDE1.pdf"
+    ],
+    "id": "search-20"
+  },
+  {
+    "family": "eu-compliance",
+    "party": "developer",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "European Commission AI Office code general purpose signatory 2026 agreement Anthropic",
+        "domains": [
+          "anthropic.com"
+        ]
+      },
+      {
+        "q": "European Commission AI Office code general purpose signatory 2026 agreement OpenAI",
+        "domains": [
+          "openai.com"
+        ]
+      },
+      {
+        "q": "European Commission AI Office code general purpose signatory 2026 agreement Google DeepMind",
+        "domains": [
+          "deepmind.google"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://openai.com/global-affairs/eu-code-of-practice/",
+      "https://www.anthropic.com/news/eu-code-practice?_rsc=304t7",
+      "https://cdn.openai.com/pdf/openai-eu-economic-blueprint-jan-2026.pdf",
+      "https://openai.com/index/advancing-responsible-ai-across-europe/",
+      "https://www.anthropic.com/policy",
+      "https://help.openai.com/en/articles/12141645-eu-ai-act.eot",
+      "https://openai.com/policies/sub-processor-list/",
+      "https://openai.com/es-419/global-affairs/eu-code-of-practice/",
+      "https://www.anthropic.com/glasswing",
+      "https://openai.com/index/the-next-chapter-for-ai-in-the-eu/",
+      "https://help.openai.com/en/articles/8959649-eu-digital-services-act-dsa-point-of-contact",
+      "https://www.anthropic.com/news/milan-office-opening?loader_name=forest&need_sec_link=1&sec_link_scene=im&use_xbridge3=true",
+      "https://openai.com/nl-NL/global-affairs/eu-code-of-practice/",
+      "https://www-cdn.anthropic.com/a5e41ab5c47afca9e39912a7cf94bd433d9b4533.pdf",
+      "https://cdn.openai.com/global-affairs/8d3c7c97-ae26-4844-a9d3-a5d51aba99ba/hactivate-ai.pdf",
+      "https://cdn.openai.com/global-affairs/2dbdb523-1a9f-4552-971d-e0948ae2abca/openai-eu-economic-blueprint-apr-2025.pdf?_bhlid=b77ec42a2af6f0298b2156f341618d94afe9b403",
+      "https://resources.anthropic.com/hubfs/The%202026%20State%20of%20AI%20Agents%20Report.pdf?_bhlid=f5832f1e00cadd0eaf3ef8debb58fa368031c9de",
+      "https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf?media_author_id=77888340147&media_id=3843784667434984174_77888340147&ranking_info_token=GCA4NDUzMjEzNmI0Yzk0OTExODI2MzAyODNlZDBhNzE0MiWwvf4GJtbMsZoNGBMzODQzNzg0MjQ3NzQ0NTg4NjIwKANjY28A"
+    ],
+    "id": "search-21"
+  },
+  {
+    "family": "eu-compliance",
+    "party": "developer",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "European Commission AI Office code general purpose signatory 2026 agreement Microsoft",
+        "domains": [
+          "microsoft.com"
+        ]
+      },
+      {
+        "q": "European Commission AI Office code general purpose signatory 2026 agreement xAI",
+        "domains": [
+          "x.ai"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/",
+      "https://blogs.microsoft.com/on-the-issues/2025/01/15/innovating-in-line-with-the-european-unions-ai-act/",
+      "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-product-and-services/security/pdf/microsoft-eu-ai-act-overview-jan-2025-477720.pdf",
+      "https://www.microsoft.com/licensing/faqs/123",
+      "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/",
+      "https://learn.microsoft.com/en-us/legal/copilot-plugins/ai-plugin-agreement",
+      "https://blogs.microsoft.com/on-the-issues/2026/04/29/one-year-on-progress-on-our-european-digital-commitments/",
+      "https://blogs.microsoft.com/blog/2026/02/27/microsoft-and-openai-joint-statement-on-continuing-partnership/",
+      "https://www.microsoft.com/en-us/trust-center/compliance/eu-ai-act",
+      "https://learn.microsoft.com/en-us/partner-center/announcements/2026-july",
+      "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-product-and-services/security/pdf/microsoft-prohibited-practices-jan-2025-477720.pdf",
+      "https://blogs.microsoft.com/on-the-issues/2025/04/30/european-digital-commitments/",
+      "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-product-and-services/security/pdf/microsoft-eu-ai-act-overview-jan-2025-477720.pdf?ocid=eml_pg475068_gdc_comm_dt",
+      "https://learn.microsoft.com/th-th/partner-center/announcements/2026-june",
+      "https://blogs.microsoft.com/wp-content/uploads/prod/sites/73/2021/09/microsoft-response-to-the-european-commission-consultation-on-the-artifical-intelligence-act.pdf",
+      "https://x.ai/legal/data-processing-addendum"
+    ],
+    "id": "search-22"
+  },
+  {
+    "family": "llnl",
+    "party": "developer",
+    "developers": [
+      "Anthropic",
+      "OpenAI",
+      "Google DeepMind"
+    ],
+    "queries": [
+      {
+        "q": "LLNL model deployment use 2026 agreement Anthropic",
+        "domains": [
+          "anthropic.com"
+        ]
+      },
+      {
+        "q": "LLNL model deployment use 2026 agreement OpenAI",
+        "domains": [
+          "openai.com"
+        ]
+      },
+      {
+        "q": "LLNL model deployment use 2026 agreement Google DeepMind",
+        "domains": [
+          "deepmind.google"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://www.anthropic.com/system-cards",
+      "https://www.anthropic.com/news/australia-MOU",
+      "https://www.anthropic.com/responsible-scaling-policy",
+      "https://deploymentsafety.openai.com/",
+      "https://openai.com/index/our-agreement-with-the-department-of-war/",
+      "https://deepmind.google/blog/accelerating-discovery-in-india-through-ai-powered-science-and-education/",
+      "https://www.anthropic.com/transparency/voluntary-commitments",
+      "https://deepmind.google/blog/securing-the-future-of-ai-agents/",
+      "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/",
+      "https://www-cdn.anthropic.com/08eca2757081e850ed2ad490e5253e940240ca4f.pdf",
+      "https://assets.anthropic.com/m/8eb43d8f1f8895f/original/Anthropic-Voluntary-Commitments-Web-Archive.pdf",
+      "https://cdn.openai.com/GPT_2_August_Report.pdf",
+      "https://www-cdn.anthropic.com/7449887b6715e3a35f362b1301e5b5d8a6b116e5.pdf",
+      "https://assets.anthropic.com/m/24a47b00f10301cd/original/Anthropic-Responsible-Scaling-Policy-2024-10-15.pdf?_bhlid=b1d7a7b926a6fc1d411c9b4d3e1ee5160010b8ed&trk=public_post_comment-text",
+      "https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf"
+    ],
+    "id": "search-23"
+  },
+  {
+    "family": "llnl",
+    "party": "developer",
+    "developers": [
+      "Microsoft",
+      "xAI"
+    ],
+    "queries": [
+      {
+        "q": "LLNL model deployment use 2026 agreement Microsoft",
+        "domains": [
+          "microsoft.com"
+        ]
+      },
+      {
+        "q": "LLNL model deployment use 2026 agreement xAI",
+        "domains": [
+          "x.ai"
+        ]
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/",
+      "https://x.ai/legal/terms-of-service",
+      "https://huggingface.co/xai-org/grok-2/blob/main/LICENSE",
+      "https://x.ai/legal/terms-of-service-enterprise",
+      "https://x.ai/legal/data-processing-addendum",
+      "https://techcommunity.microsoft.com/blog/azurearcblog/scale-on-prem-ai-with-foundry-local-on-azure-local-multi-node-inference-and-vllm/4516692",
+      "https://docs.x.ai/developers/pricing",
+      "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
+      "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/",
+      "https://x.ai/news/anthropic-compute-partnership",
+      "https://docs.x.ai/build/enterprise",
+      "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-june-2026/",
+      "https://docs.x.ai/developers/rate-limits",
+      "https://learn.microsoft.com/en-us/azure/azure-sovereign-clouds/private/foundry-local/concept-multi-node-deployment",
+      "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+      "https://fpc.microsoft.com/_entity/annotation/d84e18f0-1e22-f111-88b2-7c1e52157f8b",
+      "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/bizapps/Microsoft-Copilot-Studio-Licensing-Guide-May-2026-PUB.pdf"
+    ],
+    "id": "search-24"
+  }
+]

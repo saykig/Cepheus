@@ -1,0 +1,152 @@
+[
+  {
+    "id": "public-authority",
+    "definition": "Institutionally authorized power to make decisions binding in the specified context.",
+    "unit": "Institution × legal/operational context × assessed date",
+    "anchors": [
+      {
+        "id": "absent",
+        "definition": "Affirmative remit excludes binding public decisions in this context."
+      },
+      {
+        "id": "limited",
+        "definition": "Advisory or delegated bounded public decisions."
+      },
+      {
+        "id": "substantial",
+        "definition": "Binding decisions over a significant but bounded function."
+      },
+      {
+        "id": "binding-operational",
+        "definition": "Documented binding decision and ability to carry it into operation in the defined function."
+      }
+    ],
+    "uncertaintyRule": "Unresolved when necessary evidence is missing or adjacent anchors cannot be distinguished. No numeric conversion. Absence requires affirmative remit or operational evidence, not missing sources.",
+    "method": "Context-specific structured qualitative coding; anchors are author-defined decision rules, not validated universal measurement scales."
+  },
+  {
+    "id": "information-access",
+    "definition": "Ability to obtain non-public model information independently of provider consent.",
+    "unit": "Institution × information category × jurisdiction/date",
+    "anchors": [
+      {
+        "id": "absent",
+        "definition": "Affirmative evidence excludes access in this context."
+      },
+      {
+        "id": "voluntary-provider-controlled",
+        "definition": "Access obtained through provider permission or negotiated instrument."
+      },
+      {
+        "id": "partial-compulsory",
+        "definition": "Specific compulsory information powers apply to some requested information."
+      },
+      {
+        "id": "broad-compulsory",
+        "definition": "Applicable legal powers reach the information needed for this defined task, subject to stated safeguards."
+      }
+    ],
+    "uncertaintyRule": "Unresolved when necessary evidence is missing or adjacent anchors cannot be distinguished. No numeric conversion. Absence requires affirmative remit or operational evidence, not missing sources.",
+    "method": "Context-specific structured qualitative coding; anchors are author-defined decision rules, not validated universal measurement scales."
+  },
+  {
+    "id": "evaluation-capacity",
+    "definition": "Ability to design and execute a substantive assessment independently, conditional on access.",
+    "unit": "Evaluator × evaluation exercise or programme × date",
+    "anchors": [
+      {
+        "id": "absent",
+        "definition": "Affirmative evidence of no ability to perform this assessment."
+      },
+      {
+        "id": "nascent",
+        "definition": "Initial methods/team with no completed substantive assessment."
+      },
+      {
+        "id": "substantial-access-constrained",
+        "definition": "Completed independent assessment with documented access or time constraints materially limiting conclusions."
+      },
+      {
+        "id": "substantial-durable-access",
+        "definition": "Completed assessment and enforceable/reproducible access sufficient for the task over its defined period."
+      }
+    ],
+    "uncertaintyRule": "Unresolved when necessary evidence is missing or adjacent anchors cannot be distinguished. No numeric conversion. Absence requires affirmative remit or operational evidence, not missing sources.",
+    "method": "Context-specific structured qualitative coding; anchors are author-defined decision rules, not validated universal measurement scales."
+  },
+  {
+    "id": "technical-control",
+    "definition": "Practical ability to alter the model, its availability, or safeguards in the specified deployment. Contract clauses alone are insufficient.",
+    "unit": "Actor × exact model/deployment × period",
+    "anchors": [
+      {
+        "id": "little-control",
+        "definition": "No demonstrated practical control over the specified consequential operation, with affirmative contrary evidence."
+      },
+      {
+        "id": "shared-constrained",
+        "definition": "Consequential controls divided among actor, host, customer or enforceable technical constraints."
+      },
+      {
+        "id": "substantial",
+        "definition": "Actor demonstrably retains major development, update or access controls in this environment."
+      },
+      {
+        "id": "dominant-lifecycle",
+        "definition": "Actor demonstrably controls development, deployment, updates and access across the specified lifecycle without a consequential independent controller."
+      }
+    ],
+    "uncertaintyRule": "Unresolved when necessary evidence is missing or adjacent anchors cannot be distinguished. No numeric conversion. Absence requires affirmative remit or operational evidence, not missing sources.",
+    "method": "Context-specific structured qualitative coding; anchors are author-defined decision rules, not validated universal measurement scales."
+  },
+  {
+    "id": "substitution",
+    "definition": "Feasibility of replacing a specified capability for its operational function within a stated time horizon.",
+    "unit": "User × capability/function × replacement horizon",
+    "anchors": [
+      {
+        "id": "readily-substitutable",
+        "definition": "Demonstrated alternative with achievable transition and equivalent required function."
+      },
+      {
+        "id": "costly-limited",
+        "definition": "Demonstrated alternative with identified migration cost or functional limitation."
+      },
+      {
+        "id": "materially-constrained",
+        "definition": "Evidence shows transition would impair required function or exceed operationally acceptable time/cost."
+      },
+      {
+        "id": "no-demonstrated-viable-substitute",
+        "definition": "A documented alternatives assessment finds none meets specified function/time constraints; search silence alone insufficient."
+      }
+    ],
+    "uncertaintyRule": "Unresolved when necessary evidence is missing or adjacent anchors cannot be distinguished. No numeric conversion. Absence requires affirmative remit or operational evidence, not missing sources.",
+    "method": "Context-specific structured qualitative coding; anchors are author-defined decision rules, not validated universal measurement scales."
+  },
+  {
+    "id": "operational-reliance",
+    "definition": "Extent to which a named capability is incorporated into an identified institutional function, separately from substitution and provider control.",
+    "unit": "User × capability × function × period",
+    "anchors": [
+      {
+        "id": "incidental",
+        "definition": "Documented isolated experiment outside routine operation."
+      },
+      {
+        "id": "meaningful",
+        "definition": "Documented recurrent assistance to identified work with bounded integration."
+      },
+      {
+        "id": "substantial",
+        "definition": "Embedded use across recurring identified workflows; independent confirmation or operational detail required."
+      },
+      {
+        "id": "mission-relevant",
+        "definition": "Documented integration into an essential operational function; not inferred merely from institutional defence remit."
+      }
+    ],
+    "uncertaintyRule": "Unresolved when necessary evidence is missing or adjacent anchors cannot be distinguished. No numeric conversion. Absence requires affirmative remit or operational evidence, not missing sources.",
+    "method": "Context-specific structured qualitative coding; anchors are author-defined decision rules, not validated universal measurement scales."
+  }
+]

@@ -1,16 +1,45 @@
-/* The retired index no longer reserves a column in the essay. */
-.page :global(.essay-hero) {
-  max-width: 780px;
+.page :global(.essay-hero) { max-width:780px; }
+.page :global(.essay-hero-inner) { margin-left:0; }
+.page :global(.essay-layout) { display:block; }
+.page :global(.essay-body) { max-width:780px; }
+.storySide { display:none; }
+.endnotes { max-width:780px; }
+.mobileMoment { margin:2.5rem 0; }
+@media(min-width:1000px) and (min-height:700px) {
+ .page { padding-inline:clamp(32px,4vw,72px); }
+ .page :global(.essay-hero) { max-width:53%; }
+ .page :global(.essay-title),.page :global(.essay-hero h1) { font-size:clamp(3rem,4.7vw,4.4rem); }
+ .page :global(.essay-layout) { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:clamp(24px,3vw,48px); align-items:start; }
+ .page :global(.essay-body) { min-width:0; max-width:none; }
+ .storySide { display:block; position:sticky; top:calc(88px + env(safe-area-inset-top)); align-self:start; }
+ .inlineMap,.mobileMoment { display:none; }
+ .endnotes { max-width:52%; }
 }
-
-.page :global(.essay-hero-inner) {
-  margin-left: 0;
+@media(min-width:700px) and (max-width:999px) and (min-height:700px) {
+ .page { padding-inline:32px; }
+ .page :global(.essay-layout) { display:flex; flex-direction:column; }
+ .storySide { display:block; order:-1; position:sticky; top:calc(72px + env(safe-area-inset-top)); z-index:5; width:100%; background:var(--paper); border-bottom:1px solid var(--rule); }
+ .storySide:has([data-story-state=exploration]) { position:static; }
+ .mobileMoment { display:none; }
+ .inlineMap { margin-block:2rem; }
+ .page :global(.essay-body) { width:100%; }
 }
-
-.page :global(.essay-layout) {
-  display: block;
+@media(max-width:699px) {
+ .page { padding-inline:max(20px,env(safe-area-inset-left)); }
+ .page :global(.essay-body) { font-size:18px; line-height:1.65; }
+ .page :global(.essay-body p) { font-size:inherit; line-height:inherit; }
+ .page :global(.essay-hero h1) { font-size:clamp(2.5rem,10vw,3.6rem); }
 }
+.page { width:min(100%,1440px); padding-bottom:max(48px,env(safe-area-inset-bottom)); }
 
-.page :global(.essay-body) {
-  max-width: 780px;
+@media(max-width:360px){.page { padding-top:140px; }}
+@media(max-height:699px) and (min-width:700px){.page{padding-inline:32px}}
+/* Keep the local editorial graph beside the prose, including narrow browser panels. */
+@media(min-width:700px) and (min-height:480px) {
+ .page:has(:global([data-motion])) :global(.essay-hero) { max-width:53%; }
+ .page:has(:global([data-motion])) :global(.essay-layout) { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:clamp(20px,3vw,48px); align-items:start; }
+ .page:has(:global([data-motion])) :global(.essay-body) { min-width:0; max-width:none; }
+ .page:has(:global([data-motion])) .storySide { display:block; position:sticky; top:calc(88px + env(safe-area-inset-top)); align-self:start; order:0; background:transparent; border:0; }
+ .page:has(:global([data-motion])) .inlineMap,.page:has(:global([data-motion])) .mobileMoment { display:none; }
+ .page:has(:global([data-motion])) .endnotes { max-width:53%; }
 }

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "evaluation-access-constraint",
+    "label": "Evaluation constrained by access",
+    "definition": "Independent evaluation conclusions are materially bounded by documented access/time limits for an identified exercise.",
+    "requiredConditions": [
+      "completed-independent-test",
+      "explicit-access-limitation",
+      "bounded-inference"
+    ],
+    "rule": "All conditions necessary; their conjunction sufficient for the bounded assessment, not for global provider dependence.",
+    "requiredAttributeRubrics": [
+      "evaluation-capacity"
+    ]
+  },
+  {
+    "id": "contested-contractual-interface",
+    "label": "Contested contractual interface",
+    "definition": "Documented use and conflicting positions on contractual conditions trigger consequential institutional action.",
+    "requiredConditions": [
+      "documented-use",
+      "conflicting-conditions",
+      "institutional-action",
+      "technical-control-distinguished"
+    ],
+    "rule": "All conditions necessary and jointly sufficient for a dated contested-interface finding. No dependency conclusion follows.",
+    "requiredAttributeRubrics": [
+      "technical-control"
+    ]
+  },
+  {
+    "id": "operational-dependence",
+    "label": "Operational dependence",
+    "definition": "A specified institutional function relies on a provider-controlled capability and faces materially constrained substitution.",
+    "requiredConditions": [
+      "identified-operational-use",
+      "consequential-provider-control",
+      "constrained-substitution",
+      "identified-function"
+    ],
+    "rule": "All conditions necessary, jointly sufficient only for the named function, time and horizon. Control may include demonstrated continuing supply/update access, not merely remote shutdown. Contract restrictions alone insufficient. Counterevidence must be resolved.",
+    "requiredAttributeRubrics": [
+      "technical-control",
+      "substitution",
+      "operational-reliance"
+    ]
+  },
+  {
+    "id": "transitional-operational-dependence",
+    "label": "Transitional operational dependence",
+    "definition": "Reliance on a provider-specific capability in an existing operational function where immediate withdrawal is constrained by maintaining that function during replacement. This permits alternatives and divided technical control.",
+    "requiredConditions": [
+      "identified-operational-use",
+      "provider-specific-capability",
+      "non-immediate-substitution",
+      "temporal-and-functional-boundary",
+      "counterevidence-disposition"
+    ],
+    "rule": "All five conditions supported, with government operational-continuity evidence and a distinct instrument or deployment record. Announced procurement, continued use alone, or a phase-out deadline alone is insufficient.",
+    "requiredAttributeRubrics": [
+      "technical-control",
+      "substitution",
+      "operational-reliance"
+    ],
+    "revisionRationale": "Separate transition-constrained product dependence from dependence on an ongoing service or remote provider control. This distinction applies symmetrically to any supplier, including offline deployed systems; it is not a relaxation of evidence requirements or a claim that all purchases create dependence."
+  }
+]
