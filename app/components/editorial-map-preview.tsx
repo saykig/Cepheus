@@ -140,6 +140,8 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
  const [activated,setActivated]=useState(false)
  const [size,setSize]=useState({width:0,height:0})
  const projection=useMemo(()=>worldProjection(size),[size])
+ const [cameraReady,setCameraReady]=useState(false)
+ const fittedFrame=useRef('')
  const canvas=useRef<HTMLDivElement>(null)
  const {setViewport,viewportInitialized,zoomIn,zoomOut}=useReactFlow()
  const scene=useMemo(()=>institutionalScene(data,step,followed,focus,selected),[step,followed,focus,selected])
@@ -175,13 +177,26 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
   setFocus(institutionId);setSelected(relationshipId);setFollowed(ids=>ids.includes(relationshipId)?ids:[...ids,relationshipId]);setTraceVersion(n=>n+1)
   canvas.current?.focus({preventScroll:true})
  },[])
- const fit=useCallback(()=>{const viewport=institutionViewport(size,projection.bounds);if(viewport)void setViewport(viewport,{duration:0})},[size,projection,setViewport])
- // Fixed world dimensions: story/follow/selection never trigger camera changes.
- useEffect(()=>{if(viewportInitialized)fit()},[fit,viewportInitialized])
+ // Screen-space padding also protects labels that remain readable at low zoom.
+ const fit=useCallback(async()=>{
+  const viewport=institutionViewport(size,projection.bounds,{horizontal:64,vertical:32})
+  if(!viewport)return
+  await setViewport(viewport,{duration:0})
+  setCameraReady(true)
+ },[size,projection,setViewport])
+ // Initialize the complete world once per actual frame size, never per story/focus.
+ // Keep the default React Flow 1x viewport hidden until this fit has completed.
+ useEffect(()=>{
+  if(!viewportInitialized||size.width<=20||size.height<=32)return
+  const frame=`${Math.round(size.width)}:${Math.round(size.height)}:${projection.bounds.height}`
+  if(fittedFrame.current===frame)return
+  fittedFrame.current=frame
+  void fit()
+ },[fit,viewportInitialized,size.width,size.height,projection.bounds.height])
  const nodes=useMemo<EditorialNode[]>(()=>scene.nodes.map(n=>({id:n.id,type:'editorial',position:{x:n.position.x,y:n.position.y*projection.yScale},
-  data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:n.visible&&activated,arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:n.visible?'all':'none'},
- })),[scene.nodes,locale,activated,follow,projection])
- const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:e.visible&&activated,incident:e.incident||!!hover&&(e.source===hover||e.target===hover),drawKey:`${step}-${traceVersion}`,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,activated,step,traceVersion,hover,focus])
+  data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:n.visible&&activated&&cameraReady,arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:n.visible?'all':'none'},
+ })),[scene.nodes,locale,activated,cameraReady,follow,projection])
+ const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:e.visible&&activated&&cameraReady,incident:e.incident||!!hover&&(e.source===hover||e.target===hover),drawKey:`${step}-${traceVersion}`,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,activated,cameraReady,step,traceVersion,hover,focus])
  const prefix=locale==='en'?'':`/${locale}`
  return <EvidenceSession.Provider value={useMemo(()=>({owner,setOwner}),[owner])}>
  <section className={styles.study} data-constellation-study data-story={story} data-story-state={storyStates[step].id} aria-label={`Institutional constellation study — ${story ? 'essay companion' : storyStates[initialStep].title}`}>
@@ -192,7 +207,7 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
    }}>
    <ReactFlow proOptions={{hideAttribution:true}} nodes={nodes} edges={edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes}
     autoPanOnNodeFocus={false} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false}
-    minZoom={.2} maxZoom={2} panOnDrag panOnScroll={false} zoomOnScroll={false} zoomOnPinch zoomOnDoubleClick={false} preventScrolling={false}
+    minZoom={.1} maxZoom={2} panOnDrag panOnScroll={false} zoomOnScroll={false} zoomOnPinch zoomOnDoubleClick={false} preventScrolling={false}
     onNodeMouseEnter={(_,n)=>setHover(n.id)} onNodeMouseLeave={()=>setHover(null)} onNodeClick={()=>{}}/>
   </div>
   <div className={styles.captionRow}>

@@ -45,6 +45,17 @@ for(const [name,width,height] of frames){
   await expect(opening.locator('[data-institution="anthropic"]')).toBeEnabled()
   await page.waitForTimeout(1900) // Record initial 1.6s node → edge → caption sequence.
   await expectAligned(opening)
+  const openingFrame=await opening.locator('.react-flow').boundingBox()
+  for(const id of ['dod','anthropic']){
+   const label=await opening.locator(`[data-id="${id}"] [data-institution-label]`).boundingBox()
+   expect(label!.x).toBeGreaterThan(openingFrame!.x+20)
+   expect(label!.x+label!.width).toBeLessThan(openingFrame!.x+openingFrame!.width-20)
+  }
+  const curveInside=await opening.locator('[data-traced-interface]').evaluate((el)=>{
+   const path=el as SVGPathElement,frame=el.closest('.react-flow')!.getBoundingClientRect(),matrix=path.getScreenCTM()!
+   return Array.from({length:41},(_,i)=>path.getPointAtLength(path.getTotalLength()*i/40).matrixTransform(matrix)).every(p=>p.x>frame.left+20&&p.x<frame.right-20&&p.y>frame.top+20&&p.y<frame.bottom-20)
+  })
+  expect(curveInside).toBe(true)
   await page.screenshot({path:testInfo.outputPath('opening.png')})
   await expect(opening.getByText('Drag to explore · Pinch to zoom',{exact:true})).toBeVisible()
   await expect(opening.getByRole('button',{name:'Zoom in',exact:true})).toHaveCount(0)
