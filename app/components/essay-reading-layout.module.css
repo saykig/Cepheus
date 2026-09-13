@@ -34,17 +34,12 @@
 
 @media(max-width:360px){.page { padding-top:140px; }}
 @media(max-height:699px) and (min-width:700px){.page{padding-inline:32px}}
-/* The local motion study remains available in shorter browser panels. */
-@media(min-width:1000px) and (min-height:480px) and (max-height:699px) {
+/* Keep the local editorial graph beside the prose, including narrow browser panels. */
+@media(min-width:700px) and (min-height:480px) {
  .page:has(:global([data-motion])) :global(.essay-hero) { max-width:53%; }
- .page:has(:global([data-motion])) :global(.essay-layout) { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:32px; align-items:start; }
+ .page:has(:global([data-motion])) :global(.essay-layout) { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:clamp(20px,3vw,48px); align-items:start; }
  .page:has(:global([data-motion])) :global(.essay-body) { min-width:0; max-width:none; }
- .page:has(:global([data-motion])) .storySide { display:block; position:sticky; top:88px; align-self:start; }
+ .page:has(:global([data-motion])) .storySide { display:block; position:sticky; top:calc(88px + env(safe-area-inset-top)); align-self:start; order:0; background:transparent; border:0; }
  .page:has(:global([data-motion])) .inlineMap,.page:has(:global([data-motion])) .mobileMoment { display:none; }
-}
-@media(min-width:700px) and (max-width:999px) and (min-height:480px) and (max-height:699px) {
- .page:has(:global([data-motion])) :global(.essay-layout) { display:flex; flex-direction:column; }
- .page:has(:global([data-motion])) .storySide { display:block; order:-1; position:sticky; top:72px; z-index:5; width:100%; background:var(--paper); }
- .page:has(:global([data-motion])) .mobileMoment { display:none; }
- .page:has(:global([data-motion])) .storySide:has(:global([data-story-state=exploration])) { position:static; }
+ .page:has(:global([data-motion])) .endnotes { max-width:53%; }
 }

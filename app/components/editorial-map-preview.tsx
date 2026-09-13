@@ -105,7 +105,7 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
       detach();if(!media.matches)return
       const markers=Array.from(document.querySelectorAll<HTMLElement>('[data-institutional-step]'))
       let frame=0
-      const update=()=>{frame=0;setStep(resolveStoryStep(markers.map(m=>m.getBoundingClientRect().top),innerWidth<1000?Math.min(innerHeight*.62,innerHeight-180):innerHeight*.4))}
+      const update=()=>{frame=0;setStep(resolveStoryStep(markers.map(m=>m.getBoundingClientRect().top),innerHeight*.4))}
       const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)}
       const observer=new ResizeObserver(schedule)
       const body=document.querySelector('.essay-body');if(body)observer.observe(body)
