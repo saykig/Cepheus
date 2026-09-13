@@ -214,7 +214,7 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
   fittedFrame.current=frame
   void fit()
  },[fit,viewportInitialized,size.width,size.height,projection.bounds.height])
- const nodes=useMemo<EditorialNode[]>(()=>scene.nodes.map(n=>({id:n.id,type:'editorial',width:138,height:44,position:{x:n.position.x,y:n.position.y*projection.yScale},
+ const nodes=useMemo<EditorialNode[]>(()=>scene.nodes.map(n=>({id:n.id,type:'editorial',width:138,height:44,measured:{width:138,height:44},position:{x:n.position.x,y:n.position.y*projection.yScale},
   data:{label:institution(n.id).label,name:institution(n.id).name,locale,active:n.foreground,visible:reveal.nodes.has(n.id),revealed:reveal.seenNodes.has(n.id),arriving:!!selected&&n.id!==focus&&n.foreground,markerSide:n.side,follow:(id:string)=>follow(n.id,id)},style:{pointerEvents:reveal.nodes.has(n.id)?'all':'none'},
  })),[scene.nodes,locale,reveal,follow,projection])
  const edges=useMemo<Edge<InkData>[]>(()=>scene.edges.map(e=>({id:e.id,source:e.source,target:e.target,type:'ink',data:{...e,visible:reveal.edges.has(e.id),revealed:reveal.seenEdges.has(e.id),incident:e.incident||!!hover&&(e.source===hover||e.target===hover),followVersion:selected===e.id?traceVersion:0,reverse:!!focus&&e.target===focus,label:data['relation-types'].find(t=>t.id===data.relationships.find(r=>r.id===e.id)?.type)?.label??''}})),[scene.edges,reveal,selected,traceVersion,hover,focus])
