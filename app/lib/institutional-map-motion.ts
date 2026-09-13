@@ -29,3 +29,21 @@ export function createInstitutionMotion(
     .force('connections', forceLink<MotionPoint, { source: string; target: string }>(links).id(n => n.id).distance(190).strength(.025))
   return { nodes, simulation }
 }
+
+// Hidden responsive copies measure 0 × 0. Never send that geometry to the camera.
+export function institutionViewport(
+  size: { width: number; height: number },
+  graph: { width: number; height: number; focusX: number },
+) {
+  if (![size.width, size.height, graph.width, graph.height, graph.focusX].every(Number.isFinite)
+    || size.width <= 20 || size.height <= 32 || graph.width <= 0 || graph.height <= 0) return null
+  const zoom = Math.max(.1, Math.min(1.1, (size.width - 20) / graph.width, (size.height - 32) / graph.height))
+  return { x: (size.width - graph.width * zoom) / 2 - graph.focusX * zoom,
+    y: (size.height - graph.height * zoom) / 2, zoom }
+}
+
+// Presence and physics share a clock, so interrupted animations cannot leave opacity at zero.
+export function institutionPresence(elapsed: number) {
+  const t = Math.max(0, Math.min(1, elapsed / 700))
+  return 1 - (1 - t) ** 3
+}

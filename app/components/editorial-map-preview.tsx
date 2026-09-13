@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { AnimatePresence, animate, motion, useReducedMotion } from 'motion/react'
-import { createInstitutionMotion } from '../lib/institutional-map-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { createInstitutionMotion, institutionViewport, institutionPresence } from '../lib/institutional-map-motion'
 import { ReactFlow, ReactFlowProvider, Handle, Position, BaseEdge, getBezierPath, useReactFlow, type NodeProps, type EdgeProps, type Node, type Edge } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import bundle from '../../public/data/institutional-map/constellation.json'
@@ -86,7 +86,7 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
   const [size,setSize] = useState({width:440,height:460})
   const canvas=useRef<HTMLDivElement>(null)
   const origin = trail[trail.length-1]
-  const { setViewport } = useReactFlow()
+  const { setViewport, viewportInitialized } = useReactFlow()
   useEffect(() => { const q = matchMedia('(prefers-reduced-motion: reduce)'); const update = () => setReduced(q.matches); update(); q.addEventListener('change', update); return () => q.removeEventListener('change', update) }, [])
   useEffect(()=>{
     if(!canvas.current)return
@@ -145,13 +145,12 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
     return {nodes,edges,height:Math.max(44,next.length*62),width:next.length?328:138,focusX}
   },[trail,origin,follow,showReading,guided,step])
   const [animatedNodes, setAnimatedNodes] = useState<EditorialNode[]>(graph.nodes)
-  const currentNodes = useRef<EditorialNode[]>([])
+  const currentNodes = useRef<EditorialNode[]>(graph.nodes)
   useEffect(() => {
-    if(!onScreen)return
     const prior=new Map(currentNodes.current.map(n=>[n.id,n]))
     const outgoing=currentNodes.current.filter(n=>!graph.nodes.some(target=>target.id===n.id))
     const travel=direction.current
-    if(reduced){
+    if(reduced||!onScreen){
       currentNodes.current=graph.nodes
       setAnimatedNodes(graph.nodes)
       return
@@ -159,16 +158,14 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
     const {nodes:particles,simulation}=createInstitutionMotion(graph.nodes,graph.edges,
       new Map(currentNodes.current.map(n=>[n.id,n.position])),travel,graph.height)
     const started=performance.now()
-    let progress=0
-    // Motion owns the springy presence envelope; D3 owns node positions and collisions.
-    const presence=animate(0,1,{type:'spring',stiffness:80,damping:18,onUpdate:value=>{progress=Math.max(0,Math.min(1,value))}})
     let frame=0;let ticks=0
     const draw=(now:number)=>{
+      const progress=institutionPresence(now-started)
       const wanted=Math.min(100,Math.floor((now-started)/(1000/40)))
       if(wanted>ticks){simulation.tick(wanted-ticks);ticks=wanted}
       const current:EditorialNode[]=graph.nodes.map((n,index)=>({...n,
         data:{...n.data,direction:travel},
-        style:{opacity:prior.has(n.id)?1:progress,pointerEvents:'all'},
+        style:{opacity:prior.has(n.id)?1:.35+.65*progress,pointerEvents:'all'},
         position:{x:particles[index].x,y:particles[index].y}}))
       const exiting:EditorialNode[]=progress<.995?outgoing.map(n=>({...n,
         data:{...n.data,exiting:true,direction:travel},
@@ -179,12 +176,14 @@ function MapStudy({ initialInstitution, story, initialStep }: { initialInstituti
       if((ticks<100&&simulation.alpha()>.003)||progress<.995)frame=requestAnimationFrame(draw)
     }
     frame=requestAnimationFrame(draw)
-    return()=>{cancelAnimationFrame(frame);simulation.stop();presence.stop()}
+    return()=>{cancelAnimationFrame(frame);simulation.stop()}
   },[graph,reduced,onScreen])
   useEffect(()=>{
-    const zoom=Math.min(1.1,(size.width-20)/graph.width,(size.height-32)/graph.height)
-    void setViewport({x:(size.width-graph.width*zoom)/2-graph.focusX*zoom,y:(size.height-graph.height*zoom)/2,zoom},{duration:reduced?0:620})
-  },[size,graph.width,graph.height,graph.focusX,setViewport,reduced])
+    if(!viewportInitialized)return
+    const viewport=institutionViewport(size,graph)
+    if(!viewport)return
+    void setViewport(viewport,{duration:reduced?0:620})
+  },[size,graph.width,graph.height,graph.focusX,setViewport,viewportInitialized,reduced])
   return <section className={styles.study} aria-label="Institutional links" data-story-state={storyStates[step].id} data-motion={reduced?'reduced':onScreen?'visible':'waiting'} onKeyDown={e=>{if(e.key==='Escape'&&trail.length>1){e.preventDefault();setGuided(false);setTrail(t=>t.slice(0,-1));canvas.current?.focus({preventScroll:true})}}}>
     <div ref={canvas} className={styles.canvas} tabIndex={-1}>
       <ReactFlow proOptions={{hideAttribution:true}} onNodeClick={enableNodePointerEvents} nodes={animatedNodes} edges={graph.edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false} minZoom={.1} maxZoom={1.5} panOnDrag={true} panOnScroll={false} zoomOnScroll={false} zoomOnPinch={true} zoomOnDoubleClick={false} preventScrolling={false} aria-label="Follow an institution to reveal its connections" />

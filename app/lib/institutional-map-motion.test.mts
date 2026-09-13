@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { createInstitutionMotion } from './institutional-map-motion.ts'
+import { createInstitutionMotion, institutionViewport, institutionPresence } from './institutional-map-motion.ts'
 
 const targets=[{id:'a',position:{x:0,y:93}},...Array.from({length:4},(_,i)=>({id:`b${i}`,position:{x:190,y:i*62}}))]
 const edges=targets.slice(1).map(n=>({source:'a',target:n.id}))
@@ -41,4 +41,24 @@ test('new nodes visibly travel across several animation frames before settling',
   assert.ok(nodes.some((n,i)=>Math.hypot(n.x-early[i].x,n.y-early[i].y)>10))
   assert.ok(nodes.every((n,i)=>Math.hypot(n.x-start[i].x,n.y-start[i].y)>100))
   simulation.stop()
+})
+
+test('hidden or invalid canvas sizes cannot corrupt the graph camera',()=>{
+  const graph={width:328,height:62,focusX:0}
+  for(const size of [{width:0,height:0},{width:440,height:0},{width:0,height:270},{width:NaN,height:270}]){
+    assert.equal(institutionViewport(size,graph),null)
+  }
+  for(const size of [{width:320,height:180},{width:440,height:460}]){
+    const viewport=institutionViewport(size,graph)!
+    assert.ok(viewport.zoom>0&&viewport.zoom<=1.1)
+    assert.ok(viewport.x>=0&&viewport.y>=0)
+    assert.ok(viewport.x+graph.width*viewport.zoom<=size.width)
+    assert.ok(viewport.y+graph.height*viewport.zoom<=size.height)
+  }
+})
+test('presence completes from elapsed time even after a suspended animation frame',()=>{
+  assert.equal(institutionPresence(0),0)
+  assert.ok(institutionPresence(350)>0&&institutionPresence(350)<1)
+  assert.equal(institutionPresence(700),1)
+  assert.equal(institutionPresence(60000),1)
 })
