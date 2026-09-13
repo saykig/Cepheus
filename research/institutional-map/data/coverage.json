@@ -48,11 +48,13 @@
         "caisi-2026",
         "joint-evaluation-2024",
         "nist-mous-2024",
-        "sonnet-report"
+        "sonnet-report",
+        "fable-restoration"
       ],
       "relationshipIds": [
         "anthropic-us-access",
-        "us-anthropic-evaluation"
+        "us-anthropic-evaluation",
+        "caisi-anthropic-fable-evaluation"
       ],
       "result": "searched—supported",
       "exclusions": [
@@ -88,17 +90,21 @@
         "developer"
       ],
       "indexUrls": [
+        "https://www.aisi.gov.uk/blog",
         "https://www.aisi.gov.uk/blog"
       ],
       "inspectedSourceIds": [
         "anthropic-fable-suspension",
         "joint-evaluation-2024",
         "parliament-ai-update-september",
-        "sonnet-report"
+        "sonnet-report",
+        "aisi-july-incident",
+        "openai-july-incident"
       ],
       "relationshipIds": [
         "uk-anthropic-evaluation",
-        "uk-anthropic-fable-evaluation"
+        "uk-anthropic-fable-evaluation",
+        "uk-anthropic-july-evaluation"
       ],
       "result": "searched—supported",
       "exclusions": [
@@ -355,18 +361,25 @@
           "domains": [
             "openai.com"
           ]
-        }
+        },
+        "site.aisi.gov.uk \"OpenAI\" \"2026\" evaluation"
       ],
       "searchParties": [
         "institutional",
         "developer"
       ],
       "indexUrls": [
+        "https://www.aisi.gov.uk/blog",
         "https://www.aisi.gov.uk/blog"
       ],
-      "inspectedSourceIds": [],
-      "relationshipIds": [],
-      "result": "searched—unsupported",
+      "inspectedSourceIds": [
+        "aisi-july-incident",
+        "openai-july-incident"
+      ],
+      "relationshipIds": [
+        "uk-openai-july-evaluation"
+      ],
+      "result": "searched—supported",
       "exclusions": [
         "Co-mentions, recruitment advertisements, programme membership and general model listings are not pairwise interface evidence."
       ],
@@ -614,13 +627,15 @@
           "domains": [
             "deepmind.google"
           ]
-        }
+        },
+        "site.aisi.gov.uk \"Google DeepMind\" \"2026\" evaluation"
       ],
       "searchParties": [
         "institutional",
         "developer"
       ],
       "indexUrls": [
+        "https://www.aisi.gov.uk/blog",
         "https://www.aisi.gov.uk/blog"
       ],
       "inspectedSourceIds": [],
@@ -867,13 +882,15 @@
           "domains": [
             "microsoft.com"
           ]
-        }
+        },
+        "site.aisi.gov.uk \"Microsoft\" \"2026\" evaluation"
       ],
       "searchParties": [
         "institutional",
         "developer"
       ],
       "indexUrls": [
+        "https://www.aisi.gov.uk/blog",
         "https://www.aisi.gov.uk/blog"
       ],
       "inspectedSourceIds": [
@@ -1119,13 +1136,15 @@
           "domains": [
             "x.ai"
           ]
-        }
+        },
+        "site.aisi.gov.uk \"Grok\" evaluation 2026"
       ],
       "searchParties": [
         "institutional",
         "developer"
       ],
       "indexUrls": [
+        "https://www.aisi.gov.uk/blog",
         "https://www.aisi.gov.uk/blog"
       ],
       "inspectedSourceIds": [],

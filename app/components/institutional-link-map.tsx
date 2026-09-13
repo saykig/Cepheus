@@ -1,155 +1,92 @@
 'use client'
 
-/* THESIS: A reader follows one documented connection and opens its evidence.
- * OWN-WORLD: Cepheus paper, ink and olive; equal nodes and fine connecting lines.
- * STORY: See institutions, choose a domain, inspect the mechanism and its limits.
- * FIRST VIEWPORT: A compact network with direct labels, four filters and no profile.
- * FORM: A local simplification of the established essay instrument, not a new visual identity.
- */
+/* THESIS: An essay-side institutional constellation, inspected one interface at a time.
+   OWN-WORLD: Cepheus paper, brown ink, olive selection, existing editorial type.
+   STORY: Read the institutions assembling; distinguish documented facts from analysis; audit either.
+   FIRST VIEWPORT: Prose at left, quiet equal marks at right; opening focuses DoD and Anthropic.
+   FORM: User-specified clustered bubbles, deterministic build layout, explicit six-state story. */
 import { useEffect, useId, useRef, useState } from 'react'
-import type { CSSProperties } from 'react'
-import type { Locale } from 'app/lib/i18n'
-import institutions from '../../public/data/institutional-map/institutions.json'
-import relationships from '../../public/data/institutional-map/relationships.json'
-import evidence from '../../public/data/institutional-map/evidence.json'
-import sources from '../../public/data/institutional-map/sources.json'
-import instruments from '../../public/data/institutional-map/instruments.json'
-import layout from '../../public/data/institutional-map/layout.json'
+import bundle from '../../public/data/institutional-map/bundle.json'
+import type { Bundle } from '../lib/institutional-map-types'
+import { storyStates, resolveStoryStep, storyRelationship } from '../lib/institutional-map-story'
+import type { Locale } from '../lib/i18n'
 import styles from './institutional-link-map.module.css'
 
-const domainLabels = {
-  all: 'All domains',
-  biosecurity: 'Biosecurity',
-  cybersecurity: 'Cybersecurity',
-  'cross-domain-ai': 'Cross-domain AI',
+const data=bundle as unknown as Bundle
+const publishedIds=new Set(data.relationships.map(r=>r.id))
+const copy={
+ en:{explore:'Explore institutions',close:'Close',evidence:'View evidence →',how:'How to read',method:'Evidence & methodology →'},
+ ru:{explore:'Исследовать институты',close:'Закрыть',evidence:'Источники →',how:'Как читать',method:'Источники и методология →'},
+ ko:{explore:'기관 살펴보기',close:'닫기',evidence:'근거 보기 →',how:'읽는 방법',method:'근거 및 방법론 →'},
+ fr:{explore:'Explorer les institutions',close:'Fermer',evidence:'Voir les sources →',how:'Comment lire',method:'Sources et méthodologie →'},
+ 'zh-CN':{explore:'探索机构',close:'关闭',evidence:'查看证据 →',how:'如何阅读',method:'证据与方法 →'},
 }
-const methodologyUrl = 'https://github.com/saykig/cepheus/blob/main/research/institutional-map/METHODOLOGY.md'
-const institutionById = new Map(institutions.map((item) => [item.id, item]))
-const evidenceById = new Map(evidence.map((item) => [item.id, item]))
-const sourceById = new Map(sources.map((item) => [item.id, item]))
-const instrumentById = new Map(instruments.map((item) => [item.id, item]))
-type Relationship = (typeof relationships)[number]
-type Selection = { type: 'institution' | 'relationship'; id: string } | null
-
-function date(value: string | null) {
-  if (!value) return 'Date not established'
-  return new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`))
-}
-function relationshipLabel(item: Relationship) {
-  return `${institutionById.get(item.source)!.label} ${item.directed ? '→' : '↔'} ${institutionById.get(item.target)!.label}: ${item.kind.toLowerCase()}`
-}
-function point(id: string) { return layout[id as keyof typeof layout] }
-
-// Layout geometry has no substantive meaning. Parallel mechanisms keep separate curves.
-function curve(item: Relationship) {
-  const a = point(item.source), b = point(item.target)
-  const ax = a.x * 7, ay = a.y * 4, bx = b.x * 7, by = b.y * 4
-  const dx = bx - ax, dy = by - ay, distance = Math.hypot(dx, dy)
-  const nx = dx / distance, ny = dy / distance
-  const parallel = item.id === 'anthropic-us-access' || item.id === 'us-anthropic-evaluation'
-  const bend = parallel ? 30 : 0
-  return `M ${ax + nx * 14} ${ay + ny * 14} Q ${(ax + bx) / 2 - ny * bend} ${(ay + by) / 2 + nx * bend} ${bx - nx * 19} ${by - ny * 19}`
-}
-
-export function InstitutionalLinkMap({ locale = 'en' }: { locale?: Locale }) {
-  const uid = useId().replace(/:/g, '')
-  const [domain, setDomain] = useState<keyof typeof domainLabels>('all')
-  const [selection, setSelection] = useState<Selection>(null)
-  const [hovered, setHovered] = useState<string | null>(null)
-  const trigger = useRef<HTMLElement | SVGElement | null>(null)
-  const detailHeading = useRef<HTMLHeadingElement>(null)
-  const transferFocus = useRef(false)
-  useEffect(() => {
-    if (transferFocus.current) {
-      detailHeading.current?.focus({ preventScroll: true })
-      transferFocus.current = false
-    }
-  }, [selection])
-  const visible = relationships.filter((item) => domain === 'all' || item.domains.includes(domain))
-  const visibleIds = new Set(visible.flatMap((item) => [item.source, item.target]))
-  const selectedRelationship = selection?.type === 'relationship' ? visible.find((item) => item.id === selection.id) : undefined
-  const selectedInstitution = selection?.type === 'institution' && visibleIds.has(selection.id) ? institutionById.get(selection.id) : undefined
-  const activeRelationship = visible.find((item) => item.id === hovered) ?? selectedRelationship
-  const incident = selectedInstitution ? visible.filter((item) => item.source === selectedInstitution.id || item.target === selectedInstitution.id) : []
-  const instrument = selectedRelationship ? instrumentById.get(selectedRelationship.instrumentId)! : null
-  const open = Boolean(selectedInstitution || selectedRelationship)
-  const close = () => { setSelection(null); trigger.current?.focus() }
-  const select = (next: NonNullable<Selection>, target: HTMLElement | SVGElement) => { trigger.current = target; setSelection(next) }
-
-  return (
-    <section className={styles.map} lang="en" aria-labelledby={`${uid}-title`} onKeyDown={(event) => { if (event.key === 'Escape' && open) { event.preventDefault(); close() } }}>
-      <header className={styles.header}>
-        <h4 id={`${uid}-title`}>Institutional links</h4>
-        <span>Research pilot · 2024–25 records</span>
-      </header>
-      {locale !== 'en' ? <p className={styles.localeNote}>Research records are currently available in English.</p> : null}
-      <div className={styles.domains} role="group" aria-label="Filter relationships by domain">
-        {Object.entries(domainLabels).map(([id, label]) => (
-          <button type="button" key={id} aria-pressed={id === domain} onClick={() => { setDomain(id as keyof typeof domainLabels); setSelection(null); setHovered(null) }}>{label}</button>
-        ))}
-      </div>
-      <div className={styles.stage}>
-        <svg className={styles.connections} viewBox="0 0 700 400" aria-label="Documented institutional relationships" role="group">
-          <defs><marker id={`${uid}-arrow`} viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 1 1 L 7 4 L 1 7" fill="none" stroke="context-stroke" strokeWidth="1.2" /></marker></defs>
-          {visible.map((item) => {
-            const emphasized = activeRelationship?.id === item.id || incident.some((link) => link.id === item.id)
-            return (
-              <g key={item.id} role="button" tabIndex={0} className={`${styles.edge} ${emphasized ? styles.emphasized : ''}`} aria-label={relationshipLabel(item)} aria-expanded={selectedRelationship?.id === item.id} aria-controls={`${uid}-detail`} onMouseEnter={() => setHovered(item.id)} onMouseLeave={() => setHovered(null)} onFocus={() => setHovered(item.id)} onBlur={() => setHovered(null)} onClick={(event) => select({ type: 'relationship', id: item.id }, event.currentTarget)} onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select({ type: 'relationship', id: item.id }, event.currentTarget) } }}>
-                <title>{relationshipLabel(item)}</title>
-                <path className={styles.edgeLine} d={curve(item)} strokeDasharray={item.kind === 'Model access' ? '5 5' : undefined} markerEnd={item.directed ? `url(#${uid}-arrow)` : undefined} />
-                <path className={styles.edgeHit} d={curve(item)} />
-              </g>
-            )
-          })}
-        </svg>
-        {institutions.filter((item) => visibleIds.has(item.id)).map((item) => (
-          <button key={item.id} type="button" data-label-position={item.id.includes('aisi') ? 'above' : 'below'} className={`${styles.node} ${selectedInstitution?.id === item.id ? styles.selectedNode : ''}`} style={{ '--x': `${point(item.id).x}%`, '--y': `${point(item.id).y}%` } as CSSProperties} aria-label={`${item.name}: inspect relationships`} aria-expanded={selectedInstitution?.id === item.id} aria-controls={`${uid}-detail`} onClick={(event) => select({ type: 'institution', id: item.id }, event.currentTarget)}>
-            <span className={styles.nodeMark} aria-hidden="true" />
-            <span className={styles.nodeLabel}>{item.label}</span>
-            {item.id.includes('aisi') ? <span className={styles.nodePeriod}>{item.id === 'us-aisi' ? 'NIST · 2024' : '2024 name'}</span> : null}
-          </button>
-        ))}
-      </div>
-      <p className={styles.hint} aria-live="polite">{activeRelationship ? relationshipLabel(activeRelationship) : 'Choose an institution or a line to follow its evidence.'}</p>
-      <div className={styles.meta}><span>{visibleIds.size} institutions · {visible.length} relationships · US / UK</span><span>Size and distance do not measure power.</span></div>
-      <div id={`${uid}-detail`}>
-        {open ? <section className={styles.detail} aria-label="Selected record">
-          <button type="button" className={styles.close} onClick={close} aria-label="Close selected record">Close ×</button>
-          {selectedInstitution ? <>
-            <p className={styles.recordType}>{selectedInstitution.kind} · {selectedInstitution.jurisdiction}</p>
-            <h5>{selectedInstitution.name}</h5>
-            <p>{selectedInstitution.note}</p>
-            <ul className={styles.linkList}>{incident.map((item) => <li key={item.id}><button type="button" onClick={() => { transferFocus.current = true; setSelection({ type: 'relationship', id: item.id }) }}>{relationshipLabel(item)}<span aria-hidden="true">↗</span></button></li>)}</ul>
-          </> : null}
-          {selectedRelationship && instrument ? <>
-            <p className={styles.recordType}>{selectedRelationship.kind} · Provisional record</p>
-            <h5 ref={detailHeading} tabIndex={-1}>{relationshipLabel(selectedRelationship).split(':')[0]}</h5>
-            <p>{instrument.label}</p>
-            <p className={styles.status}>{selectedRelationship.eventStatus} · by {date(selectedRelationship.observedBy)}<br />Present status has not been verified.</p>
-            <details className={styles.evidence}><summary>Evidence and limits</summary>
-              <p>{selectedRelationship.rationale}</p>
-              <dl><dt>Context</dt><dd>{selectedRelationship.contexts.join(' / ')}</dd><dt>Jurisdictions</dt><dd>{selectedRelationship.jurisdictions.join(' / ')}</dd><dt>Terms</dt><dd>{instrument.bindingness}</dd><dt>Effective period</dt><dd>Not established from these sources</dd></dl>
-              {selectedRelationship.evidenceIds.map((id) => {
-                const record = evidenceById.get(id)!, source = sourceById.get(record.sourceId)!
-                return <div className={styles.source} key={id}>
-                  <p>{record.claim}</p>
-                  <a href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>
-                  <p className={styles.locator}>{source.publisher} · {date(source.publishedOn)} · {source.basis}<br />{record.locator}</p>
-                  <p className={styles.limitation}>{record.limitation}</p>
-                </div>
-              })}
-              <p className={styles.locator}>No counterevidence recorded. This is not a finding that none exists. Record: {selectedRelationship.id}.</p>
-            </details>
-          </> : null}
-        </section> : null}
-      </div>
-      <details className={styles.methodology}><summary>How to read this map</summary>
-        <p>These are six provisional relationship records from three primary sources, selected to test the research method. They document past announcements and activities, not a complete or current network.</p>
-        <p>Arrows read from provider to access recipient, or evaluator to model provider. The undirected line is a joint exercise. Dashed lines show access agreements. Several lines can connect the same institutions through different mechanisms.</p>
-        <p>Domains overlap. Defence is a use context, not a replacement for biosecurity or cybersecurity. An absent link means it is not documented in this sample.</p>
-        <p><a href={methodologyUrl} target="_blank" rel="noreferrer">Methodology and research plan ↗</a>{' · '}<a href="https://github.com/saykig/cepheus/tree/main/public/data/institutional-map" target="_blank" rel="noreferrer">Source records ↗</a></p>
-        <details><summary>Read relationships as a list</summary><ul className={styles.linkList}>{visible.map((item) => <li key={item.id}><button type="button" onClick={(event) => select({ type: 'relationship', id: item.id }, event.currentTarget)}>{relationshipLabel(item)}</button></li>)}</ul></details>
-      </details>
-    </section>
-  )
+export function InstitutionalLinkMap({locale='en',story=false,initialStep=5}:{locale?:Locale;story?:boolean;initialStep?:number}) {
+ const uid=useId();const root=useRef<HTMLElement>(null);const trigger=useRef<HTMLButtonElement|null>(null)
+ const [step,setStep]=useState(initialStep);const [hover,setHover]=useState<string|null>(null)
+ const [selected,setSelected]=useState<string|null>(null);const [chosen,setChosen]=useState<string|null>(null)
+ const c=copy[locale];const state=storyStates[step]
+ useEffect(()=>{
+  if(!story)return
+  const media=matchMedia('(min-width: 1120px) and (min-height: 700px)')
+  let cleanup=()=>{}
+  const attach=()=>{
+   cleanup();if(!media.matches){setStep(5);return}
+   const markers=Array.from(document.querySelectorAll<HTMLElement>('[data-institutional-step]'))
+   let frame=0
+   const update=()=>{frame=0;setStep(resolveStoryStep(markers.map(m=>m.getBoundingClientRect().top),innerHeight*.4))}
+   const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)}
+   const observer=new IntersectionObserver(schedule,{rootMargin:'-40% 0px -59% 0px'})
+   markers.forEach(m=>observer.observe(m))
+   const resize=new ResizeObserver(schedule);const body=document.querySelector('.essay-body');if(body)resize.observe(body)
+   for(const event of ['scroll','resize','hashchange','popstate','pageshow'])window.addEventListener(event,schedule,{passive:true})
+   update()
+   cleanup=()=>{observer.disconnect();resize.disconnect();cancelAnimationFrame(frame);for(const event of ['scroll','resize','hashchange','popstate','pageshow'])window.removeEventListener(event,schedule)}
+  }
+  attach();media.addEventListener('change',attach);return()=>{cleanup();media.removeEventListener('change',attach)}
+ },[story])
+ const focusId=selected??hover
+ const incident=data.relationships.filter(r=>r.source===focusId||r.target===focusId)
+ const narrative=storyRelationship(step,publishedIds)
+ const relationship=data.relationships.find(r=>r.id===(selected?(chosen??incident[0]?.id):hover?incident[0]?.id:narrative))
+ const institution=data.institutions.find(i=>i.id===selected)
+ const mechanism=data['relation-types'].find(t=>t.id===relationship?.type)
+ const assessments=relationship?data['analytical-relations'].filter(a=>a.relationshipIds.includes(relationship.id)):[]
+ const visible=new Set<string>(state.institutions??data.institutions.map(i=>i.id))
+ if(focusId)visible.add(focusId)
+ if(relationship){visible.add(relationship.source);visible.add(relationship.target)}
+ const point=(id:string)=>data.layout!.nodes[id]
+ const close=()=>{setSelected(null);setChosen(null);setHover(null);trigger.current?.focus()}
+ const prefix=locale==='en'?'':`/${locale}`
+ return <figure ref={root} className={styles.figure} data-constellation data-story-state={state.id} onKeyDown={e=>{if(e.key==='Escape'&&selected){e.preventDefault();close()}}}>
+   <div className={styles.heading}><span>{state.title}</span><span className={styles.version}>{data.release.version}</span></div>
+   <div className={styles.plot} role="group" aria-label={c.explore}>
+    <svg className={styles.lines} viewBox="0 0 600 600" aria-hidden="true">
+     {relationship&&point(relationship.source)&&point(relationship.target)?<path data-relationship-path d={`M ${point(relationship.source).x} ${point(relationship.source).y} Q 300 270 ${point(relationship.target).x} ${point(relationship.target).y}`} />:null}
+    </svg>
+    <span className={`${styles.group} ${styles.publicGroup}`}>Public decisions</span>
+    <span className={`${styles.group} ${styles.developerGroup}`}>Model developers</span>
+    <span className={`${styles.group} ${styles.evaluationGroup}`}>Evaluation / research</span>
+    {data.institutions.map(i=>{
+     const p=point(i.id);if(!p)return null
+     const active=visible.has(i.id);const incidentHighlight=relationship&&(i.id===relationship.source||i.id===relationship.target)
+     return <button key={i.id} type="button" className={styles.node} data-institution={i.id} data-emphasis={incidentHighlight||focusId===i.id?'true':'false'} data-visible={active?'true':'false'} style={{left:`${p.x/6}%`,top:`${p.y/6}%`}} tabIndex={active?0:-1} aria-hidden={!active} aria-label={`${i.name}. ${i.kind}`} aria-expanded={selected===i.id} aria-controls={`${uid}-card`} onPointerEnter={e=>{if(e.pointerType==='mouse')setHover(i.id)}} onPointerLeave={e=>{if(document.activeElement!==e.currentTarget)setHover(null)}} onFocus={()=>setHover(i.id)} onBlur={()=>setHover(null)} onClick={e=>{trigger.current=e.currentTarget;setSelected(i.id);setChosen(null)}}>
+       <span className={styles.mark}/><span className={styles.nodeLabel}>{i.label}</span>
+     </button>
+    })}
+    {relationship?<div className={styles.mechanism} data-mechanism><span>{mechanism?.label}</span><small>Directly documented · {relationship.announcedOn??relationship.observedBy??'date unknown'}</small></div>:null}
+   </div>
+   <div className={styles.readout}>
+    {step===4&&relationship?<a className={styles.lineage} href={`${prefix}/institutional-links/${relationship.id}`}>Source → evidence → instrument → interface{assessments.length?' → analysis':''}</a>:assessments[0]?<span className={styles.analysis}><span>Reviewed analysis</span>{assessments.find(a=>a.type==='transitional-operational-dependence')?.shortLabel??assessments[0].shortLabel}</span>:<span className={styles.hint}>Select an institution to follow one interface.</span>}
+   </div>
+   {institution?<section id={`${uid}-card`} className={styles.card} aria-label={`${institution.label} evidence`}>
+    <div className={styles.cardHeading}><h3>{institution.name}</h3><button type="button" onClick={close}>{c.close}</button></div>
+    <p>{institution.kind}</p>
+    <label className={styles.selectLabel}>Documented interface<select value={relationship?.id??''} onChange={e=>setChosen(e.target.value)}>{incident.map(r=><option key={r.id} value={r.id}>{data['relation-types'].find(t=>t.id===r.type)?.label} · {data.institutions.find(i=>i.id===(r.source===selected?r.target:r.source))?.label}</option>)}</select></label>
+    {relationship?<><p className={styles.status}>Directly documented · {relationship.eventStatus}<br/>{relationship.currentStatus} · checked {relationship.currentStatusCheckedOn}</p>{assessments.map(a=><p className={styles.assessment} key={a.id}><strong>Reviewed analytical assessment</strong>{a.shortLabel}</p>)}<a href={`${prefix}/institutional-links/${relationship.id}`}>{c.evidence}</a></>:<p>No published interface in this release.</p>}
+   </section>:null}
+   <figcaption className={styles.caption}><span>Named institutions · documented interfaces · reviewed analysis</span><details><summary>{c.how}</summary><p>Circles are named institutions. Mechanism labels are documented interfaces; analytical findings are marked separately. Clusters are categorical: position and distance measure no quantity. Missing links are not evidence of absence. Evidence cutoff: 12 Sep 2026.</p><a href={`${prefix}/institutional-links`}>{c.method}</a></details></figcaption>
+   {locale!=='en'?<p className={styles.languageNote}>Research records and analytical assessments are in their original English.</p>:null}
+   <noscript><p>Interactive selection requires JavaScript. <a href={`${prefix}/institutional-links`}>Read the complete evidence index.</a></p></noscript>
+ </figure>
 }

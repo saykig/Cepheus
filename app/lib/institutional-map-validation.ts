@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto'
 import type { Bundle, ResearchRecord } from './institutional-map-types.ts'
-export const materialCollections = ['sources','evidence','institutions','instruments','relationships','relation-types','taxonomy','status-checks','succession','coverage','institution-attributes','attribute-rubrics','analytical-relations','analytical-rubrics','source-versions','search-log','status-search-log'] as const
+export const materialCollections = ['sources','evidence','institutions','instruments','relationships','relation-types','taxonomy','status-checks','succession','coverage','institution-attributes','attribute-rubrics','analytical-relations','analytical-rubrics','source-versions','search-log','status-search-log','dependency-investigation'] as const
 export const reviewedCollections = ['evidence','institutions','instruments','relationships','institution-attributes','analytical-relations'] as const
 function canonical(value: any): any {
   if (Array.isArray(value)) return value.map(canonical)

@@ -4,7 +4,7 @@
     "test": "node --test --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON app/lib/gap-matrix-*.test.mts app/lib/friction-index-*.test.mts app/lib/institutional-map-*.test.mts",
     "typecheck": "tsc --noEmit",
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm research:export && next build",
     "start": "next start",
     "research:validate": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/institutional-map.mts",
     "research:export": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/institutional-map.mts --export",

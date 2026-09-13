@@ -102,11 +102,10 @@ export default async function CepheusEssay({
         </div>
       </header>
 
+      <EssayFootnoteProvider>
       <div className="essay-layout">
-
-        <EssayFootnoteProvider>
           <div className="essay-body">
-          <h2 className="essay-opening-heading" id="first-collision">
+          <h2 className="essay-opening-heading" id="first-collision" data-institutional-step="opening">
             {labels.firstCollision}
           </h2>
           <p>
@@ -119,16 +118,27 @@ export default async function CepheusEssay({
           <p>
             The dispute concerned the conditions under which the Department of
             Defense could use Claude. Anthropic refused to
-            remove safeguards related to mass domestic surveillance and fully
+            remove contractual restrictions related to mass domestic surveillance and fully
             autonomous weapons, arguing that current frontier systems remained
             too unreliable for certain high-stakes uses. Pentagon officials
             responded that a private company should not determine how the
             military could lawfully use technology it had purchased. Both
-            institutions possessed something the other could not easily replace:{' '}
+            institutions held different forms of decision-making capacity:{' '}
             <strong>
               the government held public authority, while Anthropic held
-              technical expertise and control over the system.
+              technical expertise and control over model development.
             </strong>
+          </p>
+          <p>
+            A <a className="citation-link" href="https://cases.justia.com/federal/district-courts/california/candce/3:2026cv01996/465515/250/0.pdf">27 August 2026 ruling</a> subsequently granted Anthropic
+            judgment on specified claims against the government. It also
+            distinguished contractual restrictions from technical enforcement:
+            Anthropic could not enforce those use restrictions inside the
+            deployed government environment. The wider litigation and the
+            practical constraints on replacing the system remain separate questions.
+            The evidence supports a <a className="citation-link" href="/institutional-links/dod-anthropic-contested#analysis">bounded assessment of transitional dependence in March</a>,
+            when continued operational use required a managed replacement period.
+            Whether the same constraint persisted in September remains unresolved.
           </p>
           <p>
             At first, I read it as a dispute over one government contract, but it
@@ -144,7 +154,7 @@ export default async function CepheusEssay({
             trying to answer the below questions are much more difficult in
             today's political landscape:
           </p>
-          <ol className="essay-questions">
+          <ol className="essay-questions" data-institutional-step="public-decisions">
             <li>
               <strong>Who has legal or political authority?</strong>
             </li>
@@ -199,12 +209,13 @@ export default async function CepheusEssay({
             </EssayDisclosure>
           </section>
 
-          <p>
+          <p data-institutional-step="interfaces">
             I now start with named institutions<FootnoteRef number={1} /> and
             documented mechanisms<FootnoteRef number={2} />. The Institutional
             Link Map<FootnoteRef number={3} /> lets us inspect the agreements,
             evaluations, and deployments through which institutions meet.
             Each connection has a source and a limit to what it can establish.
+            Analytical assessments make their additional reasoning inspectable.
           </p>
           <p>
             In this essay, I try to illustrate that the central governance
@@ -225,7 +236,7 @@ export default async function CepheusEssay({
             language captures the speed of change, but it can also make
             responsibility disappear.
           </p>
-          <p>
+          <p data-institutional-step="technical-knowledge">
             Much of frontier AI is developed inside a small number of private
             companies. These companies recruit the technical talent, operate the
             computing infrastructure, evaluate their models, and control how
@@ -358,7 +369,7 @@ export default async function CepheusEssay({
             error in the system, because sometimes, or most of the time, it is the
             system.
           </p>
-          <p>
+          <p data-institutional-step="provenance">
             That means I do not think policy needs, or could realistically have,
             some universal language that verifies political truth. But the
             benefit of formal systems points toward something smaller and much
@@ -412,7 +423,7 @@ export default async function CepheusEssay({
             boundaries become less costly when the information crossing them has
             structure.
           </p>
-          <h2 id="what-do-we-owe-to-each-other">
+          <h2 id="what-do-we-owe-to-each-other" data-institutional-step="exploration">
             {labels.owe}
           </h2>
           <p>
@@ -429,7 +440,8 @@ export default async function CepheusEssay({
           <p>
             Thus, these relationships form something closer to an institutional
             system than a simple divide between government and industry. The
-            map below is a preliminary picture of that system:
+            constellation offers a bounded, evidence-backed account of that system,
+            with documented interfaces and separately identified analytical assessments:
           </p>
 
           <section
@@ -437,7 +449,7 @@ export default async function CepheusEssay({
             id="cepheus-map"
             data-essay-visual="link"
           >
-            <InstitutionalLinkMap locale={locale} />
+            <div className={readingLayout.inlineMap}><InstitutionalLinkMap locale={locale} /></div>
             <EssayDisclosure title="Who depends on whom?">
               <p>
                 A government may possess legal authority while depending on a
@@ -459,9 +471,10 @@ export default async function CepheusEssay({
                 coordinate on cybersecurity threats.
               </p>
               <p>
-                The Institutional Link Map tries to make these relationships
-                visible because dependency can shape decisions as strongly as law
-                does.
+                Dependency can shape decisions as strongly as law does. The map
+                distinguishes documented interfaces from analytical findings about
+                them; a dependency assessment must establish operational use,
+                consequential control and the constraints on substitution together.
               </p>
             </EssayDisclosure>
           </section>
@@ -497,10 +510,11 @@ export default async function CepheusEssay({
             knowledge understandable across the boundary between them.
           </p>
 
-            <EssayEndnotes />
           </div>
-        </EssayFootnoteProvider>
+          <aside className={readingLayout.storySide} aria-label="Institutional constellation"><InstitutionalLinkMap locale={locale} story initialStep={0} /></aside>
       </div>
+      <div className={readingLayout.endnotes}><EssayEndnotes /></div>
+      </EssayFootnoteProvider>
     </article>
   )
 }

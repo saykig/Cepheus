@@ -14,12 +14,12 @@
     "counterEvidenceIds": [
       "independent-tests"
     ],
-    "reasoning": "Completed independent tests establish capacity; explicit limited testing access narrows conclusions. Independent method design counters inference of provider-directed findings.",
+    "reasoning": "Completed independent tests establish capacity; explicit limited testing access narrows conclusions. Independently run assessments counters inference of provider-directed findings.",
     "limitations": [
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
     "coder": "codex-primary",
-    "publicationStatus": "provisional"
+    "publicationStatus": "published"
   },
   {
     "id": "us-sonnet-capacity",
@@ -41,14 +41,14 @@
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
     "coder": "codex-primary",
-    "publicationStatus": "provisional"
+    "publicationStatus": "published"
   },
   {
     "id": "dod-claude-control",
     "institutionId": "anthropic",
     "rubricId": "technical-control",
     "value": "shared-constrained",
-    "context": "Anthropic provision and replacement of Claude models for DoW, contrasted with deployed operational control; 2025\u2013August 2026",
+    "context": "Anthropic provision and replacement of Claude models for DoW, contrasted with deployed operational control; 2025–August 2026",
     "jurisdiction": "United States",
     "assessedOn": "2026-08-27",
     "evidenceIds": [
@@ -64,7 +64,7 @@
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
     "coder": "codex-research-checker",
-    "publicationStatus": "provisional"
+    "publicationStatus": "published"
   },
   {
     "id": "dod-substitution",
@@ -87,14 +87,14 @@
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
     "coder": "codex-research-checker",
-    "publicationStatus": "provisional"
+    "publicationStatus": "published"
   },
   {
     "id": "dod-reliance",
     "institutionId": "dod",
     "rubricId": "operational-reliance",
     "value": "meaningful",
-    "context": "Repeated Claude/Claude Gov assistance in defense and intelligence work, with supplier-reported planning, analysis and cyber functions; 2024\u2013February 2026",
+    "context": "Repeated Claude/Claude Gov assistance in defense and intelligence work, with supplier-reported planning, analysis and cyber functions; 2024–February 2026",
     "jurisdiction": "United States",
     "assessedOn": "2026-08-27",
     "evidenceIds": [
@@ -110,7 +110,7 @@
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
     "coder": "codex-research-checker",
-    "publicationStatus": "provisional"
+    "publicationStatus": "published"
   },
   {
     "id": "uk-public-remit",
@@ -129,7 +129,7 @@
       "Historical institutional remit. Later capacity, legislative changes or government powers require separate evidence. Limited denotes advisory remit here, not limited binding authority."
     ],
     "coder": "codex-research-checker",
-    "publicationStatus": "provisional"
+    "publicationStatus": "published"
   },
   {
     "id": "uk-information",
@@ -150,6 +150,30 @@
       "Coding applies only to stated context and date, not a permanent institutional rank."
     ],
     "coder": "codex-primary",
-    "publicationStatus": "provisional"
+    "publicationStatus": "published"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "dod-march-substitution",
+    "institutionId": "dod",
+    "rubricId": "substitution",
+    "value": "unresolved",
+    "context": "Existing Claude-enabled operational assistance, March24 2026, immediate withdrawal horizon",
+    "jurisdiction": "United States",
+    "assessedOn": "2026-03-24",
+    "evidenceIds": [
+      "cio-transition-continuity",
+      "memo-transition-licences",
+      "official-single-provider"
+    ],
+    "counterEvidenceIds": [
+      "cio-alternative-architecture",
+      "senate-alternatives-specific"
+    ],
+    "reasoning": "Managed transition constrains immediate withdrawal, but the ordinal rubric cannot distinguish costly alternatives from material unavailability without a task-level comparison. The analytical transitional construct makes a narrower categorical finding.",
+    "limitations": [
+      "No ordinal substitution intensity established; later alternatives do not retroactively eliminate a transition constraint."
+    ]
   }
 ]

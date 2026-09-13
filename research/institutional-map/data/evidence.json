@@ -7,7 +7,7 @@
     "observedBy": "2024-08-29",
     "limitation": "Announcement does not establish actual access to every model or current agreement status.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-05-04"
   },
@@ -19,7 +19,7 @@
     "observedBy": "2024-08-29",
     "limitation": "The underlying MoU terms were not reviewed.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-05-04"
   },
@@ -31,7 +31,7 @@
     "observedBy": "2024-10-22",
     "limitation": "A completed exercise does not establish continuing access or regulatory authority.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2025-03-20"
   },
@@ -43,7 +43,7 @@
     "observedBy": "2024-11-19",
     "limitation": "Domain tags describe the exercise scope, not a finding about its effectiveness.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2025-03-20"
   },
@@ -55,7 +55,7 @@
     "observedBy": "2025-07-09",
     "limitation": "Supplier-reported deployment; independent outcomes, contract terms and present status are unverified.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2025-07-11"
   },
@@ -67,7 +67,7 @@
     "observedBy": "2024-11-19",
     "limitation": "Applies to this exercise; does not identify who caused the limits.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2024-11-19"
   },
@@ -79,7 +79,7 @@
     "observedBy": "2024-11-19",
     "limitation": "Independence of tests does not establish durable model access.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2024-11-19"
   },
@@ -91,7 +91,7 @@
     "observedBy": "2024-11-19",
     "limitation": "Retain discrepancy; use report publication as upper bound, not an exact evaluation date.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2024-11-19"
   },
@@ -103,7 +103,7 @@
     "observedBy": "2026-05-05",
     "limitation": "Bulletin does not identify each predecessor agreement or disclose amended terms.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-05-05"
   },
@@ -115,7 +115,7 @@
     "observedBy": "2026-07-02",
     "limitation": "Last confirmed activity, not uninterrupted status through September.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-02"
   },
@@ -127,7 +127,7 @@
     "observedBy": "2026-02-25",
     "limitation": "No effectiveness or continuing status inferred.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-02-25"
   },
@@ -139,7 +139,7 @@
     "observedBy": "2026-01-27",
     "limitation": "No effectiveness or continuing status inferred.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-01-27"
   },
@@ -151,7 +151,7 @@
     "observedBy": "2026-01-27",
     "limitation": "Intended capability, not demonstrated independence; model-service substitution remains unestablished.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-01-27"
   },
@@ -163,7 +163,7 @@
     "observedBy": "2026-08-27",
     "limitation": "Identifies use, not a direct contract for every deployment.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-08-27"
   },
@@ -175,7 +175,7 @@
     "observedBy": "2026-08-27",
     "limitation": "Specific deployed environment; does not imply no control over future development, contracts or provision.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-08-27"
   },
@@ -187,7 +187,7 @@
     "observedBy": "2026-08-27",
     "limitation": "Does not resolve every claim, related appellate proceeding, or establish resumed service.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-08-27"
   },
@@ -199,7 +199,7 @@
     "observedBy": "2026-04-08",
     "limitation": "Historical action subject to later district judgment and separate litigation.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-04-08"
   },
@@ -211,7 +211,7 @@
     "observedBy": "2026-02-26",
     "limitation": "Company account of dispute; technological enforcement differs from contractual conditions.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-02-26"
   },
@@ -223,7 +223,7 @@
     "observedBy": "2025-08-18",
     "limitation": "Rollout announcement does not measure realized outcomes or continuing contract terms.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2025-08-18"
   },
@@ -235,7 +235,7 @@
     "observedBy": "2026-07-09",
     "limitation": "Enabled execution, not measured usage, direct procurement or Enterprise-contract continuity.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-09"
   },
@@ -247,7 +247,7 @@
     "observedBy": "2024-02-09",
     "limitation": "Historical stated remit; not an assessment of every governmental power or all powers at September 2026.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "published-2024-02-09"
   },
@@ -259,7 +259,7 @@
     "observedBy": null,
     "limitation": "Self-reported resources, not a comparative capability measure.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "retrieved-2026-09-12"
   },
@@ -271,7 +271,7 @@
     "observedBy": "2025-09-25",
     "limitation": "Later events do not automatically transfer old agreements.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2025-09-25"
   },
@@ -283,7 +283,7 @@
     "observedBy": "2026-05-05",
     "limitation": "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-05-05"
   },
@@ -295,7 +295,7 @@
     "observedBy": "2026-05-05",
     "limitation": "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-05-05"
   },
@@ -307,7 +307,7 @@
     "observedBy": "2026-05-05",
     "limitation": "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-05-05"
   },
@@ -319,7 +319,7 @@
     "observedBy": "2026-05-05",
     "limitation": "Announcement does not prove implementation, effectiveness or status at cutoff.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-05-05"
   },
@@ -379,7 +379,7 @@
     "observedBy": null,
     "limitation": "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-31"
   },
@@ -391,7 +391,7 @@
     "observedBy": null,
     "limitation": "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-31"
   },
@@ -403,7 +403,7 @@
     "observedBy": null,
     "limitation": "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-31"
   },
@@ -415,7 +415,7 @@
     "observedBy": null,
     "limitation": "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-31"
   },
@@ -427,7 +427,7 @@
     "observedBy": null,
     "limitation": "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-31"
   },
@@ -439,7 +439,7 @@
     "observedBy": "2025-07-21",
     "limitation": "Voluntary memorandum; does not establish delivery of every contemplated activity.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2025-07-21"
   },
@@ -451,7 +451,7 @@
     "observedBy": "2025-02-13",
     "limitation": "Voluntary memorandum; does not establish delivery of every contemplated activity.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2025-02-14"
   },
@@ -463,7 +463,7 @@
     "observedBy": "2025-12-11",
     "limitation": "Voluntary memorandum; does not establish delivery of every contemplated activity.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2025-12-11"
   },
@@ -475,7 +475,7 @@
     "observedBy": "2026-01-27",
     "limitation": "Pilot development does not establish general public deployment or achieved independent maintenance.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-01-27"
   },
@@ -487,7 +487,7 @@
     "observedBy": "2026-03-18",
     "limitation": "Announcement does not prove implementation, effectiveness or status at cutoff.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-03-18"
   },
@@ -499,7 +499,7 @@
     "observedBy": "2026-03-27",
     "limitation": "Announcement does not prove implementation, effectiveness or status at cutoff.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-03-27"
   },
@@ -511,7 +511,7 @@
     "observedBy": "2026-07-09",
     "limitation": "Availability is not a direct contract, utilization measure or continuity of another product.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-09"
   },
@@ -523,7 +523,7 @@
     "observedBy": "2026-07-09",
     "limitation": "Availability is not a direct contract, utilization measure or continuity of another product.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-07-09"
   },
@@ -535,7 +535,7 @@
     "observedBy": "2026-02-26",
     "limitation": "Contractual dispute does not by itself establish technical veto power or operational dependence.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "sourceVersion": "2026-02-26"
   },
@@ -547,7 +547,7 @@
     "observedBy": "2026-01-09",
     "limitation": "Policy direction, not proof that each contract was amended.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "signed-2026-01-09"
   },
@@ -559,7 +559,7 @@
     "observedBy": "2026-01-09",
     "limitation": "Desired cadence and procurement criterion, not evidence of achieved delivery or dependence on any single company.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "signed-2026-01-09"
   },
@@ -571,7 +571,7 @@
     "observedBy": "2026-01-09",
     "limitation": "Substitution mitigation objective; no completed alternatives assessment or transition cost established.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "signed-2026-01-09"
   },
@@ -583,7 +583,7 @@
     "observedBy": "2026-08-27",
     "limitation": "Applies to deployed models described in this litigation, not future model provision or hosted consumer services.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-08-27"
   },
@@ -595,7 +595,7 @@
     "observedBy": "2026-08-27",
     "limitation": "Identifies a deployment approval gate, not complete interpretability, universal evaluation sufficiency or provider substitutability.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-08-27"
   },
@@ -607,7 +607,7 @@
     "observedBy": "2026-08-27",
     "limitation": "Provision is distinct from control over deployed inference; future supply terms and update alternatives are unspecified.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-08-27"
   },
@@ -619,7 +619,7 @@
     "observedBy": "2026-02-26",
     "limitation": "Supplier attribution for named functions; the court corroborates defense use but does not quantify reliance within each workflow.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-02-26"
   },
@@ -631,7 +631,7 @@
     "observedBy": "2026-02-26",
     "limitation": "Conditional supplier offer; establishes neither a completed replacement nor its feasibility or cost.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "2026-02-26"
   },
@@ -643,7 +643,7 @@
     "observedBy": "2026-06-12",
     "limitation": "Supplier account of named evaluator participation; no independent UK report or evaluator-specific testing duration inspected.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "published-2026-06-12"
   },
@@ -655,7 +655,7 @@
     "observedBy": "2026-06-12",
     "limitation": "Supplier account; issuing agency and full directive unavailable. Does not terminate every AISI agreement or establish restrictions persisted to cutoff.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "published-2026-06-12"
   },
@@ -667,12 +667,12 @@
     "observedBy": "2026-09-07",
     "limitation": "Relevant activity is incident-specific; does not mean all evaluations stopped or identify affected developer agreement.",
     "supportMode": "direct",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "sourceVersion": "published-2026-09-07"
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "microsoft-classified-agreement",
     "sourceId": "dod-classified-agreements",
@@ -684,7 +684,7 @@
     "supportMode": "direct"
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "openai-classified-agreement",
     "sourceId": "dod-classified-agreements",
@@ -696,7 +696,7 @@
     "supportMode": "direct"
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "google-classified-agreement",
     "sourceId": "dod-classified-agreements",
@@ -708,7 +708,7 @@
     "supportMode": "direct"
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "dod-vendor-lock-policy",
     "sourceId": "dod-classified-agreements",
@@ -717,6 +717,210 @@
     "locator": "Paragraph beginning The Department will continue to build an architecture",
     "observedBy": "2026-09-12",
     "limitation": "Policy intention, not demonstration that a specific operational workflow can switch providers.",
+    "supportMode": "direct"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "cio-active-operations",
+    "sourceId": "dep-davies-march24",
+    "claim": "In response to a question about Iran operations, CIO Davies confirms Claude use is active.",
+    "locator": "Printed p28, lines3–10, Reed question and Davies answer",
+    "observedBy": "2026-03-24",
+    "limitation": "Operational use confirmed; exact workflow, model version and weapons role undisclosed.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-24"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "cio-transition-continuity",
+    "sourceId": "dep-davies-march24",
+    "claim": "Davies explains that replacement time and an exception process protect ongoing operational success.",
+    "locator": "Printed p28, lines7–18",
+    "observedBy": "2026-03-24",
+    "limitation": "A rationale for managed transition, not a measured minimum switching duration or proof of an approved exception.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-24"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "cio-alternative-architecture",
+    "sourceId": "dep-davies-march24",
+    "claim": "Davies states the Department has designed its data architecture to accommodate multiple AI types.",
+    "locator": "Printed p29, lines14–23; p27 lines16–22",
+    "observedBy": "2026-03-24",
+    "limitation": "Government assertion of interoperability; no demonstrated task parity or replacement-cost assessment supplied.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-24"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "memo-transition-licences",
+    "sourceId": "dep-davies-march6",
+    "claim": "The CIO authorizes temporary Anthropic licences and support tokens tied to approved transition plans to preserve migration continuity.",
+    "locator": "PDF p2, paragraph beginning DoW Components will remove",
+    "observedBy": "2026-03-06",
+    "limitation": "Authorization is not proof of actual expenditure, licence issuance, or support delivery.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-06"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "memo-exception-condition",
+    "sourceId": "dep-davies-march6",
+    "claim": "Temporary exemptions may be considered for mission-critical national-security activities without a viable alternative, subject to a mitigation plan.",
+    "locator": "PDF p2, final paragraph",
+    "observedBy": "2026-03-06",
+    "limitation": "Conditional exemption rule; no inference that any named activity received an exemption.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-06"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "official-single-provider",
+    "sourceId": "dep-michael-march3",
+    "claim": "Michael describes CENTCOM, INDOPACOM and SOUTHCOM using one model in the Anthropic dispute and characterizes the arrangement as vendor lock.",
+    "locator": "On the events of the past few weeks, paragraphs2–3",
+    "observedBy": "2026-03-04",
+    "limitation": "Official characterization; no workflow inventory. Hypothetical remote-shutdown concern is qualified by later court findings.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-04"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "senate-migration-cost-unknown",
+    "sourceId": "dep-senate-may19",
+    "claim": "Service representatives cannot supply Anthropic replacement costs; Army acknowledges some use while Navy does not confirm classified use publicly.",
+    "locator": "Printed pp59–60, Manning, Tremper and Wolfson answers",
+    "observedBy": "2026-05-19",
+    "limitation": "Missing cost estimates do not prove either costly or costless replacement.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-05-19"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "senate-frozen-deployment",
+    "sourceId": "dep-senate-may19",
+    "claim": "Michael testifies that Anthropic updates and cloud access were frozen after the designation.",
+    "locator": "Printed pp63–64, answer to Kelly",
+    "observedBy": "2026-05-19",
+    "limitation": "Government technical-control account; distinct from contested contractual restrictions.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-05-19"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "senate-alternatives-specific",
+    "sourceId": "dep-senate-may19",
+    "claim": "Michael states there had been one provider before newer agreements and that alternative providers differ by application.",
+    "locator": "Printed pp66–68, Kelly questions and Michael answers",
+    "observedBy": "2026-05-19",
+    "limitation": "No measured comparison of substitutes for an existing Claude workflow.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-05-19"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "amicus-switching-burdens",
+    "sourceId": "dep-trade-amicus-april22",
+    "claim": "Trade associations report reengineering costs and unsuitable alternatives for some unnamed members’ workflows.",
+    "locator": "Printed p31 / PDF p40",
+    "observedBy": "2026-04-22",
+    "limitation": "Advocacy submission with unnamed members, no disclosed sample or audited cost schedule; not assigned to a named DoD function.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-04-22"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "anthropic-march-functions",
+    "sourceId": "dep-anthropic-march5",
+    "claim": "Anthropic identifies intelligence analysis, simulation, planning and cyber operations among supported defence applications.",
+    "locator": "Paragraph beginning As we wrote on Thursday",
+    "observedBy": "2026-03-05",
+    "limitation": "Supplier-reported functions; government testimony confirms operational use without mapping every function.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-05"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
+    "id": "anthropic-march-support",
+    "sourceId": "dep-anthropic-march5",
+    "claim": "Anthropic offers models at nominal cost with engineering support during the permitted transition.",
+    "locator": "Paragraph beginning Our most important priority",
+    "observedBy": "2026-03-05",
+    "limitation": "Offer, not demonstrated delivery or indispensable need for new provider support.",
+    "supportMode": "direct",
+    "sourceVersion": "dated-2026-03-05"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-openai-july-tested",
+    "sourceId": "aisi-july-incident",
+    "sourceVersion": "consulted-2026-09-12",
+    "claim": "AISI identifies GPT-5.6 Sol as a model it tested in its July 2026 cyber-range exercise.",
+    "locator": "Paragraphs beginning The incident stemmed and Almost all of this behaviour",
+    "observedBy": "2026-07-28",
+    "limitation": "Specific non-public testing configurations; not ordinary deployed behavior or proven real-world harm.",
+    "supportMode": "direct"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-anthropic-july-tested",
+    "sourceId": "aisi-july-incident",
+    "sourceVersion": "consulted-2026-09-12",
+    "claim": "AISI identifies Mythos 5 as a model it tested in its July 2026 cyber-range exercise.",
+    "locator": "Paragraphs beginning The incident stemmed and Almost all of this behaviour",
+    "observedBy": "2026-07-28",
+    "limitation": "Specific non-public testing configurations; not ordinary deployed behavior or proven real-world harm.",
+    "supportMode": "direct"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "july-evaluation-halted",
+    "sourceId": "openai-july-incident",
+    "sourceVersion": "consulted-2026-09-12",
+    "claim": "OpenAI reports AISI stopped related evaluations and isolated relevant machines after July28 incident detection.",
+    "locator": "UK AISI section, paragraph beginning UK AISI identified the activity",
+    "observedBy": "2026-07-28",
+    "limitation": "Specific exercise response; not termination of all developer–institute relations.",
+    "supportMode": "direct"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "fable-access-restored",
+    "sourceId": "fable-restoration",
+    "sourceVersion": "updated-2026-07-01",
+    "claim": "Anthropic reports restored Fable5 access globally, and Mythos5 access for a set of US organizations.",
+    "locator": "July1 update and opening paragraphs beginning Fable5 will be available and We have also restored",
+    "observedBy": "2026-07-01",
+    "limitation": "Does not establish restored UK AISI access to every Mythos model or uninterrupted access through September.",
+    "supportMode": "direct"
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "caisi-fable-tested",
+    "sourceId": "fable-restoration",
+    "sourceVersion": "updated-2026-07-01",
+    "claim": "Anthropic reports CAISI researchers tested both prior and new Fable safeguards.",
+    "locator": "Timeline and safeguard updates, paragraph beginning Researchers from the US Department of Commerce",
+    "observedBy": "2026-06-30",
+    "limitation": "Supplier-reported completed tests; exact test dates and independent CAISI findings not inspected. No effectiveness inference.",
     "supportMode": "direct"
   }
 ]

@@ -750,7 +750,10 @@
     "sourceIds": [
       "court-august",
       "court-april",
-      "anthropic-february"
+      "anthropic-february",
+      "dep-davies-march24",
+      "dep-davies-march6",
+      "dep-senate-may19"
     ],
     "queries": [
       "\"dod\" \"anthropic\" contested use 2026 amendment termination expiry status before:2026-09-13"
@@ -760,7 +763,7 @@
       "amendments": "unknown",
       "expiry": "unknown",
       "termination": "investigated within listed sources",
-      "restrictions": "investigated within listed sources",
+      "restrictions": "March6 removal/transition memo, March24 ongoing-use testimony, May frozen-code testimony and August judgment inspected. Later revised memo not retrieved; full September status unresolved.",
       "succession": "see succession.json",
       "conflicts": "August district judgment incorporated; separate DC statutory proceedings and postjudgment relief not conclusively resolved through cutoff. CourtListener retrieval failed; docket mirror last updated August3."
     },
@@ -778,17 +781,18 @@
     "lastConfirmedOn": "2026-06-12",
     "sourceIds": [
       "anthropic-fable-suspension",
-      "parliament-ai-update-september"
+      "parliament-ai-update-september",
+      "fable-restoration"
     ],
     "queries": [
       "UK AISI Anthropic Fable evaluation 2026 suspension status"
     ],
-    "queryExecution": "Family and primary-source status inspection; no separate relationship query executed.",
+    "queryExecution": "Executed 2026-09-12, see status-search-uk-july; historical event does not establish continuing access.",
     "checks": {
       "amendments": "not applicable to completed historical event",
       "expiry": "not applicable",
       "termination": "model access suspension explicitly reported",
-      "restrictions": "September ministerial incident-specific restriction inspected; not generalised to every evaluation",
+      "restrictions": "June12 suspension followed by June30/July1 restoration announcement; scope differs between Fable and Mythos. September incident restrictions do not end every agreement.",
       "succession": "explicit UK AISI renaming, see succession.json",
       "conflicts": "June model suspension and September incident-specific restrictions qualify continuing access, not occurrence of earlier reported testing."
     },
@@ -877,5 +881,92 @@
       "Announced availability is not a functional substitution assessment."
     ],
     "basis": "status-unknown"
+  },
+  {
+    "id": "status-uk-openai-july-evaluation",
+    "relationshipId": "uk-openai-july-evaluation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2026-07-28",
+    "sourceIds": [
+      "aisi-july-incident",
+      "openai-july-incident",
+      "parliament-ai-update-september"
+    ],
+    "queries": [
+      "site.aisi.gov.uk \"OpenAI\" \"2026\" evaluation",
+      "UK AISI Anthropic Fable evaluation 2026 suspension status before:2026-09-13"
+    ],
+    "queryExecution": "Executed 2026-09-12; full AISI and OpenAI accounts inspected.",
+    "checks": {
+      "amendments": "No change to historical event established",
+      "expiry": "Historical event, not an access term",
+      "termination": "Related evaluations halted after incident",
+      "restrictions": "Non-public configurations and incident-specific response",
+      "succession": "Same UK AISI unit; no transfer of historical US agreement",
+      "conflicts": "Reports distinguish incidents from ordinary public deployment"
+    },
+    "limitations": [
+      "No blanket claim that future evaluations stopped."
+    ],
+    "basis": "explicit-event"
+  },
+  {
+    "id": "status-uk-anthropic-july-evaluation",
+    "relationshipId": "uk-anthropic-july-evaluation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2026-07-28",
+    "sourceIds": [
+      "aisi-july-incident",
+      "openai-july-incident",
+      "parliament-ai-update-september"
+    ],
+    "queries": [
+      "site.aisi.gov.uk \"OpenAI\" \"2026\" evaluation",
+      "UK AISI Anthropic Fable evaluation 2026 suspension status before:2026-09-13"
+    ],
+    "queryExecution": "Executed 2026-09-12; full AISI and OpenAI accounts inspected.",
+    "checks": {
+      "amendments": "No change to historical event established",
+      "expiry": "Historical event, not an access term",
+      "termination": "Related evaluations halted after incident",
+      "restrictions": "Non-public configurations and incident-specific response",
+      "succession": "Same UK AISI unit; no transfer of historical US agreement",
+      "conflicts": "Reports distinguish incidents from ordinary public deployment"
+    },
+    "limitations": [
+      "No blanket claim that future evaluations stopped."
+    ],
+    "basis": "explicit-event"
+  },
+  {
+    "id": "status-caisi-anthropic-fable-evaluation",
+    "relationshipId": "caisi-anthropic-fable-evaluation",
+    "asOf": "2026-09-12",
+    "checkedOn": "2026-09-12",
+    "result": "historical event only",
+    "lastConfirmedOn": "2026-06-30",
+    "sourceIds": [
+      "fable-restoration"
+    ],
+    "queries": [
+      "site.anthropic.com \"Fable\" \"July 1\" \"2026\" restored"
+    ],
+    "queryExecution": "Executed; full primary page including July1 update inspected.",
+    "checks": {
+      "amendments": "July1 restoration update",
+      "expiry": "Historical event",
+      "termination": "Not an ongoing access claim",
+      "restrictions": "Specific model versions; no blanket lifting claim",
+      "succession": "Explicit CAISI mention, not automatic transfer",
+      "conflicts": "Supplier account; no independent efficacy conclusion"
+    },
+    "limitations": [
+      "No claim of ongoing evaluator access."
+    ],
+    "basis": "explicit-event"
   }
 ]

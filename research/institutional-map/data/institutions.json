@@ -11,7 +11,7 @@
       "joint-evaluation-2024"
     ],
     "group": "evaluation",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -26,7 +26,7 @@
       "uk-aisi-renaming"
     ],
     "group": "evaluation",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker"
   },
   {
@@ -40,7 +40,7 @@
       "nist-mous-2024"
     ],
     "group": "developers",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -56,7 +56,7 @@
       "llnl-deployment-2025"
     ],
     "group": "developers",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -70,7 +70,7 @@
       "llnl-deployment-2025"
     ],
     "group": "evaluation",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -84,7 +84,7 @@
       "caisi-2026"
     ],
     "note": "Re-established from US AISI; historical agreements are not inherited automatically.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -98,7 +98,7 @@
       "uk-google-deepmind-mou"
     ],
     "note": "Named Google organization. UK MoU identifies Google LLC; CAISI announcement names its Google DeepMind unit. Legal contracting identity is not inferred from organizational brand.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -112,7 +112,7 @@
       "microsoft-evaluation"
     ],
     "note": "Named institutional counterparty; specific subsidiaries require separate evidence.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -126,7 +126,7 @@
       "caisi-2026"
     ],
     "note": "Historical named party; changes of corporate ownership do not transfer agreements without evidence.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -140,7 +140,7 @@
       "court-august"
     ],
     "note": "Also styled Department of War in 2026 source documents. Same department, not inferred institutional succession.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -154,7 +154,7 @@
       "cdao-awards"
     ],
     "note": "Keep issuing office distinct from department-wide operational use.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -168,7 +168,7 @@
       "uk-openai-mou"
     ],
     "note": "Secretary of State acts on behalf of the Crown in the memoranda.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -182,7 +182,7 @@
       "eu-code"
     ],
     "note": "Code participation describes an administrative interface, not a compliance determination.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -196,7 +196,7 @@
       "caisi-gsa"
     ],
     "note": "Admitted by named CAISI cooperation instrument connecting evaluation to procurement.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -210,7 +210,7 @@
       "caisi-openmined"
     ],
     "note": "Admitted through a named evaluation-infrastructure research agreement, not consortium membership.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -225,7 +225,7 @@
       "uk-pilot-government"
     ],
     "note": "Admitted through named assistant-development work with Anthropic.",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   }
 ]

@@ -29,7 +29,7 @@
     "eventStatus": "Announced",
     "rationale": "Provider → recipient; no claim of compulsory access.",
     "type": "access-agreement",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "limitations": [
       "Provider → recipient; no claim of compulsory access.",
@@ -70,7 +70,7 @@
     "eventStatus": "Announced",
     "rationale": "Provider → recipient; model access is distinct from evaluation.",
     "type": "access-agreement",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "limitations": [
       "Provider → recipient; model access is distinct from evaluation.",
@@ -116,7 +116,7 @@
     "eventStatus": "Conducted",
     "rationale": "Evaluator → provider; domains follow the reported exercise.",
     "type": "evaluation",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "limitations": [
       "Evaluator → provider; domains follow the reported exercise.",
@@ -162,7 +162,7 @@
     "eventStatus": "Conducted",
     "rationale": "Evaluator → provider; unpublished findings remain unavailable.",
     "type": "evaluation",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "limitations": [
       "Evaluator → provider; unpublished findings remain unavailable.",
@@ -208,7 +208,7 @@
     "eventStatus": "Conducted",
     "rationale": "Undirected: a shared exercise, not a hierarchy.",
     "type": "joint-evaluation",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "limitations": [
       "Undirected: a shared exercise, not a hierarchy.",
@@ -252,7 +252,7 @@
     "eventStatus": "Reported deployment",
     "rationale": "Supplier → research user. Defence context follows the reported national-security applications.",
     "type": "deployment",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "limitations": [
       "Supplier → research user. Defence context follows the reported national-security applications.",
@@ -292,7 +292,7 @@
     "limitations": [
       "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
@@ -328,7 +328,7 @@
     "limitations": [
       "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
@@ -364,7 +364,7 @@
     "limitations": [
       "Announced evaluation agreement; bulletin does not supply access terms, model identity or completed testing."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
@@ -401,7 +401,7 @@
     "limitations": [
       "Announcement does not prove implementation, effectiveness or status at cutoff."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "day",
     "basis": "direct",
@@ -585,7 +585,7 @@
     "limitations": [
       "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "register-version",
     "basis": "direct",
@@ -622,7 +622,7 @@
     "limitations": [
       "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "register-version",
     "basis": "direct",
@@ -659,7 +659,7 @@
     "limitations": [
       "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "register-version",
     "basis": "direct",
@@ -696,7 +696,7 @@
     "limitations": [
       "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "register-version",
     "basis": "direct",
@@ -733,7 +733,7 @@
     "limitations": [
       "Register version 31 July 2026; signature date unknown. Participation is not a compliance judgment or universal model coverage."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "register-version",
     "basis": "direct",
@@ -771,7 +771,7 @@
     "limitations": [
       "Voluntary memorandum; does not establish delivery of every contemplated activity."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "day",
     "basis": "direct",
@@ -809,7 +809,7 @@
     "limitations": [
       "Voluntary memorandum; does not establish delivery of every contemplated activity."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
@@ -848,7 +848,7 @@
       "Voluntary memorandum; does not establish delivery of every contemplated activity.",
       "Publication date shown; exact last-signature date omitted in HTML. Do not calculate expiry from publication."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "publication-only",
     "basis": "direct",
@@ -887,7 +887,7 @@
     "limitations": [
       "Pilot development does not establish general public deployment or achieved independent maintenance."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "day",
     "basis": "direct",
@@ -923,7 +923,7 @@
     "limitations": [
       "Announcement does not prove implementation, effectiveness or status at cutoff."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "day",
     "basis": "direct",
@@ -959,7 +959,7 @@
     "limitations": [
       "Announcement does not prove implementation, effectiveness or status at cutoff."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "datePrecision": "day",
     "basis": "direct",
@@ -996,7 +996,7 @@
       "Availability is not a direct contract, utilization measure or continuity of another product.",
       "Documents coding-agent client availability. Default model-service endpoints are LivAI or LLamaMe; provider-operated model service, procurement and actual usage volumes are not established."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
@@ -1033,7 +1033,7 @@
       "Availability is not a direct contract, utilization measure or continuity of another product.",
       "Documents coding-agent client availability. Default model-service endpoints are LivAI or LLamaMe; provider-operated model service, procurement and actual usage volumes are not established."
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
@@ -1058,10 +1058,15 @@
       "e-dod-anthropic-contested",
       "court-use",
       "march-removal",
-      "judgment-august"
+      "judgment-august",
+      "cio-active-operations",
+      "memo-transition-licences"
     ],
     "counterEvidenceIds": [
-      "contractual-control"
+      "contractual-control",
+      "cio-alternative-architecture",
+      "senate-frozen-deployment",
+      "senate-alternatives-specific"
     ],
     "announcedOn": "2026-02-26",
     "observedBy": "2026-02-26",
@@ -1074,8 +1079,8 @@
     "limitations": [
       "Contractual dispute does not by itself establish technical veto power or operational dependence."
     ],
-    "publicationStatus": "provisional",
-    "coder": "codex-primary",
+    "publicationStatus": "published",
+    "coder": "codex-research-checker",
     "datePrecision": "day",
     "basis": "direct",
     "statusCheckId": "status-dod-anthropic-contested",
@@ -1088,7 +1093,8 @@
     "effectiveTo": null,
     "counterEvidenceIds": [
       "fable-access-suspension",
-      "aisi-september-restrictions"
+      "aisi-september-restrictions",
+      "fable-access-restored"
     ],
     "id": "uk-anthropic-fable-evaluation",
     "source": "uk-aisi",
@@ -1113,7 +1119,7 @@
     "eventStatus": "Conducted",
     "rationale": "Named evaluator to model provider; supplier-reported prelaunch safeguard testing.",
     "type": "evaluation",
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker",
     "limitations": [
       "Supplier account; no evaluator-specific report or exact dates inspected.",
@@ -1122,10 +1128,10 @@
     "statusCheckId": "status-uk-anthropic-fable-evaluation",
     "datePrecision": "upper-bound",
     "basis": "direct",
-    "conflictDisposition": "June model suspension and September incident-specific restrictions qualify continuing access, not occurrence of earlier reported testing."
+    "conflictDisposition": "June suspension and July restoration are separate events; no continuing access inferred. September restrictions concern an identified incident, not every agreement."
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "microsoft-dod-classified",
     "source": "microsoft",
@@ -1169,7 +1175,7 @@
     }
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "openai-dod-classified",
     "source": "openai",
@@ -1213,7 +1219,7 @@
     }
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "google-dod-classified",
     "source": "google",
@@ -1255,5 +1261,123 @@
       "legalSignatory": null,
       "unit": "named organization in official announcement"
     }
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-openai-july-evaluation",
+    "source": "uk-aisi",
+    "target": "openai",
+    "type": "evaluation",
+    "directed": true,
+    "instrumentId": "uk-openai-july-evaluation-event",
+    "evidenceIds": [
+      "uk-openai-july-tested"
+    ],
+    "counterEvidenceIds": [
+      "july-evaluation-halted"
+    ],
+    "announcedOn": null,
+    "observedBy": "2026-07-28",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "event observed by day; full evaluation period unknown",
+    "eventStatus": "Conducted",
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-uk-openai-july-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United Kingdom"
+    ],
+    "basis": "direct",
+    "rationale": "Evaluator → developer of model actually tested. No inference of joint model development.",
+    "limitations": [
+      "Model-specific historical exercise; current access and agreement terms unresolved."
+    ],
+    "conflictDisposition": "The incident halted related activity; this qualifies evaluation continuity, not the occurrence of the tests."
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-anthropic-july-evaluation",
+    "source": "uk-aisi",
+    "target": "anthropic",
+    "type": "evaluation",
+    "directed": true,
+    "instrumentId": "uk-anthropic-july-evaluation-event",
+    "evidenceIds": [
+      "uk-anthropic-july-tested"
+    ],
+    "counterEvidenceIds": [
+      "july-evaluation-halted"
+    ],
+    "announcedOn": null,
+    "observedBy": "2026-07-28",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "event observed by day; full evaluation period unknown",
+    "eventStatus": "Conducted",
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-uk-anthropic-july-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United Kingdom"
+    ],
+    "basis": "direct",
+    "rationale": "Evaluator → developer of model actually tested. No inference of joint model development.",
+    "limitations": [
+      "Model-specific historical exercise; current access and agreement terms unresolved."
+    ],
+    "conflictDisposition": "The incident halted related activity; this qualifies evaluation continuity, not the occurrence of the tests."
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "caisi-anthropic-fable-evaluation",
+    "source": "caisi",
+    "target": "anthropic",
+    "type": "evaluation",
+    "directed": true,
+    "instrumentId": "caisi-fable-event",
+    "evidenceIds": [
+      "caisi-fable-tested"
+    ],
+    "counterEvidenceIds": [],
+    "announcedOn": null,
+    "observedBy": "2026-06-30",
+    "effectiveFrom": null,
+    "effectiveTo": null,
+    "datePrecision": "upper-bound",
+    "eventStatus": "Reported completed testing",
+    "currentStatus": "historical event only",
+    "currentStatusCheckedOn": "2026-09-12",
+    "statusCheckId": "status-caisi-anthropic-fable-evaluation",
+    "domains": [
+      "cybersecurity"
+    ],
+    "contexts": [
+      "Research"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "basis": "direct",
+    "rationale": "CAISI is explicitly named as evaluator; no inherited US AISI agreement assumed.",
+    "limitations": [
+      "No exact test period or independent evaluator report inspected."
+    ],
+    "conflictDisposition": "No counterclaim to test occurrence recorded; this does not certify safeguards effective."
   }
 ]

@@ -7,7 +7,7 @@
     "sourceIds": [
       "nist-mous-2024"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -18,7 +18,7 @@
     "sourceIds": [
       "nist-mous-2024"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -29,7 +29,7 @@
     "sourceIds": [
       "joint-evaluation-2024"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -40,7 +40,7 @@
     "sourceIds": [
       "llnl-deployment-2025"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -51,7 +51,7 @@
     "sourceIds": [
       "caisi-2026"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker"
   },
   {
@@ -62,7 +62,7 @@
     "sourceIds": [
       "caisi-2026"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker"
   },
   {
@@ -73,7 +73,7 @@
     "sourceIds": [
       "caisi-2026"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker"
   },
   {
@@ -84,7 +84,7 @@
     "sourceIds": [
       "microsoft-evaluation"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -139,7 +139,7 @@
     "sourceIds": [
       "eu-code"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -150,7 +150,7 @@
     "sourceIds": [
       "eu-code"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -161,7 +161,7 @@
     "sourceIds": [
       "eu-code"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -172,7 +172,7 @@
     "sourceIds": [
       "eu-code"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -183,7 +183,7 @@
     "sourceIds": [
       "eu-code"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -194,7 +194,7 @@
     "sourceIds": [
       "uk-openai-mou"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -205,7 +205,7 @@
     "sourceIds": [
       "uk-anthropic-mou"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -216,7 +216,7 @@
     "sourceIds": [
       "uk-google-deepmind-mou"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -227,7 +227,7 @@
     "sourceIds": [
       "uk-anthropic-pilot"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -238,7 +238,7 @@
     "sourceIds": [
       "caisi-gsa"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -249,7 +249,7 @@
     "sourceIds": [
       "caisi-openmined"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -260,7 +260,7 @@
     "sourceIds": [
       "llnl-sandbox"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -271,7 +271,7 @@
     "sourceIds": [
       "llnl-sandbox"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -282,7 +282,7 @@
     "sourceIds": [
       "anthropic-february"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary"
   },
   {
@@ -293,11 +293,11 @@
     "sourceIds": [
       "anthropic-fable-suspension"
     ],
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-research-checker"
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "microsoft-classified-instrument",
     "label": "Microsoft classified deployment agreement",
@@ -308,7 +308,7 @@
     ]
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "openai-classified-instrument",
     "label": "Openai classified deployment agreement",
@@ -319,7 +319,7 @@
     ]
   },
   {
-    "publicationStatus": "provisional",
+    "publicationStatus": "published",
     "coder": "codex-primary",
     "id": "google-classified-instrument",
     "label": "Google classified deployment agreement",
@@ -327,6 +327,41 @@
     "bindingness": "Executed terms not inspected",
     "sourceIds": [
       "dod-classified-agreements"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-openai-july-evaluation-event",
+    "label": "GPT-5.6 Sol July cyber-range evaluation",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable to historical event",
+    "sourceIds": [
+      "aisi-july-incident",
+      "openai-july-incident"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "uk-anthropic-july-evaluation-event",
+    "label": "Mythos 5 July cyber-range evaluation",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable to historical event",
+    "sourceIds": [
+      "aisi-july-incident",
+      "openai-july-incident"
+    ]
+  },
+  {
+    "publicationStatus": "published",
+    "coder": "codex-primary",
+    "id": "caisi-fable-event",
+    "label": "Fable safeguard tests",
+    "kind": "Evaluation event",
+    "bindingness": "Not applicable",
+    "sourceIds": [
+      "fable-restoration"
     ]
   }
 ]

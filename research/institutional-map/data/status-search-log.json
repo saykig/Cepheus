@@ -363,5 +363,54 @@
       "https://openai.com/index/our-agreement-with-the-department-of-war/"
     ],
     "disposition": "Official May page inspected; February OpenAI agreement is a distinct event, not assumed identical instrument or completed implementation."
+  },
+  {
+    "id": "status-search-uk-july",
+    "relationshipIds": [
+      "uk-anthropic-fable-evaluation",
+      "uk-openai-july-evaluation",
+      "uk-anthropic-july-evaluation"
+    ],
+    "queries": [
+      {
+        "q": "UK AISI Anthropic Fable evaluation 2026 suspension status before:2026-09-13"
+      },
+      {
+        "q": "site.aisi.gov.uk \"OpenAI\" \"2026\" evaluation"
+      },
+      {
+        "q": "site.aisi.gov.uk \"Gemini\" evaluation 2026"
+      },
+      {
+        "q": "site.aisi.gov.uk \"Grok\" evaluation 2026"
+      },
+      {
+        "q": "site.aisi.gov.uk \"Microsoft\" evaluation 2026"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.aisi.gov.uk/blog",
+      "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/"
+    ],
+    "disposition": "Named actual July tests admitted; code client support alone is not completed evaluation; additional OpenAI GPT5.5 evaluation discovered and inspected but redundant to covered actual-evaluation mechanism for this release."
+  },
+  {
+    "id": "status-fable-restoration",
+    "relationshipIds": [
+      "uk-anthropic-fable-evaluation",
+      "caisi-anthropic-fable-evaluation"
+    ],
+    "queries": [
+      {
+        "q": "site.anthropic.com \"Fable\" \"July 1\" \"2026\" restored"
+      }
+    ],
+    "searchedOn": "2026-09-12",
+    "resultUrls": [
+      "https://www.anthropic.com/news/redeploying-fable-5"
+    ],
+    "disposition": "Inspected dated restoration and named CAISI testing; no automatic continuity."
   }
 ]

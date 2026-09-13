@@ -5,7 +5,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.nist.gov/news-events/news/2024/08/us-ai-safety-institute-signs-agreements-regarding-ai-safety-research",
     "status": "retrieved",
-    "sha256": "46ef3ec8f77da7c13b1888cdc3fd7eb7a3881da444ba607a768248254f478b2f",
+    "sha256": "65876c874a485e03147c7467ae419c05dfeded6b31aa7223c6f2c9e83c661b56",
     "contentType": "text/html; charset=UTF-8",
     "finalUrl": "https://www.nist.gov/news-events/news/2024/08/us-ai-safety-institute-signs-agreements-regarding-ai-safety-research",
     "bytes": 86287
@@ -16,7 +16,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.nist.gov/news-events/news/2024/11/pre-deployment-evaluation-anthropics-upgraded-claude-35-sonnet",
     "status": "retrieved",
-    "sha256": "608fee793a523d4b8c552fa4a55baf9233eadddfb5f26cf5aa9234638749fa62",
+    "sha256": "eb91f397ed29e9e2684cd9dd518dea0b16fba6fbc5634d37cfc25297c78050b5",
     "contentType": "text/html; charset=UTF-8",
     "finalUrl": "https://www.nist.gov/news-events/news/2024/11/pre-deployment-evaluation-anthropics-upgraded-claude-35-sonnet",
     "bytes": 95201
@@ -91,7 +91,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-openai-on-ai-opportunities/memorandum-of-understanding-between-uk-and-openai-on-ai-opportunities",
     "status": "retrieved",
-    "sha256": "b4c5fb1e746f7b5b4606e92ebd4ce9fbffdd0955a2a3d576be6b130239c2743a",
+    "sha256": "8db3af0de5a7db1c96383344bf3bb92b8a5fbe34e7eddabc571396ed5bb247c7",
     "contentType": "text/html; charset=utf-8",
     "finalUrl": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-openai-on-ai-opportunities/memorandum-of-understanding-between-uk-and-openai-on-ai-opportunities",
     "bytes": 79061
@@ -102,7 +102,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-anthropic-on-ai-opportunities/memorandum-of-understanding-between-uk-and-anthropic-on-ai-opportunities",
     "status": "retrieved",
-    "sha256": "e095fe1b993cd9b7f4dd74e82b9d1c7d872c77a355599c7282fe3cbe56f3485b",
+    "sha256": "1e270b8c80889076dc6451ba344f77746832ec02cbc049db7db30ddb98975487",
     "contentType": "text/html; charset=utf-8",
     "finalUrl": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-anthropic-on-ai-opportunities/memorandum-of-understanding-between-uk-and-anthropic-on-ai-opportunities",
     "bytes": 76780
@@ -113,7 +113,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-google-deepmind-on-ai-opportunities-and-security/memorandum-of-understanding-between-the-uk-and-google-deepmind-on-ai-opportunities-and-security",
     "status": "retrieved",
-    "sha256": "bc642da00df9ed30a59a26f612f0d7673422378316009ab0e830eb1b607a7094",
+    "sha256": "8ea26b2e2b76f4cf9b0c30fc52bb0e55eadbd8f3fdbb4c1acf41614e204c8c09",
     "contentType": "text/html; charset=utf-8",
     "finalUrl": "https://www.gov.uk/government/publications/memorandum-of-understanding-between-the-uk-and-google-deepmind-on-ai-opportunities-and-security/memorandum-of-understanding-between-the-uk-and-google-deepmind-on-ai-opportunities-and-security",
     "bytes": 89272
@@ -142,10 +142,10 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.anthropic.com/news/gov-UK-partnership",
     "status": "retrieved",
-    "sha256": "df15feb1dd6a7d4b30272993a69edb89d7bfeec691508a4ba3bb6bb29c5f52e8",
+    "sha256": "4323ab90776d87aca6bde10789fcf738265ef8595e903e8508aa32b47987dc92",
     "contentType": "text/html; charset=utf-8",
     "finalUrl": "https://www.anthropic.com/news/gov-UK-partnership",
-    "bytes": 151024
+    "bytes": 151136
   },
   {
     "id": "version-uk-pilot-government",
@@ -153,7 +153,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.gov.uk/government/news/top-british-ai-expertise-to-help-spark-renewal-of-public-services-and-bolster-national-security",
     "status": "retrieved",
-    "sha256": "99fa29d403d5b677437349bfd5d86bdc64467c1b573de8bfe84edf8c8d66cc48",
+    "sha256": "89244da0afa5801574207e2fbc61d1e735ba9c6730d932ce810bb18b377fe2e7",
     "contentType": "text/html; charset=utf-8",
     "finalUrl": "https://www.gov.uk/government/news/top-british-ai-expertise-to-help-spark-renewal-of-public-services-and-bolster-national-security",
     "bytes": 86280
@@ -195,7 +195,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://data-science.llnl.gov/llnl-introduces-anthropic-ai-tool-claude-facility-wide-operations",
     "status": "retrieved",
-    "sha256": "ba6d6909c3b74fad99350503798b465780dc8346e9bab439228df82944773f06",
+    "sha256": "edb6a0a4c4edc09fb73f4f682ddf31c78e541095b0457c5fe6c455aeec36d7bd",
     "contentType": "text/html; charset=UTF-8",
     "finalUrl": "https://data-science.llnl.gov/llnl-introduces-anthropic-ai-tool-claude-facility-wide-operations",
     "bytes": 66951
@@ -217,7 +217,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.nist.gov/news-events/news/2026/03/caisi-signs-mou-gsa-boost-ai-evaluation-science-federal-procurement-through",
     "status": "retrieved",
-    "sha256": "c2f07366ae62d5c485d069b6aef0babdb2f806af92ecedea195016d22e7a9a55",
+    "sha256": "28afd783a492776d8bde9a060670ab79a3f1c006d07f1da3eb58981b2c30776b",
     "contentType": "text/html; charset=UTF-8",
     "finalUrl": "https://www.nist.gov/news-events/news/2026/03/caisi-signs-mou-gsa-boost-ai-evaluation-science-federal-procurement-through",
     "bytes": 85412
@@ -228,7 +228,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.nist.gov/news-events/news/2026/03/announcement-caisi-signs-crada-openmined-enable-secure-ai-evaluations",
     "status": "retrieved",
-    "sha256": "ecda08fbe3ea4019b036a87433a6ee6f3aac92eed73b43e6dd9113f455986887",
+    "sha256": "77a73c7fc9238a7dfd9278d7b6282f6241a7a9e8f1beb8e2e9edb9cf8240167e",
     "contentType": "text/html; charset=UTF-8",
     "finalUrl": "https://www.nist.gov/news-events/news/2026/03/announcement-caisi-signs-crada-openmined-enable-secure-ai-evaluations",
     "bytes": 83797
@@ -239,7 +239,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.gov.uk/government/publications/ai-safety-institute-approach-to-evaluations/ai-safety-institute-approach-to-evaluations",
     "status": "retrieved",
-    "sha256": "50a8d99448d4fd20b845344b7e46037682964a1a15ccc2986486d468fd1f9dbf",
+    "sha256": "3cf1fee953c6819e009c82b58e5340b7e67737a824477c3ceced9ca636be981c",
     "contentType": "text/html; charset=utf-8",
     "finalUrl": "https://www.gov.uk/government/publications/ai-safety-institute-approach-to-evaluations/ai-safety-institute-approach-to-evaluations",
     "bytes": 143422
@@ -261,7 +261,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.nist.gov/news-events/news/2025/09/caisi-works-openai-and-anthropic-promote-secure-ai-innovation",
     "status": "retrieved",
-    "sha256": "ed80308628e28f4c05f607a86148e73ce44b983d95252f8b826fdcfa5f5ed014",
+    "sha256": "32149d2b2f1e0e4ac9e0938adcc4bcd8be36034ccb474bb0702184732d92ad2b",
     "contentType": "text/html; charset=UTF-8",
     "finalUrl": "https://www.nist.gov/news-events/news/2025/09/caisi-works-openai-and-anthropic-promote-secure-ai-innovation",
     "bytes": 83720
@@ -281,7 +281,7 @@
     "retrievedOn": "2026-09-12",
     "url": "https://www.gov.uk/government/news/tackling-ai-security-risks-to-unleash-growth-and-deliver-plan-for-change",
     "status": "retrieved",
-    "sha256": "a1edd62ffa902a282eab801b7d499a4aebb1419b5759ca6c718cbcd55961f431",
+    "sha256": "a107e1d507395f26c8efc033307d4e11e907df25e95e1aa4938d0a0cfef4d11a",
     "contentType": "text/html; charset=utf-8",
     "finalUrl": "https://www.gov.uk/government/news/tackling-ai-security-risks-to-unleash-growth-and-deliver-plan-for-change",
     "bytes": 86088
@@ -305,5 +305,105 @@
     "status": "blocked",
     "failure": "HTTP Error 403: Forbidden",
     "sha256": null
+  },
+  {
+    "id": "version-dod-classified-agreements",
+    "sourceId": "dod-classified-agreements",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.war.gov/News/Releases/Release/Article/4475177/classified-networks-ai-agreements/",
+    "status": "blocked",
+    "failure": "HTTP Error 403: Forbidden",
+    "sha256": null
+  },
+  {
+    "id": "version-dep-davies-march24",
+    "sourceId": "dep-davies-march24",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.armed-services.senate.gov/imo/media/doc/cybersecurity_transcript_03-24-20261.pdf",
+    "status": "blocked",
+    "failure": "HTTP Error 403: Forbidden",
+    "sha256": null
+  },
+  {
+    "id": "version-dep-davies-march6",
+    "sourceId": "dep-davies-march6",
+    "retrievedOn": "2026-09-12",
+    "url": "https://assets1.cbsnewsstatic.com/hub/cms/prod_cms_alt/file/2026/03/10/a2b6035a-bf88-48e1-bf79-818d70572fe3/dod_cio_signed_memo_-_to_-_components_-_removal_of_anthropic_-_pbc_products_in_dow_systems_-_cio000183-26.pdf",
+    "status": "retrieved",
+    "sha256": "d00b6cc7d7285ac97538fdd00e0a7d9c20b7fc4a4ebcdebdff98cc666bbe473b",
+    "contentType": "application/pdf",
+    "finalUrl": "https://assets1.cbsnewsstatic.com/hub/cms/prod_cms_alt/file/2026/03/10/a2b6035a-bf88-48e1-bf79-818d70572fe3/dod_cio_signed_memo_-_to_-_components_-_removal_of_anthropic_-_pbc_products_in_dow_systems_-_cio000183-26.pdf",
+    "bytes": 95119
+  },
+  {
+    "id": "version-dep-michael-march3",
+    "sourceId": "dep-michael-march3",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.a16z.news/p/emil-michaels-holy-cow-moment-with",
+    "status": "retrieved",
+    "sha256": "056a01561a95614ad752d4b792b9978930cf9c190fb75b9271556f79d6766cd8",
+    "contentType": "text/html; charset=utf-8",
+    "finalUrl": "https://www.a16z.news/p/emil-michaels-holy-cow-moment-with",
+    "bytes": 219542
+  },
+  {
+    "id": "version-dep-senate-may19",
+    "sourceId": "dep-senate-may19",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.armed-services.senate.gov/imo/media/doc/05-19-2026_sub-transcript.pdf",
+    "status": "blocked",
+    "failure": "HTTP Error 403: Forbidden",
+    "sha256": null
+  },
+  {
+    "id": "version-dep-anthropic-march5",
+    "sourceId": "dep-anthropic-march5",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.anthropic.com/news/where-stand-department-war",
+    "status": "retrieved",
+    "sha256": "31b469c8d51ba2b6d423df8459a88b13bc756b66a614093d7b118ba55f34e977",
+    "contentType": "text/html; charset=utf-8",
+    "finalUrl": "https://www.anthropic.com/news/where-stand-department-war",
+    "bytes": 146017
+  },
+  {
+    "id": "version-dep-trade-amicus-april22",
+    "sourceId": "dep-trade-amicus-april22",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.technet.org/wp-content/uploads/2026/04/2026-04-22-Trade-Associations-Amicus-Brief.pdf",
+    "status": "blocked",
+    "failure": "HTTP Error 403: Forbidden",
+    "sha256": null
+  },
+  {
+    "id": "version-aisi-july-incident",
+    "sourceId": "aisi-july-incident",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+    "status": "retrieved",
+    "sha256": "d877ecd7c74dcf9b667aadb79c49e784e11f4a87eda89f287089038b8584350c",
+    "contentType": "text/html; charset=utf-8",
+    "finalUrl": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+    "bytes": 41426
+  },
+  {
+    "id": "version-openai-july-incident",
+    "sourceId": "openai-july-incident",
+    "retrievedOn": "2026-09-12",
+    "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
+    "status": "blocked",
+    "failure": "HTTP Error 403: Forbidden",
+    "sha256": null
+  },
+  {
+    "id": "version-fable-restoration",
+    "sourceId": "fable-restoration",
+    "retrievedOn": "2026-09-12",
+    "url": "https://www.anthropic.com/news/redeploying-fable-5",
+    "status": "retrieved",
+    "sha256": "39ab4e2ff8d5ecd94392f10431b6935f234fcc644df1f4a9bcae67a6251fa8dc",
+    "contentType": "text/html; charset=utf-8",
+    "finalUrl": "https://www.anthropic.com/news/redeploying-fable-5",
+    "bytes": 216181
   }
 ]

@@ -8,6 +8,6 @@ export type Bundle = {
   'status-checks': ResearchRecord[]; succession: ResearchRecord[]; coverage: any; reviews: ResearchRecord[];
   release: any; 'institution-attributes': ResearchRecord[]; 'attribute-rubrics': ResearchRecord[];
   'analytical-relations': ResearchRecord[]; 'analytical-rubrics': ResearchRecord[];
-  'source-versions': ResearchRecord[]; 'search-log': ResearchRecord[]; 'status-search-log': ResearchRecord[];
+  'source-versions': ResearchRecord[]; 'search-log': ResearchRecord[]; 'status-search-log': ResearchRecord[]; 'dependency-investigation': any;
   layout?: { nodes: Record<string, {x: number; y: number}>; width: number; height: number; radius: number; basis: string }
 }

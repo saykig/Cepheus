@@ -44,5 +44,24 @@
       "substitution",
       "operational-reliance"
     ]
+  },
+  {
+    "id": "transitional-operational-dependence",
+    "label": "Transitional operational dependence",
+    "definition": "Reliance on a provider-specific capability in an existing operational function where immediate withdrawal is constrained by maintaining that function during replacement. This permits alternatives and divided technical control.",
+    "requiredConditions": [
+      "identified-operational-use",
+      "provider-specific-capability",
+      "non-immediate-substitution",
+      "temporal-and-functional-boundary",
+      "counterevidence-disposition"
+    ],
+    "rule": "All five conditions supported, with government operational-continuity evidence and a distinct instrument or deployment record. Announced procurement, continued use alone, or a phase-out deadline alone is insufficient.",
+    "requiredAttributeRubrics": [
+      "technical-control",
+      "substitution",
+      "operational-reliance"
+    ],
+    "revisionRationale": "Separate transition-constrained product dependence from dependence on an ongoing service or remote provider control. This distinction applies symmetrically to any supplier, including offline deployed systems; it is not a relaxation of evidence requirements or a claim that all purchases create dependence."
   }
 ]
