@@ -63,3 +63,12 @@ test('wide short tablet projection uses field width with separated rows',()=>{
  assert.ok(130*projection.yScale*zoom>44)
  assert.equal(worldProjection({width:350,height:540}).yScale,1)
 })
+
+test('following from either endpoint traces the identical cubic in reverse',()=>{
+ for(const [sx,sy,tx,ty] of [[0,20,600,300],[300,20,310,500]]){
+  const numbers=(path:string)=>path.match(/-?\d+(?:\.\d+)?/g)!.map(Number)
+  const forward=numbers(routedInstitutionPath(sx,sy,tx,ty,2))
+  const reverse=numbers(routedInstitutionPath(sx,sy,tx,ty,2,true))
+  assert.deepEqual(reverse,[...forward.slice(6,8),...forward.slice(4,6),...forward.slice(2,4),...forward.slice(0,2)])
+ }
+})

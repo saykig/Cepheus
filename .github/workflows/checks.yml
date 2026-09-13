@@ -20,3 +20,11 @@ jobs:
       - run: git diff --exit-code -- public/data/institutional-map
       - run: pnpm exec playwright install --with-deps chromium webkit
       - run: pnpm test:e2e
+      - name: Retain browser acceptance recordings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-acceptance
+          path: test-results/
+          retention-days: 14
+          if-no-files-found: ignore

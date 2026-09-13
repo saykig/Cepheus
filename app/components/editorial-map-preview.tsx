@@ -118,7 +118,7 @@ function InkEdge(props:EdgeProps<Edge<InkData>>) {
  const e=props.data!
  const path=routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane)
  const visible=e.visible
- const trace=e.reverse?routedInstitutionPath(props.targetX,props.targetY,props.sourceX,props.sourceY,-e.lane):path
+ const trace=e.reverse?routedInstitutionPath(props.sourceX,props.sourceY,props.targetX,props.targetY,e.lane,true):path
  return <g aria-hidden="true" data-world-edge={props.id} data-revealed={visible}>
   <motion.path d={path} fill="none" className={styles.worldInk} initial={{pathLength:0,opacity:0}}
    animate={{pathLength:visible?1:0,opacity:visible?(e.incident||e.retained? .45:.18):0}}
@@ -170,7 +170,7 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
   }
   attach();media.addEventListener('change',attach);return()=>{cleanup();media.removeEventListener('change',attach)}
  },[story])
- useEffect(()=>{setSelected(null);setFocus(null);setFollowed([]);setOwner(null)},[step])
+ useEffect(()=>{setSelected(null);setFocus(null)},[step])
  const follow=useCallback((institutionId:string,relationshipId:string)=>{
   setFocus(institutionId);setSelected(relationshipId);setFollowed(ids=>ids.includes(relationshipId)?ids:[...ids,relationshipId]);setTraceVersion(n=>n+1)
   canvas.current?.focus({preventScroll:true})
@@ -187,7 +187,7 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
  const prefix=locale==='en'?'':`/${locale}`
  const overview=()=>{setSelected(null);setFocus(null);setFollowed([]);setHover(null)}
  return <EvidenceSession.Provider value={useMemo(()=>({owner,setOwner}),[owner])}>
- <section className={styles.study} data-constellation-study data-story={story} data-story-state={storyStates[step].id} aria-label="Institutional constellation study">
+ <section className={styles.study} data-constellation-study data-story={story} data-story-state={storyStates[step].id} aria-label={`Institutional constellation study — ${story ? 'essay companion' : storyStates[initialStep].title}`}>
   <div className={styles.storyHeading}>{storyStates[step].title}</div>
   <div ref={canvas} className={styles.canvas} tabIndex={0} role="group" aria-label="Institutional field. Drag to pan, pinch to zoom. Plus and minus zoom; zero fits the world."
    onKeyDown={e=>{
@@ -195,7 +195,7 @@ function MapStudy({story,initialStep,locale}:{story:boolean;initialStep:number;l
     if(e.target instanceof HTMLElement&&e.target.hasAttribute('data-institution')&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)&&!e.altKey){e.preventDefault();const buttons=Array.from(canvas.current?.querySelectorAll<HTMLButtonElement>('[data-institution]:not(:disabled)')??[]);const index=buttons.indexOf(e.target as HTMLButtonElement);buttons[(index+(['ArrowRight','ArrowDown'].includes(e.key)?1:-1)+buttons.length)%buttons.length]?.focus({preventScroll:true})}
    }}>
    <ReactFlow proOptions={{hideAttribution:true}} nodes={nodes} edges={edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes}
-    nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false}
+    autoPanOnNodeFocus={false} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false}
     minZoom={.2} maxZoom={2} panOnDrag panOnScroll={false} zoomOnScroll={false} zoomOnPinch zoomOnDoubleClick={false} preventScrolling={false}
     onNodeMouseEnter={(_,n)=>setHover(n.id)} onNodeMouseLeave={()=>setHover(null)} onNodeClick={()=>{}}/>
    <div className={styles.cameraControls} aria-label="Map controls"><button onClick={()=>void zoomOut({duration:reduced?0:200})} aria-label="Zoom out">−</button><button onClick={()=>void zoomIn({duration:reduced?0:200})} aria-label="Zoom in">+</button><button onClick={fit}>Fit</button></div>

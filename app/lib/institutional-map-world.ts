@@ -44,11 +44,16 @@ export function settledFraction(milliseconds:number,duration=timing.settle) {
  const end=1-9*Math.exp(-8)
  return (1-(1+8*t)*Math.exp(-8*t))/end
 }
-export function routedInstitutionPath(sx:number,sy:number,tx:number,ty:number,lane:number) {
+export function routedInstitutionPath(sx:number,sy:number,tx:number,ty:number,lane:number,reverse=false) {
  const bend=lane*22
- if(Math.abs(tx-sx)<180){const outer=Math.max(sx,tx)+100+Math.abs(lane)*24;return `M ${sx} ${sy} C ${outer} ${sy+bend}, ${outer} ${ty-bend}, ${tx} ${ty}`}
  const dx=tx-sx
- return `M ${sx} ${sy} C ${sx+dx*.3} ${sy+bend}, ${tx-dx*.3} ${ty-bend}, ${tx} ${ty}`
+ const outer=Math.max(sx,tx)+100+Math.abs(lane)*24
+ const c1=[Math.abs(dx)<180?outer:sx+dx*.3,sy+bend]
+ const c2=[Math.abs(dx)<180?outer:tx-dx*.3,ty-bend]
+ // Reverse the same cubic, rather than calculating a different return route.
+ return reverse
+  ? `M ${tx} ${ty} C ${c2[0]} ${c2[1]}, ${c1[0]} ${c1[1]}, ${sx} ${sy}`
+  : `M ${sx} ${sy} C ${c1[0]} ${c1[1]}, ${c2[0]} ${c2[1]}, ${tx} ${ty}`
 }
 
 // Portrait-tablet top frames use width without shrinking a tall world into a thin strip.
