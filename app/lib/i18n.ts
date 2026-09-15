@@ -1,5 +1,9 @@
-export const locales = ['en', 'ru', 'ko', 'fr', 'zh-CN'] as const
-export type Locale = (typeof locales)[number]
+const contentLocales = ['en', 'ru', 'ko', 'fr', 'zh-CN'] as const
+export type Locale = (typeof contentLocales)[number]
+
+// English is the only locale currently exposed by the site. The translated
+// copy remains available in the codebase so it can be restored later.
+export const locales: readonly Locale[] = ['en']
 
 export const defaultLocale: Locale = 'en'
 export const localeCookie = 'cepheus-locale'
@@ -26,5 +30,5 @@ export function stripLocale(pathname: string) {
   return isLocale(parts[1] ?? '') ? `/${parts.slice(2).join('/')}` : pathname
 }
 
-// All supported languages are available in every deployment environment.
+// Keep the language control hidden while English is the sole public locale.
 export const selectableLocales: readonly Locale[] = locales
